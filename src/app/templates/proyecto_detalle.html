@@ -1,0 +1,301 @@
+{% extends "base.html" %}
+
+{% block title %}{{ proyecto.nombre }} - MVP Mediciones{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <div>
+            <h2>{{ proyecto.nombre or 'Sin nombre' }}</h2>
+            <p style="color: #6c757d; margin-top: 10px;">
+                {% if proyecto.descripcion %}{{ proyecto.descripcion }}{% else %}Proyecto #{{ proyecto.id }}{% endif %}
+            </p>
+        </div>
+        <div>
+            <a href="/proyectos" class="btn btn-secondary">← Volver</a>
+        </div>
+    </div>
+
+</div>
+
+<div class="card">
+    <h3>Resumen de Presupuesto por Capítulos</h3>
+
+    <table style="margin-top: 20px;">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Capítulo</th>
+                <th style="text-align: center;">Partidas</th>
+                <th style="text-align: right;">Importe Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% set ns = namespace(total_general=0, total_partidas=0) %}
+            {% for capitulo in proyecto.capitulos %}
+                {% set ns_cap = namespace(total_capitulo=0, num_partidas_cap=0) %}
+
+                {# Calcular total del capítulo sumando todas sus partidas #}
+                {# Primero partidas directas del capítulo (sin subcapítulo) #}
+                {% for partida in capitulo.partidas %}
+                    {% set ns_cap.total_capitulo = ns_cap.total_capitulo + partida.importe %}
+                    {% set ns_cap.num_partidas_cap = ns_cap.num_partidas_cap + 1 %}
+                {% endfor %}
+
+                {# Luego partidas de subcapítulos #}
+                {% for subcapitulo in capitulo.subcapitulos %}
+                    {% for partida in subcapitulo.partidas %}
+                        {% set ns_cap.total_capitulo = ns_cap.total_capitulo + partida.importe %}
+                        {% set ns_cap.num_partidas_cap = ns_cap.num_partidas_cap + 1 %}
+                    {% endfor %}
+                    {% for apartado in subcapitulo.apartados %}
+                        {% for partida in apartado.partidas %}
+                            {% set ns_cap.total_capitulo = ns_cap.total_capitulo + partida.importe %}
+                            {% set ns_cap.num_partidas_cap = ns_cap.num_partidas_cap + 1 %}
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %}
+
+                {% set ns.total_general = ns.total_general + ns_cap.total_capitulo %}
+                {% set ns.total_partidas = ns.total_partidas + ns_cap.num_partidas_cap %}
+
+                <tr>
+                    <td><strong>{{ capitulo.codigo }}</strong></td>
+                    <td>{{ capitulo.nombre }}</td>
+                    <td style="text-align: center;">{{ ns_cap.num_partidas_cap }}</td>
+                    <td style="text-align: right; font-weight: 600;">{{ ns_cap.total_capitulo|european }} €</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot style="border-top: 2px solid #667eea;">
+            <tr style="background: #f8f9ff; font-weight: bold; font-size: 1.1em;">
+                <td colspan="2"><strong>TOTAL PRESUPUESTO</strong></td>
+                <td style="text-align: center; color: #667eea;">{{ ns.total_partidas }}</td>
+                <td style="text-align: right; color: #667eea;">{{ ns.total_general|european }} €</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div style="margin-top: 20px; padding: 15px; background: #f8f9ff; border-left: 4px solid #667eea; border-radius: 5px;">
+        <p style="margin: 0; color: #495057;">
+            <strong>Verificación:</strong>
+            Este presupuesto contiene <strong>{{ ns.total_partidas }} partidas</strong>
+            distribuidas en <strong>{{ proyecto.estadisticas.capitulos }} capítulos</strong>,
+            con un importe total de <strong style="color: #667eea;">{{ ns.total_general|european }} €</strong>
+        </p>
+    </div>
+</div>
+
+<div class="card">
+    <h3>Exportar Presupuesto</h3>
+    <p style="color: #6c757d; margin: 15px 0;">
+        Descarga el presupuesto en diferentes formatos:
+    </p>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <a href="http://localhost:3013/exportar/{{ proyecto.id }}/csv"
+           class="btn"
+           download>
+            📄 Exportar CSV
+        </a>
+        <a href="http://localhost:3013/exportar/{{ proyecto.id }}/excel"
+           class="btn"
+           download>
+            📊 Exportar Excel
+        </a>
+        <a href="http://localhost:3013/exportar/{{ proyecto.id }}/xml"
+           class="btn"
+           download>
+            📋 Exportar XML
+        </a>
+        <a href="http://localhost:3013/exportar/{{ proyecto.id }}/bc3"
+           class="btn"
+           download>
+            🏗️ Exportar BC3/FIEBDC-3
+        </a>
+    </div>
+</div>
+
+{% if proyecto.capitulos %}
+<div class="card">
+    <h3>Estructura del Presupuesto</h3>
+    <p style="color: #6c757d; margin-bottom: 20px;">Click en cada subcapítulo para ver el desglose de partidas</p>
+
+    {# Macro recursivo para renderizar subcapítulos anidados #}
+    {% macro renderizar_subcapitulos(subcapitulos, prefijo_id, margen_izq=0) %}
+        {% for subcapitulo in subcapitulos %}
+        {% set ns_sub = namespace(total_sub=0, num_partidas=0) %}
+
+        {# Calcular total del subcapítulo (partidas directas + apartados) #}
+        {% for partida in subcapitulo.partidas %}
+            {% set ns_sub.total_sub = ns_sub.total_sub + partida.importe %}
+            {% set ns_sub.num_partidas = ns_sub.num_partidas + 1 %}
+        {% endfor %}
+        {% for apartado in subcapitulo.apartados %}
+            {% for partida in apartado.partidas %}
+                {% set ns_sub.total_sub = ns_sub.total_sub + partida.importe %}
+                {% set ns_sub.num_partidas = ns_sub.num_partidas + 1 %}
+            {% endfor %}
+        {% endfor %}
+
+        <div style="margin: 15px 0; margin-left: {{ margen_izq }}px;">
+            {# Cabecera colapsable del subcapítulo #}
+            <div onclick="toggleSubcapitulo('{{ prefijo_id }}_{{ loop.index }}')"
+                 style="cursor: pointer; padding: 15px; background: #f8f9fa; border-radius: 5px; border-left: 3px solid #764ba2; display: flex; justify-content: space-between; align-items: center; transition: background 0.3s;"
+                 onmouseover="this.style.background='#e9ecef'"
+                 onmouseout="this.style.background='#f8f9fa'">
+                <div>
+                    <strong style="color: #764ba2; font-size: 1.05em;">▶ {{ subcapitulo.codigo }} - {{ subcapitulo.nombre }}</strong>
+                    <span style="color: #6c757d; font-size: 0.9em; margin-left: 15px;">
+                        ({{ ns_sub.num_partidas }} partidas{% if subcapitulo.subcapitulos_hijos %}, {{ subcapitulo.subcapitulos_hijos|length }} subcapítulos{% endif %})
+                    </span>
+                </div>
+                <strong style="color: #764ba2; font-size: 1.1em;">
+                    {{ ns_sub.total_sub|european }} €
+                </strong>
+            </div>
+
+            {# Contenido colapsable #}
+            <div id="{{ prefijo_id }}_{{ loop.index }}" style="display: none; margin-top: 10px; padding: 15px; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 5px;">
+                {# PARTIDAS DIRECTAS DEL SUBCAPÍTULO #}
+                {% if subcapitulo.partidas %}
+                <table style="width: 100%; font-size: 0.9em;">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Resumen</th>
+                            <th>Unidad</th>
+                            <th style="text-align: right;">Cantidad</th>
+                            <th style="text-align: right;">Precio</th>
+                            <th style="text-align: right;">Importe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for partida in subcapitulo.partidas %}
+                        <tr>
+                            <td><code>{{ partida.codigo }}</code></td>
+                            <td>{{ partida.resumen[:50] }}{% if partida.resumen|length > 50 %}...{% endif %}</td>
+                            <td>{{ partida.unidad }}</td>
+                            <td style="text-align: right;">{{ partida.cantidad|european }}</td>
+                            <td style="text-align: right;">{{ partida.precio|european }} €</td>
+                            <td style="text-align: right;"><strong>{{ partida.importe|european }} €</strong></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% endif %}
+
+                {# APARTADOS DEL SUBCAPÍTULO #}
+                {% for apartado in subcapitulo.apartados %}
+                <div style="margin-top: 20px;">
+                    <h6 style="color: #6c757d; margin-bottom: 10px; font-weight: 600;">
+                        {{ apartado.codigo }} - {{ apartado.nombre }}
+                    </h6>
+
+                    {% if apartado.partidas %}
+                    <table style="width: 100%; font-size: 0.85em;">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Resumen</th>
+                                <th>Unidad</th>
+                                <th style="text-align: right;">Cantidad</th>
+                                <th style="text-align: right;">Precio</th>
+                                <th style="text-align: right;">Importe</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for partida in apartado.partidas %}
+                            <tr>
+                                <td><code>{{ partida.codigo }}</code></td>
+                                <td>{{ partida.resumen[:40] }}{% if partida.resumen|length > 40 %}...{% endif %}</td>
+                                <td>{{ partida.unidad }}</td>
+                                <td style="text-align: right;">{{ partida.cantidad|european }}</td>
+                                <td style="text-align: right;">{{ partida.precio|european }} €</td>
+                                <td style="text-align: right;"><strong>{{ partida.importe|european }} €</strong></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% endif %}
+                </div>
+                {% endfor %}
+
+                {# RECURSIÓN: Renderizar subcapítulos hijos #}
+                {% if subcapitulo.subcapitulos_hijos %}
+                <div style="margin-top: 20px; padding-top: 15px; border-top: 2px dashed #dee2e6;">
+                    <h6 style="color: #667eea; margin-bottom: 15px;">📂 Subcapítulos de nivel inferior:</h6>
+                    {{ renderizar_subcapitulos(subcapitulo.subcapitulos_hijos, prefijo_id ~ '_' ~ loop.index, 0) }}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    {% endmacro %}
+
+    {% for capitulo in proyecto.capitulos %}
+    <div style="border-left: 4px solid #667eea; padding-left: 20px; margin: 30px 0;">
+        <h4 style="color: #667eea; margin-bottom: 15px;">
+            {{ capitulo.codigo }} - {{ capitulo.nombre }}
+        </h4>
+
+        {% if capitulo.subcapitulos %}
+        {# Renderizar solo subcapítulos de nivel 1 (sin parent_id) #}
+        {% set subcapitulos_nivel1 = [] %}
+        {% for sub in capitulo.subcapitulos %}
+            {% if not sub.parent_id %}
+                {% set _ = subcapitulos_nivel1.append(sub) %}
+            {% endif %}
+        {% endfor %}
+        {{ renderizar_subcapitulos(subcapitulos_nivel1, 'sub_' ~ capitulo.codigo, 0) }}
+        {% endif %}
+
+        {# Total del capítulo #}
+        <div style="margin-top: 20px; padding: 15px; background: #f0f1ff; border-radius: 5px; border: 2px solid #667eea;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <strong style="color: #667eea; font-size: 1.2em;">TOTAL {{ capitulo.codigo }}</strong>
+                <strong style="color: #667eea; font-size: 1.3em;">
+                    {{ capitulo.total|european }} €
+                </strong>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<div class="card">
+    <h3>Información del Archivo</h3>
+    <table style="width: auto;">
+        <tr>
+            <td style="font-weight: 600; width: 200px;">Archivo origen:</td>
+            <td>{{ proyecto.archivo_origen }}</td>
+        </tr>
+        <tr>
+            <td style="font-weight: 600;">Fecha de procesamiento:</td>
+            <td>{{ proyecto.fecha_creacion[:19] if proyecto.fecha_creacion else '-' }}</td>
+        </tr>
+        <tr>
+            <td style="font-weight: 600;">ID del proyecto:</td>
+            <td><span class="badge badge-info">#{{ proyecto.id }}</span></td>
+        </tr>
+    </table>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function toggleSubcapitulo(id) {
+    const element = document.getElementById(id);
+    const header = element.previousElementSibling;
+    const arrow = header.querySelector('strong');
+
+    if (element.style.display === 'none') {
+        element.style.display = 'block';
+        arrow.textContent = arrow.textContent.replace('▶', '▼');
+    } else {
+        element.style.display = 'none';
+        arrow.textContent = arrow.textContent.replace('▼', '▶');
+    }
+}
+</script>
+{% endblock %}

@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 15548,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n01 FASE 2 01.13 MOBILIARIO URBANO m23U02BZ090 m3 EXCAVACIÓN EN POZO A MANO 1,00 40,60 40,60 Excavación en pozo a mano o por procedimientos no mecanizados, en cualquier clase de terreno (excepto roca) y a cualquier profundidad, incluso elevación y car- ga de productos sobrantes, medida sobre perfil, sin transporte. Conforme a OR- DEN FOM/1382/2002-PG3-Art.321, CTE DB-SE-C y NTE-ADZ. m23E02PCA030 m3 EXCAVACIÓN POZOS <2m. TERRENOS CO"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 3791,
+      "content_preview": "Extrae partidas del capítulo 01\n\nFORMATO DE PARTIDA:\nCada línea tiene este formato: CÓDIGO UNIDAD DESCRIPCIÓN CANTIDAD PRECIO IMPORTE\n\nIMPORTANTE: Los 3 valores numéricos (CANTIDAD, PRECIO, IMPORTE) están SIEMPRE al FINAL de la línea.\nSi la descripción contiene números (ejemplo: \"14,65 m2\"), IGNÓRALOS y extrae los ÚLTIMOS 3 NÚMEROS.\n\nCASOS ESPECIALES - CÓDIGOS PEGADOS SIN ESPACIOS:\nA veces el código está PEGADO a la descripción sin espacios ni unidad visible.\nIdentifica el código por su LONGITUD"
+    }
+  ]
+}

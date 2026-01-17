@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 5929,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n03 FASE 4 03.09.03 ARBUSTIVAS m23U14A170 m3 TIERRAS VEGETALES-FERTILIZADAS 61,80 47,70 2.947 Suministro y extensión a máquina y perfilado a mano de tierras vegetales, proce- dentes de excavación de terrenos de vega o simplemente tierras \"de cabeza\", es decir las constituyentes del suelo vegetal, no el subsuelo, libres de elementos grue- sos (piedras, cascotes, etc.), así como libres también de residuos vegetales (gra- mas, raíces,"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 455,
+      "content_preview": "Extrae partidas del capítulo 03\n\nJSON:\n{\n  \"capitulo_codigo\": \"03\",\n  \"partidas\": [\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n},\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n}\n  ]\n}\n\nReglas:\n1. NO repetir códigos\n2. NO incluir totales\n3. NO incluir campo subcapitulo_codigo\n4. Extrae TODAS las partidas\n\nVALIDACIÓN (antes de enviar):\n1. cantidad × precio = importe (CADA partida)\n2. Códigos únicos\n3. Revisa primera y última partida"
+    }
+  ]
+}

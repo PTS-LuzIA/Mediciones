@@ -1,0 +1,17 @@
+{
+  "capitulo_codigo": "02",
+  "partidas": [
+    {
+      "codigo": "m23U14K050",
+      "cantidad": 628.00,
+      "precio": 2.07,
+      "importe": 1299.96
+    },
+    {
+      "codigo": "m23U14A360",
+      "cantidad": 268.00,
+      "precio": 6.47,
+      "importe": 1733.96
+    }
+  ]
+}

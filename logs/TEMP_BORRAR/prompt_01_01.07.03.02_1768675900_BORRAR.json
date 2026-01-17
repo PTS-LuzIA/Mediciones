@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 4822,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n01 FASE 2 01.07.03.02 CERRAJERÍA APUDm23U04KA0k1g0 ACERO LAMINADO S275JR EN PERFILES 5549,15 5,23 29.022,05 Acero laminado tipo S275JR, en perfiles, según peso teórico para preparar en ta- ller sobre cercos. Conforme a ORDEN FOM/1382/2002-PG3-Art. 640. Según UNE-EN 10025-1:2006, NTE-EAS, NTE-EAV, CTE DB-SE-A y EAE. Acero con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011. APUDE04AB040 kg ACERO EN BAR"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 4425,
+      "content_preview": "Extrae partidas del capítulo 01\n\nIMPORTANTE: El campo \"resumen\" es OBLIGATORIO. Extrae el título/descripción corta de la partida (máximo 100 caracteres).\n\nFORMATO DE PARTIDA:\nCada línea tiene este formato: CÓDIGO UNIDAD DESCRIPCIÓN CANTIDAD PRECIO IMPORTE\n\nIMPORTANTE: Los 3 valores numéricos (CANTIDAD, PRECIO, IMPORTE) están SIEMPRE al FINAL de la línea.\nSi la descripción contiene números (ejemplo: \"14,65 m2\"), IGNÓRALOS y extrae los ÚLTIMOS 3 NÚMEROS.\n\nCASOS ESPECIALES - CÓDIGOS PEGADOS SIN ESP"
+    }
+  ]
+}

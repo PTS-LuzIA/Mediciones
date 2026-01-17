@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 7468,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n03 FASE 4 03.04.02 PAVIMENTO PERMEABLE RECORRIDOS PRINCIPALES APUDm23U05F030m2 PAVIMENTO PERMEABLE 1202,00 57,26 68.826,52 Suministro y colocación de pavimento permeable incluidas subbases, formado por hormigón poroso (e=10 cm) con una capacidad drenante de 500 l/(m2 x minu- to) con un 20% de huecos sobre capa de gravas finas (e=10 cm) que se apoyan sobre capa de gravas medias (e=15 cm) y a su vez sobre capa de gravas gruesas (e=4"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 455,
+      "content_preview": "Extrae partidas del capítulo 03\n\nJSON:\n{\n  \"capitulo_codigo\": \"03\",\n  \"partidas\": [\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n},\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n}\n  ]\n}\n\nReglas:\n1. NO repetir códigos\n2. NO incluir totales\n3. NO incluir campo subcapitulo_codigo\n4. Extrae TODAS las partidas\n\nVALIDACIÓN (antes de enviar):\n1. cantidad × precio = importe (CADA partida)\n2. Códigos únicos\n3. Revisa primera y última partida"
+    }
+  ]
+}

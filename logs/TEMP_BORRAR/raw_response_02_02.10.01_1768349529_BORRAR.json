@@ -1,0 +1,77 @@
+{
+  "capitulo_codigo": "02",
+  "partidas": [
+    {
+      "codigo": "02.10.01",
+      "descripcion": "PREPARACION TERRENO",
+      "unidad": "m2",
+      "cantidad": 100.00,
+      "precio": 1.71,
+      "importe": 171.00
+    },
+    {
+      "codigo": "U14A120",
+      "descripcion": "LABOREO CON MEDIOS MECÁNICOS",
+      "unidad": "m2",
+      "cantidad": 896.00,
+      "precio": 0.94,
+      "importe": 842.00
+    },
+    {
+      "codigo": "U13AM090",
+      "descripcion": "ABONADO QUÍMICO DE FONDO CON MOTOCULTOR",
+      "unidad": "m2",
+      "cantidad": 592.00,
+      "precio": 0.93,
+      "importe": 550.00
+    },
+    {
+      "codigo": "U13AM100",
+      "descripcion": "ENMIENDA ORGÁNICA CON MOTOCULTOR",
+      "unidad": "m2",
+      "cantidad": 384.00,
+      "precio": 16.73,
+      "importe": 6424.00
+    },
+    {
+      "codigo": "U14A170",
+      "descripcion": "TIERRAS VEGETALES-FERTILIZADAS",
+      "unidad": "m3",
+      "cantidad": 20.00,
+      "precio": 47.70,
+      "importe": 954.00
+    },
+    {
+      "codigo": "U14A150",
+      "descripcion": "TURBAS OSCURAS",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 345.21,
+      "importe": 345.00
+    },
+    {
+      "codigo": "U14O060",
+      "descripcion": "PERFILADO",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 0.63,
+      "importe": 0.00
+    },
+    {
+      "codigo": "U14A350",
+      "descripcion": "DELIMITADOR CHAPA DE ACERO S275JR DE 5x100 mm",
+      "unidad": "m",
+      "cantidad": 89.50,
+      "precio": 30.45,
+      "importe": 2725.00
+    },
+    {
+      "codigo": "E02TRT090",
+      "descripcion": "TRANSPORTE TIERRA EN OBRA DUMPER CONVENCIONAL 2 t CARGA MANUAL",
+      "unidad": "m3",
+      "cantidad": 149.40,
+      "precio": 12.08,
+      "importe": 1804.00
+    }
+  ]
+}

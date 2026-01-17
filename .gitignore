@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Data
+data/uploads/*
+!data/uploads/.gitkeep
+data/exports/*
+!data/exports/.gitkeep
+data/*.db
+data/*.sqlite
+data/*.db-journal
+
+# Logs
+logs/*.log
+logs/*.txt
+!logs/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporal
+*.tmp
+*.bak
+*.cache
+.env

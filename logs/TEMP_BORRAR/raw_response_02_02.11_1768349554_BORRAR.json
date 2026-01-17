@@ -1,0 +1,327 @@
+{
+  "capitulo_codigo": "02",
+  "partidas": [
+    {
+      "codigo": "m23U14A075m",
+      "descripcion": "APERTURA DE ZANJA CON ZANJADORA",
+      "cantidad": 1058.00,
+      "precio": 4.47,
+      "importe": 4729.26
+    },
+    {
+      "codigo": "m23E02ECA020",
+      "descripcion": "EXCAVACIÓN ZANJA <2m. TERRENOS FLOJOS C/MEDIOS MANUALES",
+      "cantidad": 146.35,
+      "precio": 38.41,
+      "importe": 5621.30
+    },
+    {
+      "codigo": "m23U02F030",
+      "descripcion": "REFINO Y NIVELACIÓN FONDO ZANJA",
+      "cantidad": 569.55,
+      "precio": 3.37,
+      "importe": 1919.38
+    },
+    {
+      "codigo": "m23U02F040",
+      "descripcion": "COMPACTACIÓN FONDO ZANJA",
+      "cantidad": 569.55,
+      "precio": 0.55,
+      "importe": 313.25
+    },
+    {
+      "codigo": "m23E02SZ080",
+      "descripcion": "RELLENO/COMPACTADO C/PLANCHA VIBRANTE C/MEDIOS MANUALES S/APORTE",
+      "cantidad": 137.16,
+      "precio": 19.49,
+      "importe": 2673.25
+    },
+    {
+      "codigo": "m23U03H040",
+      "descripcion": "HORMIGÓN EN MASA HM-20/B/40/XA2 CEM I/SR EN CANALIZACIÓNES",
+      "cantidad": 21.92,
+      "precio": 170.03,
+      "importe": 3727.06
+    },
+    {
+      "codigo": "m23U02EA010",
+      "descripcion": "EXTENSIÓN CAMA TIERRA ARENOSA",
+      "cantidad": 42.32,
+      "precio": 5.19,
+      "importe": 219.64
+    },
+    {
+      "codigo": "m23U02ER010",
+      "descripcion": "RELLENO ZANJAS SUELO TOLERABLES",
+      "cantidad": 283.51,
+      "precio": 5.64,
+      "importe": 1599.00
+    },
+    {
+      "codigo": "m23U18DV010",
+      "descripcion": "BANDA SEÑALIZACIÓN POLIETILENO 20 cm",
+      "cantidad": 1058.00,
+      "precio": 1.08,
+      "importe": 1142.00
+    },
+    {
+      "codigo": "m23U13BH010",
+      "descripcion": "TUBO POLIETILENO CORRUGADO DOBLE CAPA Ø 110 mm",
+      "cantidad": 1058.00,
+      "precio": 4.66,
+      "importe": 4930.00
+    },
+    {
+      "codigo": "m23U10APA300",
+      "descripcion": "TUBERÍA POLIETILENO ALTA DENSIDAD Ø25mm 16atm",
+      "cantidad": 896.50,
+      "precio": 2.95,
+      "importe": 2644.00
+    },
+    {
+      "codigo": "m23U10APA310",
+      "descripcion": "TUBERÍA POLIETILENO ALTA DENSIDAD Ø32mm 16atm",
+      "cantidad": 161.50,
+      "precio": 5.23,
+      "importe": 844.00
+    },
+    {
+      "codigo": "m23U10APA320",
+      "descripcion": "TUBERÍA POLIETILENO ALTA DENSIDAD Ø40mm 16atm",
+      "cantidad": 1.00,
+      "precio": 8.43,
+      "importe": 8.00
+    },
+    {
+      "codigo": "m23U10APA390",
+      "descripcion": "PIEZA ESPECIAL POLIETILENO",
+      "cantidad": 105.80,
+      "precio": 20.38,
+      "importe": 2156.00
+    },
+    {
+      "codigo": "m23U10DF155",
+      "descripcion": "TUBERÍA INTEGRAL GOTEROS A 0,30 m ENTERRABLE",
+      "cantidad": 2976.70,
+      "precio": 2.78,
+      "importe": 8275.00
+    },
+    {
+      "codigo": "m23U10DF175",
+      "descripcion": "TUBERÍA INTEGRAL GOTEROS A 0,50 m ENTERRABLE",
+      "cantidad": 1.00,
+      "precio": 2.45,
+      "importe": 2.00
+    },
+    {
+      "codigo": "m23U10DF310",
+      "descripcion": "ANILLO Ø 1 m TUBERÍA INTEGRAL GOTEROS A 0,30 m ENTERRABLE",
+      "cantidad": 46.00,
+      "precio": 9.18,
+      "importe": 422.00
+    },
+    {
+      "codigo": "m23U10DV020",
+      "descripcion": "VÁLVULA COMPUERTA BRONCE Ø=3/4\"",
+      "cantidad": 1.00,
+      "precio": 18.38,
+      "importe": 18.38
+    },
+    {
+      "codigo": "m23E20VCL020",
+      "descripcion": "VÁLVULA COMPUERTA LATÓN PN-10 3/4\"",
+      "cantidad": 7.00,
+      "precio": 15.07,
+      "importe": 105.49
+    },
+    {
+      "codigo": "m23U10DV030",
+      "descripcion": "VÁLVULA COMPUERTA BRONCE Ø=1\"",
+      "cantidad": 1.00,
+      "precio": 23.73,
+      "importe": 23.73
+    },
+    {
+      "codigo": "m23E20VCL030",
+      "descripcion": "VÁLVULA COMPUERTA LATÓN PN-10 1\"",
+      "cantidad": 4.00,
+      "precio": 24.81,
+      "importe": 99.24
+    },
+    {
+      "codigo": "m23U10DF005",
+      "descripcion": "FILTRO MALLA EN Y DE 3/4\" METAL",
+      "cantidad": 7.00,
+      "precio": 106.37,
+      "importe": 744.59
+    },
+    {
+      "codigo": "m23U10DF010",
+      "descripcion": "FILTRO MALLA EN Y DE 1\" METAL",
+      "cantidad": 4.00,
+      "precio": 136.94,
+      "importe": 547.76
+    },
+    {
+      "codigo": "m23U10DV260",
+      "descripcion": "VÁLVULA ESFERA BRONCE Ø=3/4\"",
+      "cantidad": 1.00,
+      "precio": 17.44,
+      "importe": 17.44
+    },
+    {
+      "codigo": "m23E20VFL030",
+      "descripcion": "VÁLVULA DE ESFERA LATÓN PN35 3/4\"",
+      "cantidad": 1.00,
+      "precio": 36.59,
+      "importe": 36.59
+    },
+    {
+      "codigo": "m23U10DV270",
+      "descripcion": "VÁLVULA ESFERA BRONCE Ø=1\"",
+      "cantidad": 1.00,
+      "precio": 23.85,
+      "importe": 23.85
+    },
+    {
+      "codigo": "m23E20VFL040",
+      "descripcion": "VÁLVULA DE ESFERA LATÓN PN28 1\"",
+      "cantidad": 1.00,
+      "precio": 36.42,
+      "importe": 36.42
+    },
+    {
+      "codigo": "U12VR130",
+      "descripcion": "VÁLVULA REGULADORA PRESIÓN METAL CON MANÓMETRO D=3/4\"",
+      "cantidad": 7.00,
+      "precio": 154.91,
+      "importe": 1084.37
+    },
+    {
+      "codigo": "U12VR131",
+      "descripcion": "VÁLVULA REGULADORA PRESIÓN METAL CON MANÓMETRO D=1\"",
+      "cantidad": 4.00,
+      "precio": 198.45,
+      "importe": 793.00
+    },
+    {
+      "codigo": "U12SV020",
+      "descripcion": "ELECTROVÁLVULA 3/4\"H SOLENOIDE 9 V",
+      "cantidad": 7.00,
+      "precio": 56.82,
+      "importe": 397.00
+    },
+    {
+      "codigo": "U12SV120",
+      "descripcion": "ELECTROVÁLVULA 1\"H 9 V SOLENOIDE 2 VÍAS",
+      "cantidad": 4.00,
+      "precio": 39.34,
+      "importe": 157.00
+    },
+    {
+      "codigo": "m23U10DV490",
+      "descripcion": "REGULADOR DE PRESIÓN 3/4\" LATÓN",
+      "cantidad": 7.00,
+      "precio": 157.43,
+      "importe": 1102.00
+    },
+    {
+      "codigo": "m23U10DV500",
+      "descripcion": "REGULADOR DE PRESIÓN 1 1/4\" LATÓN",
+      "cantidad": 1.00,
+      "precio": 289.09,
+      "importe": 289.00
+    },
+    {
+      "codigo": "m23U10DV450",
+      "descripcion": "REGULADOR DE PRESIÓN EN SOLENOIDE",
+      "cantidad": 1.00,
+      "precio": 137.33,
+      "importe": 137.00
+    },
+    {
+      "codigo": "m23U10DF230",
+      "descripcion": "COLLARINES ARTICULADOS",
+      "cantidad": 341.00,
+      "precio": 3.59,
+      "importe": 1224.00
+    },
+    {
+      "codigo": "m23U10DF232",
+      "descripcion": "COLLARINES DE ACOPLE RÁPIDO ROSCA AUTOESTANCA PP 25mm",
+      "cantidad": 40.00,
+      "precio": 1.43,
+      "importe": 57.00
+    },
+    {
+      "codigo": "m23U10DF233",
+      "descripcion": "COLLARINES DE ACOPLE RÁPIDO ROSCA AUTOESTANCA PP 32mm",
+      "cantidad": 6.00,
+      "precio": 1.57,
+      "importe": 9.00
+    },
+    {
+      "codigo": "m23U10DF234",
+      "descripcion": "COLLARINES DE ACOPLE RÁPIDO ROSCA AUTOESTANCA PP 40mm",
+      "cantidad": 1.00,
+      "precio": 1.82,
+      "importe": 1.00
+    },
+    {
+      "codigo": "m23U10DP110",
+      "descripcion": "PROGRAMADOR AUTÓNOMO 2 ELECTROVÁLVULA",
+      "cantidad": 1.00,
+      "precio": 343.75,
+      "importe": 343.00
+    },
+    {
+      "codigo": "m23U10DP120",
+      "descripcion": "PROGRAMADOR AUTÓNOMO 4 ELECTROVÁLVULA",
+      "cantidad": 3.00,
+      "precio": 501.60,
+      "importe": 1504.00
+    },
+    {
+      "codigo": "m23U10C160",
+      "descripcion": "ARQUETA 54X38X32 cm PREFABRICADA FIBRA VIDRIO S/GRAVILLA",
+      "cantidad": 1.00,
+      "precio": 96.48,
+      "importe": 96.48
+    },
+    {
+      "codigo": "m23U10C190",
+      "descripcion": "ARQUETA 67X48X32 cm PREFABRICADA FIBRA VIDRIO S/GRAVILLA",
+      "cantidad": 3.00,
+      "precio": 142.31,
+      "importe": 426.93
+    },
+    {
+      "codigo": "m23U10C230",
+      "descripcion": "ARQUETA Ø30 cm PREFABRICADA POLIETILENO",
+      "cantidad": 3.00,
+      "precio": 37.00,
+      "importe": 111.00
+    },
+    {
+      "codigo": "m23U10AF550",
+      "descripcion": "BOCA ACOPLE RÁPIDO 1\"",
+      "cantidad": 3.00,
+      "precio": 136.17,
+      "importe": 408.51
+    },
+    {
+      "codigo": "m23U10AF570",
+      "descripcion": "LLAVE PARA BOCA 1\"",
+      "cantidad": 3.00,
+      "precio": 95.35,
+      "importe": 286.05
+    },
+    {
+      "codigo": "APUDm23U10AF02u0d",
+      "descripcion": "REVISIÓN Y CONEXIÓN A RED DE RIEGO EXISTENTE",
+      "cantidad": 1.00,
+      "precio": 1466.30,
+      "importe": 1466.30
+    }
+  ]
+}

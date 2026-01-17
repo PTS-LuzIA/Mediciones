@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 7235,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n03 FASE 4 03.04.02 PAVIMENTO PERMEABLE RECORRIDOS PRINCIPALES APUDm23U05F030m2 PAVIMENTO PERMEABLE 1202,00 57,26 68.826,52 Suministro y colocación de pavimento permeable incluidas subbases, formado por hormigón poroso (e=10 cm) con una capacidad drenante de 500 l/(m2 x minu- to) con un 20% de huecos sobre capa de gravas finas (e=10 cm) que se apoyan sobre capa de gravas medias (e=15 cm) y a su vez sobre capa de gravas gruesas (e=4"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 1430,
+      "content_preview": "Extrae partidas del capítulo 03\n\nFORMATO DE PARTIDA:\nCada línea tiene este formato: CÓDIGO UNIDAD DESCRIPCIÓN CANTIDAD PRECIO IMPORTE\n\nEjemplo de línea:\nm23U01BP010 m2 DEMOLICIÓN MEDIOS MECÁNICOS PAVIMENTO ASFÁLTICO 450,40 2,34 1.053,94\n\nExtracción correcta:\n- codigo: \"m23U01BP010\" (TODO hasta el primer espacio, incluye letras y números)\n- unidad: \"m2\" (IGNORAR, no incluir en el código)\n- cantidad: 450.40\n- precio: 2.34\n- importe: 1053.94\n\nOtro ejemplo:\nAPUI_003 d ALQUILER DIARIO DE GRUA SOBRE C"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "capitulo_codigo": "03",
+  "partidas": [
+    {
+      "codigo": "E02W020",
+      "cantidad": 45.20,
+      "precio": 34.73,
+      "importe": 1569.00
+    },
+    {
+      "codigo": "m23U14A270",
+      "cantidad": 22.60,
+      "precio": 45.30,
+      "importe": 1023.00
+    },
+    {
+      "codigo": "m23U02G060",
+      "cantidad": 113.00,
+      "precio": 3.95,
+      "importe": 446.00
+    }
+  ]
+}

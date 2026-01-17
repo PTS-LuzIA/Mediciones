@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+
+{% block title %}Subir PDF con IA - MVP Mediciones{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>🤖 Procesar con IA (Gemini 2.5 Flash Lite)</h2>
+    <p style="margin: 20px 0; color: #6c757d;">
+        Sube un PDF de presupuesto y elige el método de procesamiento
+    </p>
+
+    <div class="alert alert-success">
+        <strong>✨ Ventajas del procesamiento con IA:</strong>
+        <ul style="margin: 10px 0 0 20px;">
+            <li>Extracción automática completa del presupuesto</li>
+            <li>Detección inteligente de jerarquías (Capítulos, Subcapítulos, Partidas)</li>
+            <li>Nivel de confianza para cada elemento extraído</li>
+            <li>Detección de inconsistencias y anomalías</li>
+            <li>Procesamiento rápido de documentos complejos</li>
+        </ul>
+    </div>
+
+    <form id="uploadForm" enctype="multipart/form-data">
+        <div class="upload-zone" id="uploadZone">
+            <input type="file" id="fileInput" name="file" accept=".pdf" style="display: none;">
+            <div id="uploadContent">
+                <h3 style="color: #667eea; margin-bottom: 10px;">📄 Seleccionar PDF</h3>
+                <p style="color: #6c757d;">Formatos soportados: PDF con presupuestos de construcción</p>
+                <p style="color: #6c757d; font-size: 0.9em; margin-top: 10px;">
+                    Click aquí o arrastra el archivo
+                </p>
+            </div>
+            <div id="fileInfo" style="display: none;">
+                <h3 style="color: #28a745; margin-bottom: 10px;">✓ Archivo seleccionado</h3>
+                <p id="fileName" style="color: #333; font-weight: 600;"></p>
+                <p id="fileSize" style="color: #6c757d; font-size: 0.9em;"></p>
+
+                <!-- Selector de método -->
+                <div style="margin: 20px 0; padding: 15px; background: #f8f9ff; border-radius: 8px; border-left: 4px solid #667eea;">
+                    <h4 style="margin: 0 0 15px 0; color: #667eea;">Elige el método de procesamiento:</h4>
+
+                    <label style="display: block; padding: 15px; background: white; border-radius: 5px; border: 2px solid #667eea; margin-bottom: 10px; cursor: pointer;">
+                        <input type="radio" name="method" value="phased" checked style="margin-right: 10px;">
+                        <strong style="color: #667eea;">⚡ Nuevo: Procesamiento por Fases (Recomendado)</strong>
+                        <p style="margin: 10px 0 0 25px; color: #6c757d; font-size: 0.9em;">
+                            Primero extrae la estructura (capítulos/subcapítulos), luego las partidas. Más rápido y preciso.
+                        </p>
+                    </label>
+
+                    <label style="display: block; padding: 15px; background: white; border-radius: 5px; border: 2px solid #dee2e6; cursor: pointer;">
+                        <input type="radio" name="method" value="complete" style="margin-right: 10px;">
+                        <strong style="color: #6c757d;">🔄 Antiguo: Procesamiento Completo</strong>
+                        <p style="margin: 10px 0 0 25px; color: #6c757d; font-size: 0.9em;">
+                            Extrae todo de una vez (hasta 20 peticiones). Más lento pero probado.
+                        </p>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-success" style="margin-top: 10px;">
+                    🤖 Subir y Procesar
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <p><strong>Procesando con Gemini AI...</strong></p>
+        <p style="color: #6c757d; font-size: 0.9em; margin-top: 10px;">
+            La IA está analizando el documento completo. Esto puede tardar entre 30 segundos y 2 minutos.
+        </p>
+        <p style="color: #6c757d; font-size: 0.85em; margin-top: 15px;">
+            💡 El modelo está extrayendo capítulos, subcapítulos, partidas, precios y calculando niveles de confianza...
+        </p>
+    </div>
+</div>
+
+<div class="card">
+    <h3>ℹ️ Información del Procesamiento</h3>
+    <table style="margin-top: 15px;">
+        <tr>
+            <td style="padding: 10px;"><strong>Modelo usado:</strong></td>
+            <td style="padding: 10px;">Grok 4.1 Fast (xAI)</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px;"><strong>Proveedor:</strong></td>
+            <td style="padding: 10px;">OpenRouter API</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px;"><strong>Capacidades:</strong></td>
+            <td style="padding: 10px;">Visión multimodal, JSON estructurado</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px;"><strong>Campos extraídos:</strong></td>
+            <td style="padding: 10px;">Código, Unidad, Resumen, Descripción, Cantidad, Precio, Importe</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px;"><strong>Extras:</strong></td>
+            <td style="padding: 10px;">Nivel de confianza (0-100%), Notas de la IA</td>
+        </tr>
+    </table>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    const uploadZone = document.getElementById('uploadZone');
+    const fileInput = document.getElementById('fileInput');
+    const uploadContent = document.getElementById('uploadContent');
+    const fileInfo = document.getElementById('fileInfo');
+    const fileName = document.getElementById('fileName');
+    const fileSize = document.getElementById('fileSize');
+    const uploadForm = document.getElementById('uploadForm');
+    const loading = document.getElementById('loading');
+
+    // Click para abrir selector
+    uploadZone.addEventListener('click', (e) => {
+        if (e.target.tagName !== 'BUTTON') {
+            fileInput.click();
+        }
+    });
+
+    // Drag & Drop
+    uploadZone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        uploadZone.classList.add('dragover');
+    });
+
+    uploadZone.addEventListener('dragleave', () => {
+        uploadZone.classList.remove('dragover');
+    });
+
+    uploadZone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        uploadZone.classList.remove('dragover');
+
+        const files = e.dataTransfer.files;
+        if (files.length > 0 && files[0].type === 'application/pdf') {
+            fileInput.files = files;
+            showFileInfo(files[0]);
+        }
+    });
+
+    // Cuando se selecciona archivo
+    fileInput.addEventListener('change', (e) => {
+        if (e.target.files.length > 0) {
+            showFileInfo(e.target.files[0]);
+        }
+    });
+
+    function showFileInfo(file) {
+        fileName.textContent = file.name;
+        fileSize.textContent = formatBytes(file.size);
+        uploadContent.style.display = 'none';
+        fileInfo.style.display = 'block';
+    }
+
+    function formatBytes(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
+    }
+
+    // Submit form
+    uploadForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        if (fileInput.files.length === 0) {
+            alert('Por favor, selecciona un archivo PDF');
+            return;
+        }
+
+        // Obtener método seleccionado
+        const method = document.querySelector('input[name="method"]:checked').value;
+
+        // Mostrar loading con mensaje apropiado
+        uploadZone.style.display = 'none';
+        const loadingMsg = loading.querySelector('p strong');
+        const loadingDetail = loading.querySelectorAll('p')[1];
+
+        if (method === 'phased') {
+            loadingMsg.textContent = 'Subiendo PDF...';
+            loadingDetail.textContent = 'El archivo se está guardando. Podrás extraer la estructura desde la página de detalle.';
+        } else {
+            loadingMsg.textContent = 'Procesando con Gemini AI...';
+            loadingDetail.textContent = 'La IA está analizando el documento completo. Esto puede tardar varios minutos.';
+        }
+
+        loading.classList.add('active');
+
+        try {
+            // Submit
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+
+            // Elegir endpoint según método
+            const endpoint = method === 'phased' ? '/ai-upload-simple' : '/ai-upload';
+
+            const response = await fetch(`http://localhost:3013${endpoint}`, {
+                method: 'POST',
+                body: formData
+            });
+
+            if (!response.ok) {
+                const error = await response.json();
+                throw new Error(error.detail || 'Error al procesar PDF');
+            }
+
+            const data = await response.json();
+
+            if (data.success && data.proyecto_id) {
+                // Redirigir al detalle del proyecto
+                window.location.href = `/ai-proyecto/${data.proyecto_id}`;
+            } else {
+                throw new Error('Respuesta inválida del servidor');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Error: ' + error.message);
+            loading.classList.remove('active');
+            uploadZone.style.display = 'block';
+        }
+    });
+</script>
+{% endblock %}

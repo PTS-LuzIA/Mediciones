@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 1698,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n02 FASE 3 02.04.06 CAMINOS DE MADERA U04VBM020 m2 PAVIMENTO RODAJAS PINO S/ENCACHADO 53,20 179,36 9.541,95 Pavimento de rodajas de pino tanalizadas en autoclave, de 15 cm de espesor, co- locadas sobre encachado de piedra de 20 cm de espesor, por intermedio de una lámina de geotextil de 125 g/m2, i/relleno y retacado de juntas con jabre cribado seleccionado y p.p. de encuentros y bordes, terminado. m23E11D030 m2 RECRECIDO 5 cm. MOR"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 455,
+      "content_preview": "Extrae partidas del capítulo 02\n\nJSON:\n{\n  \"capitulo_codigo\": \"02\",\n  \"partidas\": [\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n},\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n}\n  ]\n}\n\nReglas:\n1. NO repetir códigos\n2. NO incluir totales\n3. NO incluir campo subcapitulo_codigo\n4. Extrae TODAS las partidas\n\nVALIDACIÓN (antes de enviar):\n1. cantidad × precio = importe (CADA partida)\n2. Códigos únicos\n3. Revisa primera y última partida"
+    }
+  ]
+}

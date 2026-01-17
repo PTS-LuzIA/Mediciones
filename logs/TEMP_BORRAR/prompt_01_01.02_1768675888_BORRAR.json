@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 9106,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n01 FASE 2 01.02 DEMOLICIONES m23U01A010 m LEVANTADO DE BORDILLO 1,00 3,99 3,99 Levantado de bordillo, con recuperación del mismo incluso retirada y carga, o aco- pio en obra, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008. APUDm23U01A010m.1 LEVANTADO DE BORDILLO DE GRANITO CON RECUPERACIÓN 96,00 9,17 880,32 Levantado de bordillo, con recuperación del mismo incluso retirada y carga, o aco- pio en obra, inc"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 4425,
+      "content_preview": "Extrae partidas del capítulo 01\n\nIMPORTANTE: El campo \"resumen\" es OBLIGATORIO. Extrae el título/descripción corta de la partida (máximo 100 caracteres).\n\nFORMATO DE PARTIDA:\nCada línea tiene este formato: CÓDIGO UNIDAD DESCRIPCIÓN CANTIDAD PRECIO IMPORTE\n\nIMPORTANTE: Los 3 valores numéricos (CANTIDAD, PRECIO, IMPORTE) están SIEMPRE al FINAL de la línea.\nSi la descripción contiene números (ejemplo: \"14,65 m2\"), IGNÓRALOS y extrae los ÚLTIMOS 3 NÚMEROS.\n\nCASOS ESPECIALES - CÓDIGOS PEGADOS SIN ESP"
+    }
+  ]
+}

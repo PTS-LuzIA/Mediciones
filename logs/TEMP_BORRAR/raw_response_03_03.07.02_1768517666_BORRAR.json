@@ -1,0 +1,54 @@
+{
+  "capitulo_codigo": "03",
+  "partidas": [
+    {
+      "codigo": "m23U13KB020",
+      "unidad": "ud",
+      "cantidad": 30.00,
+      "precio": 190.68,
+      "importe": 5720.40
+    },
+    {
+      "codigo": "m23U13KA180",
+      "unidad": "m",
+      "cantidad": 396.00,
+      "precio": 10.70,
+      "importe": 4237.20
+    },
+    {
+      "codigo": "m23U13KC040",
+      "unidad": "ud",
+      "cantidad": 1.00,
+      "precio": 156.65,
+      "importe": 156.65
+    },
+    {
+      "codigo": "m23U13KC100",
+      "unidad": "ud",
+      "cantidad": 30.00,
+      "precio": 226.17,
+      "importe": 6785.10
+    },
+    {
+      "codigo": "m23U13KC050",
+      "unidad": "ud",
+      "cantidad": 1.00,
+      "precio": 311.65,
+      "importe": 311.65
+    },
+    {
+      "codigo": "m23U13DQH070",
+      "unidad": "ud",
+      "cantidad": 1.00,
+      "precio": 96.44,
+      "importe": 96.44
+    },
+    {
+      "codigo": "m23U13KD120",
+      "unidad": "ud",
+      "cantidad": 1.00,
+      "precio": 175.09,
+      "importe": 175.09
+    }
+  ]
+}

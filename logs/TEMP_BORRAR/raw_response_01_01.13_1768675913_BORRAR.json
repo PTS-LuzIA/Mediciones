@@ -1,0 +1,187 @@
+{
+  "capitulo_codigo": "01",
+  "partidas": [
+    {
+      "codigo": "m23U02BZ090",
+      "resumen": "EXCAVACIÓN EN POZO A MANO",
+      "cantidad": 1.0,
+      "precio": 40.6,
+      "importe": 40.6
+    },
+    {
+      "codigo": "m23E02PCA030",
+      "resumen": "EXCAVACIÓN POZOS <2M. TERRENOS COMPACTOS C/MEDIOS MANUALES",
+      "cantidad": 13.35,
+      "precio": 46.1,
+      "importe": 615.44
+    },
+    {
+      "codigo": "m23U02F040",
+      "resumen": "COMPACTACIÓN FONDO ZANJA",
+      "cantidad": 20.62,
+      "precio": 0.55,
+      "importe": 11.34
+    },
+    {
+      "codigo": "m23E04CM010",
+      "resumen": "HORMIGÓN LIMPIEZA HM-20/B/20/XC2 o XC3 VERTIDO MANUAL",
+      "cantidad": 1.8,
+      "precio": 169.18,
+      "importe": 304.52
+    },
+    {
+      "codigo": "m23E04CE020",
+      "resumen": "ENCOFRADO MADERA EN ZAPATAS/VIGAS/ENCEPADOS",
+      "cantidad": 1.0,
+      "precio": 29.13,
+      "importe": 29.13
+    },
+    {
+      "codigo": "m23E04CM050",
+      "resumen": "HORMIGÓN HA-25/B/20/XC2 o XC3 VERTIDO MANUAL",
+      "cantidad": 10.76,
+      "precio": 121.36,
+      "importe": 1305.83
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "resumen": "ACERO BARRAS CORRUGADAS B 500 S",
+      "cantidad": 436.64,
+      "precio": 2.4,
+      "importe": 1047.94
+    },
+    {
+      "codigo": "m23U03I010",
+      "resumen": "HORMIGÓN EN MASA HM-20/B/20/XC2 o XC3 CEM II EN ANCLAJES Y PLATAFORMA",
+      "cantidad": 0.97,
+      "precio": 157.65,
+      "importe": 152.92
+    },
+    {
+      "codigo": "APUDV_BAM37I.26ud",
+      "resumen": "PÉRGOLA HABANA MÓDULO 5X2.5M",
+      "cantidad": 13.0,
+      "precio": 5634.03,
+      "importe": 73242.39
+    },
+    {
+      "codigo": "m23E09IMS020",
+      "resumen": "CUBIERTA CHAPA PRELACADA 0,6 MM I/REMATES",
+      "cantidad": 162.5,
+      "precio": 48.23,
+      "importe": 7837.38
+    },
+    {
+      "codigo": "APUDm23U16D030ud",
+      "resumen": "BANCO ANILLO VERDE O EQUIVALENTE L=3,00M",
+      "cantidad": 5.0,
+      "precio": 1202.06,
+      "importe": 6010.3
+    },
+    {
+      "codigo": "APUI_V_UAGAR11uR",
+      "resumen": "SERIE DOMO - R11R BANCO ORGÁNICO",
+      "cantidad": 1.0,
+      "precio": 955.88,
+      "importe": 955.88
+    },
+    {
+      "codigo": "m23U16D210ud",
+      "resumen": "BANCO HORMIGÓN 200X50X45 CM O SIMILAR (MM00501)",
+      "cantidad": 34.0,
+      "precio": 1026.92,
+      "importe": 34915.28
+    },
+    {
+      "codigo": "m23U03L030",
+      "resumen": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 o XC3 CEM II",
+      "cantidad": 1.1,
+      "precio": 155.35,
+      "importe": 170.89
+    },
+    {
+      "codigo": "m23U04CB020",
+      "resumen": "ENCOFRADO MADERA CARA VISTA MURO",
+      "cantidad": 22.5,
+      "precio": 30.5,
+      "importe": 686.25
+    },
+    {
+      "codigo": "m23U04DM015",
+      "resumen": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 o XC3, MUROS",
+      "cantidad": 5.5,
+      "precio": 163.79,
+      "importe": 900.85
+    },
+    {
+      "codigo": "U15MM050",
+      "resumen": "MESA MADERA/TUBO ACERO CON 4 BANCOS 1,00 M",
+      "cantidad": 2.0,
+      "precio": 778.91,
+      "importe": 1557.82
+    },
+    {
+      "codigo": "m23U16IF120",
+      "resumen": "FUENTE DE BEBER DE ACERO CON DOS CUBETAS A DIFERENTE ALTURA",
+      "cantidad": 1.0,
+      "precio": 1400.56,
+      "importe": 1400.56
+    },
+    {
+      "codigo": "APUDm23U16C030ud",
+      "resumen": "PAPELERA MODELO CIBÉLES DE 50 L",
+      "cantidad": 6.0,
+      "precio": 387.32,
+      "importe": 2323.92
+    },
+    {
+      "codigo": "m23U16M150",
+      "resumen": "BARANDILLA DE BARROTES VERTICALES ZONA 2",
+      "cantidad": 52.5,
+      "precio": 224.21,
+      "importe": 11771.03
+    },
+    {
+      "codigo": "m23U16M090",
+      "resumen": "BARANDILLA DE BARROTES VERTICALES DOBLE PASAMANOS MU-57",
+      "cantidad": 98.7,
+      "precio": 219.23,
+      "importe": 21638.0
+    },
+    {
+      "codigo": "m23U16M100",
+      "resumen": "DOBLE PASAMANOS S/MURO O POSTE MU-57",
+      "cantidad": 22.0,
+      "precio": 130.57,
+      "importe": 2872.54
+    },
+    {
+      "codigo": "APUI_V_mU16CORU7110S0UMINISTRO",
+      "resumen": "E INSTALACIÓN DE TOBOGÁN DE LADERA REFERENCIA COR711001-3030",
+      "cantidad": 1.0,
+      "precio": 13290.03,
+      "importe": 13290.03
+    },
+    {
+      "codigo": "APUI_V_mU16ELEU40002S2UMINISTRO",
+      "resumen": "E INSTALACIÓN DE BALANCÍN REFERENCIA ELE400022 DE JUEGOS",
+      "cantidad": 1.0,
+      "precio": 3742.25,
+      "importe": 3742.25
+    },
+    {
+      "codigo": "APUI_V_UAGAR52u06",
+      "resumen": "R5206 - TRIPLE BARRA DE EQUILIBRIO DE ESTIMULACIÓN TEMPRANA",
+      "cantidad": 1.0,
+      "precio": 932.12,
+      "importe": 932.12
+    },
+    {
+      "codigo": "m23E28ZB335",
+      "resumen": "RED PARABALONES FUTBOL-7 H=4 M CON POSTES",
+      "cantidad": 130.0,
+      "precio": 74.31,
+      "importe": 9660.3
+    }
+  ]
+}

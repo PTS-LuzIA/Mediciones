@@ -1,0 +1,59 @@
+{
+  "capitulo_codigo": "03",
+  "partidas": [
+    {
+      "codigo": "U14A110",
+      "cantidad": 100.00,
+      "precio": 1.71,
+      "importe": 171.00
+    },
+    {
+      "codigo": "U14A120",
+      "cantidad": 1632.00,
+      "precio": 0.94,
+      "importe": 1534.08
+    },
+    {
+      "codigo": "U13AM090",
+      "cantidad": 1027.00,
+      "precio": 0.93,
+      "importe": 955.11
+    },
+    {
+      "codigo": "U13AM100",
+      "cantidad": 705.00,
+      "precio": 16.73,
+      "importe": 11794.65
+    },
+    {
+      "codigo": "U14A170",
+      "cantidad": 1.00,
+      "precio": 47.70,
+      "importe": 47.70
+    },
+    {
+      "codigo": "U14A150",
+      "cantidad": 1.00,
+      "precio": 345.21,
+      "importe": 345.21
+    },
+    {
+      "codigo": "U14O060",
+      "cantidad": 1.00,
+      "precio": 0.63,
+      "importe": 0.00
+    },
+    {
+      "codigo": "U14A350",
+      "cantidad": 148.00,
+      "precio": 30.45,
+      "importe": 4506.60
+    },
+    {
+      "codigo": "E02TRT090",
+      "cantidad": 259.80,
+      "precio": 12.08,
+      "importe": 3138.44
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "capitulo_codigo": "03",
+  "partidas": [
+    {
+      "codigo": "m23U02BZ090",
+      "resumen": "EXCAVACIÓN EN POZO A MANO",
+      "cantidad": 1.00,
+      "precio": 40.60,
+      "importe": 40.60
+    },
+    {
+      "codigo": "m23E02PCA030",
+      "resumen": "EXCAVACIÓN POZOS <2m. TERRENOS COMPACTOS C/MEDIOS MANUALES",
+      "cantidad": 17.11,
+      "precio": 46.10,
+      "importe": 788.77
+    },
+    {
+      "codigo": "m23U02F040",
+      "resumen": "COMPACTACIÓN FONDO ZANJA",
+      "cantidad": 24.08,
+      "precio": 0.55,
+      "importe": 13.24
+    },
+    {
+      "codigo": "m23E04CM010",
+      "resumen": "HORMIGÓN LIMPIEZA HM-20/B/20/XC2 o XC3 VERTIDO MANUAL",
+      "cantidad": 14.34,
+      "precio": 169.18,
+      "importe": 2426.04
+    },
+    {
+      "codigo": "m23E04CE020",
+      "resumen": "ENCOFRADO MADERA EN ZAPATAS/VIGAS/ENCEPADOS",
+      "cantidad": 1.00,
+      "precio": 29.13,
+      "importe": 29.13
+    },
+    {
+      "codigo": "m23E04CM050",
+      "resumen": "HORMIGÓN HA-25/B/20/XC2 o XC3 VERTIDO MANUAL",
+      "cantidad": 12.29,
+      "precio": 121.36,
+      "importe": 1491.51
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "resumen": "ACERO BARRAS CORRUGADAS B 500 S",
+      "cantidad": 499.01,
+      "precio": 2.40,
+      "importe": 1197.62
+    },
+    {
+      "codigo": "m23U03I010",
+      "resumen": "HORMIGÓN EN MASA HM-20/B/20/XC2 o XC3 CEM II EN ANCLAJES Y PLATAFORMA",
+      "cantidad": 1.22,
+      "precio": 157.65,
+      "importe": 192.33
+    },
+    {
+      "codigo": "APUDV_BAM37I.26ud",
+      "resumen": "PÉRGOLA HABANA MÓDULO 5X2.5M",
+      "cantidad": 13.00,
+      "precio": 5634.03,
+      "importe": 73242.39
+    },
+    {
+      "codigo": "APUDm23U16D030ud",
+      "resumen": "BANCO ANILLO VERDE O EQUIVALENTE L=3,00m",
+      "cantidad": 8.00,
+      "precio": 1202.06,
+      "importe": 9616.48
+    },
+    {
+      "codigo": "APUI_V_UAGAR11uR",
+      "resumen": "SERIE DOMO - R11R BANCO ORGÁNICO",
+      "cantidad": 6.00,
+      "precio": 955.88,
+      "importe": 5735.28
+    },
+    {
+      "codigo": "APUDm23U16D010ud",
+      "resumen": "BANCO TRONCO MADERA DE PINO L=2,00m",
+      "cantidad": 4.00,
+      "precio": 804.67,
+      "importe": 3218.68
+    },
+    {
+      "codigo": "APUDU15SD090",
+      "resumen": "TÚNEL MADERA",
+      "cantidad": 2.00,
+      "precio": 1375.01,
+      "importe": 2750.02
+    },
+    {
+      "codigo": "APUDm23U16C030ud",
+      "resumen": "PAPELERA MODELO CIBÉLES DE 50 L",
+      "cantidad": 6.00,
+      "precio": 387.32,
+      "importe": 2323.92
+    },
+    {
+      "codigo": "APUI_V_UAGAR20u20RR2020R",
+      "resumen": "MESA EN PLÁSTICO RECICLADO",
+      "cantidad": 4.00,
+      "precio": 1061.88,
+      "importe": 4247.52
+    },
+    {
+      "codigo": "m23U16M150",
+      "resumen": "BARANDILLA DE BARROTES VERTICALES ZONA 2",
+      "cantidad": 1.00,
+      "precio": 224.21,
+      "importe": 224.21
+    },
+    {
+      "codigo": "m23U16M100",
+      "resumen": "DOBLE PASAMANOS S/MURO O POSTE MU-57",
+      "cantidad": 1.00,
+      "precio": 130.57,
+      "importe": 130.57
+    },
+    {
+      "codigo": "APUI_V_mU16NROU822",
+      "resumen": "SUMINISTRO E INSTALACIÓN DE EQUIPO REFERENCIA NRO824 DE JUEGOS KOMPAN",
+      "cantidad": 5.00,
+      "precio": 603.54,
+      "importe": 3017.70
+    },
+    {
+      "codigo": "APUI_V_mU16NROU854",
+      "resumen": "SUMINISTRO E INSTALACIÓN DE PARKOUR REFERENCIA NRO854 DE JUEGOS KOMPAN",
+      "cantidad": 1.00,
+      "precio": 11110.84,
+      "importe": 11110.84
+    },
+    {
+      "codigo": "APUI_V_mU16PCMU1101S2U1",
+      "resumen": "SUMINISTRO E INSTALACIÓN DE TOBOGÁN DE LADERA PCM110103 DE JUEGOS",
+      "cantidad": 1.00,
+      "precio": 6053.43,
+      "importe": 6053.43
+    },
+    {
+      "codigo": "m23U16E090",
+      "resumen": "ESCALADA ROCÓDROMO h=2 m",
+      "cantidad": 1.00,
+      "precio": 2126.06,
+      "importe": 2126.06
+    }
+  ]
+}

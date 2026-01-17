@@ -1,0 +1,159 @@
+{
+  "capitulo_codigo": "02",
+  "partidas": [
+    {
+      "codigo": "m23U01A010",
+      "resumen": "LEVANTADO DE BORDILLO",
+      "cantidad": 1.00,
+      "precio": 3.99,
+      "importe": 3.99
+    },
+    {
+      "codigo": "m23U01A010m.1",
+      "resumen": "LEVANTADO DE BORDILLO DE GRANITO CON RECUPERACIÓN",
+      "cantidad": 1.00,
+      "precio": 9.17,
+      "importe": 9.17
+    },
+    {
+      "codigo": "m23U01A010m.2",
+      "resumen": "LEVANTADO DE BORDILLO SIN RECUPERACIÓN",
+      "cantidad": 275.50,
+      "precio": 3.99,
+      "importe": 1099.25
+    },
+    {
+      "codigo": "m23U02H010",
+      "resumen": "TRANSPORTE BORDILLO RECUPERADO",
+      "cantidad": 1.00,
+      "precio": 9.97,
+      "importe": 9.97
+    },
+    {
+      "codigo": "m23U01BP010",
+      "resumen": "DEMOLICIÓN MEDIOS MECÁNICOS PAVIMENTO ASFÁLTICO E<12 cm",
+      "cantidad": 316.80,
+      "precio": 2.34,
+      "importe": 741.31
+    },
+    {
+      "codigo": "m23U01BP020",
+      "resumen": "DEMOLICIÓN COMPRESOR PAVIMENTO ASFÁLTICO E<12cm",
+      "cantidad": 79.20,
+      "precio": 4.60,
+      "importe": 364.32
+    },
+    {
+      "codigo": "m23E01DPP120",
+      "resumen": "DEMOLICIÓN PAVIMENTO FLEXIBLE",
+      "cantidad": 292.00,
+      "precio": 3.74,
+      "importe": 1092.08
+    },
+    {
+      "codigo": "m23U01BP030",
+      "resumen": "DEMOLICIÓN COMPRESOR SOLADO ACERA",
+      "cantidad": 626.50,
+      "precio": 3.21,
+      "importe": 2011.07
+    },
+    {
+      "codigo": "m23U01BF030",
+      "resumen": "DEMOLICIÓN MEDIOS MECÁNICOS FIRME BASE HORMIGÓN",
+      "cantidad": 239.30,
+      "precio": 26.57,
+      "importe": 6358.20
+    },
+    {
+      "codigo": "m23U01BF040",
+      "resumen": "DEMOLICIÓN COMPRESOR FIRME BASE HORMIGÓN",
+      "cantidad": 59.83,
+      "precio": 65.43,
+      "importe": 3914.68
+    },
+    {
+      "codigo": "m23U01BB020",
+      "resumen": "DEMOLICIÓN COMPRESOR HORMIGÓN EN MASA",
+      "cantidad": 6.90,
+      "precio": 82.11,
+      "importe": 566.56
+    },
+    {
+      "codigo": "m23U01BB030",
+      "resumen": "DEMOLICIÓN MEDIOS MECÁNICOS HORMIGÓN ARMADO",
+      "cantidad": 34.04,
+      "precio": 47.29,
+      "importe": 1609.75
+    },
+    {
+      "codigo": "m23U01BB040",
+      "resumen": "DEMOLICIÓN COMPRESOR HORMIGÓN ARMADO",
+      "cantidad": 1.80,
+      "precio": 90.43,
+      "importe": 162.77
+    },
+    {
+      "codigo": "m23E01DM040",
+      "resumen": "DEMOLICIÓN CIMENTACIÓN HORMIGÓN ARMADO C/MAQUINARIA",
+      "cantidad": 3.06,
+      "precio": 141.92,
+      "importe": 434.28
+    },
+    {
+      "codigo": "m23E01DFL030",
+      "resumen": "DEMOLICIÓN FÁBRICA LADRILLO MACIZO 1 PIE C/MARTILLO ELÉCTRICO",
+      "cantidad": 3.00,
+      "precio": 37.81,
+      "importe": 113.43
+    },
+    {
+      "codigo": "m23E01DFL040",
+      "resumen": "DEMOLICIÓN FÁBRICA LADRILLO MACIZO 1/2 PIE C/MEDIOS MANUALES",
+      "cantidad": 1.00,
+      "precio": 22.22,
+      "importe": 22.22
+    },
+    {
+      "codigo": "m23U01BB100",
+      "resumen": "DEMOLICIÓN MEDIOS MECÁNICOS LADRILLO MACIZO 1 PIE",
+      "cantidad": 1.00,
+      "precio": 7.44,
+      "importe": 7.44
+    },
+    {
+      "codigo": "m23E01DPW010",
+      "resumen": "DEMOLICIÓN PELDAÑOS LADRILLO C/MARTILLO ELÉCTRICO",
+      "cantidad": 1.00,
+      "precio": 21.33,
+      "importe": 21.33
+    },
+    {
+      "codigo": "m23E10IR040",
+      "resumen": "IMPERMEABILIZACIÓN MURO MORTERO HIDRÓFUGO",
+      "cantidad": 1.00,
+      "precio": 33.47,
+      "importe": 33.47
+    },
+    {
+      "codigo": "m23E01DKA020",
+      "resumen": "LEVANTADO CARPINTERÍA METÁLICA EN MUROS C/MEDIOS MANUALES",
+      "cantidad": 1.00,
+      "precio": 12.74,
+      "importe": 12.74
+    },
+    {
+      "codigo": "m23U01BB060",
+      "resumen": "DEMOLICIÓN COMPRESOR FÁBRICA LADRILLO MACIZO",
+      "cantidad": 1.00,
+      "precio": 45.99,
+      "importe": 45.99
+    },
+    {
+      "codigo": "m23M02PTD010",
+      "resumen": "Plataforma elevadora de tijera diesel hasta 10 m altura",
+      "cantidad": 25.00,
+      "precio": 13.35,
+      "importe": 333.75
+    }
+  ]
+}

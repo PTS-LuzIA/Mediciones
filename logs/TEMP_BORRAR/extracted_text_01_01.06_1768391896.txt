@@ -1,0 +1,10 @@
+=== TEXTO EXTRAÍDO ===
+Capítulo: 01
+Subcapítulos: ['01.06']
+Caracteres: 1684
+Líneas: 25
+PDF: hybrid_20260114_002108_PRESUPUESTOS PARCIALES NAVAS DE TOLOSA.pdf
+
+================================================================================
+
+01 FASE 2 01.06 ESCALERA m23U03L030 m3 HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 o XC3 CEM II 2,03 155,35 315,36 Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011. m23U04DH050 m3 HORMIGÓN PARA ARMAR HA-25/B/20/XC2 o XC3 EN LOSA HORIZONTAL 4,05 111,36 451,01 Suministro y puesta en obra de hormigón para armar, moldeado y vibrado, en lo- sas horizontales y forjados de cualquier forma y dimensión y colocado a cualquier altura, con HA-25/B/20/XC2 o XC3, con árido procedente de cantera, de tamaño máximo 20 mm y consistencia plástica. m23U04DJ020 kg ACERO BARRAS CORRUGADAS B 500 S 243,00 2,40 583,20 Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011. m23E28ZJ230 ud PELDAÑO DOBLE PREFABRICADO HORMIGÓN 48,00 98,45 4.725,60 Peldaño doble prefabricado de hormigón con tabica de 15cm., huella de 30cm. y longitud de 120cm., con un peso por unidad de 185kg., i/montaje con grúa y colo- cación. TOTAL 01.06........................................................................................... 6.075,17

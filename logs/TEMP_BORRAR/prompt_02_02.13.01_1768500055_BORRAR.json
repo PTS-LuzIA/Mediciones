@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 1380,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n02 FASE 3 02.13.01 ESTABILIZACIÓN DE LOS PUNTOS DE ENTRADA Y SALIDA A LA OBRA m23U03EB015 m3 HORMIGÓN EN MASA HM-15/B/40/XC2 o XC3 CEM II EN BASES 1,20 145,20 174,24 Suministro y puesta en obra de hormigón en masa, vibrado y moldeado en su ca- so, en base de calzadas, solera de aceras, pistas deportivas o paseos, cimiento de bordillos y escaleras, con HM-15/B/40/XC2 o XC3 (CEM-II), con árido proce- dente de cantera, de tamaño máxi"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 1430,
+      "content_preview": "Extrae partidas del capítulo 02\n\nFORMATO DE PARTIDA:\nCada línea tiene este formato: CÓDIGO UNIDAD DESCRIPCIÓN CANTIDAD PRECIO IMPORTE\n\nEjemplo de línea:\nm23U01BP010 m2 DEMOLICIÓN MEDIOS MECÁNICOS PAVIMENTO ASFÁLTICO 450,40 2,34 1.053,94\n\nExtracción correcta:\n- codigo: \"m23U01BP010\" (TODO hasta el primer espacio, incluye letras y números)\n- unidad: \"m2\" (IGNORAR, no incluir en el código)\n- cantidad: 450.40\n- precio: 2.34\n- importe: 1053.94\n\nOtro ejemplo:\nAPUI_003 d ALQUILER DIARIO DE GRUA SOBRE C"
+    }
+  ]
+}

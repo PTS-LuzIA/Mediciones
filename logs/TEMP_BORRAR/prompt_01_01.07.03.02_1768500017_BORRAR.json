@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 4822,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n01 FASE 2 01.07.03.02 CERRAJERÍA APUDm23U04KA0k1g0 ACERO LAMINADO S275JR EN PERFILES 5549,15 5,23 29.022,05 Acero laminado tipo S275JR, en perfiles, según peso teórico para preparar en ta- ller sobre cercos. Conforme a ORDEN FOM/1382/2002-PG3-Art. 640. Según UNE-EN 10025-1:2006, NTE-EAS, NTE-EAV, CTE DB-SE-A y EAE. Acero con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011. APUDE04AB040 kg ACERO EN BAR"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 1430,
+      "content_preview": "Extrae partidas del capítulo 01\n\nFORMATO DE PARTIDA:\nCada línea tiene este formato: CÓDIGO UNIDAD DESCRIPCIÓN CANTIDAD PRECIO IMPORTE\n\nEjemplo de línea:\nm23U01BP010 m2 DEMOLICIÓN MEDIOS MECÁNICOS PAVIMENTO ASFÁLTICO 450,40 2,34 1.053,94\n\nExtracción correcta:\n- codigo: \"m23U01BP010\" (TODO hasta el primer espacio, incluye letras y números)\n- unidad: \"m2\" (IGNORAR, no incluir en el código)\n- cantidad: 450.40\n- precio: 2.34\n- importe: 1053.94\n\nOtro ejemplo:\nAPUI_003 d ALQUILER DIARIO DE GRUA SOBRE C"
+    }
+  ]
+}

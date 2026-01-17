@@ -1,0 +1,41 @@
+{
+  "capitulo_codigo": "03",
+  "partidas": [
+    {
+      "codigo": "3U01C190",
+      "cantidad": 2.00,
+      "precio": 26.89,
+      "importe": 53.78
+    },
+    {
+      "codigo": "3U13IC020",
+      "cantidad": 2.00,
+      "precio": 47.36,
+      "importe": 94.72
+    },
+    {
+      "codigo": "3E01DKW010",
+      "cantidad": 234.00,
+      "precio": 11.89,
+      "importe": 2781.26
+    },
+    {
+      "codigo": "3E01DKAm0220",
+      "cantidad": 142.50,
+      "precio": 12.74,
+      "importe": 1815.45
+    },
+    {
+      "codigo": "3U01C180",
+      "cantidad": 4.00,
+      "precio": 46.15,
+      "importe": 184.60
+    },
+    {
+      "codigo": "3M02PTD010",
+      "cantidad": 25.00,
+      "precio": 13.35,
+      "importe": 333.75
+    }
+  ]
+}

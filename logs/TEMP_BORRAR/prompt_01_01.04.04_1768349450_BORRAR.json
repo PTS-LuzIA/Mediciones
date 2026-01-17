@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 2695,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n01 FASE 2 01.04.04 TARIMA MADERA m23E02CA030 m3 EXCAVACIÓN VACIADOS TERRENOS COMPACTOS C/MEDIOS MANUALES 13,60 43,61 593,10 Excavación a cielo abierto, en terrenos compactos, por medios manuales, con ex- tracción de tierras a los bordes, en vaciados, sin carga ni transporte al vertedero y con p.p. de medios auxiliares. Según CTE DB-SE-C y NTE-ADV. m23E02SA020 m2 COMPACTACIÓN TERRENO A CIELO ABIERTO C/MEDIOS MECÁNICOS C/APORTE DE 6"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 455,
+      "content_preview": "Extrae partidas del capítulo 01\n\nJSON:\n{\n  \"capitulo_codigo\": \"01\",\n  \"partidas\": [\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n},\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n}\n  ]\n}\n\nReglas:\n1. NO repetir códigos\n2. NO incluir totales\n3. NO incluir campo subcapitulo_codigo\n4. Extrae TODAS las partidas\n\nVALIDACIÓN (antes de enviar):\n1. cantidad × precio = importe (CADA partida)\n2. Códigos únicos\n3. Revisa primera y última partida"
+    }
+  ]
+}

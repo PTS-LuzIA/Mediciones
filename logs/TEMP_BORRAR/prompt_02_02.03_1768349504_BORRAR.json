@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 22853,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n02 FASE 3 02.03 MOVIMIENTO DE TIERRAS m23E02AM010 m2 DESBROCE Y LIMPIEZA DEL TERRENO C/MEDIOS MECÁNICOS 667,00 1,03 687,01 Desbroce y limpieza superficial del terreno por medios mecánicos, sin carga ni transporte al vertedero y con p.p. de medios auxiliares. Según NTE-ADE. m23E02AM020 m2 RETIRADA CAPA TIERRA VEGETAL C/MEDIOS MECÁNICOS 112,00 1,55 173,60 Retirada y apilado de capa de tierra vegetal superficial, por medios mecánicos"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 455,
+      "content_preview": "Extrae partidas del capítulo 02\n\nJSON:\n{\n  \"capitulo_codigo\": \"02\",\n  \"partidas\": [\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n},\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n}\n  ]\n}\n\nReglas:\n1. NO repetir códigos\n2. NO incluir totales\n3. NO incluir campo subcapitulo_codigo\n4. Extrae TODAS las partidas\n\nVALIDACIÓN (antes de enviar):\n1. cantidad × precio = importe (CADA partida)\n2. Códigos únicos\n3. Revisa primera y última partida"
+    }
+  ]
+}

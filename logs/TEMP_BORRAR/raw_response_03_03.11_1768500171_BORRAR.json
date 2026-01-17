@@ -1,0 +1,113 @@
+{
+  "capitulo_codigo": "03",
+  "partidas": [
+    {
+      "codigo": "m23U02BZ090",
+      "cantidad": 1.00,
+      "precio": 40.60,
+      "importe": 40.60
+    },
+    {
+      "codigo": "m23E02PCA030",
+      "cantidad": 17.11,
+      "precio": 46.10,
+      "importe": 788.77
+    },
+    {
+      "codigo": "m23U02F040",
+      "cantidad": 24.08,
+      "precio": 0.55,
+      "importe": 13.24
+    },
+    {
+      "codigo": "m23E04CM010",
+      "cantidad": 14.34,
+      "precio": 169.18,
+      "importe": 2426.04
+    },
+    {
+      "codigo": "m23E04CE020",
+      "cantidad": 1.00,
+      "precio": 29.13,
+      "importe": 29.13
+    },
+    {
+      "codigo": "m23E04CM050",
+      "cantidad": 12.29,
+      "precio": 121.36,
+      "importe": 1491.51
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "cantidad": 499.01,
+      "precio": 2.40,
+      "importe": 1197.62
+    },
+    {
+      "codigo": "m23U03I010",
+      "cantidad": 1.22,
+      "precio": 157.65,
+      "importe": 192.33
+    },
+    {
+      "codigo": "APUDV_BAM37I.26ud",
+      "cantidad": 13.00,
+      "precio": 5634.03,
+      "importe": 73242.39
+    },
+    {
+      "codigo": "APUDm23U16D030ud",
+      "cantidad": 8.00,
+      "precio": 1202.06,
+      "importe": 9616.48
+    },
+    {
+      "codigo": "APUI_V_UAGAR11uR",
+      "cantidad": 6.00,
+      "precio": 955.88,
+      "importe": 5735.28
+    },
+    {
+      "codigo": "APUDm23U16D010ud",
+      "cantidad": 4.00,
+      "precio": 804.67,
+      "importe": 3218.68
+    },
+    {
+      "codigo": "APUDU15SD090",
+      "cantidad": 2.00,
+      "precio": 1375.01,
+      "importe": 2750.02
+    },
+    {
+      "codigo": "APUDm23U16C030ud",
+      "cantidad": 6.00,
+      "precio": 387.32,
+      "importe": 2323.92
+    },
+    {
+      "codigo": "APUI_V_mU16NROU822SUMINISTRO",
+      "cantidad": 5.00,
+      "precio": 603.54,
+      "importe": 3017.70
+    },
+    {
+      "codigo": "APUI_V_mU16NROU854SUMINISTRO",
+      "cantidad": 1.00,
+      "precio": 11110.84,
+      "importe": 11110.84
+    },
+    {
+      "codigo": "APUI_V_mU16PCMU1101S2U1MINISTRO",
+      "cantidad": 1.00,
+      "precio": 6053.43,
+      "importe": 6053.43
+    },
+    {
+      "codigo": "m23U16E090",
+      "cantidad": 1.00,
+      "precio": 2126.06,
+      "importe": 2126.06
+    }
+  ]
+}

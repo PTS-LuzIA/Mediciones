@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 9468,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n01 FASE 2 01.02 DEMOLICIONES m23U01A010 m LEVANTADO DE BORDILLO 1,00 3,99 3,99 Levantado de bordillo, con recuperación del mismo incluso retirada y carga, o aco- pio en obra, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008. APUDm23U01A010m.1 LEVANTADO DE BORDILLO DE GRANITO CON RECUPERACIÓN 96,00 9,17 880,32 Levantado de bordillo, con recuperación del mismo incluso retirada y carga, o aco- pio en obra, inc"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 455,
+      "content_preview": "Extrae partidas del capítulo 01\n\nJSON:\n{\n  \"capitulo_codigo\": \"01\",\n  \"partidas\": [\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n},\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n}\n  ]\n}\n\nReglas:\n1. NO repetir códigos\n2. NO incluir totales\n3. NO incluir campo subcapitulo_codigo\n4. Extrae TODAS las partidas\n\nVALIDACIÓN (antes de enviar):\n1. cantidad × precio = importe (CADA partida)\n2. Códigos únicos\n3. Revisa primera y última partida"
+    }
+  ]
+}

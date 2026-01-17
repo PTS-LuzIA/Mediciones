@@ -1,0 +1,47 @@
+{
+  "capitulo_codigo": "02",
+  "partidas": [
+    {
+      "codigo": "m23E02CA030",
+      "cantidad": 7.60,
+      "precio": 43.61,
+      "importe": 331.44
+    },
+    {
+      "codigo": "m23E02SA020",
+      "cantidad": 38.00,
+      "precio": 48.41,
+      "importe": 1839.58
+    },
+    {
+      "codigo": "m23E04SA020",
+      "cantidad": 1.00,
+      "precio": 25.78,
+      "importe": 25.78
+    },
+    {
+      "codigo": "U04VBM030",
+      "cantidad": 38.00,
+      "precio": 212.61,
+      "importe": 8079.18
+    },
+    {
+      "codigo": "m23U02G060",
+      "cantidad": 41.80,
+      "precio": 3.95,
+      "importe": 165.11
+    },
+    {
+      "codigo": "m23U05A020",
+      "cantidad": 7.60,
+      "precio": 28.89,
+      "importe": 219.56
+    },
+    {
+      "codigo": "m23E28PH050",
+      "cantidad": 38.00,
+      "precio": 62.61,
+      "importe": 2379.18
+    }
+  ]
+}

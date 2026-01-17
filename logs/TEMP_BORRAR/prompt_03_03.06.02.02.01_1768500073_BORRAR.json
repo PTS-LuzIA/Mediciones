@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 3195,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n03 FASE 4 03.06.02.02.01CIMENTACIONES APUDm23E05AP02u0dA PLACA ANCLAJE S275 40x25x2cm SIN GARROTAS 95,00 51,55 4.897,25 Placa de anclaje de acero S275 en perfil plano, de dimensiones 40x25x2 cm., i/ta- ladro central, colocada. Según UNE-EN 10025-1:2006, UNE-EN 1090-2:2019, CTE DB-SE-A y EAE. Acero con marcado CE y DdP (Declaración de prestacio- nes) según Reglamento (UE) 305/2011. m23E05AM020 ud ANCLAJE MECÁNICO D=12mm L=105mm 95,"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 1430,
+      "content_preview": "Extrae partidas del capítulo 03\n\nFORMATO DE PARTIDA:\nCada línea tiene este formato: CÓDIGO UNIDAD DESCRIPCIÓN CANTIDAD PRECIO IMPORTE\n\nEjemplo de línea:\nm23U01BP010 m2 DEMOLICIÓN MEDIOS MECÁNICOS PAVIMENTO ASFÁLTICO 450,40 2,34 1.053,94\n\nExtracción correcta:\n- codigo: \"m23U01BP010\" (TODO hasta el primer espacio, incluye letras y números)\n- unidad: \"m2\" (IGNORAR, no incluir en el código)\n- cantidad: 450.40\n- precio: 2.34\n- importe: 1053.94\n\nOtro ejemplo:\nAPUI_003 d ALQUILER DIARIO DE GRUA SOBRE C"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "capitulo_codigo": "01",
+  "partidas": [
+    {
+      "codigo": "m23U01C190",
+      "titulo": "DESMONTAJE DE PAPELERA",
+      "descripcion": "Desmontaje de papelera existente de cualquier material, incluido transporte al lugar indicado por la Dirección facultativa, y si fuera necesario, demolición de cimentaciones, carga y transporte a vertedero autorizado.",
+      "subcapitulo_codigo": "01.01",
+      "unidad": "Ud",
+      "cantidad": 4.0,
+      "precio": 26.89,
+      "importe": 107.56
+    },
+    {
+      "codigo": "m23E01DKW010",
+      "titulo": "LEVANTADO BARANDILLAS/VALLAS C/MEDIOS MANUALES",
+      "descripcion": "Levantado de barandillas o vallas de cualquier tipo, por medios manuales, incluso limpieza y retirada de escombros a pie de carga, sin transporte a vertedero y con p.p. de medios auxiliares, sin medidas de protección colectivas. Según RD 105/2008. Medición de longitud realmente ejecutada.",
+      "subcapitulo_codigo": "01.01",
+      "unidad": "m",
+      "cantidad": 202.50,
+      "precio": 11.89,
+      "importe": 2407.73
+    },
+    {
+      "codigo": "APUDm23E01DKA-020",
+      "titulo": "LEVANTADO CARPINTERÍA METÁLICA C/MEDIOS MANUALES",
+      "descripcion": "Levantado de carpintería metálica, incluidos cercos, hojas y accesorios, por medios manuales, incluso limpieza, retirada de escombros a pie de carga, sin transporte a vertedero y con p.p. de medios auxiliares. Según RD 105/2008 y NTE-ADD. Medición de superficie realmente ejecutada.",
+      "subcapitulo_codigo": "01.01",
+      "unidad": "m",
+      "cantidad": 107.50,
+      "precio": 12.74,
+      "importe": 1369.55
+    },
+    {
+      "codigo": "m23U01C180",
+      "titulo": "DESMONTAJE DE BANCO",
+      "descripcion": "Desmontaje de banco existente de cualquier material, incluido transporte al lugar indicado por la Dirección facultativa, y si fuera necesario, demolición de cimentaciones, carga y transporte a vertedero autorizado.",
+      "subcapitulo_codigo": "01.01",
+      "unidad": "Ud",
+      "cantidad": 5.0,
+      "precio": 46.15,
+      "importe": 230.75
+    },
+    {
+      "codigo": "m23M02PTD010",
+      "titulo": "Plataforma elevadora de tijera diesel hasta 10 m altura",
+      "descripcion": null,
+      "subcapitulo_codigo": "01.01",
+      "unidad": "h",
+      "cantidad": 27.00,
+      "precio": 13.35,
+      "importe": 360.45
+    },
+    {
+      "codigo": "m23U01BP010",
+      "titulo": "DEMOLICIÓN MEDIOS MECÁNICOS PAVIMENTO ASFÁLTICO E<12 cm",
+      "descripcion": "Levantado por medios mecánicos (retroexcavadora con martillo hidráulico o similar) de pavimento de aglomerado asfáltico en capas de rodadura e intermedia de espesor menor o igual a doce centímetros, incluso retirada y carga de productos, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m2",
+      "cantidad": 79.20,
+      "precio": 4.60,
+      "importe": 364.32
+    },
+    {
+      "codigo": "m23U01BP020",
+      "titulo": "DEMOLICIÓN COMPRESOR PAVIMENTO ASFÁLTICO E<12cm",
+      "descripcion": "Levantado con compresor de pavimento de aglomerado asfáltico en capas de rodadura e intermedia de espesor menor o igual a doce centímetros, incluso retirada y carga de productos, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m2",
+      "cantidad": 112.00,
+      "precio": 4.60,
+      "importe": 517.96
+    },
+    {
+      "codigo": "m23E01DPP120",
+      "titulo": "DEMOLICIÓN PAVIMENTO FLEXIBLE",
+      "descripcion": "Demolición de pavimento flexible de moqueta, linóleo, caucho-goma, PVC, corcho, etc. incluso limpieza de adhesivo, retirada, carga y sin transporte a vertedero. Según RD 105/2008 y NTE-ADD. Medición de superficie realmente ejecutada.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m2",
+      "cantidad": 294.00,
+      "precio": 3.74,
+      "importe": 1099.56
+    },
+    {
+      "codigo": "m23U01BP030",
+      "titulo": "DEMOLICIÓN COMPRESOR SOLADO ACERA",
+      "descripcion": "Levantado con compresor de solado de aceras de cemento continuo, loseta hidráulica o terrazo y p.p. de material de agarre, incluso retirada y carga de productos, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m2",
+      "cantidad": 967.00,
+      "precio": 3.21,
+      "importe": 3104.07
+    },
+    {
+      "codigo": "m23U01BF030",
+      "titulo": "DEMOLICIÓN MEDIOS MECÁNICOS FIRME BASE HORMIGÓN",
+      "descripcion": "Levantado por medios mecánicos (retroexcavadora con martillo hidráulico o similar) de firme con base de hormigón hidráulico, incluso retirada y carga de productos, medido sobre perfil, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m3",
+      "cantidad": 335.31,
+      "precio": 26.57,
+      "importe": 8909.19
+    },
+    {
+      "codigo": "m23U01BF040",
+      "titulo": "DEMOLICIÓN COMPRESOR FIRME BASE HORMIGÓN",
+      "descripcion": "Levantado con compresor de firme con base de hormigón hidráulico, incluso retirada y carga de productos, medido sobre perfil, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m3",
+      "cantidad": 83.83,
+      "precio": 65.43,
+      "importe": 5485.00
+    },
+    {
+      "codigo": "m23U01BB020",
+      "titulo": "DEMOLICIÓN COMPRESOR HORMIGÓN EN MASA",
+      "descripcion": "Demolición con compresor, de fábrica de hormigón en masa de cualquier tipo, incluso retirada y carga de productos, medido sobre fábrica, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301, RD 105/2008 y NTE-ADD-13.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m3",
+      "cantidad": 11.30,
+      "precio": 82.11,
+      "importe": 927.84
+    },
+    {
+      "codigo": "m23U01A010",
+      "titulo": "LEVANTADO DE BORDILLO",
+      "descripcion": "Levantado de bordillo, con recuperación del mismo incluso retirada y carga, o acopio en obra, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 3.99,
+      "importe": 3.99
+    },
+    {
+      "codigo": "APUDm23U01A01001",
+      "titulo": "LEVANTADO DE BORDILLO DE GRANITO CON RECUPERACIÓN",
+      "descripcion": "Levantado de bordillo, con recuperación del mismo incluso retirada y carga, o acopio en obra, incluido transporte a dependencias municipales. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m",
+      "cantidad": 96.00,
+      "precio": 9.17,
+      "importe": 880.32
+    },
+    {
+      "codigo": "APUDm23U01A0102",
+      "titulo": "LEVANTADO DE BORDILLO SIN RECUPERACIÓN",
+      "descripcion": "Levantado de bordillo, sin recuperación del mismo incluso retirada y carga, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m",
+      "cantidad": 90.00,
+      "precio": 3.99,
+      "importe": 359.10
+    },
+    {
+      "codigo": "m23U02H010",
+      "titulo": "TRANSPORTE BORDILLO RECUPERADO",
+      "descripcion": "Limpieza de bordillo recuperado, paletizado en palé de madera y transporte de bordillo recuperado a casilla u otra obra municipal, incluso descarga.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m",
+      "cantidad": 96.00,
+      "precio": 9.97,
+      "importe": 957.12
+    }
+  ]
+}

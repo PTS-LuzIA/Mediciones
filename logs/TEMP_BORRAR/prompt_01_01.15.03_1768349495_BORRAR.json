@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 3154,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n01 FASE 2 01.15.03 TRATAMIENTO m23G03B010 ud TRATAMIENTO RESTOS PINTURA EN BIDÓN 60 l 1,00 91,72 91,72 Tratamiento en planta por gestor autorizado (por la Consejería de Medio Ambiente de la Comunidad de Madrid) de restos de pintura y pinturas caducadas, almacena- dos en la instalación en bidones adecuados de 60 l y paletizados, de primer uso. El precio (por bidón) incluye la etiquetación por parte de peón del bidón correspon- dien"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 455,
+      "content_preview": "Extrae partidas del capítulo 01\n\nJSON:\n{\n  \"capitulo_codigo\": \"01\",\n  \"partidas\": [\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n},\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n}\n  ]\n}\n\nReglas:\n1. NO repetir códigos\n2. NO incluir totales\n3. NO incluir campo subcapitulo_codigo\n4. Extrae TODAS las partidas\n\nVALIDACIÓN (antes de enviar):\n1. cantidad × precio = importe (CADA partida)\n2. Códigos únicos\n3. Revisa primera y última partida"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "capitulo_codigo": "01",
+  "partidas": [
+    {
+      "codigo": "m23E01DIE020",
+      "cantidad": 10.00,
+      "precio": 4.92,
+      "importe": 49.20
+    },
+    {
+      "codigo": "APUI_004",
+      "cantidad": 8.00,
+      "precio": 759.00,
+      "importe": 6072.00
+    },
+    {
+      "codigo": "m23U01BV030",
+      "cantidad": 10.00,
+      "precio": 11.12,
+      "importe": 111.20
+    },
+    {
+      "codigo": "m23E02SZ070",
+      "cantidad": 2.40,
+      "precio": 31.40,
+      "importe": 75.36
+    },
+    {
+      "codigo": "m23U13KB130",
+      "cantidad": 1.00,
+      "precio": 213.98,
+      "importe": 213.98
+    },
+    {
+      "codigo": "m23E01DIS090",
+      "cantidad": 1.00,
+      "precio": 67.71,
+      "importe": 67.71
+    },
+    {
+      "codigo": "m23U01C260m",
+      "cantidad": 5.00,
+      "precio": 4.65,
+      "importe": 23.25
+    },
+    {
+      "codigo": "m23E01DIE090",
+      "cantidad": 12.30,
+      "precio": 51.45,
+      "importe": 632.84
+    },
+    {
+      "codigo": "m23U11EF010",
+      "cantidad": 133.00,
+      "precio": 1.27,
+      "importe": 168.91
+    },
+    {
+      "codigo": "m23U01T090",
+      "cantidad": 8.00,
+      "precio": 40.07,
+      "importe": 320.56
+    }
+  ]
+}

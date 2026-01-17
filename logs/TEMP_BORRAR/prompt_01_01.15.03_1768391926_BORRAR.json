@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 3045,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n01 FASE 2 01.15.03 TRATAMIENTO m23G03B010 ud TRATAMIENTO RESTOS PINTURA EN BIDÓN 60 l 1,00 91,72 91,72 Tratamiento en planta por gestor autorizado (por la Consejería de Medio Ambiente de la Comunidad de Madrid) de restos de pintura y pinturas caducadas, almacena- dos en la instalación en bidones adecuados de 60 l y paletizados, de primer uso. El precio (por bidón) incluye la etiquetación por parte de peón del bidón correspon- dien"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 1430,
+      "content_preview": "Extrae partidas del capítulo 01\n\nFORMATO DE PARTIDA:\nCada línea tiene este formato: CÓDIGO UNIDAD DESCRIPCIÓN CANTIDAD PRECIO IMPORTE\n\nEjemplo de línea:\nm23U01BP010 m2 DEMOLICIÓN MEDIOS MECÁNICOS PAVIMENTO ASFÁLTICO 450,40 2,34 1.053,94\n\nExtracción correcta:\n- codigo: \"m23U01BP010\" (TODO hasta el primer espacio, incluye letras y números)\n- unidad: \"m2\" (IGNORAR, no incluir en el código)\n- cantidad: 450.40\n- precio: 2.34\n- importe: 1053.94\n\nOtro ejemplo:\nAPUI_003 d ALQUILER DIARIO DE GRUA SOBRE C"
+    }
+  ]
+}

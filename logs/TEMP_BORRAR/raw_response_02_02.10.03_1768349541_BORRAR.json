@@ -1,0 +1,194 @@
+{
+  "capitulo_codigo": "02",
+  "partidas": [
+    {
+      "codigo": "02.10.03",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "ARBUSTIVAS",
+      "unidad": "m23U14A170",
+      "cantidad": 67.7,
+      "precio": 47.7,
+      "importe": 3229.29
+    },
+    {
+      "codigo": "E02TRT090",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "TRANSPORTE TIERRA EN OBRA DUMPER CONVENCIONAL 2 t CARGA MANUAL",
+      "unidad": "m3",
+      "cantidad": 67.7,
+      "precio": 12.08,
+      "importe": 817.82
+    },
+    {
+      "codigo": "m23U14B030",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "APLICACIÓN POLÍMERO EN ARBUSTOS",
+      "unidad": "m2",
+      "cantidad": 338.5,
+      "precio": 1.2,
+      "importe": 406.2
+    },
+    {
+      "codigo": "m23U14G505",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "SYRINGA VULGARIS DE 0,60-0,80 m CONTENEDOR",
+      "unidad": "ud",
+      "cantidad": 116,
+      "precio": 17.2,
+      "importe": 1995.2
+    },
+    {
+      "codigo": "m23U14H392",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "VIBURNUM TINUS 0,40-0,60 m CONTENEDOR 5L",
+      "unidad": "ud",
+      "cantidad": 20,
+      "precio": 13.45,
+      "importe": 269.0
+    },
+    {
+      "codigo": "m23U14G305",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "PHILADELPHUS CORONARIUS DE 0,60-0,80 m CONTENEDOR",
+      "unidad": "ud",
+      "cantidad": 116,
+      "precio": 14.65,
+      "importe": 1699.4
+    },
+    {
+      "codigo": "m23U14H003",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "ABELIA FLORIBUNDA DE 0,40-0,60 m CONTENEDOR",
+      "unidad": "ud",
+      "cantidad": 24,
+      "precio": 16.57,
+      "importe": 397.68
+    },
+    {
+      "codigo": "m23U14H383",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "TEUCRIUM FRUTICANS 0,40-0,60 m CONTENEDOR",
+      "unidad": "ud",
+      "cantidad": 36,
+      "precio": 11.16,
+      "importe": 401.76
+    },
+    {
+      "codigo": "m23U14DA387",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "JUNIPERUS HORIZONTALIS/PFITZERIANA 0,40-0,60 m CONTENEDOR",
+      "unidad": "ud",
+      "cantidad": 64,
+      "precio": 18.9,
+      "importe": 1209.0
+    },
+    {
+      "codigo": "m23U14G155",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "CORNUS ALBA/SANGUINEA DE 0,40-0,60 CONTENEDOR",
+      "unidad": "ud",
+      "cantidad": 140,
+      "precio": 11.61,
+      "importe": 1625.0
+    },
+    {
+      "codigo": "m23U14H321",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "MAHONIA AQUIFOLIUM DE 0,40-0,60 m CONTENEDOR",
+      "unidad": "ud",
+      "cantidad": 36,
+      "precio": 26.58,
+      "importe": 956.0
+    },
+    {
+      "codigo": "m23U14I250",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "ROSMARINUS OFFICINALIS 'PROSTRATUS' CONTENEDOR 5L",
+      "unidad": "ud",
+      "cantidad": 64,
+      "precio": 6.91,
+      "importe": 442.0
+    },
+    {
+      "codigo": "m23U14H125",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "CISTUS ALBIDUS 0,40-0,60 m CONTENEDOR 5L",
+      "unidad": "ud",
+      "cantidad": 36,
+      "precio": 14.86,
+      "importe": 534.0
+    },
+    {
+      "codigo": "m23U14H354",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "PISTACIA LENTISCUS 0,40-0,60 m CONTENEDOR 5L",
+      "unidad": "ud",
+      "cantidad": 64,
+      "precio": 20.27,
+      "importe": 1297.0
+    },
+    {
+      "codigo": "m23U14H023",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "ARBUTUS UNEDO 0,40-0,60 m CONTENEDOR",
+      "unidad": "ud",
+      "cantidad": 36,
+      "precio": 20.09,
+      "importe": 723.0
+    },
+    {
+      "codigo": "U13EE500",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "ARBUSTOS CUBRESUELOS 0,20-0,40 m CONTENEDOR",
+      "unidad": "u",
+      "cantidad": 80,
+      "precio": 8.24,
+      "importe": 659.0
+    },
+    {
+      "codigo": "m23U14H360",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "PITTOSPORUM TOBIRA 0,20-0,40 m CONTENEDOR 2L",
+      "unidad": "ud",
+      "cantidad": 240,
+      "precio": 12.73,
+      "importe": 3055.0
+    },
+    {
+      "codigo": "m23U14H247",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "HYPERICUM CALYCINUM DE 0,20-0,40 m CONTENEDOR",
+      "unidad": "ud",
+      "cantidad": 184,
+      "precio": 7.29,
+      "importe": 1341.0
+    },
+    {
+      "codigo": "m23U14H145",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "COTONEASTER DAMMERI 0,30-0,40 m CONTENEDOR 3L",
+      "unidad": "ud",
+      "cantidad": 42,
+      "precio": 15.0,
+      "importe": 630.0
+    },
+    {
+      "codigo": "m23U14I090",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "GAURA LINDHEIMERI DE 0,20-0,40 m CONTENEDOR",
+      "unidad": "ud",
+      "cantidad": 216,
+      "precio": 10.02,
+      "importe": 2164.0
+    },
+    {
+      "codigo": "m23U14N040",
+      "subcapitulo_codigo": "02.10.03",
+      "descripcion": "TRANSPORTE Y PLANTACIÓN ARBUSTO < 1,50 m DE VIVERO MUNICIPAL",
+      "unidad": "ud",
+      "cantidad": 2,
+      "precio": 10.55,
+      "importe": 21.0
+    }
+  ]
+}

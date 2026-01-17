@@ -1,0 +1,10 @@
+=== TEXTO EXTRAÍDO ===
+Capítulo: 01
+Subcapítulos: ['01.01']
+Caracteres: 1750
+Líneas: 25
+PDF: hybrid_20260114_002108_PRESUPUESTOS PARCIALES NAVAS DE TOLOSA.pdf
+
+================================================================================
+
+01 FASE 2 01.01 LEVANTANDO DE ELEMENTOS EN SUPERFICIE m23U01C190 Ud DESMONTAJE DE PAPELERA 9,00 26,89 242,01 Desmontaje de papelera existente de cualquier material, incluido transporte al lu- gar indicado por la Dirección facultativa, y si fuera necesario, demolición de cimen- taciones, carga y transporte a vertedero autorizado. m23E01DKW010 m LEVANTADO BARANDILLAS/VALLAS C/MEDIOS MANUALES 153,00 11,89 1.819,17 Levantado de barandillas o vallas de cualquier tipo, por medios manuales, incluso limpieza y retirada de escombros a pie de carga, sin transporte a vertedero y con p.p. de medios auxiliares, sin medidas de protección colectivas. Según RD 105/2008. Medición de longitud realmente ejecutada. APUDm23E01DKAm0220 LEVANTADO CARPINTERÍA METÁLICA C/MEDIOS MANUALES 327,00 12,74 4.165,98 Levantado de carpintería metálica, incluidos cercos, hojas y accesorios, por me- dios manuales, incluso limpieza, retirada de escombros a pie de carga, sin trans- porte a vertedero y con p.p. de medios auxiliares. Según RD 105/2008 y NTE-ADD. Medición de superficie realmente ejecutada. APUI_001 ud DESMONTAJE DE FUENTE 1,00 66,52 66,52 Desmontaje de fuente y transporte a depósito municipal, incluso demolición de ci- mentación, carga y transporte de productos sobrantes a vertedero. m23U01C180 Ud DESMONTAJE DE BANCO 4,00 46,15 184,60 Desmontaje de banco existente de cualquier material, incluido transporte al lugar indicado por la Dirección facultativa, y si fuera necesario, demolición de cimenta- ciones, carga y transporte a vertedero autorizado. m23M02PTD010 h Plataforma elevadora de tijera diesel hasta 10 m altura 27,00 13,35 360,45 TOTAL 01.01........................................................................................... 6.838,73

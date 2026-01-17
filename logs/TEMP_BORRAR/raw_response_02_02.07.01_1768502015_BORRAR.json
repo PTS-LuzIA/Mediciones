@@ -1,0 +1,119 @@
+{
+  "capitulo_codigo": "02",
+  "partidas": [
+    {
+      "codigo": "m23BZ090",
+      "cantidad": 1.00,
+      "precio": 40.60,
+      "importe": 40.60
+    },
+    {
+      "codigo": "m23E02PCM030",
+      "cantidad": 5.82,
+      "precio": 24.28,
+      "importe": 141.31
+    },
+    {
+      "codigo": "m23E02PCA030",
+      "cantidad": 1.00,
+      "precio": 46.10,
+      "importe": 46.10
+    },
+    {
+      "codigo": "m23E02RP020",
+      "cantidad": 8.32,
+      "precio": 7.06,
+      "importe": 58.74
+    },
+    {
+      "codigo": "m23E02SA070",
+      "cantidad": 8.32,
+      "precio": 1.61,
+      "importe": 13.40
+    },
+    {
+      "codigo": "m23U03L040",
+      "cantidad": 1.00,
+      "precio": 167.87,
+      "importe": 167.87
+    },
+    {
+      "codigo": "m23E04CM020",
+      "cantidad": 0.83,
+      "precio": 169.18,
+      "importe": 140.42
+    },
+    {
+      "codigo": "m23U04CA010",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA030",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U04DA130",
+      "cantidad": 4.99,
+      "precio": 108.24,
+      "importe": 540.12
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "cantidad": 202.73,
+      "precio": 2.40,
+      "importe": 486.55
+    },
+    {
+      "codigo": "m23E05AP020",
+      "cantidad": 13.00,
+      "precio": 53.38,
+      "importe": 693.94
+    },
+    {
+      "codigo": "APUDm23E05AP02u0dB",
+      "cantidad": 1.00,
+      "precio": 51.55,
+      "importe": 51.55
+    },
+    {
+      "codigo": "m23E05AM020",
+      "cantidad": 1.00,
+      "precio": 14.88,
+      "importe": 14.88
+    },
+    {
+      "codigo": "E05AP040",
+      "cantidad": 13.00,
+      "precio": 66.13,
+      "importe": 859.69
+    },
+    {
+      "codigo": "m23E05AW010",
+      "cantidad": 2.40,
+      "precio": 33.91,
+      "importe": 81.38
+    },
+    {
+      "codigo": "m23E05NP020",
+      "cantidad": 1.00,
+      "precio": 3.61,
+      "importe": 3.61
+    },
+    {
+      "codigo": "m23E05NP030",
+      "cantidad": 1.00,
+      "precio": 12.30,
+      "importe": 12.30
+    },
+    {
+      "codigo": "APUI_002",
+      "cantidad": 2.00,
+      "precio": 252.28,
+      "importe": 504.56
+    }
+  ]
+}

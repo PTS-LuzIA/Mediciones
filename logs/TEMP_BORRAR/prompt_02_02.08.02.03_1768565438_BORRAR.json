@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 4085,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n02 FASE 3 02.08.02.03 SOPORTES Y LUMINARIAS m23U13DQA200 ud COLUMNA AE-25.1 DE 4 m 14,00 441,65 6.183,10 Columna tipo A según AE.25.1 galvanizada y sin pintar de 4 m de altura, con trans- porte y montaje. Conforme a REBT, ITC-BT-09. Materiales con marcado CE y De- claración de Prestaciones (DdP) según Reglamento Europeo (UE) 305/2011. APUDV_BAM37.D3u.d08 LUM. CERRADA LED, CLASE I, HASTA 85W 24,00 647,84 15.548,16 Luminaria LED her"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 2038,
+      "content_preview": "Extrae partidas del capítulo 02\n\nFORMATO DE PARTIDA:\nCada línea tiene este formato: CÓDIGO UNIDAD DESCRIPCIÓN CANTIDAD PRECIO IMPORTE\n\nIMPORTANTE: Los 3 valores numéricos (CANTIDAD, PRECIO, IMPORTE) están SIEMPRE al FINAL de la línea.\nSi la descripción contiene números (ejemplo: \"14,65 m2\"), IGNÓRALOS y extrae los ÚLTIMOS 3 NÚMEROS.\n\nEjemplo 1:\nm23U01BP010 m2 DEMOLICIÓN MEDIOS MECÁNICOS PAVIMENTO ASFÁLTICO 450,40 2,34 1.053,94\n\nExtracción correcta:\n- codigo: \"m23U01BP010\" (TODO hasta el primer e"
+    }
+  ]
+}

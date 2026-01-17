@@ -1,0 +1,30 @@
+================================================================================
+EJEMPLOS DE ESTRUCTURA Y TOTALES EXTRAÍDOS
+================================================================================
+
+EJEMPLO 1: Jerarquía con niveles intermedios
+--------------------------------------------------------------------------------
+01 FASE 2
+Total: 1,174,151.99 €
+
+  └─ 01.04 PAVIMENTACIÓN
+     Total: 220,073.52 €
+
+       ├─ 01.04.01 PAVIMENTO PERMEABLE RECORRIDOS PRIN    49,578.18 €
+       ├─ 01.04.02 PAVIMENTO IMPERMEABLE DE ADOQUÍN      107,930.01 €
+       ├─ 01.04.03 LÍMITES Y BORDILLOS                    30,963.42 €
+       ├─ 01.04.04 TARIMA MADERA                          23,314.08 €
+       ├─ 01.04.05 CAMINOS DE MADERA                       1,815.34 €
+       ├─ 01.04.06 REPOSICIÓN PAVIMENTO EXISTENTE          4,287.23 €
+       ├─ 01.04.07 ARENERO                                 2,185.26 €
+
+EJEMPLO 2: Niveles profundos (5 niveles)
+--------------------------------------------------------------------------------
+03 FASE 4 → Total: 991,125.90 €
+  └─ 03.06 VALLADO → Total: 168,165.71 €
+     └─ 03.06.02 VALLADO EXTERIOR → Total: 133,860.10 €
+        └─ 03.06.02.02 VALLADO PROYECTADO → Total: 118,909.04 €
+           ├─ 03.06.02.02.01 CIMENTACIONES                 8,058.17 €
+           ├─ 03.06.02.02.02 CERRAJERÍA                  110,850.87 €
+
+================================================================================

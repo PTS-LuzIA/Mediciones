@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 1380,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n02 FASE 3 02.13.01 ESTABILIZACIÓN DE LOS PUNTOS DE ENTRADA Y SALIDA A LA OBRA m23U03EB015 m3 HORMIGÓN EN MASA HM-15/B/40/XC2 o XC3 CEM II EN BASES 1,20 145,20 174,24 Suministro y puesta en obra de hormigón en masa, vibrado y moldeado en su ca- so, en base de calzadas, solera de aceras, pistas deportivas o paseos, cimiento de bordillos y escaleras, con HM-15/B/40/XC2 o XC3 (CEM-II), con árido proce- dente de cantera, de tamaño máxi"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 3791,
+      "content_preview": "Extrae partidas del capítulo 02\n\nFORMATO DE PARTIDA:\nCada línea tiene este formato: CÓDIGO UNIDAD DESCRIPCIÓN CANTIDAD PRECIO IMPORTE\n\nIMPORTANTE: Los 3 valores numéricos (CANTIDAD, PRECIO, IMPORTE) están SIEMPRE al FINAL de la línea.\nSi la descripción contiene números (ejemplo: \"14,65 m2\"), IGNÓRALOS y extrae los ÚLTIMOS 3 NÚMEROS.\n\nCASOS ESPECIALES - CÓDIGOS PEGADOS SIN ESPACIOS:\nA veces el código está PEGADO a la descripción sin espacios ni unidad visible.\nIdentifica el código por su LONGITUD"
+    }
+  ]
+}

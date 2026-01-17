@@ -1,0 +1,6529 @@
+{
+  "capitulo_codigo": "01",
+  "partidas": [
+    {
+      "codigo": "m23U01C190",
+      "subcapitulo_codigo": "01.01",
+      "unidad": "Ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 26.89,
+      "importe": 26.89
+    },
+    {
+      "codigo": "m23E01DKW010",
+      "subcapitulo_codigo": "01.01",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 153,
+      "precio": 11.89,
+      "importe": 1819.17
+    },
+    {
+      "codigo": "APUDm23E01DKA-020",
+      "subcapitulo_codigo": "01.01",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 327,
+      "precio": 12.74,
+      "importe": 4165.98
+    },
+    {
+      "codigo": "APUI_001",
+      "subcapitulo_codigo": "01.01",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 66.52,
+      "importe": 66.52
+    },
+    {
+      "codigo": "m23U01C180",
+      "subcapitulo_codigo": "01.01",
+      "unidad": "Ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 4,
+      "precio": 46.15,
+      "importe": 184.6
+    },
+    {
+      "codigo": "m23U01A010",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.99,
+      "importe": 3.99
+    },
+    {
+      "codigo": "APUDm23U01A01001",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 96,
+      "precio": 9.17,
+      "importe": 880.32
+    },
+    {
+      "codigo": "APUDm23U01A0102",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 90,
+      "precio": 3.99,
+      "importe": 359.1
+    },
+    {
+      "codigo": "m23U02G060",
+      "subcapitulo_codigo": "01.04.01",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 29.13,
+      "importe": 29.13
+    },
+    {
+      "codigo": "APUDm23U05F030",
+      "subcapitulo_codigo": "01.04.01",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 849,
+      "precio": 57.26,
+      "importe": 48613.74
+    },
+    {
+      "codigo": "m23E27EPA030",
+      "subcapitulo_codigo": "01.04.01",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 58,
+      "precio": 15.27,
+      "importe": 885.66
+    },
+    {
+      "codigo": "m23E02SZ010",
+      "subcapitulo_codigo": "01.04.01",
+      "unidad": "m3",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 49.65,
+      "importe": 49.65
+    },
+    {
+      "codigo": "m23U06A010",
+      "subcapitulo_codigo": "01.04.03",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 15.53,
+      "importe": 15.53
+    },
+    {
+      "codigo": "m23U06A075",
+      "subcapitulo_codigo": "01.04.03",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 15,
+      "precio": 16.73,
+      "importe": 250.95
+    },
+    {
+      "codigo": "m23U06A115",
+      "subcapitulo_codigo": "01.04.03",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.45,
+      "importe": 11.45
+    },
+    {
+      "codigo": "m23U06A110",
+      "subcapitulo_codigo": "01.04.03",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 10.25,
+      "importe": 10.25
+    },
+    {
+      "codigo": "APUDU04BM020",
+      "subcapitulo_codigo": "01.04.03",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 14.42,
+      "importe": 14.42
+    },
+    {
+      "codigo": "m23U06A010",
+      "subcapitulo_codigo": "01.04.03",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 15.61,
+      "importe": 15.61
+    },
+    {
+      "codigo": "m23U06A015",
+      "subcapitulo_codigo": "01.04.03",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 15.61,
+      "importe": 468.3
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "subcapitulo_codigo": "01.05.01.01",
+      "unidad": "kg",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 29.44,
+      "precio": 2.4,
+      "importe": 70.66
+    },
+    {
+      "codigo": "APUIm23U04Q010m2",
+      "subcapitulo_codigo": "01.05.01.01",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 152,
+      "precio": 149.67,
+      "importe": 22749.84
+    },
+    {
+      "codigo": "m23U04Q050",
+      "subcapitulo_codigo": "01.05.01.01",
+      "unidad": "m3",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 33.75,
+      "precio": 16.1,
+      "importe": 543.38
+    },
+    {
+      "codigo": "APUDm23E02SZ0503",
+      "subcapitulo_codigo": "01.05.01.01",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 8.5,
+      "precio": 29.44,
+      "importe": 250.24
+    },
+    {
+      "codigo": "m23U04DM015",
+      "subcapitulo_codigo": "01.05.01.02",
+      "unidad": "m3",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 0.85,
+      "precio": 155.35,
+      "importe": 132.05
+    },
+    {
+      "codigo": "m23U04DM015",
+      "subcapitulo_codigo": "01.05.01.02",
+      "unidad": "m3",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1.69,
+      "precio": 163.79,
+      "importe": 276.81
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "subcapitulo_codigo": "01.05.01.02",
+      "unidad": "kg",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 237.44,
+      "precio": 2.4,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U02BZ020",
+      "subcapitulo_codigo": "01.05.02.01",
+      "unidad": "m3",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 5.5,
+      "precio": 20.72,
+      "importe": 113.96
+    },
+    {
+      "codigo": "m23E02RP020",
+      "subcapitulo_codigo": "01.05.02.01",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 36.6,
+      "precio": 5.61,
+      "importe": 205.33
+    },
+    {
+      "codigo": "m23E02SA070",
+      "subcapitulo_codigo": "01.05.02.01",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 5.5,
+      "precio": 170.59,
+      "importe": 938.25
+    },
+    {
+      "codigo": "m23U02ER010",
+      "subcapitulo_codigo": "01.05.02.01",
+      "unidad": "m3",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 40.45,
+      "precio": 5.64,
+      "importe": 228.14
+    },
+    {
+      "codigo": "m23U04CA030",
+      "subcapitulo_codigo": "01.05.02.01",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 33.2,
+      "precio": 17.1,
+      "importe": 567.72
+    },
+    {
+      "codigo": "m23U04CA010",
+      "subcapitulo_codigo": "01.05.02.01",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 18.9,
+      "importe": 18.9
+    },
+    {
+      "codigo": "m23U03L030",
+      "subcapitulo_codigo": "01.05.02.01",
+      "unidad": "m3",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1.4,
+      "precio": 155.35,
+      "importe": 217.49
+    },
+    {
+      "codigo": "m23U04DM015",
+      "subcapitulo_codigo": "01.05.02.01",
+      "unidad": "m3",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 6.38,
+      "precio": 163.79,
+      "importe": 1044.98
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "subcapitulo_codigo": "01.05.02.02",
+      "unidad": "kg",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 285.38,
+      "precio": 2.4,
+      "importe": 684.91
+    },
+    {
+      "codigo": "m23U08AH010",
+      "subcapitulo_codigo": "01.05.02.02",
+      "unidad": "m3",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2.67,
+      "precio": 155.5,
+      "importe": 415.19
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "subcapitulo_codigo": "01.05.02.02",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 24.5,
+      "precio": 34.11,
+      "importe": 835.7
+    },
+    {
+      "codigo": "m23U05B130",
+      "subcapitulo_codigo": "01.05.02.02",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 96.44,
+      "importe": 96.44
+    },
+    {
+      "codigo": "m23U05A040",
+      "subcapitulo_codigo": "01.05.02.02",
+      "unidad": "m3",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 12.84,
+      "precio": 36.46,
+      "importe": 468.15
+    },
+    {
+      "codigo": "m23E02G030",
+      "subcapitulo_codigo": "01.05.02.02",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 57.78,
+      "precio": 1.74,
+      "importe": 100.54
+    },
+    {
+      "codigo": "m23U08BC010",
+      "subcapitulo_codigo": "01.05.02.02",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 9.6,
+      "precio": 13.91,
+      "importe": 133.54
+    },
+    {
+      "codigo": "m23E27EEL020",
+      "subcapitulo_codigo": "01.05.02.02",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 9.6,
+      "precio": 4.11,
+      "importe": 39.46
+    },
+    {
+      "codigo": "m23U06D020",
+      "subcapitulo_codigo": "01.05.02.02",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 20.4,
+      "precio": 25.78,
+      "importe": 525.91
+    },
+    {
+      "codigo": "m23U02BZ020",
+      "subcapitulo_codigo": "01.05.04",
+      "unidad": "m3",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 32.48,
+      "precio": 1.95,
+      "importe": 63.34
+    },
+    {
+      "codigo": "m23E02RP020",
+      "subcapitulo_codigo": "01.05.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 40.6,
+      "precio": 7.06,
+      "importe": 286.64
+    },
+    {
+      "codigo": "m23E02SA070",
+      "subcapitulo_codigo": "01.05.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 40.6,
+      "precio": 1.61,
+      "importe": 65.37
+    },
+    {
+      "codigo": "m23U02ER010",
+      "subcapitulo_codigo": "01.05.04",
+      "unidad": "m3",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 9.28,
+      "precio": 5.64,
+      "importe": 52.34
+    },
+    {
+      "codigo": "m23U04CA030",
+      "subcapitulo_codigo": "01.05.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 18.9,
+      "importe": 18.9
+    },
+    {
+      "codigo": "m23U04CA010",
+      "subcapitulo_codigo": "01.05.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 14.12,
+      "precio": 163.79,
+      "importe": 2312.71
+    },
+    {
+      "codigo": "m23U04DM015",
+      "subcapitulo_codigo": "01.05.04",
+      "unidad": "m3",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 6.38,
+      "precio": 155.35,
+      "importe": 1044.98
+    },
+    {
+      "codigo": "m23U13BH010",
+      "subcapitulo_codigo": "01.08.02.01",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.66,
+      "importe": 4.66
+    },
+    {
+      "codigo": "m23E04SM010",
+      "subcapitulo_codigo": "01.08.02.01",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 12.33,
+      "importe": 12.33
+    },
+    {
+      "codigo": "m23U13BI040",
+      "subcapitulo_codigo": "01.08.02.01",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.67,
+      "importe": 3.67
+    },
+    {
+      "codigo": "m23U13KB010",
+      "subcapitulo_codigo": "01.08.02.01",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 153.07,
+      "importe": 153.07
+    },
+    {
+      "codigo": "m23U13KB020",
+      "subcapitulo_codigo": "01.08.02.01",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 22,
+      "precio": 14.88,
+      "importe": 327.36
+    },
+    {
+      "codigo": "APUDm23E03ALR020",
+      "subcapitulo_codigo": "01.08.02.01",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 122.67,
+      "importe": 122.67
+    },
+    {
+      "codigo": "m23U13KC040",
+      "subcapitulo_codigo": "01.08.02.01",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 111.3,
+      "importe": 111.3
+    },
+    {
+      "codigo": "m23U13KA040",
+      "subcapitulo_codigo": "01.08.02.01",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 10,
+      "precio": 25.43,
+      "importe": 254.3
+    },
+    {
+      "codigo": "m23U13KA060",
+      "subcapitulo_codigo": "01.08.02.01",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 10,
+      "precio": 19.85,
+      "importe": 198.5
+    },
+    {
+      "codigo": "m23U13KA070",
+      "subcapitulo_codigo": "01.08.02.01",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 10,
+      "precio": 32.93,
+      "importe": 329.3
+    },
+    {
+      "codigo": "m23U13KA180",
+      "subcapitulo_codigo": "01.08.02.01",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 156.65,
+      "importe": 156.65
+    },
+    {
+      "codigo": "m23U13KC040",
+      "subcapitulo_codigo": "01.08.02.01",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 122.67,
+      "importe": 122.67
+    },
+    {
+      "codigo": "m23U13KC100",
+      "subcapitulo_codigo": "01.08.02.01",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 111.3,
+      "importe": 111.3
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.02",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 220,
+      "precio": 7.4,
+      "importe": 1628.0
+    },
+    {
+      "codigo": "m23U13BAB020",
+      "subcapitulo_codigo": "01.08.02.02",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 96.8,
+      "precio": 2.75,
+      "importe": 266.2
+    },
+    {
+      "codigo": "m23U13BH010",
+      "subcapitulo_codigo": "01.08.02.02",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 24.2,
+      "precio": 4.66,
+      "importe": 112.77
+    },
+    {
+      "codigo": "m23E01DIE090",
+      "subcapitulo_codigo": "01.08.02.02",
+      "unidad": "h",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1.4,
+      "precio": 155.35,
+      "importe": 217.49
+    },
+    {
+      "codigo": "m23U11EF010",
+      "subcapitulo_codigo": "01.08.02.02",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 12.71,
+      "importe": 12.71
+    },
+    {
+      "codigo": "m23U01T090",
+      "subcapitulo_codigo": "01.08.02.02",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 7,
+      "precio": 40.07,
+      "importe": 280.49
+    },
+    {
+      "codigo": "m23U09C110",
+      "subcapitulo_codigo": "01.08.02.02",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 107.22,
+      "importe": 214.44
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.02",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 220,
+      "precio": 7.4,
+      "importe": 1628.0
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.02",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.02",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.02",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.02",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.02",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.03",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.03",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.03",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.03",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.03",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAB020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 96.8,
+      "precio": 2.75,
+      "importe": 266.2
+    },
+    {
+      "codigo": "m23U13BH010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 24.2,
+      "precio": 4.66,
+      "importe": 112.77
+    },
+    {
+      "codigo": "m23U13KC040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 111.3,
+      "importe": 111.3
+    },
+    {
+      "codigo": "m23U13KC100",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 122.67,
+      "importe": 122.67
+    },
+    {
+      "codigo": "m23U13KA040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 10,
+      "precio": 25.43,
+      "importe": 254.3
+    },
+    {
+      "codigo": "m23U13KA060",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 10,
+      "precio": 19.85,
+      "importe": 198.5
+    },
+    {
+      "codigo": "m23U13KA070",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 10,
+      "precio": 32.93,
+      "importe": 329.3
+    },
+    {
+      "codigo": "m23U13KA180",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 156.65,
+      "importe": 156.65
+    },
+    {
+      "codigo": "m23U13KC040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 122.67,
+      "importe": 122.67
+    },
+    {
+      "codigo": "m23U13KC100",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 111.3,
+      "importe": 111.3
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 220,
+      "precio": 7.4,
+      "importe": 1628.0
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 30,
+      "precio": 88.64,
+      "importe": 2659.2
+    },
+    {
+      "codigo": "m23U13E030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 60,
+      "precio": 11.95,
+      "importe": 717
+    },
+    {
+      "codigo": "m23U13BAT010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 4.11,
+      "importe": 4.11
+    },
+    {
+      "codigo": "m23U13BAT030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U13BAT050",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 3.96,
+      "importe": 3.96
+    },
+    {
+      "codigo": "m23U13BAS040",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 7.4,
+      "importe": 7.4
+    },
+    {
+      "codigo": "m23U13BAS010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2076,
+      "precio": 3.98,
+      "importe": 8262.48
+    },
+    {
+      "codigo": "m23U13BAS020",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 5.9,
+      "importe": 519.2
+    },
+    {
+      "codigo": "m23U13BAS030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 88,
+      "precio": 6.55,
+      "importe": 576.4
+    },
+    {
+      "codigo": "m23E27HE010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "m2",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "m23U13F250",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 44.88,
+      "importe": 44.88
+    },
+    {
+      "codigo": "m23U13DR070",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 63.63,
+      "importe": 63.63
+    },
+    {
+      "codigo": "m23U13DR080",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 1,
+      "precio": 85.67,
+      "importe": 85.67
+    },
+    {
+      "codigo": "m23U13DR100",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 974.03,
+      "importe": 1948.06
+    },
+    {
+      "codigo": "APUI_005",
+      "subcapitulo_codigo": "01.08.02.05",
+      "unidad": "d",
+      "resumen": "",
+      "descripcion": "",
+      "cantidad": 2,
+      "precio": 759,
+      "importe": 1518.0
+    },
+    {
+      "codigo": "m23U13E010",
+      "subcapitulo_codigo": "01.08.02.04",
+      "unidad": "ud",
+      "resumen": "",
+      "descripcion": "",

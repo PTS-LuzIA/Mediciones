@@ -1,0 +1,719 @@
+{% extends "base.html" %}
+
+{% block title %}{{ proyecto.nombre }} - Proyecto IA{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <div>
+            <h2>🤖 {{ proyecto.nombre or 'Sin nombre' }}</h2>
+            <p style="color: #6c757d; margin-top: 10px;">
+                {% if proyecto.descripcion %}{{ proyecto.descripcion }}{% else %}Proyecto IA #{{ proyecto.id }}{% endif %}
+            </p>
+            {% if proyecto.confianza_general %}
+            <div style="margin-top: 10px;">
+                <span class="badge {% if proyecto.confianza_general >= 0.9 %}badge-success{% else %}badge-info{% endif %}" style="font-size: 1em;">
+                    Confianza General: {{ (proyecto.confianza_general * 100) | round(1) }}%
+                </span>
+            </div>
+            {% endif %}
+        </div>
+        <div>
+            <a href="/ai-proyectos" class="btn btn-secondary">← Volver</a>
+        </div>
+    </div>
+
+    {% if proyecto.notas_ia %}
+    <div class="alert alert-success" style="margin-top: 20px;">
+        <strong>📝 Notas de la IA:</strong>
+        <p style="margin: 10px 0 0 0;">{{ proyecto.notas_ia }}</p>
+    </div>
+    {% endif %}
+</div>
+
+<div class="card">
+    <h3>Resumen de Presupuesto por Capítulos</h3>
+
+    <table style="margin-top: 20px;">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Capítulo</th>
+                <th style="text-align: center;">Partidas</th>
+                <th style="text-align: center;">Confianza</th>
+                <th style="text-align: right;">Importe Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% set ns = namespace(total_general=0, total_partidas=0, suma_confianza=0, items_confianza=0) %}
+            {% for capitulo in proyecto.capitulos %}
+                {% set ns_cap = namespace(total_capitulo=0, num_partidas_cap=0) %}
+
+                {# Calcular total del capítulo sumando todas sus partidas #}
+                {% for partida in capitulo.partidas %}
+                    {% set ns_cap.total_capitulo = ns_cap.total_capitulo + partida.importe %}
+                    {% set ns_cap.num_partidas_cap = ns_cap.num_partidas_cap + 1 %}
+                {% endfor %}
+
+                {% for subcapitulo in capitulo.subcapitulos %}
+                    {% for partida in subcapitulo.partidas %}
+                        {% set ns_cap.total_capitulo = ns_cap.total_capitulo + partida.importe %}
+                        {% set ns_cap.num_partidas_cap = ns_cap.num_partidas_cap + 1 %}
+                    {% endfor %}
+                    {% for apartado in subcapitulo.apartados %}
+                        {% for partida in apartado.partidas %}
+                            {% set ns_cap.total_capitulo = ns_cap.total_capitulo + partida.importe %}
+                            {% set ns_cap.num_partidas_cap = ns_cap.num_partidas_cap + 1 %}
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %}
+
+                {% set ns.total_general = ns.total_general + ns_cap.total_capitulo %}
+                {% set ns.total_partidas = ns.total_partidas + ns_cap.num_partidas_cap %}
+                {% if capitulo.confianza %}
+                    {% set ns.suma_confianza = ns.suma_confianza + capitulo.confianza %}
+                    {% set ns.items_confianza = ns.items_confianza + 1 %}
+                {% endif %}
+
+                <tr>
+                    <td><strong>{{ capitulo.codigo }}</strong></td>
+                    <td>{{ capitulo.nombre }}</td>
+                    <td style="text-align: center;">{{ ns_cap.num_partidas_cap }}</td>
+                    <td style="text-align: center;">
+                        {% if capitulo.confianza %}
+                        <span class="badge {% if capitulo.confianza >= 0.9 %}badge-success{% else %}badge-info{% endif %}">
+                            {{ (capitulo.confianza * 100) | round(0) }}%
+                        </span>
+                        {% else %}
+                        -
+                        {% endif %}
+                    </td>
+                    <td style="text-align: right; font-weight: 600;">{{ ns_cap.total_capitulo|european }} €</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot style="border-top: 2px solid #667eea;">
+            <tr style="background: #f8f9ff; font-weight: bold; font-size: 1.1em;">
+                <td colspan="2"><strong>TOTAL PRESUPUESTO</strong></td>
+                <td style="text-align: center; color: #667eea;">{{ ns.total_partidas }}</td>
+                <td style="text-align: center;">
+                    {% if ns.items_confianza > 0 %}
+                    <span class="badge badge-success">{{ ((ns.suma_confianza / ns.items_confianza) * 100) | round(0) }}%</span>
+                    {% endif %}
+                </td>
+                <td style="text-align: right; color: #667eea;">{{ ns.total_general|european }} €</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div style="margin-top: 20px; padding: 15px; background: #f8f9ff; border-left: 4px solid #667eea; border-radius: 5px;">
+        <p style="margin: 0; color: #495057;">
+            <strong>Verificación:</strong>
+            Este presupuesto contiene <strong>{{ ns.total_partidas }} partidas</strong>
+            distribuidas en <strong>{{ proyecto.capitulos|length }} capítulos</strong>,
+            con un importe total de <strong style="color: #667eea;">{{ ns.total_general|european }} €</strong>
+        </p>
+    </div>
+</div>
+
+<div class="card">
+    <h3>Exportar Presupuesto</h3>
+    <p style="color: #6c757d; margin: 15px 0;">
+        Descarga el presupuesto en diferentes formatos:
+    </p>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <a href="http://localhost:3013/ai-exportar/{{ proyecto.id }}/csv"
+           class="btn"
+           download>
+            📄 Exportar CSV
+        </a>
+        <a href="http://localhost:3013/ai-exportar/{{ proyecto.id }}/excel"
+           class="btn"
+           download>
+            📊 Exportar Excel
+        </a>
+        <a href="http://localhost:3013/ai-exportar/{{ proyecto.id }}/xml"
+           class="btn"
+           download>
+            📋 Exportar XML
+        </a>
+        <a href="http://localhost:3013/ai-exportar/{{ proyecto.id }}/bc3"
+           class="btn"
+           download>
+            🏗️ Exportar BC3/FIEBDC-3
+        </a>
+    </div>
+</div>
+
+<!-- PESTAÑA IA: PROCESAMIENTO POR FASES -->
+<div class="card">
+    <h3>🤖 Procesamiento con IA</h3>
+    <p style="color: #6c757d; margin-bottom: 20px;">Extracción inteligente en dos fases: primero la estructura, luego las partidas</p>
+
+    <!-- FASE 1: ESTRUCTURA -->
+    <div style="border: 2px solid #667eea; border-radius: 10px; padding: 20px; margin-bottom: 20px; background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <h4 style="margin: 0; color: #667eea;">
+                📋 FASE 1: Estructura del Presupuesto
+            </h4>
+            <div id="fase1-status">
+                {% if proyecto.capitulos %}
+                <span class="badge badge-success" style="font-size: 1em;">✓ Completada</span>
+                {% else %}
+                <span class="badge" style="background: #ffc107; color: #000; font-size: 1em;">⏳ Pendiente</span>
+                {% endif %}
+            </div>
+        </div>
+
+        <p style="color: #6c757d; margin-bottom: 15px;">
+            Extrae únicamente los capítulos, subcapítulos y sus totales. Esto permite validar la estructura antes de procesar las partidas.
+        </p>
+        <div style="padding: 10px; background: #fff3cd; border-left: 3px solid #ffc107; margin-bottom: 15px; border-radius: 3px;">
+            <small style="color: #856404;">
+                <strong>⚠️ Nota:</strong> Los totales mostrados son extraídos directamente del PDF por la IA.
+                Estos valores se recalcularán automáticamente cuando se extraigan las partidas en la Fase 2.
+            </small>
+        </div>
+
+        {% if not proyecto.capitulos %}
+        <!-- Botón para iniciar extracción de estructura -->
+        <button id="btn-extract-structure"
+                onclick="extractStructure({{ proyecto.id }})"
+                class="btn"
+                style="background: #667eea; color: white;">
+            🔍 Extraer Estructura
+        </button>
+        <div id="structure-loading" style="display: none; margin-top: 15px;">
+            <div style="padding: 15px; background: #e3f2fd; border-left: 4px solid #2196f3; border-radius: 5px;">
+                <strong>⏳ Procesando...</strong>
+                <p style="margin: 10px 0 0 0;">Extrayendo la estructura jerárquica del presupuesto. Esto puede tardar unos segundos.</p>
+            </div>
+        </div>
+        {% else %}
+        <!-- Estructura extraída -->
+        <div id="structure-tree" style="margin-top: 15px;">
+            <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; border-left: 4px solid #28a745;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                    <strong style="color: #28a745;">✓ Estructura extraída correctamente</strong>
+                    <button id="btn-reextract-structure"
+                            onclick="reExtractStructure({{ proyecto.id }})"
+                            class="btn"
+                            style="background: #ffc107; color: #000; font-size: 0.85em; padding: 8px 15px;">
+                        🔄 Re-extraer
+                    </button>
+                </div>
+                <div style="margin-top: 10px;">
+                    {% for capitulo in proyecto.capitulos %}
+                    <div style="margin: 10px 0; padding: 10px; background: white; border-radius: 3px; border-left: 3px solid #667eea;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <strong style="color: #667eea;">📁 {{ capitulo.codigo }} - {{ capitulo.nombre }}</strong>
+                                {% if capitulo.subcapitulos %}
+                                <span style="color: #6c757d; font-size: 0.9em; margin-left: 10px;">
+                                    ({{ capitulo.subcapitulos|length }} subcapítulos)
+                                </span>
+                                {% endif %}
+                            </div>
+                            <strong style="color: #667eea;">{{ capitulo.total|european }} €</strong>
+                        </div>
+                        {% if capitulo.subcapitulos %}
+                        <div style="margin-left: 20px; margin-top: 10px;">
+                            {# Macro recursivo para mostrar subcapítulos anidados #}
+                            {% macro mostrar_subcapitulos(subcaps, nivel=1) %}
+                                {% for subcapitulo in subcaps %}
+                                <div style="padding: 5px 0; color: #6c757d; font-size: 0.9em; margin-left: {{ (nivel - 1) * 15 }}px;">
+                                    └─ {{ subcapitulo.codigo }} - {{ subcapitulo.nombre }}
+                                    <span style="float: right; color: #764ba2; font-weight: 600;">{{ subcapitulo.total|european }} €</span>
+                                </div>
+                                {# Recursión: mostrar subcapítulos hijos #}
+                                {% if subcapitulo.subcapitulos %}
+                                    {{ mostrar_subcapitulos(subcapitulo.subcapitulos, nivel + 1) }}
+                                {% endif %}
+                                {% endfor %}
+                            {% endmacro %}
+
+                            {{ mostrar_subcapitulos(capitulo.subcapitulos, 1) }}
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <button onclick="toggleStructureDetail()"
+                    class="btn"
+                    style="margin-top: 15px; background: #6c757d; color: white;">
+                Ver estructura completa ↓
+            </button>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- FASE 2: EXTRACCIÓN DE PARTIDAS -->
+    <div style="border: 2px solid {% if proyecto.capitulos %}#667eea{% else %}#dee2e6{% endif %}; border-radius: 10px; padding: 20px; background: {% if proyecto.capitulos %}linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%){% else %}#f8f9fa{% endif %};">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <h4 style="margin: 0; color: {% if proyecto.capitulos %}#667eea{% else %}#6c757d{% endif %};">
+                📊 FASE 2: Extracción de Partidas
+            </h4>
+            <div id="fase2-status">
+                {% set tiene_partidas = False %}
+                {% for capitulo in proyecto.capitulos %}
+                    {% for subcapitulo in capitulo.subcapitulos %}
+                        {% if subcapitulo.partidas %}
+                            {% set tiene_partidas = True %}
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+
+                {% if tiene_partidas %}
+                <span class="badge badge-success" style="font-size: 1em;">✓ Completada</span>
+                {% elif proyecto.capitulos %}
+                <span class="badge" style="background: #ffc107; color: #000; font-size: 1em;">⏳ Pendiente</span>
+                {% else %}
+                <span class="badge" style="background: #dee2e6; color: #6c757d; font-size: 1em;">🔒 Bloqueada</span>
+                {% endif %}
+            </div>
+        </div>
+
+        <p style="color: {% if proyecto.capitulos %}#6c757d{% else %}#adb5bd{% endif %}; margin-bottom: 15px;">
+            Una vez validada la estructura, extrae todas las partidas individuales con sus mediciones, precios e importes.
+        </p>
+
+        {% if not proyecto.capitulos %}
+        <div style="padding: 15px; background: #f8f9fa; border-left: 4px solid #dee2e6; border-radius: 5px;">
+            <strong style="color: #6c757d;">🔒 Fase bloqueada</strong>
+            <p style="margin: 10px 0 0 0; color: #6c757d;">
+                Complete primero la Fase 1 (Extracción de Estructura) para desbloquear la extracción de partidas.
+            </p>
+        </div>
+        {% elif not tiene_partidas %}
+        <button id="btn-extract-partidas"
+                onclick="extractPartidas({{ proyecto.id }})"
+                class="btn"
+                style="background: #667eea; color: white;">
+            🚀 Extraer Partidas
+        </button>
+        <div id="partidas-loading" style="display: none; margin-top: 15px;">
+            <div style="padding: 15px; background: #e3f2fd; border-left: 4px solid #2196f3; border-radius: 5px;">
+                <strong>⏳ Procesando...</strong>
+                <p style="margin: 10px 0 0 0;">Extrayendo todas las partidas del presupuesto. Este proceso puede tardar varios minutos dependiendo del tamaño del documento.</p>
+            </div>
+        </div>
+        {% else %}
+        <div style="background: #d4edda; padding: 15px; border-left: 4px solid #28a745; border-radius: 5px;">
+            <strong style="color: #155724;">✓ Partidas extraídas correctamente</strong>
+            <p style="margin: 10px 0 0 0; color: #155724;">
+                Se han procesado todas las partidas del presupuesto. Ver desglose completo abajo.
+            </p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% if proyecto.capitulos %}
+<div class="card">
+    <h3>Estructura del Presupuesto</h3>
+    <p style="color: #6c757d; margin-bottom: 20px;">Click en cada subcapítulo para ver el desglose de partidas</p>
+
+    {# Macro recursivo para renderizar subcapítulos anidados #}
+    {% macro renderizar_subcapitulos(subcapitulos, prefijo_id, margen_izq=0) %}
+        {% for subcapitulo in subcapitulos %}
+        {% set ns_sub = namespace(total_sub=0, num_partidas=0) %}
+
+        {# Calcular total del subcapítulo (partidas directas + apartados) #}
+        {% for partida in subcapitulo.partidas %}
+            {% set ns_sub.total_sub = ns_sub.total_sub + partida.importe %}
+            {% set ns_sub.num_partidas = ns_sub.num_partidas + 1 %}
+        {% endfor %}
+        {% for apartado in subcapitulo.apartados %}
+            {% for partida in apartado.partidas %}
+                {% set ns_sub.total_sub = ns_sub.total_sub + partida.importe %}
+                {% set ns_sub.num_partidas = ns_sub.num_partidas + 1 %}
+            {% endfor %}
+        {% endfor %}
+
+        <div style="margin: 15px 0; margin-left: {{ margen_izq }}px;">
+            {# Cabecera colapsable del subcapítulo #}
+            <div onclick="toggleSubcapitulo('{{ prefijo_id }}_{{ loop.index }}')"
+                 style="cursor: pointer; padding: 15px; background: #f8f9fa; border-radius: 5px; border-left: 3px solid #764ba2; display: flex; justify-content: space-between; align-items: center; transition: background 0.3s;"
+                 onmouseover="this.style.background='#e9ecef'"
+                 onmouseout="this.style.background='#f8f9fa'">
+                <div>
+                    <strong style="color: #764ba2; font-size: 1.05em;">▶ {{ subcapitulo.codigo }} - {{ subcapitulo.nombre }}</strong>
+                    <span style="color: #6c757d; font-size: 0.9em; margin-left: 15px;">
+                        ({{ ns_sub.num_partidas }} partidas{% if subcapitulo.subcapitulos %}, {{ subcapitulo.subcapitulos|length }} subcapítulos{% endif %})
+                    </span>
+                    {% if subcapitulo.confianza %}
+                    <span class="badge {% if subcapitulo.confianza >= 0.9 %}badge-success{% else %}badge-info{% endif %}" style="margin-left: 10px;">
+                        {{ (subcapitulo.confianza * 100) | round(0) }}%
+                    </span>
+                    {% endif %}
+                </div>
+                <strong style="color: #764ba2; font-size: 1.1em;">
+                    {{ ns_sub.total_sub|european }} €
+                </strong>
+            </div>
+
+            {# Contenido colapsable #}
+            <div id="{{ prefijo_id }}_{{ loop.index }}" style="display: none; margin-top: 10px; padding: 15px; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 5px;">
+                {% if subcapitulo.notas %}
+                <div style="padding: 10px; background: #fff3cd; border-left: 3px solid #ffc107; margin-bottom: 15px; border-radius: 3px;">
+                    <small style="color: #856404;"><strong>⚠️ Nota:</strong> {{ subcapitulo.notas }}</small>
+                </div>
+                {% endif %}
+
+                {# PARTIDAS DIRECTAS DEL SUBCAPÍTULO #}
+                {% if subcapitulo.partidas %}
+                <table style="width: 100%; font-size: 0.9em;">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Resumen</th>
+                            <th>Unidad</th>
+                            <th style="text-align: right;">Cantidad</th>
+                            <th style="text-align: right;">Precio</th>
+                            <th style="text-align: right;">Importe</th>
+                            <th style="text-align: center;">Conf.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for partida in subcapitulo.partidas %}
+                        <tr {% if partida.notas %}style="background: #fffbf0;"{% endif %}>
+                            <td><code>{{ partida.codigo }}</code></td>
+                            <td>
+                                {{ partida.resumen[:50] }}{% if partida.resumen|length > 50 %}...{% endif %}
+                                {% if partida.notas %}
+                                <br><small style="color: #856404;">⚠️ {{ partida.notas }}</small>
+                                {% endif %}
+                            </td>
+                            <td>{{ partida.unidad }}</td>
+                            <td style="text-align: right;">{{ partida.cantidad|european }}</td>
+                            <td style="text-align: right;">{{ partida.precio|european }} €</td>
+                            <td style="text-align: right;"><strong>{{ partida.importe|european }} €</strong></td>
+                            <td style="text-align: center;">
+                                {% if partida.confianza %}
+                                <span class="badge {% if partida.confianza >= 0.9 %}badge-success{% else %}badge-info{% endif %}" style="font-size: 0.75em;">
+                                    {{ (partida.confianza * 100) | round(0) }}%
+                                </span>
+                                {% else %}
+                                -
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% endif %}
+
+                {# APARTADOS DEL SUBCAPÍTULO #}
+                {% for apartado in subcapitulo.apartados %}
+                <div style="margin-top: 20px;">
+                    <h6 style="color: #6c757d; margin-bottom: 10px; font-weight: 600;">
+                        {{ apartado.codigo }} - {{ apartado.nombre }}
+                        {% if apartado.confianza %}
+                        <span class="badge {% if apartado.confianza >= 0.9 %}badge-success{% else %}badge-info{% endif %}">
+                            {{ (apartado.confianza * 100) | round(0) }}%
+                        </span>
+                        {% endif %}
+                    </h6>
+
+                    {% if apartado.notas %}
+                    <div style="padding: 10px; background: #fff3cd; border-left: 3px solid #ffc107; margin-bottom: 10px; border-radius: 3px;">
+                        <small style="color: #856404;"><strong>⚠️ Nota:</strong> {{ apartado.notas }}</small>
+                    </div>
+                    {% endif %}
+
+                    {% if apartado.partidas %}
+                    <table style="width: 100%; font-size: 0.85em;">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Resumen</th>
+                                <th>Unidad</th>
+                                <th style="text-align: right;">Cantidad</th>
+                                <th style="text-align: right;">Precio</th>
+                                <th style="text-align: right;">Importe</th>
+                                <th style="text-align: center;">Conf.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for partida in apartado.partidas %}
+                            <tr {% if partida.notas %}style="background: #fffbf0;"{% endif %}>
+                                <td><code>{{ partida.codigo }}</code></td>
+                                <td>
+                                    {{ partida.resumen[:40] }}{% if partida.resumen|length > 40 %}...{% endif %}
+                                    {% if partida.notas %}
+                                    <br><small style="color: #856404;">⚠️ {{ partida.notas }}</small>
+                                    {% endif %}
+                                </td>
+                                <td>{{ partida.unidad }}</td>
+                                <td style="text-align: right;">{{ partida.cantidad|european }}</td>
+                                <td style="text-align: right;">{{ partida.precio|european }} €</td>
+                                <td style="text-align: right;"><strong>{{ partida.importe|european }} €</strong></td>
+                                <td style="text-align: center;">
+                                    {% if partida.confianza %}
+                                    <span class="badge {% if partida.confianza >= 0.9 %}badge-success{% else %}badge-info{% endif %}" style="font-size: 0.7em;">
+                                        {{ (partida.confianza * 100) | round(0) }}%
+                                    </span>
+                                    {% else %}
+                                    -
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% endif %}
+                </div>
+                {% endfor %}
+
+                {# RECURSIÓN: Renderizar subcapítulos hijos #}
+                {% if subcapitulo.subcapitulos %}
+                <div style="margin-top: 20px; padding-top: 15px; border-top: 2px dashed #dee2e6;">
+                    <h6 style="color: #667eea; margin-bottom: 15px;">📂 Subcapítulos de nivel inferior:</h6>
+                    {{ renderizar_subcapitulos(subcapitulo.subcapitulos, prefijo_id ~ '_' ~ loop.index, 0) }}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    {% endmacro %}
+
+    {% for capitulo in proyecto.capitulos %}
+    <div style="border-left: 4px solid #667eea; padding-left: 20px; margin: 30px 0;">
+        <h4 style="color: #667eea; margin-bottom: 15px;">
+            {{ capitulo.codigo }} - {{ capitulo.nombre }}
+            {% if capitulo.confianza %}
+            <span class="badge {% if capitulo.confianza >= 0.9 %}badge-success{% else %}badge-info{% endif %}" style="margin-left: 10px;">
+                {{ (capitulo.confianza * 100) | round(0) }}%
+            </span>
+            {% endif %}
+        </h4>
+
+        {% if capitulo.notas %}
+        <div style="padding: 10px; background: #fff3cd; border-left: 3px solid #ffc107; margin-bottom: 15px; border-radius: 3px;">
+            <small style="color: #856404;"><strong>⚠️ Nota:</strong> {{ capitulo.notas }}</small>
+        </div>
+        {% endif %}
+
+        {% if capitulo.subcapitulos %}
+        {# Renderizar todos los subcapítulos recursivamente #}
+        {{ renderizar_subcapitulos(capitulo.subcapitulos, 'sub_' ~ capitulo.codigo, 0) }}
+        {% endif %}
+
+        {# Total del capítulo #}
+        <div style="margin-top: 20px; padding: 15px; background: #f0f1ff; border-radius: 5px; border: 2px solid #667eea;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <strong style="color: #667eea; font-size: 1.2em;">TOTAL {{ capitulo.codigo }}</strong>
+                <strong style="color: #667eea; font-size: 1.3em;">
+                    {{ capitulo.total|european }} €
+                </strong>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<div class="card">
+    <h3>Información del Archivo</h3>
+    <table style="width: auto;">
+        <tr>
+            <td style="font-weight: 600; width: 200px;">Archivo origen:</td>
+            <td>{{ proyecto.archivo_origen }}</td>
+        </tr>
+        <tr>
+            <td style="font-weight: 600;">Modelo usado:</td>
+            <td><code>{{ proyecto.modelo_usado }}</code></td>
+        </tr>
+        <tr>
+            <td style="font-weight: 600;">Fecha de procesamiento:</td>
+            <td>{{ proyecto.fecha_creacion[:19] if proyecto.fecha_creacion else '-' }}</td>
+        </tr>
+        <tr>
+            <td style="font-weight: 600;">Tiempo de procesamiento:</td>
+            <td>{{ proyecto.tiempo_procesamiento|round(2) if proyecto.tiempo_procesamiento else '-' }} segundos</td>
+        </tr>
+        <tr>
+            <td style="font-weight: 600;">ID del proyecto:</td>
+            <td><span class="badge badge-info">#{{ proyecto.id }}</span></td>
+        </tr>
+    </table>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function toggleSubcapitulo(id) {
+    const element = document.getElementById(id);
+    const header = element.previousElementSibling;
+    const arrow = header.querySelector('strong');
+
+    if (element.style.display === 'none') {
+        element.style.display = 'block';
+        arrow.textContent = arrow.textContent.replace('▶', '▼');
+    } else {
+        element.style.display = 'none';
+        arrow.textContent = arrow.textContent.replace('▼', '▶');
+    }
+}
+
+function toggleStructureDetail() {
+    // Navegar a la sección de estructura completa más abajo
+    const estructuraSection = document.querySelector('.card h3');
+    if (estructuraSection && estructuraSection.textContent.includes('Estructura del Presupuesto')) {
+        estructuraSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+// FASE 1: Extraer estructura
+async function extractStructure(proyectoId) {
+    const btn = document.getElementById('btn-extract-structure');
+    const loading = document.getElementById('structure-loading');
+
+    // Deshabilitar botón y mostrar loading
+    btn.disabled = true;
+    btn.style.opacity = '0.6';
+    loading.style.display = 'block';
+
+    try {
+        const response = await fetch(`http://localhost:3013/api/extract-structure/${proyectoId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            // Mostrar mensaje de éxito y recargar página
+            alert('✓ Estructura extraída correctamente!\n\n' +
+                  `Capítulos encontrados: ${data.estructura.capitulos.length}\n` +
+                  `Tiempo: ${data.tiempo_procesamiento.toFixed(2)}s`);
+            location.reload();
+        } else {
+            throw new Error(data.detail || 'Error desconocido');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('❌ Error al extraer estructura:\n' + error.message);
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        loading.style.display = 'none';
+    }
+}
+
+// Re-extraer estructura (usa el mismo endpoint pero con confirmación)
+async function reExtractStructure(proyectoId) {
+    if (!confirm('¿Re-extraer la estructura?\n\nEsto eliminará la estructura actual y la volverá a procesar con el agente mejorado.')) {
+        return;
+    }
+
+    const btn = document.getElementById('btn-reextract-structure');
+    const structureTree = document.getElementById('structure-tree');
+
+    // Deshabilitar botón y mostrar loading
+    btn.disabled = true;
+    btn.style.opacity = '0.6';
+    btn.textContent = '⏳ Procesando...';
+
+    try {
+        const response = await fetch(`http://localhost:3013/api/extract-structure/${proyectoId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            // Mostrar mensaje de éxito y recargar página
+            let mensaje = '✓ Estructura re-extraída correctamente!\n\n' +
+                  `Capítulos encontrados: ${data.estructura.capitulos.length}\n` +
+                  `Tiempo: ${data.tiempo_procesamiento.toFixed(2)}s`;
+
+            if (data.validacion && !data.validacion.valido) {
+                mensaje += '\n\n⚠️ Advertencia: Se encontraron inconsistencias en los totales.';
+            }
+
+            alert(mensaje);
+            location.reload();
+        } else {
+            throw new Error(data.detail || 'Error desconocido');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('❌ Error al re-extraer estructura:\n' + error.message);
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        btn.textContent = '🔄 Re-extraer';
+    }
+}
+
+// FASE 2: Extraer partidas
+async function extractPartidas(proyectoId) {
+    const btn = document.getElementById('btn-extract-partidas');
+    const loading = document.getElementById('partidas-loading');
+
+    // Confirmar acción
+    if (!confirm('¿Iniciar extracción de partidas?\n\nEste proceso procesará todos los capítulos y puede tardar varios minutos.\n\n¿Continuar?')) {
+        return;
+    }
+
+    // Deshabilitar botón y mostrar loading
+    btn.disabled = true;
+    btn.style.opacity = '0.6';
+    loading.style.display = 'block';
+
+    try {
+        const response = await fetch(`http://localhost:3013/api/extract-partidas/${proyectoId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        const estado = await response.json();
+
+        if (estado.estado === 'completed') {
+            // Extracción completada exitosamente
+            let mensaje = '✓ Extracción de partidas completada!\n\n' +
+                  `Partidas extraídas: ${estado.resumen.total_partidas}\n` +
+                  `Capítulos procesados: ${estado.resumen.capitulos_procesados}/${estado.resumen.capitulos_totales}`;
+
+            alert(mensaje);
+            location.reload();
+        } else if (estado.estado === 'partial') {
+            // Extracción parcial con algunos errores
+            let mensaje = '⚠️ Extracción parcial completada\n\n' +
+                  `Partidas extraídas: ${estado.resumen.total_partidas}\n` +
+                  `Capítulos procesados: ${estado.resumen.capitulos_procesados}/${estado.resumen.capitulos_totales}\n` +
+                  `Capítulos con error: ${estado.resumen.capitulos_error}\n\n` +
+                  'Revisa los detalles para ver qué capítulos fallaron.';
+
+            // Mostrar detalles de errores
+            const capitulos_error = estado.capitulos.filter(c => c.estado === 'error');
+            if (capitulos_error.length > 0) {
+                mensaje += '\n\nCapítulos con error:\n';
+                capitulos_error.forEach(c => {
+                    mensaje += `- ${c.codigo}: ${c.error}\n`;
+                });
+            }
+
+            alert(mensaje);
+            location.reload();
+        } else {
+            throw new Error(estado.error || 'Error desconocido en la extracción');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('❌ Error al extraer partidas:\n' + error.message);
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        loading.style.display = 'none';
+    }
+}
+</script>
+{% endblock %}

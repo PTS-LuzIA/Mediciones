@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 2246,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n03 FASE 4 03.13.02 TRANSPORTE m23G02T010 ud TRANSPORTE PLANTA <50 km SACOS RCD ESCOMBROS 1,5 m3 15,00 35,73 535 Servicio de entrega y recogida de saco de RCD de 1,5 m3 por transportista autori- zado (por la Consejería de Medio Ambiente de la Comunidad de Madrid), coloca- do a pie de carga y considerando una distancia de transporte al centro de reciclaje o de transferencia no superior a 50 km. No incluye alquiler del saco ni el tra"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 455,
+      "content_preview": "Extrae partidas del capítulo 03\n\nJSON:\n{\n  \"capitulo_codigo\": \"03\",\n  \"partidas\": [\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n},\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n}\n  ]\n}\n\nReglas:\n1. NO repetir códigos\n2. NO incluir totales\n3. NO incluir campo subcapitulo_codigo\n4. Extrae TODAS las partidas\n\nVALIDACIÓN (antes de enviar):\n1. cantidad × precio = importe (CADA partida)\n2. Códigos únicos\n3. Revisa primera y última partida"
+    }
+  ]
+}

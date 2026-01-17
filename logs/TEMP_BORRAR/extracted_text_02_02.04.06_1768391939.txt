@@ -1,0 +1,10 @@
+=== TEXTO EXTRAÍDO ===
+Capítulo: 02
+Subcapítulos: ['02.04.06']
+Caracteres: 1632
+Líneas: 24
+PDF: hybrid_20260114_002108_PRESUPUESTOS PARCIALES NAVAS DE TOLOSA.pdf
+
+================================================================================
+
+02 FASE 3 02.04.06 CAMINOS DE MADERA U04VBM020 m2 PAVIMENTO RODAJAS PINO S/ENCACHADO 53,20 179,36 9.541,95 Pavimento de rodajas de pino tanalizadas en autoclave, de 15 cm de espesor, co- locadas sobre encachado de piedra de 20 cm de espesor, por intermedio de una lámina de geotextil de 125 g/m2, i/relleno y retacado de juntas con jabre cribado seleccionado y p.p. de encuentros y bordes, terminado. m23E11D030 m2 RECRECIDO 5 cm. MORTERO M-5 1,00 11,13 11,13 Recrecido del soporte de pavimentos con mortero de cemento CEM II/B-P 32,5 N y arena de río (M-5) de 5 cm. de espesor, con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011, maestreado y fratasado medido en superficie realmente ejecutada. m23E04SM020 m2 SOLERA HORMIGÓN HM-25/B/20/X0 o XC1 e=10cm 1,00 15,08 15,08 Solera de hormigón en masa de 10 cm. de espesor, realizada con hormigón HM-25 N/mm2, Tmáx.20 mm., elaborado en obra, i/vertido, colocación, p.p. de jun- tas, aserrado de las mismas y fratasado. Según Código Estructural, NTE-CCM, NTE-RSS y CTE DB-SE-C. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011. m23E02SZ070 m3 RELLENO/COMPACTADO ZANJA C/RANA C/MEDIOS MANUALES S/APORTE 1,00 31,40 31,40 Relleno, extendido y compactado de tierras propias en zanjas, por medios manua- les, con pisón compactador manual tipo rana, en tongadas de 30 cm. de espesor, sin aporte de tierras, incluso regado de las mismas, y con p.p. de medios auxilia- res. Según CTE DB-SE-C y NTE-ADZ. TOTAL 02.04.06...................................................................................... 9.599,56

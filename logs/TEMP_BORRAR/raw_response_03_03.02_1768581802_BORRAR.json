@@ -1,0 +1,101 @@
+{
+  "capitulo_codigo": "03",
+  "partidas": [
+    {
+      "codigo": "m23U01A010m.1",
+      "cantidad": 24.00,
+      "precio": 9.17,
+      "importe": 220.08
+    },
+    {
+      "codigo": "m23U01A010m.2",
+      "cantidad": 224.50,
+      "precio": 3.99,
+      "importe": 895.76
+    },
+    {
+      "codigo": "m23U02H010",
+      "cantidad": 24.00,
+      "precio": 9.97,
+      "importe": 239.28
+    },
+    {
+      "codigo": "m23U01BP030",
+      "cantidad": 636.00,
+      "precio": 3.21,
+      "importe": 2041.56
+    },
+    {
+      "codigo": "m23E01DPP120",
+      "cantidad": 380.00,
+      "precio": 3.74,
+      "importe": 1421.20
+    },
+    {
+      "codigo": "m23E01DPS030",
+      "cantidad": 265.00,
+      "precio": 16.70,
+      "importe": 4425.50
+    },
+    {
+      "codigo": "m23U01BF030",
+      "cantidad": 294.41,
+      "precio": 26.57,
+      "importe": 7822.47
+    },
+    {
+      "codigo": "m23U01BF040",
+      "cantidad": 294.41,
+      "precio": 65.43,
+      "importe": 19263.25
+    },
+    {
+      "codigo": "m23E01DCC090",
+      "cantidad": 228.00,
+      "precio": 16.98,
+      "importe": 3871.44
+    },
+    {
+      "codigo": "m23E01DCE030",
+      "cantidad": 228.00,
+      "precio": 24.77,
+      "importe": 5647.56
+    },
+    {
+      "codigo": "m23U01BE040",
+      "cantidad": 12981.20,
+      "precio": 1.08,
+      "importe": 14019.70
+    },
+    {
+      "codigo": "APUI_003",
+      "cantidad": 6.00,
+      "precio": 620.65,
+      "importe": 3723.90
+    },
+    {
+      "codigo": "m23U01BB030",
+      "cantidad": 53.00,
+      "precio": 47.29,
+      "importe": 2506.37
+    },
+    {
+      "codigo": "m23E01DM040",
+      "cantidad": 55.59,
+      "precio": 141.92,
+      "importe": 7889.33
+    },
+    {
+      "codigo": "m23U01BB100",
+      "cantidad": 123.80,
+      "precio": 7.44,
+      "importe": 921.07
+    },
+    {
+      "codigo": "m23M02PTD010",
+      "cantidad": 45.00,
+      "precio": 13.35,
+      "importe": 600.75
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "capitulo_codigo": "02",
+  "partidas": [
+    {
+      "codigo": "m23U02BZ090",
+      "cantidad": 1.00,
+      "precio": 40.60,
+      "importe": 40.60
+    },
+    {
+      "codigo": "m23E02PCA030",
+      "cantidad": 28.54,
+      "precio": 46.10,
+      "importe": 1315.69
+    },
+    {
+      "codigo": "m23U02F040",
+      "cantidad": 14.92,
+      "precio": 0.55,
+      "importe": 8.21
+    },
+    {
+      "codigo": "m23E04CM010",
+      "cantidad": 9.79,
+      "precio": 169.18,
+      "importe": 1656.27
+    },
+    {
+      "codigo": "m23E04CE020",
+      "cantidad": 1.00,
+      "precio": 29.13,
+      "importe": 29.13
+    },
+    {
+      "codigo": "m23E04CM050",
+      "cantidad": 2.30,
+      "precio": 121.36,
+      "importe": 279.13
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "cantidad": 93.57,
+      "precio": 2.40,
+      "importe": 224.57
+    },
+    {
+      "codigo": "m23U03I010",
+      "cantidad": 10.76,
+      "precio": 157.65,
+      "importe": 1696.31
+    },
+    {
+      "codigo": "APUDV_BAM37I.26ud",
+      "cantidad": 4.00,
+      "precio": 5634.03,
+      "importe": 22536.12
+    },
+    {
+      "codigo": "APUD_murbHags.0m52.1",
+      "cantidad": 42.25,
+      "precio": 686.62,
+      "importe": 29009.70
+    },
+    {
+      "codigo": "APUDm23U16D030ud",
+      "cantidad": 4.00,
+      "precio": 1202.06,
+      "importe": 4808.24
+    },
+    {
+      "codigo": "APUI_V_UAGAR11uR",
+      "cantidad": 2.00,
+      "precio": 955.88,
+      "importe": 1911.76
+    },
+    {
+      "codigo": "APUIm23U16D210ud",
+      "cantidad": 39.00,
+      "precio": 1026.92,
+      "importe": 40049.88
+    },
+    {
+      "codigo": "APUDm23U16C030ud",
+      "cantidad": 5.00,
+      "precio": 387.32,
+      "importe": 1936.60
+    },
+    {
+      "codigo": "m23U16M150",
+      "cantidad": 3.50,
+      "precio": 224.21,
+      "importe": 784.74
+    },
+    {
+      "codigo": "m23U16M090",
+      "cantidad": 98.50,
+      "precio": 219.23,
+      "importe": 21594.16
+    },
+    {
+      "codigo": "m23U16M100",
+      "cantidad": 1.00,
+      "precio": 130.57,
+      "importe": 130.57
+    },
+    {
+      "codigo": "APUI_V_mU16M13U0",
+      "cantidad": 1.00,
+      "precio": 1499.03,
+      "importe": 1499.03
+    },
+    {
+      "codigo": "APUI_V_UAGAR40u30",
+      "cantidad": 1.00,
+      "precio": 965.11,
+      "importe": 965.11
+    },
+    {
+      "codigo": "APUI_V_mU16NROU108",
+      "cantidad": 1.00,
+      "precio": 2595.02,
+      "importe": 2595.02
+    },
+    {
+      "codigo": "APUI_V_mU16MSCU6416",
+      "cantidad": 1.00,
+      "precio": 29672.00,
+      "importe": 29672.05
+    },
+    {
+      "codigo": "APUI_V_mU16NROU2009",
+      "cantidad": 1.00,
+      "precio": 31860.16,
+      "importe": 31860.16
+    }
+  ]
+}

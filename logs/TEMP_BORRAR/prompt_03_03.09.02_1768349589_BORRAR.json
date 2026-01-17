@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 7884,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n03 FASE 4 03.09.02 ARBOLADO m23E28PZ050 m2 CAPA DE PIÑONCILLO 5 cm. 40,32 3,53 142 Capa de piñoncillo limpio, lavado y exento de finos de 5 cm. de espesor de diáme- tros comprendidos entre 12 y 10 mm. extendido y nivelado por medios mecánicos. m23U14A260 m3 GRAVILLA (1-3cm) EN JARDINERÍA 8,06 33,47 269 Suministro y extensión de gravilla de 1-3 cm en jardinería. Árido con marcado CE y DdP (Declaración de prestaciones) según Reglame"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 455,
+      "content_preview": "Extrae partidas del capítulo 03\n\nJSON:\n{\n  \"capitulo_codigo\": \"03\",\n  \"partidas\": [\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n},\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n}\n  ]\n}\n\nReglas:\n1. NO repetir códigos\n2. NO incluir totales\n3. NO incluir campo subcapitulo_codigo\n4. Extrae TODAS las partidas\n\nVALIDACIÓN (antes de enviar):\n1. cantidad × precio = importe (CADA partida)\n2. Códigos únicos\n3. Revisa primera y última partida"
+    }
+  ]
+}

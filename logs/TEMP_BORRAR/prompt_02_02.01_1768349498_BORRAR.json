@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 1618,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n02 FASE 3 02.01 LEVANTANDO DE ELEMENTOS EN SUPERFICIE m23U01C190 Ud DESMONTAJE DE PAPELERA 4,00 26,89 107,56 Desmontaje de papelera existente de cualquier material, incluido transporte al lu- gar indicado por la Dirección facultativa, y si fuera necesario, demolición de cimen- taciones, carga y transporte a vertedero autorizado. m23E01DKW010 m LEVANTADO BARANDILLAS/VALLAS C/MEDIOS MANUALES 202,50 11,89 2.407,73 Levantado de barand"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 455,
+      "content_preview": "Extrae partidas del capítulo 02\n\nJSON:\n{\n  \"capitulo_codigo\": \"02\",\n  \"partidas\": [\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n},\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n}\n  ]\n}\n\nReglas:\n1. NO repetir códigos\n2. NO incluir totales\n3. NO incluir campo subcapitulo_codigo\n4. Extrae TODAS las partidas\n\nVALIDACIÓN (antes de enviar):\n1. cantidad × precio = importe (CADA partida)\n2. Códigos únicos\n3. Revisa primera y última partida"
+    }
+  ]
+}

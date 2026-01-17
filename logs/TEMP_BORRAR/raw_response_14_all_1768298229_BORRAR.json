@@ -1,0 +1,50 @@
+{
+  "capitulo_codigo": "14",
+  "partidas": [
+    {
+      "codigo": "E28IPA010",
+      "titulo": "PINTU.PLÁSTICA LISA BLANCA MATE",
+      "descripcion": "Pintura plástica lisa mate en blanco, sobre paramentos horizontales y verticales, lavable dos manos, incluso mano de imprimación de fondo, plastecido y mano de acabado.",
+      "unidad": "m2",
+      "cantidad": 2267.68,
+      "precio": 6.26,
+      "importe": 14195.68
+    },
+    {
+      "codigo": "E28IPA020",
+      "titulo": "PINTU.PLÁST.LISA MATE 2 COL.CLAROS",
+      "descripcion": "Pintura plástica lisa mate en dos colores tonos claros a deinir por D.F., sobre paramentos horizontales y verticales, lavable dos manos, incluso mano de imprimación de fondo, plastecido y mano de acabado.",
+      "unidad": "m2",
+      "cantidad": 3191.32,
+      "precio": 6.09,
+      "importe": 19435.14
+    },
+    {
+      "codigo": "E28ME010",
+      "titulo": "ESMALTE SATINADO S/MADERA",
+      "descripcion": "Pintura al esmalte satinado sobre carpintería de madera, i/lijado, imprimación, plastecido, mano de fondo y acabado con una mano de esmalte.",
+      "unidad": "m2",
+      "cantidad": 29.76,
+      "precio": 10.32,
+      "importe": 307.12
+    },
+    {
+      "codigo": "E28EW040",
+      "titulo": "PINTURA EPOXI S/HORMIGON VISTO",
+      "descripcion": "Pintura plástica de resinas epoxi sobre hormigón visto, dos manos, i/lijado, limpieza, mano de imprimación epoxi, emplastecido con masilla especial y lijado de parches.",
+      "unidad": "m2",
+      "cantidad": 35.2,
+      "precio": 6.54,
+      "importe": 230.21
+    },
+    {
+      "codigo": "E28IPR030",
+      "titulo": "REVESTIM. PÉTREO TIPO ISPO-PUTZ",
+      "descripcion": "Revestimiento pétreo fratasado tipo Ispo-putz, sobre paramentos verticales, previo enfondado y plastecido y acabado rayado fratasado.",
+      "unidad": "m2",
+      "cantidad": 855.53,
+      "precio": 11.36,
+      "importe": 9718.82
+    }
+  ]
+}

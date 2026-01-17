@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block title %}Proyectos Local - MVP Mediciones{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2>Proyectos Procesados (Sistema Local)</h2>
+        <a href="/local-upload" class="btn btn-success">+ Subir Nuevo PDF</a>
+    </div>
+
+    {% if proyectos %}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Capítulos</th>
+                <th>Partidas</th>
+                <th>Fecha</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for proyecto in proyectos %}
+            <tr>
+                <td><span class="badge badge-info">#{{ proyecto.id }}</span></td>
+                <td>
+                    <a href="/local-proyecto/{{ proyecto.id }}" style="color: #667eea; text-decoration: none; font-weight: 600;">
+                        {{ proyecto.nombre or 'Sin nombre' }}
+                    </a>
+                </td>
+                <td>{{ proyecto.descripcion[:50] }}{% if proyecto.descripcion|length > 50 %}...{% endif %}</td>
+                <td>{{ proyecto.num_capitulos }}</td>
+                <td><strong>{{ proyecto.num_partidas }}</strong></td>
+                <td>{{ proyecto.fecha_creacion[:10] if proyecto.fecha_creacion else '-' }}</td>
+                <td>
+                    <div style="display: flex; gap: 8px;">
+                        <a href="/local-proyecto/{{ proyecto.id }}" class="btn" style="padding: 6px 12px; font-size: 0.9em;">
+                            Ver Detalle
+                        </a>
+                        <button onclick="eliminarProyecto({{ proyecto.id }})"
+                                class="btn"
+                                style="padding: 6px 12px; font-size: 0.9em; background: #dc3545; color: white;"
+                                title="Eliminar proyecto">
+                            🗑️
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div style="text-align: center; padding: 60px 20px; color: #6c757d;">
+        <h3 style="margin-bottom: 20px;">No hay proyectos procesados</h3>
+        <p style="margin-bottom: 30px;">Sube tu primer PDF de presupuesto para comenzar</p>
+        <a href="/local-upload" class="btn btn-success">Subir PDF</a>
+    </div>
+    {% endif %}
+</div>
+
+{% if proyectos %}
+<div class="card">
+    <h3>Estadísticas Generales</h3>
+    <div class="stats">
+        <div class="stat-card">
+            <h3>{{ proyectos|length }}</h3>
+            <p>Proyectos Totales</p>
+        </div>
+        <div class="stat-card">
+            <h3>{{ proyectos|sum(attribute='num_capitulos') }}</h3>
+            <p>Capítulos</p>
+        </div>
+        <div class="stat-card">
+            <h3>{{ proyectos|sum(attribute='num_partidas') }}</h3>
+            <p>Partidas</p>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+async function eliminarProyecto(proyectoId) {
+    if (!confirm('¿Estás seguro de que deseas eliminar este proyecto?\n\nEsta acción no se puede deshacer.')) {
+        return;
+    }
+
+    try {
+        const response = await fetch(`http://localhost:3013/local-proyectos/${proyectoId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            alert('✓ Proyecto eliminado correctamente');
+            location.reload();
+        } else {
+            throw new Error(data.detail || 'Error desconocido');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('❌ Error al eliminar proyecto:\n' + error.message);
+    }
+}
+</script>
+{% endblock %}

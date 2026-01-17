@@ -1,0 +1,61 @@
+{
+  "capitulo_codigo": "03",
+  "partidas": [
+    {
+      "codigo": "m23U04KA0k1g0",
+      "resumen": "ACERO LAMINADO S275JR EN PERFILES",
+      "cantidad": 10653.50,
+      "precio": 5.23,
+      "importe": 55717.81
+    },
+    {
+      "codigo": "APUDE04AB040",
+      "resumen": "ACERO EN BARRAS LISO B 500 S/SD",
+      "cantidad": 15248.31,
+      "precio": 2.14,
+      "importe": 32631.38
+    },
+    {
+      "codigo": "m23E27HA010",
+      "resumen": "PINTURA MINIO ELECTROLÍTICO",
+      "cantidad": 808.50,
+      "precio": 6.94,
+      "importe": 5610.99
+    },
+    {
+      "codigo": "m23E27HE01m02",
+      "resumen": "ESMALTE-LACA SATINADO S/METAL",
+      "cantidad": 808.50,
+      "precio": 13.17,
+      "importe": 10647.95
+    },
+    {
+      "codigo": "m23E27HA030",
+      "resumen": "IMPRIMACIÓN GALVANIZADOS",
+      "cantidad": 1.00,
+      "precio": 6.50,
+      "importe": 6.50
+    },
+    {
+      "codigo": "m23E27HE010",
+      "resumen": "ESMALTE SATINADO S/METAL",
+      "cantidad": 1.00,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "resumen": "PINTURA MONOCAPA SINTÉTICA COLOR",
+      "cantidad": 1.00,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "APUI_003",
+      "resumen": "ALQUILER DIARIO DE GRUA SOBRE CAMIÓN TELESCOPICA 21-25 TN.",
+      "cantidad": 10.00,
+      "precio": 620.65,
+      "importe": 6206.50
+    }
+  ]
+}

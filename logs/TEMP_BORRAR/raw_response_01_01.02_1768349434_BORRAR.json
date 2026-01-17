@@ -1,0 +1,161 @@
+{
+  "capitulo_codigo": "01",
+  "partidas": [
+    {
+      "codigo": "m23U01A010m",
+      "cantidad": 1.00,
+      "precio": 3.99,
+      "importe": 3.99
+    },
+    {
+      "codigo": "m23U01A010m.1",
+      "cantidad": 96.00,
+      "precio": 9.17,
+      "importe": 880.32
+    },
+    {
+      "codigo": "m23U01A010m.2",
+      "cantidad": 90.00,
+      "precio": 3.99,
+      "importe": 359.10
+    },
+    {
+      "codigo": "m23U02H010m",
+      "cantidad": 96.00,
+      "precio": 9.97,
+      "importe": 957.12
+    },
+    {
+      "codigo": "m23U01BP010m2",
+      "cantidad": 450.40,
+      "precio": 2.34,
+      "importe": 1053.90
+    },
+    {
+      "codigo": "m23U01BP020m2",
+      "cantidad": 112.60,
+      "precio": 4.60,
+      "importe": 517.90
+    },
+    {
+      "codigo": "m23E01DPP120m2",
+      "cantidad": 294.00,
+      "precio": 3.74,
+      "importe": 1099.50
+    },
+    {
+      "codigo": "m23U01BP030m2",
+      "cantidad": 967.00,
+      "precio": 3.21,
+      "importe": 3104.00
+    },
+    {
+      "codigo": "m23U01BF030m3",
+      "cantidad": 335.31,
+      "precio": 26.57,
+      "importe": 8909.00
+    },
+    {
+      "codigo": "m23U01BF040m3",
+      "cantidad": 83.83,
+      "precio": 65.43,
+      "importe": 5485.00
+    },
+    {
+      "codigo": "m23U01BB020m3",
+      "cantidad": 11.30,
+      "precio": 82.11,
+      "importe": 927.80
+    },
+    {
+      "codigo": "m23E01DCC090m2",
+      "cantidad": 181.00,
+      "precio": 16.98,
+      "importe": 3073.30
+    },
+    {
+      "codigo": "m23E01DCE030m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.30
+    },
+    {
+      "codigo": "m23U01BE040kg",
+      "cantidad": 3818.00,
+      "precio": 1.08,
+      "importe": 4123.44
+    },
+    {
+      "codigo": "d",
+      "cantidad": 6.00,
+      "precio": 620.65,
+      "importe": 3723.90
+    },
+    {
+      "codigo": "m23U01BB030m3",
+      "cantidad": 66.87,
+      "precio": 47.29,
+      "importe": 3162.28
+    },
+    {
+      "codigo": "m23U01BB010m3",
+      "cantidad": 11.00,
+      "precio": 42.51,
+      "importe": 467.61
+    },
+    {
+      "codigo": "m23U01BB040m3",
+      "cantidad": 0.68,
+      "precio": 90.43,
+      "importe": 61.49
+    },
+    {
+      "codigo": "m23E01DM040m3",
+      "cantidad": 23.83,
+      "precio": 141.92,
+      "importe": 3381.95
+    },
+    {
+      "codigo": "m23E01DFL040m2",
+      "cantidad": 1.00,
+      "precio": 22.22,
+      "importe": 22.22
+    },
+    {
+      "codigo": "m23U01BB100m2",
+      "cantidad": 15.00,
+      "precio": 7.44,
+      "importe": 111.60
+    },
+    {
+      "codigo": "m23E01DFL030m2",
+      "cantidad": 15.00,
+      "precio": 37.81,
+      "importe": 567.15
+    },
+    {
+      "codigo": "m23E01DPW010m",
+      "cantidad": 1.00,
+      "precio": 21.33,
+      "importe": 21.30
+    },
+    {
+      "codigo": "m23U01BB060m3",
+      "cantidad": 1.00,
+      "precio": 45.99,
+      "importe": 45.99
+    },
+    {
+      "codigo": "m23E01DKA020m2",
+      "cantidad": 1.00,
+      "precio": 12.74,
+      "importe": 12.70
+    },
+    {
+      "codigo": "m23M02PTD010h",
+      "cantidad": 45.00,
+      "precio": 13.35,
+      "importe": 600.75
+    }
+  ]
+}

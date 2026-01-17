@@ -1,0 +1,781 @@
+{
+  "capitulo_codigo": "01",
+  "partidas": [
+    {
+      "codigo": "m23U01C190",
+      "titulo": "DESMONTAJE DE PAPELERA",
+      "descripcion": "Desmontaje de papelera existente de cualquier material, incluido transporte al lu- gar indicado por la Dirección facultativa, y si fuera necesario, demolición de cimen- taciones, carga y transporte a vertedero autorizado.",
+      "unidad": "Ud",
+      "cantidad": 9.00,
+      "precio": 26.89,
+      "importe": 242.01
+    },
+    {
+      "codigo": "m23E01DKW010",
+      "titulo": "LEVANTADO BARANDILLAS/VA LLAS C/MEDIOS MANUALES",
+      "descripcion": "Levantado de barandillas o vallas de cualquier tipo, por medios manuales, incluso limpieza y retirada de escombros a pie de carga, sin transporte a vertedero y con p.p. de medios auxiliares, sin medidas de protección colectivas. Según RD105/2008. Medición de longitud realmente ejecutada.",
+      "unidad": "m",
+      "cantidad": 153.00,
+      "precio": 11.89,
+      "importe": 1819.17
+    },
+    {
+      "codigo": "m23E01DKA020",
+      "titulo": "LEVANTADO CARPINTERÍA METÁLI CA C/MEDIOS MANUALES",
+      "descripcion": "Levantado de carpintería metálica, incluidos cercos, hojas y accesorios, por me- dios manuales, incluso limpieza, retirada de escombros a pie de carga, sin trans-porte a vertedero y con p.p. de medios auxiliares. Según RD 105/2008 yNTE-ADD. Medición de superficie realmente ejecutada.",
+      "unidad": "m2",
+      "cantidad": 327.00,
+      "precio": 12.74,
+      "importe": 4165.98
+    },
+    {
+      "codigo": "APUI_001",
+      "titulo": "DESMONTAJE DE FUENTE",
+      "descripcion": "Desmontaje de fuente y transporte a depósito municipal, incluso demolición de ci- mentación, carga y transporte de productos sobrantes a vertedero.",
+      "unidad": "ud",
+      "cantidad": 1.00,
+      "precio": 66.52,
+      "importe": 66.52
+    },
+    {
+      "codigo": "m23U01C180",
+      "titulo": "DESMONTAJE DE BANCO",
+      "descripcion": "Desmontaje de banco existente de cualquier material, incluido transporte al lu- gar indicado por la Dirección facultativa, y si fuera necesario, demolición de cimenta-ciones, carga y transporte a vertedero autorizado.",
+      "unidad": "Ud",
+      "cantidad": 4.00,
+      "precio": 46.15,
+      "importe": 184.60
+    },
+    {
+      "codigo": "m23M02PTD010",
+      "titulo": "Plataforma elevadora de tijera diesel hasta 10 m altura",
+      "descripcion": "Plataforma elevadora de tijera diesel hasta 10 m altura",
+      "unidad": "h",
+      "cantidad": 27.00,
+      "precio": 13.35,
+      "importe": 360.45
+    },
+    {
+      "codigo": "m23U01A010",
+      "titulo": "LEVANTADO DE BORDILLO",
+      "descripcion": "Levantado de bordillo, con recuperación del mismo incluso retirada y carga, o aco- pio en obra, sin transporte. Confor me a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 3.99,
+      "importe": 3.99
+    },
+    {
+      "codigo": "m23U01A010.1",
+      "titulo": "LEVANTADO DE BORDILLO DE GRANITO CON RECUPERACIÓN",
+      "descripcion": "Levantado de bordillo, con recuperación del mismo incluso retirada y carga, o aco- pio en obra, incluido transporte a dependenc ias municipales. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "unidad": "m",
+      "cantidad": 96.00,
+      "precio": 9.17,
+      "importe": 880.32
+    },
+    {
+      "codigo": "m23U01A010.2",
+      "titulo": "LEVANTADO DE BORDILLO SIN RECUPERACIÓN",
+      "descripcion": "Levantado de bordillo, sin recuperación del mismo incluso retirada y carga, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "unidad": "m",
+      "cantidad": 90.00,
+      "precio": 3.99,
+      "importe": 359.10
+    },
+    {
+      "codigo": "m23U02H010",
+      "titulo": "TRANSPORTE BORDILLO RECUPERADO",
+      "descripcion": "Limpieza de bordillo recuperado, paletiz ado en palé de madera y transporte de bor- dillo recuperado a casilla u otra obra municipal, incluso descarga.",
+      "unidad": "m",
+      "cantidad": 96.00,
+      "precio": 9.97,
+      "importe": 957.12
+    },
+    {
+      "codigo": "m23U01BP010",
+      "titulo": "DEMOLICIÓN MEDIOS MECÁNICOS PAVIMENTO ASFÁLTICO E<12 cm",
+      "descripcion": "Levantado por medios mecánicos (retroexcavadora con martillo hidráulico o simi- lar) de pavimento de aglomerado asfáltico en capas de rodadura e intermedia deespesor menor o igual a doce centímetros , incluso retirada y carga de productos, sin transporte. Conforme a ORDE N FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "unidad": "m2",
+      "cantidad": 450.40,
+      "precio": 2.34,
+      "importe": 1053.94
+    },
+    {
+      "codigo": "m23U01BP020",
+      "titulo": "DEMOLICIÓN COMPRESOR PAVIMENTO ASFÁLTICO E<12cm",
+      "descripcion": "Levantado con compresor de pavimento de aglomerado asfáltico en capas de ro- dadura e intermedia de espesor menor o igual a doce centímetros, incluso retirada y carga de productos, sin tr ansporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "unidad": "m2",
+      "cantidad": 112.60,
+      "precio": 4.60,
+      "importe": 517.96
+    },
+    {
+      "codigo": "m23E01DPP120",
+      "titulo": "DEMOLICIÓN PAVIMENTO FLEXIBLE",
+      "descripcion": "Demolición de pavimento flexible de moqueta, linóleo, caucho-goma, PVC, corcho, etc. incluso limpieza de adhesivo, retirada, carga y sin transporte a vertedero. Se- gún RD 105/2008 y NTE-ADD. Medición de superficie realmente ejecutada.",
+      "unidad": "m2",
+      "cantidad": 294.00,
+      "precio": 3.74,
+      "importe": 1099.56
+    },
+    {
+      "codigo": "m23U01BP030",
+      "titulo": "DEMOLICIÓN COMPRESOR SOLADO ACERA",
+      "descripcion": "Levantado con compresor de solado de aceras de cemento continuo, loseta hi- dráulica o terrazo y p.p. de material de agarre, incluso retirada y carga de produc-tos, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "unidad": "m2",
+      "cantidad": 967.00,
+      "precio": 3.21,
+      "importe": 3104.07
+    },
+    {
+      "codigo": "m23U01BF030",
+      "titulo": "DEMOLICIÓN MEDIOS MEC ÁNICOS FIRME BASE HORMIGÓN",
+      "descripcion": "Levantado por medios mecánicos (retroexcavadora con martillo hidráulico o simi- lar) de firme con base de hormigón hidráulico, incluso retirada y carga de produc-tos, medido sobre perfil, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "unidad": "m3",
+      "cantidad": 335.31,
+      "precio": 26.57,
+      "importe": 8909.19
+    },
+    {
+      "codigo": "m23U01BF040",
+      "titulo": "DEMOLICIÓN COMPRESOR FIRME BASE HORMIGÓN",
+      "descripcion": "Levantado con compresor de firme con base de hormigón hidráulico, incluso retira- da y carga de productos, medido sobre perf il, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "unidad": "m3",
+      "cantidad": 83.83,
+      "precio": 65.43,
+      "importe": 5485.00
+    },
+    {
+      "codigo": "m23U01BB020",
+      "titulo": "DEMOLICIÓN COMPRESOR HORMIGÓN EN MASA",
+      "descripcion": "Demolición con compresor, de fábrica de hormigón en masa de cualquier tipo, in- cluso retirada y carga de productos, medido sobre fábrica, sin transporte. Confor- me a ORDEN FOM/1382/2002-PG3-Ar t.301, RD 105/2008 y NTE-ADD-13.",
+      "unidad": "m3",
+      "cantidad": 11.30,
+      "precio": 82.11,
+      "importe": 927.84
+    },
+    {
+      "codigo": "m23E01DCC090",
+      "titulo": "DEMOLICIÓN CUBRICIÓN CHAPA SIMPLE",
+      "descripcion": "Demolición de cubrición de placas nervadas de chapa simple, incluidos caballetes, limas, canalones, remates laterales, encuentros con paramentos, etc., por mediosmanuales y sin aprovechamiento del materi al desmontado, incluso limpieza y reti- rada de escombros a pie de carga, sin transporte al vertedero, y con p.p. de me-dios auxiliares, sin medidas de protección colectivas. Según RD 105/2008 yNTE-ADD. Medición descontando huecos.",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 16.98,
+      "importe": 3073.38
+    },
+    {
+      "codigo": "m23E01DCE030",
+      "titulo": "DEMOLICIÓN ENTRAM ADO METÁLICO CUBIERTA",
+      "descripcion": "Demolición del entramado de cerchas y correas metálicas de la estructura de la cu- bierta, por medios manuales i/limpieza y retirada de escombros a pie de carga, sintransporte al vertedero, y con p.p. de medios auxiliares, sin medidas de proteccióncolectivas. Según RD 105/2008 y NTE-ADD. Medición descontando huecos.",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U01BE040",
+      "titulo": "DEMOLICIÓN VIGAS-PILARES METÁLICOS C/EQUIPO OXICORTE",
+      "descripcion": "Demolición de estructuras formadas por vi gas y pilares metálicos, (sin forjados), por medios manuales con empleo de equipo oxicorte, incluso limpieza y retirada de escombros a pie de carga, con transporte al vertedero y con p.p. de medios au-xiliares, sin medidas de protección colectivas, s/RCDs.",
+      "unidad": "kg",
+      "cantidad": 3818.00,
+      "precio": 1.08,
+      "importe": 4123.44
+    },
+    {
+      "codigo": "APUI_003",
+      "titulo": "ALQUILER DIARIO DE GRUA SOBR E CAMIÓN TELESCOPICA 21-25 TN.",
+      "descripcion": "Alquiler diario de grúa sobre camión de brazo telescópico con una capacidad de carga de elevación entre 21 y 25 Tn.. Con todos los medios de seguridad y protec-ción necesarias. Documentación en vigor, marcado CE y Declaración CE de con-formidad, manual de uso y mantenimiento, así como cualquier otro documento ne-cesario para su correcto funcionamiento.",
+      "unidad": "d",
+      "cantidad": 6.00,
+      "precio": 620.65,
+      "importe": 3723.90
+    },
+    {
+      "codigo": "m23U01BB030",
+      "titulo": "DEMOLICIÓN MEDIOS MECÁNICOS HORMIGÓN ARMADO",
+      "descripcion": "Demolición por medios mecánicos, (retroexcavadora con martillo hidráulico o simi- lar), de fábrica de hormigón armado, de cual quier tipo, incluso retirada y carga de productos, medido sobre fábrica, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301, RD 105/2008 y NTE-ADD-13.",
+      "unidad": "m3",
+      "cantidad": 66.87,
+      "precio": 47.29,
+      "importe": 3162.28
+    },
+    {
+      "codigo": "m23U01BB010",
+      "titulo": "DEMOLICIÓN MEDIOS MECÁNICOS HORMIGÓN EN MASA",
+      "descripcion": "Demolición por medios mecánicos (retroexcavadora con martillo hidráulico o simi- lar), de fábrica de hormigón en masa, de cualquier tipo, incluso retirada y carga deproductos, medido sobre fábrica, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301, RD 105/2008 y NTE-ADD-13.",
+      "unidad": "m3",
+      "cantidad": 11.00,
+      "precio": 42.51,
+      "importe": 467.61
+    },
+    {
+      "codigo": "m23U01BB040",
+      "titulo": "DEMOLICIÓN COMPRESOR HORMIGÓN ARMADO",
+      "descripcion": "Demolición con compresor, de fábrica de hormigón armado de cualquier tipo, inclu- so retirada y carga de productos, medido s obre fábrica, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art. 301, RD 105/2008 y NTE-ADD-13.",
+      "unidad": "m3",
+      "cantidad": 0.68,
+      "precio": 90.43,
+      "importe": 61.49
+    },
+    {
+      "codigo": "m23E01DM040",
+      "titulo": "DEMOLICIÓN CIMENTACIÓN HORMIGÓN ARMADO C/ MAQUINARIA",
+      "descripcion": "Demolición de cimentaciones o elementos aislados de hormigón armado (encepa- dos) etc., con retro-pala con martillo ro mpedor, incluso limpieza y retirada de es- combros a pie de carga, sin transporte al vertedero y con parte proporcional de medios auxiliares, sin medidas de protección colectivas. Según RD 105/2008 yNTE-ADD. Medición de volumen realmente ejecutado.",
+      "unidad": "m3",
+      "cantidad": 23.83,
+      "precio": 141.92,
+      "importe": 3381.95
+    },
+    {
+      "codigo": "m23E01DFL040",
+      "titulo": "DEMOLICIÓN FÁBRICA LADRILLO MACIZO 1/2 PIE C/ME DIOS MANUALES",
+      "descripcion": "Demolición de muros de fábrica de ladrillo macizo de 1/2 pie de espesor, por me- dios manuales, incluso limpieza y retirada de escombros a pie de carga, sin trans-porte al vertedero y con p.p. de medios auxiliares, sin medidas de protección colec-tivas. Según RD 105/2008 y NTE-ADD. Medición de superficie realmente ejecuta-da.",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 22.22,
+      "importe": 22.22
+    },
+    {
+      "codigo": "m23U01BB100",
+      "titulo": "DEMOLICIÓN MEDIOS ME CÁNICOS LADRILLO MACIZO 1 PIE",
+      "descripcion": "Demolición por medios mecánicos (retroexcavadora con martillo hidráulico o simi- lar) de muro de fábrica de ladrillo macizo de un pie de espesor, sobre el terreno, in-cluso retirada y carga de productos, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301, RD 105/2008 y NTE-ADD-13.",
+      "unidad": "m2",
+      "cantidad": 15.00,
+      "precio": 7.44,
+      "importe": 111.60
+    },
+    {
+      "codigo": "m23E01DFL030",
+      "titulo": "DEMOLICIÓN FÁBRICA LADRILLO MACIZO 1 PIE C/MARTILLO ELÉCTRICO",
+      "descripcion": "Demolición de muros de fábrica de ladrillo macizo de un pie de espesor, con marti- llo eléctrico, incluso limpieza y retirada de escombros a pie de carga, sin transpor- te al vertedero y con p.p. de medios auxiliares, sin medidas de protección colecti-vas. Según RD 105/2008 y NTE-ADD. Medición de superficie realmente ejecutada.",
+      "unidad": "m2",
+      "cantidad": 15.00,
+      "precio": 37.81,
+      "importe": 567.15
+    },
+    {
+      "codigo": "m23E01DPW010",
+      "titulo": "DEMOLICIÓN PELDAÑOS LADRI LLO C/MARTILLO ELÉCTRICO",
+      "descripcion": "Demolición de peldaños de cualquier tipo de material, incluido el peldañeado de la- drillo, con martillo eléctrico, incluso limpieza y retirada de escombros a pie de car-ga, sin transporte a vertedero y con p.p. de medios auxiliares, sin medidas de pro-tección colectivas. Según RD 105/2008 y NTE-ADD. Medición de longitud realmen-te ejecutada.",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 21.33,
+      "importe": 21.33
+    },
+    {
+      "codigo": "m23U01BB060",
+      "titulo": "DEMOLICIÓN COMPR ESOR FÁBRICA LADRILLO MACIZO",
+      "descripcion": "Demolición con compresor de fábrica de ladrillo macizo de cualquier tipo, incluso retirada y carga de productos, medido sobr e fábrica, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art. 301, RD 105/2008 y NTE-ADD-13.",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 45.99,
+      "importe": 45.99
+    },
+    {
+      "codigo": "m23E01DKA020",
+      "titulo": "LEVANTADO CARPINTERÍA METÁLICA EN MUROS C/MEDIOS MANUALES",
+      "descripcion": "Levantado de carpintería metálica, en cualquier tipo de muros, incluidos cercos, hojas y accesorios, por medios manuales, incluso limpieza, retirada de escombrosa pie de carga, sin transporte a vertedero y con p.p. de medios auxiliares. SegúnRD 105/2008 y NTE-ADD. Medición de superficie realmente ejecutada.",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 12.74,
+      "importe": 12.74
+    },
+    {
+      "codigo": "m23M02PTD010",
+      "titulo": "Plataforma elevadora de tijera diesel hasta 10 m altura",
+      "descripcion": "Plataforma elevadora de tijera diesel hasta 10 m altura",
+      "unidad": "h",
+      "cantidad": 45.00,
+      "precio": 13.35,
+      "importe": 600.75
+    },
+    {
+      "codigo": "m23E02AM010",
+      "titulo": "DESBROCE Y LIMPIEZA DEL TERRENO C/MEDIOS MECÁNICOS",
+      "descripcion": "Desbroce y limpieza superficial del terreno por medios mecánicos, sin carga ni transporte al vertedero y con p.p. de medios auxiliares. Según NTE-ADE.",
+      "unidad": "m2",
+      "cantidad": 332.00,
+      "precio": 1.03,
+      "importe": 341.96
+    },
+    {
+      "codigo": "m23E02AM020",
+      "titulo": "RETIRADA CAPA TIERRA VEGETAL C/MEDIOS MECÁNICOS",
+      "descripcion": "Retirada y apilado de capa de tierra vegetal superficial, por medios mecánicos, sin carga ni transporte al vertedero y con p.p. de medios auxiliares. Según NTE-ADE.",
+      "unidad": "m2",
+      "cantidad": 332.00,
+      "precio": 1.55,
+      "importe": 514.60
+    },
+    {
+      "codigo": "m23E02CM020",
+      "titulo": "EXCAVACIÓN VACIADOS TERRENOS FLOJOS C/MEDIOS MECÁNICOS",
+      "descripcion": "Excavación a cielo abierto, en terrenos floj os, por medios mecánicos, con extrac- ción de tierras fuera de la excavación, en vaciados, sin carga ni transporte al verte-dero y con p.p. de medios auxiliare s. Según CTE DB-SE-C y NTE-ADV.",
+      "unidad": "m3",
+      "cantidad": 274.55,
+      "precio": 4.55,
+      "importe": 1249.20
+    },
+    {
+      "codigo": "m23E02CM030",
+      "titulo": "EXCAVACIÓN VACIADOS TERRENOS COMPACTOS C/MEDIOS MECÁNICOS",
+      "descripcion": "Excavación a cielo abierto, en terrenos compactos, por medios mecánicos, con ex- tracción de tierras fuera de la excavación, en vaciados, sin carga ni transporte al vertedero y con p.p. de medios auxilia res. Según CTE DB-SE-C y NTE-ADV.",
+      "unidad": "m3",
+      "cantidad": 150.00,
+      "precio": 5.25,
+      "importe": 787.50
+    },
+    {
+      "codigo": "m23E02SA060",
+      "titulo": "RELLENO/APISONADO A CIELO A BIERTO C/MEDIOS MECÁNI COS S/APORTE",
+      "descripcion": "Relleno extendido y apisonado de tierras propias a cielo abierto, por medios mecá- nicos, en tongadas de 30 cm. de espesor, hasta conseguir un grado de compacta-ción del 95% del proctor normal, sin aporte de tierras, incluso regado de las mis-mas y refino de taludes, y con p.p. de medios auxiliares. Según CTE DB-SE-C YUNE 103500:1994.",
+      "unidad": "m3",
+      "cantidad": 274.55,
+      "precio": 5.81,
+      "importe": 1595.14
+    },
+    {
+      "codigo": "m23U02H050",
+      "titulo": "TRANSPORTE INTERIOR DE OBRA",
+      "descripcion": "Transporte interior de obra de los producto s resultantes de excavación, incluso descarga y extendido mecánico en su caso, medido sobre perfil.",
+      "unidad": "m3",
+      "cantidad": 274.50,
+      "precio": 2.66,
+      "importe": 730.17
+    },
+    {
+      "codigo": "m23E02SA010",
+      "titulo": "RELLENO/APISONADO A CIELO A BIERTO C/MEDIOS MECÁNICOS C/AP ORTE DE TIERRAS",
+      "descripcion": "Relleno extendido y apisonado con tierras de préstamo a cielo abierto, por medios mecánicos, en tongadas de 30 cm. de espesor, hasta conseguir un grado de com-pactación del 95% del proctor normal, con aporte de tierras, incluso regado de lasmismas y refino de taludes, y con p.p. de medios auxiliares. Según CTE DB-SE-CY UNE 103500:1994.",
+      "unidad": "m3",
+      "cantidad": 301.00,
+      "precio": 43.34,
+      "importe": 13045.34
+    },
+    {
+      "codigo": "m23E02RV010",
+      "titulo": "REFINADO VACIADOS TERRE NOS FLOJOS C/MEDIOS MANUALES",
+      "descripcion": "Refinado de paredes y fondos de vaciados, en terrenos de consistencia floja, por medios manuales, en excavaciones realizadas por máquinas, con extracción y ex-tendido de las tierras en los bordes, y con p.p. de medios auxiliares. Según CTEDB SE-C y NTE-ADZ.",
+      "unidad": "m2",
+      "cantidad": 2105.50,
+      "precio": 5.61,
+      "importe": 11811.86
+    },
+    {
+      "codigo": "m23U02F040",
+      "titulo": "COMPACTACIÓN FONDO ZANJA",
+      "descripcion": "Compactación por medios mecánicos, del terreno natural del fondo de zanjas o ci- mientos. Conforme a O RDEN FOM/1382/2002-PG3-Art.302.",
+      "unidad": "m2",
+      "cantidad": 70.00,
+      "precio": 0.55,
+      "importe": 38.50
+    },
+    {
+      "codigo": "m23E02ECM020",
+      "titulo": "EXCAVACIÓN ZANJA TERRENOS FLOJOS C/MEDIOS MECÁNICOS",
+      "descripcion": "Excavación en zanjas, en terrenos flojos, por medios mecánicos, con extracción de tierras a los bordes, sin carga ni transporte al vertedero y con p.p. de mediosauxiliares. Según CTE DB SE-C y NTE-ADZ.",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 11.60,
+      "importe": 11.60
+    },
+    {
+      "codigo": "m23E04CE020",
+      "titulo": "ENCOFRADO MADERA EN ZAPATAS/VIGAS/ENCEPADOS",
+      "descripcion": "Encofrado y desencofrado con madera suel ta en zapatas, zanjas, vigas y encepa- dos, considerando 4 posturas. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE)305/2011.",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 29.13,
+      "importe": 29.13
+    },
+    {
+      "codigo": "m23U05F030",
+      "titulo": "PAVIMENTO PERMEABLE",
+      "descripcion": "Suministro y colocación de pavimento permeable incluidas subbases, formado por hormigón poroso (e=10 cm) con una capacidad drenante de 500 l/(m2 x minu-to) con un 20% de huecos sobre capa de gravas finas (e=10 cm) que se apoyan sobre capa de gravas medias (e=15 cm) y a su vez sobre capa de gravas gruesas (e=40 cm); totalmente terminado. Conforme a ORDENFOM/1382/2002-PG3-Art.550. Hormigón con marcado CE y DdP (Declaración deprestaciones) según Reglamento (UE) 305/2011.",
+      "unidad": "m2",
+      "cantidad": 849.00,
+      "precio": 57.26,
+      "importe": 48613.74
+    },
+    {
+      "codigo": "m23E27GW050",
+      "titulo": "PINTURA AL CLOROCAUCHO",
+      "descripcion": "Pintura al clorocaucho con dos manos a br ocha, i/limpieza de superficies y neutrali- zación, plastecido de grietas y mano de imprimación. Productos con marcado CEy DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "unidad": "m2",
+      "cantidad": 58.00,
+      "precio": 15.27,
+      "importe": 885.66
+    },
+    {
+      "codigo": "m23E02SZ010",
+      "titulo": "RELLENO TIERRA EN ZA NJA C/MEDIOS MANUALES C/APORTE",
+      "descripcion": "Relleno y extendido con tierras de préstamo en zanjas, por medios manuales, con aporte de tierras, i/carga y transporte a pie de tajo, y con p.p. de medios auxiliares.Según CTE DB-SE-C y NTE-ADZ.",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 49.65,
+      "importe": 49.65
+    },
+    {
+      "codigo": "m23U05C020",
+      "titulo": "SUB-BASE ARENA DE MIGA",
+      "descripcion": "Sub-base o explanada mejorada de arena de miga, clasificada (suelos selecciona- dos), puesta en obra y con compactación según Pliego de Condiciones, medidasobre perfil. Arena con marcado CE y DdP (Declaración de prestaciones) segúnReglamento (UE) 305/2011.",
+      "unidad": "m3",
+      "cantidad": 175.50,
+      "precio": 54.86,
+      "importe": 9627.93
+    },
+    {
+      "codigo": "m23U05C040",
+      "titulo": "SUB-BASE ZAHORRA ARTIFICIAL",
+      "descripcion": "Sub-base de zahorra artificial (husos ZA25 y ZA40), puesta en obra y con compac- tación según Pliego de Condiciones, medida sobre perfil. Conforme a ORDENFOM/1382/2002-PG3-Art.510. Árido con marc ado CE y DdP (Declaración de pres- taciones) según Reglamento (UE) 305/2011.",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 28.83,
+      "importe": 28.83
+    },
+    {
+      "codigo": "m23U03EB025",
+      "titulo": "HORMIGÓN EN MASA HM-20/B/40 CEM II/SR EN BASES",
+      "descripcion": "Suministro y puesta en obra de hormigón en masa, vibrado y moldeado en su ca- so, en base de calzadas, solera de aceras, pistas deportivas o paseos, cimientode bordillos y escaleras, con HM-20/ B/40 (CEM-II/SR), con árido procedente de cantera, de tamaño máximo 40 mm y consistencia blanda, incluso parte proporcio-nal de juntas de contracción. Conf orme ORDEN FOM/1382/2002-PG3-Art. 550. Hormigón con marcado CE y DdP (Decla ración de prestaciones) según Reglamen- to (UE) 305/2011.",
+      "unidad": "m3",
+      "cantidad": 175.50,
+      "precio": 170.59,
+      "importe": 29938.55
+    },
+    {
+      "codigo": "m23U06B180",
+      "titulo": "ADOQUÍN PREFABRICADO e=6cm COLOR SOBRE ASIENTO DE MORTERO OBRA",
+      "descripcion": "Suministro y colocación de adoquinado prefabricado de hormigón, sinusoidal o po- ligonal de 6 cm de espesor, sentado sobre capa de mortero de cemento de 10 cmde espesor preparado en obra; incluso recebado de juntas con arena caliza fina,en color a elegir por la D.O. Adoquín y áridos con marcado CE y DdP (Declaraciónde prestaciones) según Reglamento (UE) 305/2011.",
+      "unidad": "m2",
+      "cantidad": 1173.00,
+      "precio": 57.74,
+      "importe": 67729.02
+    },
+    {
+      "codigo": "m23U06B125",
+      "titulo": "ADOQUÍN PREFABRICADO e=8 cm GRIS/COLOR SOBRE MORTERO",
+      "descripcion": "Suministro y colocación de adoquinado prefabricado de hormigón 8 cm de espe- sor, sentado sobre mortero industrial de cemento M-20 con un espesor de 3-4 cm con control de la retracción, rejuntado con mortero industrial de calidad M-20 enconsistencia fluida, totalmente terminado. Adoquín con marcado CE y DdP (Decla-ración de prestaciones) según Reglamento (UE) 305/2011.",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 44.48,
+      "importe": 44.48
+    },
+    {
+      "codigo": "m23U06B150",
+      "titulo": "ADOQUÍN PREFABRICADO AUTOBLOCANTE e=10cm S/MORTERO",
+      "descripcion": "Suministro y colocación de adoquinado prefabricado de hormigón autoblocante, con traba en sentido horizontal y vertical, tipo TEGULA-TEC o similar, de 10 cmde espesor, sentado sobre mortero de cemento de dosificación 450 kg/m3, inclusorejuntado con lechada de cemento de 600 kg/m3 de dosificación, según PCTG.Adoquín con marcado CE y DdP (Declaración de prestaciones) según Reglamento(UE) 305/2011.",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 68.59,
+      "importe": 68.59
+    },
+    {
+      "codigo": "m23E04SA020",
+      "titulo": "SOLERA HA-25, 15cm. ARMADO#15x15x6",
+      "descripcion": "Solera de hormigón de 15 cm. de espesor, realizada con hormigón HA-25 N/mm2, Tmáx.20 mm., elaborado en obra, i/vertido, colocación y armado con mallazo15x15x6, p.p. de juntas, aserrado de las mismas y fratasado. Según NTE-RSS yCódigo Estructural. Componentes del hormigón con marcado CE y DdP (Declara-ción de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 25.78,
+      "importe": 25.78
+    },
+    {
+      "codigo": "m23U02H050",
+      "titulo": "TRANSPORTE INTERIOR DE OBRA",
+      "descripcion": "Transporte interior de obra de los producto s resultantes de excavación, incluso descarga y extendido mecánico en su caso, medido sobre perfil.",
+      "unidad": "m3",
+      "cantidad": 175.50,
+      "precio": 2.66,
+      "importe": 466.83
+    },
+    {
+      "codigo": "m23E02ECM030",
+      "titulo": "EXCAVACIÓN ZANJA TERRENOS COMPACTOS C/MEDIOS MECÁNICOS",
+      "descripcion": "Excavación en zanjas, en terrenos compactos, por medios mecánicos, con extrac- ción de tierras a los bordes, sin carga ni transporte al vertedero y con p.p. de me-dios auxiliares. Según CTE DB SE-C y NTE-ADZ.",
+      "unidad": "m3",
+      "cantidad": 5.50,
+      "precio": 20.72,
+      "importe": 113.96
+    },
+    {
+      "codigo": "m23E02RV010",
+      "titulo": "REFINADO VACIADOS TERRENOS FLOJOS C/MEDIOS MANUALES",
+      "descripcion": "Refinado de paredes y fondos de vaciados, en terrenos de consistencia floja, por medios manuales, en excavaciones realizadas por máquinas, con extracción y ex-tendido de las tierras en los bordes, y con p.p. de medios auxiliares. Según CTEDB SE-C y NTE-ADZ.",
+      "unidad": "m2",
+      "cantidad": 36.60,
+      "precio": 5.61,
+      "importe": 205.33
+    },
+    {
+      "codigo": "m23U03EB025",
+      "titulo": "HORMIGÓN EN MASA HM-20/B/40 CEM II/SR EN BASES",
+      "descripcion": "Suministro y puesta en obra de hormigón en masa, vibrado y moldeado en su ca- so, en base de calzadas, solera de aceras, pistas deportivas o paseos, cimientode bordillos y escaleras, con HM-20/ B/40 (CEM-II/SR), con árido procedente de cantera, de tamaño máximo 40 mm y consistencia blanda, incluso parte proporcio-nal de juntas de contracción. Conf orme ORDEN FOM/1382/2002-PG3-Art. 550. Hormigón con marcado CE y DdP (Decla ración de prestaciones) según Reglamen- to (UE) 305/2011.",
+      "unidad": "m3",
+      "cantidad": 5.50,
+      "precio": 170.59,
+      "importe": 938.25
+    },
+    {
+      "codigo": "U04BQ260",
+      "titulo": "ALCORQUE ENRASASADO CHAPA ACERO D=1,50 m",
+      "descripcion": "Alcorque circular enrasado con el pavimento de 1,50 m de diámetro, formado por chapa de acero cortén de 8 mm de espesor y 15 cm de altura, provista de patillasde anclaje, recibida con mortero de cemento a solera, terminado. Alcorque y com-ponoentes de hormigón con marcado CE y DdP (Declaración de prestaciones) se-gún Reglamento (UE) 305/2011.",
+      "unidad": "u",
+      "cantidad": 10.00,
+      "precio": 172.02,
+      "importe": 1720.20
+    },
+    {
+      "codigo": "m23U14A350",
+      "titulo": "DELIMITADOR CHAPA DE ACERO GALVANIZADO DE 150X10 MM",
+      "descripcion": "Suministro y colocación de chapa de acero galvanizado de 150x10mm, como deli- mitador de zonas, incluso p.p. de chapas soldadas de acero galvanizado a 0,20 m de 10x5x1 cm. para anclar el delimitador a las bases de hormigón de los pavimen-tos que delimita, totalmente terminado.",
+      "unidad": "m",
+      "cantidad": 491.00,
+      "precio": 50.55,
+      "importe": 24820.05
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, m edido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U14M010",
+      "titulo": "GEO-RED POLIPROPILENO Y POLIETILENO",
+      "descripcion": "Suministro y colocación de geo-red simple de polipropileno o polietileno de alta densidad, grueso de hilo de 2,8 a 5,2 mm, y apertura de malla de 27 x 27 mm a 40x 28 mm, incluyendo los elementos de anclaje, con una densidad media de 1,5gr/cm3 y el anclaje en cabecera y pie de talud. Geo-red con marcado CE y DdP(Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 8.64,
+      "importe": 8.64
+    },
+    {
+      "codigo": "m23U06A070",
+      "titulo": "BORDILLO PREFABRICADO RECTO TIPO III COLOCACIÓN MANUAL",
+      "descripcion": "Suministro y colocación manual mediant e útil de seguridad de bordillo prefabrica- do de hormigón, recto, tipo III de las normas municipales de 17 x 28 cm, inclusomortero de asiento y rejuntado, sin incluir excavación ni hormigón de solera y re-fuerzo, para delimitación de aceras con calzadas. Bordillo y componentes de hor-migón con marcado CE y DdP (Declaración de prestaciones) según Reglamento(UE) 305/2011.",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 15.53,
+      "importe": 15.53
+    },
+    {
+      "codigo": "m23U06A075",
+      "titulo": "BORDILLO PREFABRICADO TIPO III COLOCACIÓN MEDIOS MECÁNICOS",
+      "descripcion": "Suministro y colocación con medios me cánicos de bordillo prefabricado de hormi- gón, recto, tipo III de las normas municipales de 17 x 28 cm, incluso mortero deasiento y rejuntado, sin incluir excavación ni hormigón de solera y refuerzo, paradelimitación de aceras con calzadas. Bordillo y componentes de hormigón conmarcado CE y DdP (Declaración de prestaciones) según Reglamento (UE)305/2011.",
+      "unidad": "m",
+      "cantidad": 15.00,
+      "precio": 16.73,
+      "importe": 250.95
+    },
+    {
+      "codigo": "m23U06A115",
+      "titulo": "BORDILLO PREFABRICADO TIPO IV COLOCACIÓN MEDIOS MECÁNICOS",
+      "descripcion": "Suministro y colocación con medios me cánicos de bordillo prefabricado de hormi- gón en recta o curva, tipo IV de las normas municipales de 14 x 20 cm, inclusomortero de asiento y rejuntado, sin incluir excavación ni hormigón de solera y re-fuerzo, para delimitación de aceras con z ona terriza, vados o zonas verdes. Bordi- llo y componentes de hormigón con marcado CE y DdP (Declaración de prestacio-nes) según Reglamento (UE) 305/2011.",
+      "unidad": "m",
+      "cantidad": 112.10,
+      "precio": 11.45,
+      "importe": 1283.55
+    },
+    {
+      "codigo": "m23U06A110",
+      "titulo": "BORDILLO PREFABRICADO TIPO IV COLOCACIÓN MANUAL",
+      "descripcion": "Suministro y colocación manual mediant e útil de seguridad de bordillo prefabrica- do de hormigón en recta o curva, tipo IV de las normas municipales de 14 x 20cm, incluso mortero de asiento y rejuntado, sin incluir excavación ni hormigón desolera y refuerzo, para delimitación de ac eras con zona terriza, vados o zonas ver- des. Bordillo y componentes de hormigón con marcado CE y DdP (Declaración deprestaciones) según Reglamento (UE) 305/2011.",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 10.25,
+      "importe": 10.25
+    },
+    {
+      "codigo": "m23U06A130",
+      "titulo": "BORDILLO PREFABRICADO TIPO VI COLOCACIÓN MANUAL",
+      "descripcion": "Suministro y colocación manual mediant e útil de seguridad de bordillo prefabrica- do de hormigón, en recta o curva, tipo VI de las normas municipales de 10 x 20cm, para delimitación de alcorques sin rejilla, incluso mortero de asiento y rejunta-do, sin incluir excavación ni hormigón de solera y refuerzo. Bordillo y componentesde hormigón con marcado CE y DdP (Dec laración de prestaciones) según Regla- mento (UE) 305/2011.",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 10.25,
+      "importe": 10.25
+    },
+    {
+      "codigo": "APUDU04BM020",
+      "titulo": "BORDILLO 1 ROLLIZO MADERA VACSOLIZADO",
+      "descripcion": "Bordillo de rollizos de madera de pino de 1ª calidad vacsolizados al vacío en auto- clave, de D=10/15 cm, de un rollizo en línea, sobre suelo preparado, i/excavación,sujeción, anclaje, corte y traslado, terminado.",
+      "unidad": "m",
+      "cantidad": 24.00,
+      "precio": 44.47,
+      "importe": 1067.28
+    },
+    {
+      "codigo": "m23U06A010",
+      "titulo": "BORDILLO PREFABRICADO TIPO I COLOCACIÓN MANUAL",
+      "descripcion": "Suministro y colocación manual mediant e útil de seguridad de bordillo prefabrica- do de hormigón, en recta o curva, tipo I de las normas municipales de 20 x 30 cm,para delimitación de isletas, incluso mortero de asiento y rejuntado, sin incluir exca-vación ni hormigón de solera o refuerzo. Bordillo y componentes de hormigón conmarcado CE y DdP (Declaración de prestaciones) según Reglamento (UE)305/2011.",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 14.42,
+      "importe": 14.42
+    },
+    {
+      "codigo": "m23U06A015",
+      "titulo": "BORDILLO PREFABRICADO TIPO I COLOCACIÓN MEDIOS MECÁNICOS",
+      "descripcion": "Suministro y colocación con medios me cánicos de bordillo prefabricado de hormi- gón, en recta o curva, tipo I de las normas municipales de 20 x 30 cm, para delimi-tación de isletas, incluso mortero de asiento y rejuntado, sin incluir excavación nihormigón de solera o refuerzo. Bordillo y componentes de hormigón con marcadoCE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "unidad": "m",
+      "cantidad": 30.00,
+      "precio": 15.61,
+      "importe": 468.30
+    },
+    {
+      "codigo": "m23E02CA030",
+      "titulo": "EXCAVACIÓN VACIADOS TERRENOS COMPACTOS C/MEDIOS MANUALES",
+      "descripcion": "Excavación a cielo abierto, en terrenos compactos, por medios manuales, con ex- tracción de tierras a los bordes, en vaciados, sin carga ni transporte al vertedero y con p.p. de medios auxiliares. Según CTE DB-SE-C y NTE-ADV.",
+      "unidad": "m3",
+      "cantidad": 13.60,
+      "precio": 43.61,
+      "importe": 593.10
+    },
+    {
+      "codigo": "m23E02SA020",
+      "titulo": "COMPACTACIÓN TERRENO A CIELO ABIERTO C/MEDIOS MECÁNICOS C/APORTE DE TIERRAS",
+      "descripcion": "Compactación de terrenos a cielo abierto, por medios mecánicos, con aporte de tierras, incluso regado de los mismos, sin definir grado de compactación mínimo, ycon p.p. de medios auxiliares. Según CTE DB-SE-C Y UNE 103500:1994.",
+      "unidad": "m2",
+      "cantidad": 68.00,
+      "precio": 48.41,
+      "importe": 3291.88
+    },
+    {
+      "codigo": "m23E04SA020",
+      "titulo": "SOLERA HA-25, 15cm. ARMADO#15x15x6",
+      "descripcion": "Solera de hormigón de 15 cm. de espesor, realizada con hormigón HA-25 N/mm2, Tmáx.20 mm., elaborado en obra, i/vertido, colocación y armado con mallazo15x15x6, p.p. de juntas, aserrado de las mismas y fratasado. Según NTE-RSS yCódigo Estructural. Componentes del hormigón con marcado CE y DdP (Declara-ción de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 25.78,
+      "importe": 25.78
+    },
+    {
+      "codigo": "U04VBM030",
+      "titulo": "TARIMA MADERA EXTERIORES IPÉ",
+      "descripcion": "Pavimento de tarima de exteriores realizado con madera de Ipé, tratada en auto- clave, con una sección de las tablas de 28x120 mm, colocada sobre rastreles demadera de 40x50 mm, apoyados en un lecho de grava como drenaje y regulariza-ción de pendientes de 10 cm.",
+      "unidad": "m2",
+      "cantidad": 68.00,
+      "precio": 212.61,
+      "importe": 14457.48
+    },
+    {
+      "codigo": "m23U02G060",
+      "titulo": "GEOTEXTIL NO TEJIDO 215 g/m2",
+      "descripcion": "Geotextil no tejido, compuesto por filamentos de propileno unidos por agujeteado y posterior calandrado, con un gramaje de 215 g/m2. Medida la superficie ejecuta-da. Conforme a ORDEN FOM/1382/2002-PG 3-Art.290,422. Geotextil con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "unidad": "m2",
+      "cantidad": 74.80,
+      "precio": 3.95,
+      "importe": 295.46
+    },
+    {
+      "codigo": "m23U05A020",
+      "titulo": "GARBANCILLO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de garbancillo de canto rodado de 20 a 40 mm, colocado en zanjas o superficies para drenaje, en capas de 20 cm, medido sobre perfil. Garbancillo con marcado CE y DdP (Declaración de prestaciones) se-gún Reglamento (UE) 305/2011.",
+      "unidad": "m3",
+      "cantidad": 13.60,
+      "precio": 28.89,
+      "importe": 392.90
+    },
+    {
+      "codigo": "m23E28PH050",
+      "titulo": "PAVIMENTO HORMIGÓN POROSO I/SOLERA PEQUEÑAS SUPERFICIES",
+      "descripcion": "Pavimento de hormigón poroso, aglomerado con piedra de granulometría seleccio- nada, con terminación mediante aplicación de pintura acrílica, en color rojo y/o ver-de, i/solera de hormigón de 9 cm. de espesor y relleno de gravilla de nivelación,para pequeñas superficies.",
+      "unidad": "m2",
+      "cantidad": 68.00,
+      "precio": 62.61,
+      "importe": 4257.48
+    },
+    {
+      "codigo": "m23E02ECM030",
+      "titulo": "EXCAVACIÓN ZANJA TERRENOS COMPACTOS C/MEDIOS MECÁNICOS",
+      "descripcion": "Excavación en zanjas, en terrenos compactos, por medios mecánicos, con extrac- ción de tierras a los bordes, sin carga ni transporte al vertedero y con p.p. de me-dios auxiliares. Según CTE DB SE-C y NTE-ADZ.",
+      "unidad": "m3",
+      "cantidad": 113.96,
+      "precio": 20.72,
+      "importe": 2361.95
+    },
+    {
+      "codigo": "m23E02RV010",
+      "titulo": "REFINADO VACIADOS TERRENOS FLOJOS C/MEDIOS MANUALES",
+      "descripcion": "Refinado de paredes y fondos de vaciados, en terrenos de consistencia floja, por medios manuales, en excavaciones realizadas por máquinas, con extracción y ex-tendido de las tierras en los bordes, y con p.p. de medios auxiliares. Según CTEDB SE-C y NTE-ADZ.",
+      "unidad": "m2",
+      "cantidad": 36.60,
+      "precio": 5.61,
+      "importe": 205.33
+    },
+    {
+      "codigo": "m23U03EB025",
+      "titulo": "HORMIGÓN EN MASA HM-20/B/40 CEM II/SR EN BASES",
+      "descripcion": "Suministro y puesta en obra de hormigón en masa, vibrado y moldeado en su ca- so, en base de calzadas, solera de aceras, pistas deportivas o paseos, cimientode bordillos y escaleras, con HM-20/ B/40 (CEM-II/SR), con árido procedente de cantera, de tamaño máximo 40 mm y consistencia blanda, incluso parte proporcio-nal de juntas de contracción. Conf orme ORDEN FOM/1382/2002-PG3-Art. 550. Hormigón con marcado CE y DdP (Decla ración de prestaciones) según Reglamen- to (UE) 305/2011.",
+      "unidad": "m3",
+      "cantidad": 5.50,
+      "precio": 170.59,
+      "importe": 938.25
+    },
+    {
+      "codigo": "U04BQ260",
+      "titulo": "ALCORQUE ENRASASADO CHAPA ACERO D=1,50 m",
+      "descripcion": "Alcorque circular enrasado con el pavimento de 1,50 m de diámetro, formado por chapa de acero cortén de 8 mm de espesor y 15 cm de altura, provista de patillasde anclaje, recibida con mortero de cemento a solera, terminado. Alcorque y com-ponoentes de hormigón con marcado CE y DdP (Declaración de prestaciones) se-gún Reglamento (UE) 305/2011.",
+      "unidad": "u",
+      "cantidad": 10.00,
+      "precio": 172.02,
+      "importe": 1720.20
+    },
+    {
+      "codigo": "m23U14A350",
+      "titulo": "DELIMITADOR CHAPA DE ACERO GALVANIZADO DE 150X10 MM",
+      "descripcion": "Suministro y colocación de chapa de acero galvanizado de 150x10mm, como deli- mitador de zonas, incluso p.p. de chapas soldadas de acero galvanizado a 0,20 m de 10x5x1 cm. para anclar el delimitador a las bases de hormigón de los pavimen-tos que delimita, totalmente terminado.",
+      "unidad": "m",
+      "cantidad": 491.00,
+      "precio": 50.55,
+      "importe": 24820.05
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, m edido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U14M010",
+      "titulo": "GEO-RED POLIPROPILENO Y POLIETILENO",
+      "descripcion": "Suministro y colocación de geo-red simple de polipropileno o polietileno de alta densidad, grueso de hilo de 2,8 a 5,2 mm, y apertura de malla de 27 x 27 mm a 40x 28 mm, incluyendo los elementos de anclaje, con una densidad media de 1,5gr/cm3 y el anclaje en cabecera y pie de talud. Geo-red con marcado CE y DdP(Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 8.64,
+      "importe": 8.64
+    },
+    {
+      "codigo": "m23U06A070",
+      "titulo": "BORDILLO PREFABRICADO RECTO TIPO III COLOCACIÓN MANUAL",
+      "descripcion": "Suministro y colocación manual mediant e útil de seguridad de bordillo prefabrica- do de hormigón, recto, tipo III de las normas municipales de 17 x 28 cm, inclusomortero de asiento y rejuntado, sin incluir excavación ni hormigón de solera y re-fuerzo, para delimitación de aceras con calzadas. Bordillo y componentes de hor-migón con marcado CE y DdP (Declaración de prestaciones) según Reglamento(UE) 305/2011.",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 15.53,
+      "importe": 15.53
+    },
+    {
+      "codigo": "m23U06A075",
+      "titulo": "BORDILLO PREFABRICADO TIPO III COLOCACIÓN MEDIOS MECÁNICOS",
+      "descripcion": "Suministro y colocación con medios me cánicos de bordillo prefabricado de hormi- gón, recto, tipo III de las normas municipales de 17 x 28 cm, incluso mortero deasiento y rejuntado, sin incluir excavación ni hormigón de solera y refuerzo, paradelimitación de aceras con calzadas. Bordillo y componentes de hormigón conmarcado CE y DdP (Declaración de prestaciones) según Reglamento (UE)305/2011.",
+      "unidad": "m",
+      "cantidad": 15.00,
+      "precio": 16.73,
+      "importe": 250.95
+    },
+    {
+      "codigo": "m23U06A115",
+      "titulo": "BORDILLO PREFABRICADO TIPO IV COLOCACIÓN MEDIOS MECÁNICOS",
+      "descripcion": "Suministro y colocación con medios me cánicos de bordillo prefabricado de hormi- gón en recta o curva, tipo IV de las normas municipales de 14 x 20 cm, inclusomortero de asiento y rejuntado, sin incluir excavación ni hormigón de solera y re-fuerzo, para delimitación de aceras con z ona terriza, vados o zonas verdes. Bordi- llo y componentes de hormigón con marcado CE y DdP (Declaración de prestacio-nes) según Reglamento (UE) 305/2011.",
+      "unidad": "m",
+      "cantidad": 112.10,
+      "precio": 11.45,
+      "importe": 1283.55
+    },
+    {
+      "codigo": "m23U06A110",
+      "titulo": "BORDILLO PREFABRICADO TIPO IV COLOCACIÓN MANUAL",
+      "descripcion": "Suministro y colocación manual mediant e útil de seguridad de bordillo prefabrica- do de hormigón en recta o curva, tipo IV de

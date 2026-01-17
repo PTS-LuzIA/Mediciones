@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 3741,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n03 FASE 4 03.07.02 RED PROYECTADA 03.07.02.01 OBRA CIVIL m23U13KB020 ud ARQUETA ACERA EXISTENTE 30,00 190,68 5.720,40 Arqueta de paso, derivación o toma de tierra, según N.E.C., incluso movimiento de tierras y tapa de fundición, situada en acera existente a mantener de 0.20 m de es- pesor, con levantado y reposición total de la acera, incluso transporte y tratamien- to de RCD a gestor autorizado, completamente terminada. Materiale"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 2038,
+      "content_preview": "Extrae partidas del capítulo 03\n\nFORMATO DE PARTIDA:\nCada línea tiene este formato: CÓDIGO UNIDAD DESCRIPCIÓN CANTIDAD PRECIO IMPORTE\n\nIMPORTANTE: Los 3 valores numéricos (CANTIDAD, PRECIO, IMPORTE) están SIEMPRE al FINAL de la línea.\nSi la descripción contiene números (ejemplo: \"14,65 m2\"), IGNÓRALOS y extrae los ÚLTIMOS 3 NÚMEROS.\n\nEjemplo 1:\nm23U01BP010 m2 DEMOLICIÓN MEDIOS MECÁNICOS PAVIMENTO ASFÁLTICO 450,40 2,34 1.053,94\n\nExtracción correcta:\n- codigo: \"m23U01BP010\" (TODO hasta el primer e"
+    }
+  ]
+}

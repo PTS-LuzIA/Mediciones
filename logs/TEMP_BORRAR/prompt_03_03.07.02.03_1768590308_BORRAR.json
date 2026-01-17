@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 4088,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n03 FASE 4 03.07.02.03 SOPORTES Y LUMINARIAS m23U13DQA200 ud COLUMNA AE-25.1 DE 4 m 30,00 441,65 13.249,50 Columna tipo A según AE.25.1 galvanizada y sin pintar de 4 m de altura, con trans- porte y montaje. Conforme a REBT, ITC-BT-09. Materiales con marcado CE y De- claración de Prestaciones (DdP) según Reglamento Europeo (UE) 305/2011. APUDV_BAM37.D3u.d08 LUM. CERRADA LED, CLASE I, HASTA 85W 30,00 647,84 19.435,20 Luminaria LED he"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 3791,
+      "content_preview": "Extrae partidas del capítulo 03\n\nFORMATO DE PARTIDA:\nCada línea tiene este formato: CÓDIGO UNIDAD DESCRIPCIÓN CANTIDAD PRECIO IMPORTE\n\nIMPORTANTE: Los 3 valores numéricos (CANTIDAD, PRECIO, IMPORTE) están SIEMPRE al FINAL de la línea.\nSi la descripción contiene números (ejemplo: \"14,65 m2\"), IGNÓRALOS y extrae los ÚLTIMOS 3 NÚMEROS.\n\nCASOS ESPECIALES - CÓDIGOS PEGADOS SIN ESPACIOS:\nA veces el código está PEGADO a la descripción sin espacios ni unidad visible.\nIdentifica el código por su LONGITUD"
+    }
+  ]
+}

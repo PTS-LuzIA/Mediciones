@@ -1,0 +1,96 @@
+{
+  "capitulo_codigo": "01",
+  "partidas": [
+    {
+      "codigo": "m23U04KA0k1g0",
+      "resumen": "ACERO LAMINADO S275JR EN PERFILES",
+      "cantidad": 11460.91,
+      "precio": 5.23,
+      "importe": 59940.56
+    },
+    {
+      "codigo": "APUDE04AB040",
+      "resumen": "ACERO EN BARRAS LISO B 500 S/SD",
+      "cantidad": 17619.01,
+      "precio": 2.14,
+      "importe": 37704.68
+    },
+    {
+      "codigo": "m23E05AAT010",
+      "resumen": "ACERO PERFIL TUBULAR ESTRUCTURA",
+      "cantidad": 273.00,
+      "precio": 4.99,
+      "importe": 1362.27
+    },
+    {
+      "codigo": "APUDm23E15CGCu0d30",
+      "resumen": "PUERTA CORREDERA SIN DINTEL CHAPA/TUBO 9,00x2,20m APERTURA AUTOMÁTICA",
+      "cantidad": 1.00,
+      "precio": 6342.12,
+      "importe": 6342.12
+    },
+    {
+      "codigo": "m23U04KA010",
+      "resumen": "ACERO LAMINADO S275JR EN PERFILES",
+      "cantidad": 1115.66,
+      "precio": 5.23,
+      "importe": 5834.90
+    },
+    {
+      "codigo": "APUDm23E01AAMuVd010",
+      "resumen": "TUERCA Y PERNO PARA EMBRIDAR",
+      "cantidad": 175.00,
+      "precio": 36.58,
+      "importe": 6401.50
+    },
+    {
+      "codigo": "m23U12F100",
+      "resumen": "INSTALACIÓN CERRADURA DE SEGURIDAD",
+      "cantidad": 4.00,
+      "precio": 244.50,
+      "importe": 978.00
+    },
+    {
+      "codigo": "m23E27HA010",
+      "resumen": "PINTURA MINIO ELECTROLÍTICO",
+      "cantidad": 925.20,
+      "precio": 6.94,
+      "importe": 6420.89
+    },
+    {
+      "codigo": "APUDm23E27HE01m02.1",
+      "resumen": "ESMALTE-LACA SATINADO S/METAL",
+      "cantidad": 878.04,
+      "precio": 13.17,
+      "importe": 11563.79
+    },
+    {
+      "codigo": "m23E27HA030",
+      "resumen": "IMPRIMACIÓN GALVANIZADOS",
+      "cantidad": 1.00,
+      "precio": 6.50,
+      "importe": 6.50
+    },
+    {
+      "codigo": "m23E27HE010",
+      "resumen": "ESMALTE SATINADO S/METAL",
+      "cantidad": 1.00,
+      "precio": 17.77,
+      "importe": 17.77
+    },
+    {
+      "codigo": "m23U04KBD030",
+      "resumen": "PINTURA MONOCAPA SINTÉTICA COLOR",
+      "cantidad": 1.00,
+      "precio": 11.97,
+      "importe": 11.97
+    },
+    {
+      "codigo": "APUI_003",
+      "resumen": "ALQUILER DIARIO DE GRUA SOBRE CAMIÓN TELESCOPICA 21-25 TN.",
+      "cantidad": 10.00,
+      "precio": 620.65,
+      "importe": 6206.50
+    }
+  ]
+}

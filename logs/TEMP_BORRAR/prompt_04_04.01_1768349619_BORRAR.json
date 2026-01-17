@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 8464,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n04 SEGURIDAD Y SALUD 04.01 PROTECCIONES INDIVIDUALES m23S01J231 ud CASCO DE SEGURIDAD AJUSTABLE RUEDA 12,00 12,80 153 Casco de seguridad con arnés de cabeza ajustable por medio de rueda dentada, para uso normal y eléctrico hasta 440 V. Según R.D. 773/97 y R.D. 1407/92. Equi- po de Protección Individual (EPI) con marcado de conformidad CE. m23S01K030 ud TRAJE IMPERMEABLE 12,00 24,61 295 Traje completo impermeable (traje de agua) va"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 455,
+      "content_preview": "Extrae partidas del capítulo 04\n\nJSON:\n{\n  \"capitulo_codigo\": \"04\",\n  \"partidas\": [\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n},\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n}\n  ]\n}\n\nReglas:\n1. NO repetir códigos\n2. NO incluir totales\n3. NO incluir campo subcapitulo_codigo\n4. Extrae TODAS las partidas\n\nVALIDACIÓN (antes de enviar):\n1. cantidad × precio = importe (CADA partida)\n2. Códigos únicos\n3. Revisa primera y última partida"
+    }
+  ]
+}

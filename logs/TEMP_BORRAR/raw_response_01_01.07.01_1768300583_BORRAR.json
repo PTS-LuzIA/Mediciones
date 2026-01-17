@@ -1,0 +1,41 @@
+{
+  "capitulo_codigo": "01",
+  "partidas": [
+    {
+      "codigo": "01.1.1.1",
+      "cantidad": 100,
+      "precio": 5.50,
+      "importe": 550.00
+    },
+    {
+      "codigo": "01.1.1.2",
+      "cantidad": 50,
+      "precio": 12.75,
+      "importe": 637.50
+    },
+    {
+      "codigo": "01.1.2.1",
+      "cantidad": 200,
+      "precio": 2.10,
+      "importe": 420.00
+    },
+    {
+      "codigo": "01.2.1.1",
+      "cantidad": 10,
+      "precio": 75.00,
+      "importe": 750.00
+    },
+    {
+      "codigo": "01.2.1.2",
+      "cantidad": 5,
+      "precio": 150.00,
+      "importe": 750.00
+    },
+    {
+      "codigo": "01.3.1.1",
+      "cantidad": 1,
+      "precio": 1200.00,
+      "importe": 1200.00
+    }
+  ]
+}

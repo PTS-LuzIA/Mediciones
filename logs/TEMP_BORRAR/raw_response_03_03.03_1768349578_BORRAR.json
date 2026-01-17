@@ -1,0 +1,233 @@
+{
+  "capitulo_codigo": "03",
+  "partidas": [
+    {
+      "codigo": "E02AM010",
+      "cantidad": 1168.00,
+      "precio": 1.03,
+      "importe": 1203.00
+    },
+    {
+      "codigo": "E02AM020",
+      "cantidad": 230.00,
+      "precio": 1.55,
+      "importe": 356.00
+    },
+    {
+      "codigo": "E02CM020",
+      "cantidad": 891.10,
+      "precio": 4.55,
+      "importe": 4054.00
+    },
+    {
+      "codigo": "E02CM030",
+      "cantidad": 50.00,
+      "precio": 5.25,
+      "importe": 262.00
+    },
+    {
+      "codigo": "U02H050",
+      "cantidad": 891.10,
+      "precio": 2.66,
+      "importe": 2370.00
+    },
+    {
+      "codigo": "E02RV010",
+      "cantidad": 2643.90,
+      "precio": 5.61,
+      "importe": 14832.00
+    },
+    {
+      "codigo": "U02F040",
+      "cantidad": 2020.00,
+      "precio": 0.55,
+      "importe": 1111.00
+    },
+    {
+      "codigo": "E02SZ02",
+      "cantidad": 112.00,
+      "precio": 42.82,
+      "importe": 4795.00
+    },
+    {
+      "codigo": "E02ECM020",
+      "cantidad": 1.00,
+      "precio": 11.60,
+      "importe": 11.60
+    },
+    {
+      "codigo": "U05D150",
+      "cantidad": 12.15,
+      "precio": 77.74,
+      "importe": 944.54
+    },
+    {
+      "codigo": "U05E090",
+      "cantidad": 81.00,
+      "precio": 5.70,
+      "importe": 461.70
+    },
+    {
+      "codigo": "U05E040",
+      "cantidad": 20.00,
+      "precio": 2.53,
+      "importe": 50.60
+    },
+    {
+      "codigo": "U05F030",
+      "cantidad": 1202.00,
+      "precio": 57.26,
+      "importe": 68826.52
+    },
+    {
+      "codigo": "E27GW050",
+      "cantidad": 33.10,
+      "precio": 15.27,
+      "importe": 505.44
+    },
+    {
+      "codigo": "U05C020",
+      "cantidad": 77.10,
+      "precio": 54.86,
+      "importe": 4229.71
+    },
+    {
+      "codigo": "U03EB02",
+      "cantidad": 81.60,
+      "precio": 170.59,
+      "importe": 13920.00
+    },
+    {
+      "codigo": "U06B180",
+      "cantidad": 544.00,
+      "precio": 57.74,
+      "importe": 31410.00
+    },
+    {
+      "codigo": "U06B125",
+      "cantidad": 115.00,
+      "precio": 44.48,
+      "importe": 5115.00
+    },
+    {
+      "codigo": "U06B150",
+      "cantidad": 1.00,
+      "precio": 68.59,
+      "importe": 68.00
+    },
+    {
+      "codigo": "U02H050",
+      "cantidad": 77.10,
+      "precio": 2.66,
+      "importe": 205.00
+    },
+    {
+      "codigo": "U04VQ030",
+      "cantidad": 1.00,
+      "precio": 32.67,
+      "importe": 32.00
+    },
+    {
+      "codigo": "E02ECM030",
+      "cantidad": 2.93,
+      "precio": 20.72,
+      "importe": 60.00
+    },
+    {
+      "codigo": "E02RV010",
+      "cantidad": 19.50,
+      "precio": 5.61,
+      "importe": 109.00
+    },
+    {
+      "codigo": "U03EB02",
+      "cantidad": 2.93,
+      "precio": 170.59,
+      "importe": 499.83
+    },
+    {
+      "codigo": "U14A350",
+      "cantidad": 757.50,
+      "precio": 50.55,
+      "importe": 38291.63
+    },
+    {
+      "codigo": "U04BM090",
+      "cantidad": 15.84,
+      "precio": 38.24,
+      "importe": 605.72
+    },
+    {
+      "codigo": "U06A115",
+      "cantidad": 65.00,
+      "precio": 11.45,
+      "importe": 744.25
+    },
+    {
+      "codigo": "U04BM020",
+      "cantidad": 76.00,
+      "precio": 44.47,
+      "importe": 3379.72
+    },
+    {
+      "codigo": "E02CA030",
+      "cantidad": 17.20,
+      "precio": 43.61,
+      "importe": 750.09
+    },
+    {
+      "codigo": "E02SA020",
+      "cantidad": 86.00,
+      "precio": 48.41,
+      "importe": 4163.26
+    },
+    {
+      "codigo": "U04VBM030",
+      "cantidad": 86.00,
+      "precio": 212.61,
+      "importe": 18284.46
+    },
+    {
+      "codigo": "U02G060",
+      "cantidad": 94.60,
+      "precio": 3.95,
+      "importe": 373.00
+    },
+    {
+      "codigo": "U05A020",
+      "cantidad": 17.20,
+      "precio": 28.89,
+      "importe": 496.00
+    },
+    {
+      "codigo": "E28PH050",
+      "cantidad": 86.00,
+      "precio": 62.61,
+      "importe": 5384.00
+    },
+    {
+      "codigo": "U04VBM020",
+      "cantidad": 42.70,
+      "precio": 179.36,
+      "importe": 7658.00
+    },
+    {
+      "codigo": "E02W020",
+      "cantidad": 45.20,
+      "precio": 34.73,
+      "importe": 1569.00
+    },
+    {
+      "codigo": "U14A270",
+      "cantidad": 22.60,
+      "precio": 45.30,
+      "importe": 1023.00
+    },
+    {
+      "codigo": "U02G060",
+      "cantidad": 113.00,
+      "precio": 3.95,
+      "importe": 446.00
+    }
+  ]
+}

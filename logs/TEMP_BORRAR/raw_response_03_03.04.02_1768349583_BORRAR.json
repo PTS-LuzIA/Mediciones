@@ -1,0 +1,101 @@
+{
+  "capitulo_codigo": "03",
+  "partidas": [
+    {
+      "codigo": "APUDm23U05F030m2",
+      "cantidad": 1202.00,
+      "precio": 57.26,
+      "importe": 68826.52
+    },
+    {
+      "codigo": "3E27GW050m2",
+      "cantidad": 33.10,
+      "precio": 15.27,
+      "importe": 505.44
+    },
+    {
+      "codigo": "APUDm23U05C020m3",
+      "cantidad": 77.10,
+      "precio": 54.86,
+      "importe": 4229.71
+    },
+    {
+      "codigo": "APUDm23U03EB02m53",
+      "cantidad": 81.60,
+      "precio": 170.59,
+      "importe": 13920.00
+    },
+    {
+      "codigo": "APUDm23U06B180m2",
+      "cantidad": 544.00,
+      "precio": 57.74,
+      "importe": 31410.00
+    },
+    {
+      "codigo": "3U06B125m2",
+      "cantidad": 115.00,
+      "precio": 44.48,
+      "importe": 5115.00
+    },
+    {
+      "codigo": "3U06B150m2",
+      "cantidad": 1.00,
+      "precio": 68.59,
+      "importe": 68.59
+    },
+    {
+      "codigo": "APUDm23U02H050m3",
+      "cantidad": 77.10,
+      "precio": 2.66,
+      "importe": 205.00
+    },
+    {
+      "codigo": "U04VQ030m2",
+      "cantidad": 1.00,
+      "precio": 32.67,
+      "importe": 32.67
+    },
+    {
+      "codigo": "3E02ECM030m3",
+      "cantidad": 2.93,
+      "precio": 20.72,
+      "importe": 60.72
+    },
+    {
+      "codigo": "3E02RV010m2",
+      "cantidad": 19.50,
+      "precio": 5.61,
+      "importe": 109.40
+    },
+    {
+      "codigo": "APUDm23U03EB02m53",
+      "cantidad": 2.93,
+      "precio": 170.59,
+      "importe": 499.83
+    },
+    {
+      "codigo": "APUDm23U14A350m",
+      "cantidad": 757.50,
+      "precio": 50.55,
+      "importe": 38291.63
+    },
+    {
+      "codigo": "APUDU04BM090m",
+      "cantidad": 15.84,
+      "precio": 38.24,
+      "importe": 605.72
+    },
+    {
+      "codigo": "3U06A115m",
+      "cantidad": 65.00,
+      "precio": 11.45,
+      "importe": 744.25
+    },
+    {
+      "codigo": "APUDU04BM020m",
+      "cantidad": 76.00,
+      "precio": 44.47,
+      "importe": 3379.72
+    }
+  ]
+}

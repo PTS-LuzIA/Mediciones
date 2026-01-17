@@ -1,0 +1,131 @@
+{
+  "capitulo_codigo": "03",
+  "partidas": [
+    {
+      "codigo": "m23U14A170",
+      "cantidad": 61.80,
+      "precio": 47.70,
+      "importe": 2947.86
+    },
+    {
+      "codigo": "E02TRT090",
+      "cantidad": 61.80,
+      "precio": 12.08,
+      "importe": 746.54
+    },
+    {
+      "codigo": "m23U14B030",
+      "cantidad": 705.00,
+      "precio": 1.20,
+      "importe": 846.00
+    },
+    {
+      "codigo": "m23U14G505",
+      "cantidad": 56.00,
+      "precio": 17.20,
+      "importe": 963.20
+    },
+    {
+      "codigo": "m23U14H392",
+      "cantidad": 34.00,
+      "precio": 13.45,
+      "importe": 457.30
+    },
+    {
+      "codigo": "m23U14G305",
+      "cantidad": 118.00,
+      "precio": 14.65,
+      "importe": 1728.70
+    },
+    {
+      "codigo": "m23U14H003",
+      "cantidad": 88.00,
+      "precio": 16.57,
+      "importe": 1458.16
+    },
+    {
+      "codigo": "m23U14H383",
+      "cantidad": 126.00,
+      "precio": 11.16,
+      "importe": 1406.16
+    },
+    {
+      "codigo": "m23U14DA387",
+      "cantidad": 46.00,
+      "precio": 18.90,
+      "importe": 869.40
+    },
+    {
+      "codigo": "m23U14G155",
+      "cantidad": 160.00,
+      "precio": 11.61,
+      "importe": 1857.60
+    },
+    {
+      "codigo": "m23U14H321",
+      "cantidad": 36.00,
+      "precio": 26.58,
+      "importe": 956.88
+    },
+    {
+      "codigo": "m23U14I250",
+      "cantidad": 68.00,
+      "precio": 6.91,
+      "importe": 469.88
+    },
+    {
+      "codigo": "m23U14H125",
+      "cantidad": 274.00,
+      "precio": 14.86,
+      "importe": 4071.64
+    },
+    {
+      "codigo": "m23U14H354",
+      "cantidad": 74.00,
+      "precio": 20.27,
+      "importe": 1499.98
+    },
+    {
+      "codigo": "m23U14H023",
+      "cantidad": 123.00,
+      "precio": 20.09,
+      "importe": 2471.07
+    },
+    {
+      "codigo": "U13EE500",
+      "cantidad": 216.00,
+      "precio": 8.24,
+      "importe": 1779.84
+    },
+    {
+      "codigo": "m23U14H360",
+      "cantidad": 92.00,
+      "precio": 12.73,
+      "importe": 1171.16
+    },
+    {
+      "codigo": "m23U14H247",
+      "cantidad": 320.00,
+      "precio": 7.29,
+      "importe": 2332.80
+    },
+    {
+      "codigo": "m23U14H145",
+      "cantidad": 210.00,
+      "precio": 15.00,
+      "importe": 3150.00
+    },
+    {
+      "codigo": "m23U14I090",
+      "cantidad": 207.00,
+      "precio": 10.02,
+      "importe": 2074.14
+    },
+    {
+      "codigo": "m23U14N040",
+      "cantidad": 2.00,
+      "precio": 10.55,
+      "importe": 21.10
+    }
+  ]
+}

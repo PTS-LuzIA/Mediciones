@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 1750,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n01 FASE 2 01.06 ESCALERA m23U03L030 m3 HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 o XC3 CEM II 2,03 155,35 315,36 Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 455,
+      "content_preview": "Extrae partidas del capítulo 01\n\nJSON:\n{\n  \"capitulo_codigo\": \"01\",\n  \"partidas\": [\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n},\n    {\"codigo\":\"...\",\"cantidad\":n,\"precio\":n,\"importe\":n}\n  ]\n}\n\nReglas:\n1. NO repetir códigos\n2. NO incluir totales\n3. NO incluir campo subcapitulo_codigo\n4. Extrae TODAS las partidas\n\nVALIDACIÓN (antes de enviar):\n1. cantidad × precio = importe (CADA partida)\n2. Códigos únicos\n3. Revisa primera y última partida"
+    }
+  ]
+}

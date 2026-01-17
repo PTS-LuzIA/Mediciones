@@ -1,0 +1,21 @@
+{
+  "model": "google/gemini-2.5-flash-lite",
+  "temperature": 0.0,
+  "messages": [
+    {
+      "role": "user",
+      "content_length": 3195,
+      "content_preview": "A continuación te proporciono el texto completo del presupuesto:\n\n03 FASE 4 03.06.02.02.01CIMENTACIONES APUDm23E05AP02u0dA PLACA ANCLAJE S275 40x25x2cm SIN GARROTAS 95,00 51,55 4.897,25 Placa de anclaje de acero S275 en perfil plano, de dimensiones 40x25x2 cm., i/ta- ladro central, colocada. Según UNE-EN 10025-1:2006, UNE-EN 1090-2:2019, CTE DB-SE-A y EAE. Acero con marcado CE y DdP (Declaración de prestacio- nes) según Reglamento (UE) 305/2011. m23E05AM020 ud ANCLAJE MECÁNICO D=12mm L=105mm 95,"
+    },
+    {
+      "role": "assistant",
+      "content_length": 109,
+      "content_preview": "Entendido. He recibido y analizado el presupuesto completo. ¿Qué partidas específicas necesitas que extraiga?"
+    },
+    {
+      "role": "user",
+      "content_length": 3791,
+      "content_preview": "Extrae partidas del capítulo 03\n\nFORMATO DE PARTIDA:\nCada línea tiene este formato: CÓDIGO UNIDAD DESCRIPCIÓN CANTIDAD PRECIO IMPORTE\n\nIMPORTANTE: Los 3 valores numéricos (CANTIDAD, PRECIO, IMPORTE) están SIEMPRE al FINAL de la línea.\nSi la descripción contiene números (ejemplo: \"14,65 m2\"), IGNÓRALOS y extrae los ÚLTIMOS 3 NÚMEROS.\n\nCASOS ESPECIALES - CÓDIGOS PEGADOS SIN ESPACIOS:\nA veces el código está PEGADO a la descripción sin espacios ni unidad visible.\nIdentifica el código por su LONGITUD"
+    }
+  ]
+}

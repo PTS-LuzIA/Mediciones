@@ -1,0 +1,23 @@
+{
+  "capitulo_codigo": "01",
+  "partidas": [
+    {
+      "codigo": "m23U04CA030",
+      "subcapitulo_codigo": "01.04.01",
+      "unidad": "m2",
+      "cantidad": 1.0,
+      "precio": 29.13,
+      "importe": 29.13
+    },
+    {
+      "codigo": "m23U05A040",
+      "subcapitulo_codigo": "01.04.01",
+      "unidad": "m3",
+      "cantidad": 1.0,
+      "precio": 49.65,
+      "importe": 49.65
+    }
+  ],
+  "total_extraido": 78.78,
+  "num_partidas": 2
+}

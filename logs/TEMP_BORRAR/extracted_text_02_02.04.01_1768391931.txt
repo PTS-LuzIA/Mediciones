@@ -1,0 +1,10 @@
+=== TEXTO EXTRAÍDO ===
+Capítulo: 02
+Subcapítulos: ['02.04.01']
+Caracteres: 1149
+Líneas: 16
+PDF: hybrid_20260114_002108_PRESUPUESTOS PARCIALES NAVAS DE TOLOSA.pdf
+
+================================================================================
+
+02 FASE 3 02.04.01 CAMINOS DE TERRIZO m23U05D150 m3 BASE DE ZAHORRA ARTIFICIAL CALIZA 18,38 77,74 1.428,86 Base de zahorra artificial caliza, clasificada (husos ZA25 y ZA40), puesta en obra y compactada, según Pliego de Condiciones Técnicas, medida sobre perfil. m23U05E090 m2 PAVIMENTO TERRIZO ARENA CALIZA e=10 cm MEDIOS MANUALES 122,50 5,70 698,25 Pavimento terrizo peatonal de 10 cm de espesor, realizado con arena caliza, ex- tendida y refinada a mano sobre firme terrizo existente (no incluido en este pre- cio). Conforme a ORDEN FOM/1382/2002-PG3-Art.512. Arenas con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011. m23U05E040 m2 MEJORA PAVIMENTO TERRIZO C/ARENAS e=5cm MEDIOS MECÁNICOS 30,00 2,53 75,90 Mejora con medios mecánicos de pavimento terrizo existente mediante el recreci- do con una capa uniforme de 5 cm de espesor de arenas sílice y compactado me- cánico. Conforme a ORDEN FOM/1382/2002-PG3-Art.303. Arena con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011. TOTAL 02.04.01...................................................................................... 2.203,01

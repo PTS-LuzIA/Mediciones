@@ -1,0 +1,1282 @@
+{% extends "base.html" %}
+
+{% block title %}{{ proyecto.nombre }} - Proyecto Híbrido{% endblock %}
+
+{% block extra_head %}
+<style>
+    .badge-warning {
+        background: #ffc107;
+        color: #000;
+    }
+    .badge-danger {
+        background: #dc3545;
+        color: white;
+    }
+    .badge-purple {
+        background: #6f42c1;
+        color: white;
+    }
+    .validation-row-validado {
+        background: #f0fff4 !important;
+        border-left: 3px solid #28a745 !important;
+    }
+    .validation-row-discrepancia {
+        background: #fffbf0 !important;
+        border-left: 3px solid #ffc107 !important;
+    }
+    .validation-row-error {
+        background: #fff5f5 !important;
+        border-left: 3px solid #dc3545 !important;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <div>
+            <h2>⚡ {{ proyecto.nombre or 'Sin nombre' }}</h2>
+            <p style="color: #6c757d; margin-top: 10px;">
+                {% if proyecto.descripcion %}{{ proyecto.descripcion }}{% else %}Proyecto Híbrido #{{ proyecto.id }}{% endif %}
+            </p>
+            <div style="margin-top: 10px; display: flex; gap: 10px; align-items: center;">
+                {% if proyecto.fase == 'COMPLETADO' %}
+                <span class="badge badge-success" style="font-size: 1em;">✓ COMPLETADO</span>
+                {% elif proyecto.fase == 'FASE3_VALIDACION' %}
+                <span class="badge" style="background: #28a745; color: white; font-size: 1em;">FASE 3 - VALIDACIÓN</span>
+                {% elif proyecto.fase == 'FASE2_PARTIDAS' %}
+                <span class="badge" style="background: #ffc107; color: #000; font-size: 1em;">FASE 2 - PARTIDAS</span>
+                {% elif proyecto.fase == 'FASE1_ESTRUCTURA' %}
+                <span class="badge" style="background: #17a2b8; color: white; font-size: 1em;">FASE 1 - ESTRUCTURA</span>
+                {% else %}
+                <span class="badge" style="background: #6c757d; color: white; font-size: 1em;">CREADO</span>
+                {% endif %}
+            </div>
+        </div>
+        <div>
+            <a href="/hybrid-proyectos" class="btn btn-secondary">← Volver</a>
+        </div>
+    </div>
+</div>
+
+<!-- CONTROLES DE FASES -->
+<div class="card">
+    <h3>🎮 Control de Fases del Procesamiento Híbrido</h3>
+    <p style="color: #6c757d; margin: 15px 0 20px 0;">
+        Ejecuta cada fase del procesamiento de forma independiente para pruebas y re-procesamiento
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+        <!-- FASE 1AA: Estructura LOCAL (sin IA) -->
+        <div style="padding: 20px; border: 2px solid {% if proyecto.capitulos %}#28a745{% else %}#28a745{% endif %}; border-radius: 10px; background: {% if proyecto.capitulos %}#f0fff4{% else %}#e8f5e9{% endif %};">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <h4 style="margin: 0; color: #28a745;">⚡ FASE 1AA</h4>
+                {% if proyecto.capitulos %}
+                <span class="badge badge-success">✓ Completada</span>
+                {% else %}
+                <span class="badge" style="background: #28a745; color: white;">Recomendada</span>
+                {% endif %}
+            </div>
+            <p style="margin: 10px 0; color: #6c757d; font-size: 0.85em;">
+                Extraer estructura con PARSER LOCAL (rápido, determinista, sin IA)
+            </p>
+            <button onclick="ejecutarFase1aa({{ proyecto.id }})"
+                    id="btn-fase1aa"
+                    class="btn"
+                    style="width: 100%; background: #28a745; color: white; margin-top: 10px;">
+                {% if proyecto.capitulos %}🔄 Re-ejecutar 1AA (LOCAL){% else %}🚀 Ejecutar 1AA (LOCAL){% endif %}
+            </button>
+            <div id="loading-fase1aa" style="display: none; margin-top: 10px; padding: 10px; background: #d4edda; border-radius: 5px; text-align: center;">
+                <small>⏳ Extrayendo con parser local...</small>
+            </div>
+        </div>
+
+        <!-- FASE 1A: Solo Estructura con IA -->
+        <div style="padding: 20px; border: 2px solid {% if proyecto.capitulos %}#28a745{% else %}#667eea{% endif %}; border-radius: 10px; background: {% if proyecto.capitulos %}#f0fff4{% else %}#f8f9ff{% endif %};">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <h4 style="margin: 0; color: #667eea;">🤖 FASE 1A</h4>
+                {% if proyecto.capitulos %}
+                <span class="badge badge-success">✓ Completada</span>
+                {% else %}
+                <span class="badge" style="background: #ffc107; color: #000;">Pendiente</span>
+                {% endif %}
+            </div>
+            <p style="margin: 10px 0; color: #6c757d; font-size: 0.85em;">
+                Extraer estructura con IA (más lento, requiere Claude)
+            </p>
+            <button onclick="ejecutarFase1a({{ proyecto.id }})"
+                    id="btn-fase1a"
+                    class="btn"
+                    style="width: 100%; background: #667eea; color: white; margin-top: 10px;">
+                {% if proyecto.capitulos %}🔄 Re-ejecutar 1A (IA){% else %}🚀 Ejecutar 1A (IA){% endif %}
+            </button>
+            <div id="loading-fase1a" style="display: none; margin-top: 10px; padding: 10px; background: #e3f2fd; border-radius: 5px; text-align: center;">
+                <small>⏳ Extrayendo con IA...</small>
+            </div>
+        </div>
+
+        <!-- FASE 1B: Solo Conteo -->
+        <div style="padding: 20px; border: 2px solid {% if proyecto.capitulos %}#28a745{% else %}#dee2e6{% endif %}; border-radius: 10px; background: {% if proyecto.capitulos %}#ffffff{% else %}#f8f9fa{% endif %};">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <h4 style="margin: 0; color: #7c3aed;">🔢 FASE 1B</h4>
+                {% if proyecto.capitulos %}
+                    {% if proyecto.capitulos|length > 0 %}
+                        {% set primer_cap = proyecto.capitulos[0] %}
+                        {% set num_ia = primer_cap.num_partidas_ia if primer_cap.num_partidas_ia is defined else (primer_cap.get('num_partidas_ia', 0) if primer_cap.get else 0) %}
+                        {% if num_ia and num_ia > 0 %}
+                            <span class="badge badge-success">✓ Completada</span>
+                        {% else %}
+                            <span class="badge" style="background: #ffc107; color: #000;">Pendiente</span>
+                        {% endif %}
+                    {% else %}
+                        <span class="badge" style="background: #ffc107; color: #000;">Pendiente</span>
+                    {% endif %}
+                {% else %}
+                    <span class="badge" style="background: #dee2e6; color: #6c757d;">Bloqueada</span>
+                {% endif %}
+            </div>
+            <p style="margin: 10px 0; color: #6c757d; font-size: 0.85em;">
+                Contar número de partidas por capítulo/subcapítulo
+            </p>
+            <button onclick="ejecutarFase1b({{ proyecto.id }})"
+                    id="btn-fase1b"
+                    class="btn"
+                    style="width: 100%; background: {% if proyecto.capitulos %}#7c3aed{% else %}#dee2e6{% endif %}; color: white; margin-top: 10px;"
+                    {% if not proyecto.capitulos %}disabled{% endif %}>
+                🚀 Ejecutar 1B
+            </button>
+            {% if not proyecto.capitulos %}
+            <p style="margin: 10px 0 0 0; color: #6c757d; font-size: 0.85em; text-align: center;">
+                🔒 Complete Fase 1A primero
+            </p>
+            {% endif %}
+            <div id="loading-fase1b" style="display: none; margin-top: 10px; padding: 10px; background: #e3f2fd; border-radius: 5px; text-align: center;">
+                <small>⏳ Contando partidas...</small>
+            </div>
+        </div>
+
+        <!-- FASE 2: Partidas con Parser Local -->
+        <div style="padding: 20px; border: 2px solid {% if proyecto.fase in ['FASE2_PARTIDAS', 'FASE3_VALIDACION', 'COMPLETADO'] %}#28a745{% elif proyecto.capitulos %}#28a745{% else %}#dee2e6{% endif %}; border-radius: 10px; background: {% if proyecto.fase in ['FASE2_PARTIDAS', 'FASE3_VALIDACION', 'COMPLETADO'] %}#f0fff4{% elif proyecto.capitulos %}#ffffff{% else %}#f8f9fa{% endif %};">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <h4 style="margin: 0; color: #28a745;">⚙️ FASE 2</h4>
+                {% if proyecto.fase in ['FASE2_PARTIDAS', 'FASE3_VALIDACION', 'COMPLETADO'] %}
+                <span class="badge badge-success">✓ Completada</span>
+                {% elif proyecto.capitulos %}
+                <span class="badge" style="background: #ffc107; color: #000;">Pendiente</span>
+                {% else %}
+                <span class="badge" style="background: #dee2e6; color: #6c757d;">Bloqueada</span>
+                {% endif %}
+            </div>
+            <p style="margin: 10px 0; color: #6c757d; font-size: 0.9em;">
+                Extraer partidas individuales con PartidaParser (sin IA)
+            </p>
+            <button onclick="ejecutarFase2({{ proyecto.id }})"
+                    id="btn-fase2"
+                    class="btn"
+                    style="width: 100%; background: {% if proyecto.capitulos %}#28a745{% else %}#dee2e6{% endif %}; color: white; margin-top: 10px;"
+                    {% if not proyecto.capitulos %}disabled{% endif %}>
+                {% if proyecto.fase in ['FASE2_PARTIDAS', 'FASE3_VALIDACION', 'COMPLETADO'] %}🔄 Re-ejecutar Fase 2{% else %}🚀 Ejecutar Fase 2{% endif %}
+            </button>
+            {% if not proyecto.capitulos %}
+            <p style="margin: 10px 0 0 0; color: #6c757d; font-size: 0.85em; text-align: center;">
+                🔒 Complete Fase 1 primero
+            </p>
+            {% endif %}
+            <div id="loading-fase2" style="display: none; margin-top: 10px; padding: 10px; background: #e3f2fd; border-radius: 5px; text-align: center;">
+                <small>⏳ Extrayendo partidas con parser local...</small>
+            </div>
+        </div>
+
+        <!-- FASE 3: Validación Cruzada -->
+        <div style="padding: 20px; border: 2px solid {% if proyecto.fase == 'COMPLETADO' %}#28a745{% elif proyecto.capitulos %}#ffc107{% else %}#dee2e6{% endif %}; border-radius: 10px; background: {% if proyecto.fase == 'COMPLETADO' %}#f0fff4{% elif proyecto.capitulos %}#ffffff{% else %}#f8f9fa{% endif %};">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <h4 style="margin: 0; color: #ffc107;">✓ FASE 3</h4>
+                {% if proyecto.fase == 'COMPLETADO' %}
+                <span class="badge badge-success">✓ Completada</span>
+                {% elif proyecto.capitulos %}
+                <span class="badge" style="background: #ffc107; color: #000;">Disponible</span>
+                {% else %}
+                <span class="badge" style="background: #dee2e6; color: #6c757d;">Pendiente</span>
+                {% endif %}
+            </div>
+            <p style="margin: 10px 0; color: #6c757d; font-size: 0.9em;">
+                Validar coincidencias entre totales IA y Local (±5%)
+            </p>
+            <button onclick="ejecutarFase3({{ proyecto.id }})"
+                    id="btn-fase3"
+                    class="btn"
+                    style="width: 100%; background: {% if proyecto.capitulos %}#ffc107{% else %}#dee2e6{% endif %}; color: {% if proyecto.capitulos %}#000{% else %}white{% endif %}; margin-top: 10px;"
+                    {% if not proyecto.capitulos %}disabled{% endif %}>
+                {% if proyecto.fase == 'COMPLETADO' %}🔄 Re-validar{% else %}🚀 Ejecutar Fase 3{% endif %}
+            </button>
+            {% if not proyecto.capitulos %}
+            <p style="margin: 10px 0 0 0; color: #6c757d; font-size: 0.85em; text-align: center;">
+                🔒 Complete Fase 1 primero
+            </p>
+            {% endif %}
+            <div id="loading-fase3" style="display: none; margin-top: 10px; padding: 10px; background: #e3f2fd; border-radius: 5px; text-align: center;">
+                <small>⏳ Validando totales IA vs Local...</small>
+            </div>
+        </div>
+
+        <!-- FASE 4: Completar Descripciones -->
+        <div class="card">
+            <h4 style="margin: 0 0 10px 0; display: flex; align-items: center; gap: 10px;">
+                <span style="background: #9c27b0; color: white; border-radius: 50%; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; font-size: 1.1em; font-weight: bold;">4</span>
+                Completar Descripciones
+            </h4>
+            <div style="background: #f8f9fa; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                <span class="badge badge-success">✓ Disponible</span>
+            </div>
+            <p style="margin: 10px 0; color: #6c757d; font-size: 0.9em;">
+                Completar descripciones faltantes con parser local (coste: $0)
+            </p>
+            <button onclick="ejecutarFase4({{ proyecto.id }})"
+                    id="btn-fase4"
+                    class="btn"
+                    style="width: 100%; background: #9c27b0; color: white; margin-top: 10px;">
+                📝 Ejecutar Fase 4
+            </button>
+            <div id="loading-fase4" style="display: none; margin-top: 10px; padding: 10px; background: #f3e5f5; border-radius: 5px; text-align: center;">
+                <small>⏳ Buscando descripciones en texto clasificado...</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MÉTRICAS DE VALIDACIÓN -->
+{% if proyecto.estadisticas %}
+<div class="card">
+    <h3>📊 Métricas de Validación Híbrida</h3>
+    <div class="stats">
+        <div class="stat-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <h3>{{ proyecto.estadisticas.porcentaje_coincidencia|round(1) if proyecto.estadisticas.porcentaje_coincidencia is not none else '-' }}%</h3>
+            <p>Coincidencia Global</p>
+        </div>
+        <div class="stat-card" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%);">
+            <h3>{{ proyecto.estadisticas.validados }}</h3>
+            <p>Elementos Validados</p>
+        </div>
+        <div class="stat-card" style="background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);">
+            <h3>{{ proyecto.estadisticas.discrepancias }}</h3>
+            <p>Discrepancias</p>
+        </div>
+        <div class="stat-card" style="background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);">
+            <h3>{{ proyecto.estadisticas.errores }}</h3>
+            <p>Errores</p>
+        </div>
+    </div>
+
+    <!-- Comparación de totales IA vs Local -->
+    <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+        <h4 style="margin: 0 0 20px 0; color: #495057;">💰 Comparación de Totales</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+            <div style="text-align: center;">
+                <p style="margin: 0; color: #6c757d; font-size: 0.9em;">Total IA (Estructura)</p>
+                <h3 style="margin: 10px 0; color: #667eea;">{{ proyecto.total_ia|european if proyecto.total_ia else '0,00' }} €</h3>
+            </div>
+            <div style="text-align: center;">
+                <p style="margin: 0; color: #6c757d; font-size: 0.9em;">Total Local (Partidas)</p>
+                <h3 style="margin: 10px 0; color: #28a745;">{{ proyecto.total_local|european if proyecto.total_local else '0,00' }} €</h3>
+            </div>
+            <div style="text-align: center;">
+                <p style="margin: 0; color: #6c757d; font-size: 0.9em;">Diferencia</p>
+                {% set diff = proyecto.diferencia_euros if proyecto.diferencia_euros is not none else 0 %}
+                <h3 style="margin: 10px 0; color: {% if diff|abs < 0.01 %}#28a745{% elif diff|abs < 1000 %}#ffc107{% else %}#dc3545{% endif %};">
+                    {{ diff|european }} €
+                </h3>
+                {% if proyecto.diferencia_porcentaje is not none %}
+                <p style="margin: 5px 0 0 0; font-size: 0.85em; color: #6c757d;">
+                    ({{ proyecto.diferencia_porcentaje|round(2) }}%)
+                </p>
+                {% endif %}
+            </div>
+            <div style="text-align: center;">
+                <p style="margin: 0; color: #6c757d; font-size: 0.9em;">Total Final</p>
+                <h3 style="margin: 10px 0; color: #764ba2;">{{ proyecto.total_final|european if proyecto.total_final else '0,00' }} €</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Elementos con Discrepancia - Para Revisión IA -->
+    <div id="elementos-revisar-container" style="margin-top: 30px; display: none;">
+        <div style="padding: 20px; background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 5px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <h4 style="margin: 0; color: #856404;">⚠️ Elementos con Discrepancia</h4>
+                <button onclick="revisarTodosElementos()"
+                        id="btn-revisar-todos"
+                        class="btn"
+                        style="background: #ffc107; color: #000; padding: 8px 16px; font-size: 0.9em;">
+                    🤖 Revisar Todos con IA
+                </button>
+            </div>
+            <p style="margin: 0 0 15px 0; color: #856404; font-size: 0.9em;">
+                Los siguientes elementos tienen diferencias significativas entre IA y Local. Puede revisarlos automáticamente con IA para corregir las partidas.
+            </p>
+            <div id="lista-elementos-revisar" style="display: grid; gap: 10px;">
+                <!-- Se llenará dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Tiempos de procesamiento -->
+    {% if proyecto.tiempo_fase1 or proyecto.tiempo_fase2 or proyecto.tiempo_fase3 %}
+    <div style="margin-top: 20px; padding: 15px; background: #e3f2fd; border-left: 4px solid #2196f3; border-radius: 5px;">
+        <strong style="color: #0c5460;">⏱️ Tiempos de Procesamiento:</strong>
+        <div style="margin-top: 10px; display: flex; gap: 20px; flex-wrap: wrap;">
+            {% if proyecto.tiempo_fase1 %}
+            <div>Fase 1 (IA): <strong>{{ proyecto.tiempo_fase1|round(2) }}s</strong></div>
+            {% endif %}
+            {% if proyecto.tiempo_fase2 %}
+            <div>Fase 2 (Local): <strong>{{ proyecto.tiempo_fase2|round(2) }}s</strong></div>
+            {% endif %}
+            {% if proyecto.tiempo_fase3 %}
+            <div>Fase 3 (Validación): <strong>{{ proyecto.tiempo_fase3|round(2) }}s</strong></div>
+            {% endif %}
+            {% if proyecto.tiempo_total %}
+            <div style="color: #667eea;">Total: <strong>{{ proyecto.tiempo_total|round(2) }}s</strong></div>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endif %}
+
+<!-- RESUMEN POR CAPÍTULOS CON VALIDACIÓN -->
+<div class="card">
+    <h3>📋 Resumen por Capítulos (con Validación)</h3>
+
+    <table style="margin-top: 20px;">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Capítulo</th>
+                <th style="text-align: center;">Estado</th>
+                <th style="text-align: right;">Partidas IA</th>
+                <th style="text-align: right;">Partidas Local</th>
+                <th style="text-align: right;">Total IA</th>
+                <th style="text-align: right;">Total Local</th>
+                <th style="text-align: right;">Diferencia</th>
+                <th style="text-align: right;">Total Final</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% set ns = namespace(total_ia=0, total_local=0, total_final=0) %}
+            {% for capitulo in proyecto.capitulos %}
+                {% set ns.total_ia = ns.total_ia + (capitulo.total_ia if capitulo.total_ia else 0) %}
+                {% set ns.total_local = ns.total_local + (capitulo.total_local if capitulo.total_local else 0) %}
+                {% set ns.total_final = ns.total_final + (capitulo.total_final if capitulo.total_final else 0) %}
+
+                <tr class="{% if capitulo.estado_validacion == 'VALIDADO' %}validation-row-validado{% elif capitulo.estado_validacion == 'DISCREPANCIA' %}validation-row-discrepancia{% elif capitulo.estado_validacion == 'ERROR' %}validation-row-error{% endif %}">
+                    <td><strong>{{ capitulo.codigo }}</strong></td>
+                    <td>{{ capitulo.nombre }}</td>
+                    <td style="text-align: center;">
+                        {% if capitulo.estado_validacion == 'VALIDADO' %}
+                        <span class="badge badge-success">✓ VALIDADO</span>
+                        {% elif capitulo.estado_validacion == 'DISCREPANCIA' %}
+                        <span class="badge badge-warning">⚠️ DISCREPANCIA</span>
+                        {% elif capitulo.estado_validacion == 'REVISADO_IA' %}
+                        <span class="badge badge-purple">📋 REVISADO IA</span>
+                        {% elif capitulo.estado_validacion == 'ERROR' %}
+                        <span class="badge badge-danger">❌ ERROR</span>
+                        {% else %}
+                        <span class="badge" style="background: #6c757d; color: white;">PENDIENTE</span>
+                        {% endif %}
+                    </td>
+                    <td style="text-align: right; {% if capitulo.num_partidas_ia != capitulo.num_partidas_local %}color: #dc3545; font-weight: 600;{% else %}color: #667eea;{% endif %}">
+                        {{ capitulo.num_partidas_ia if capitulo.num_partidas_ia is not none else '-' }}
+                    </td>
+                    <td style="text-align: right; color: #28a745;">
+                        {{ capitulo.num_partidas_local if capitulo.num_partidas_local is not none else '-' }}
+                    </td>
+                    <td style="text-align: right; color: #667eea;">{{ capitulo.total_ia|european if capitulo.total_ia else '0,00' }} €</td>
+                    <td style="text-align: right; color: #28a745;">{{ capitulo.total_local|european if capitulo.total_local else '0,00' }} €</td>
+                    <td style="text-align: right; {% if capitulo.diferencia_euros and capitulo.diferencia_euros|abs > 100 %}color: #dc3545; font-weight: 600;{% else %}color: #6c757d;{% endif %}">
+                        {{ capitulo.diferencia_euros|european if capitulo.diferencia_euros is not none else '0,00' }} €
+                        {% if capitulo.diferencia_porcentaje is not none %}
+                        <br><small>({{ capitulo.diferencia_porcentaje|round(1) }}%)</small>
+                        {% endif %}
+                    </td>
+                    <td style="text-align: right; font-weight: 600; color: #764ba2;">{{ capitulo.total_final|european if capitulo.total_final else '0,00' }} €</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot style="border-top: 2px solid #667eea;">
+            <tr style="background: #f8f9ff; font-weight: bold; font-size: 1.1em;">
+                <td colspan="3"><strong>TOTAL PRESUPUESTO</strong></td>
+                <td colspan="2"></td>
+                <td style="text-align: right; color: #667eea;">{{ ns.total_ia|european }} €</td>
+                <td style="text-align: right; color: #28a745;">{{ ns.total_local|european }} €</td>
+                <td style="text-align: right; color: {% if (ns.total_ia - ns.total_local)|abs > 100 %}#dc3545{% else %}#6c757d{% endif %};">
+                    {{ (ns.total_ia - ns.total_local)|european }} €
+                </td>
+                <td style="text-align: right; color: #764ba2;">{{ ns.total_final|european }} €</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+<!-- ESTRUCTURA DETALLADA CON VALIDACIÓN POR SUBCAPÍTULO -->
+{% if proyecto.capitulos %}
+<div class="card">
+    <h3>🔍 Estructura Detallada con Validación</h3>
+    <p style="color: #6c757d; margin-bottom: 20px;">Click en cada subcapítulo para ver el desglose de partidas y validación</p>
+
+    {# Macro recursivo para renderizar subcapítulos anidados con validación #}
+    {% macro renderizar_subcapitulos_hibridos(subcapitulos, prefijo_id, margen_izq=0) %}
+        {% for subcapitulo in subcapitulos %}
+        <div style="margin: 15px 0; margin-left: {{ margen_izq }}px;">
+            {# Cabecera colapsable del subcapítulo con estado de validación #}
+            <div onclick="toggleSubcapitulo('{{ prefijo_id }}_{{ loop.index }}')"
+                 style="cursor: pointer; padding: 15px; background: {% if subcapitulo.estado_validacion == 'VALIDADO' %}#f0fff4{% elif subcapitulo.estado_validacion == 'DISCREPANCIA' %}#fffbf0{% else %}#f8f9fa{% endif %}; border-radius: 5px; border-left: 3px solid {% if subcapitulo.estado_validacion == 'VALIDADO' %}#28a745{% elif subcapitulo.estado_validacion == 'DISCREPANCIA' %}#ffc107{% else %}#764ba2{% endif %}; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s;"
+                 onmouseover="this.style.opacity='0.9'"
+                 onmouseout="this.style.opacity='1'">
+                <div style="flex: 1;">
+                    <strong style="color: #764ba2; font-size: 1.05em;">▶ {{ subcapitulo.codigo }} - {{ subcapitulo.nombre }}</strong>
+                    <div style="margin-top: 5px;">
+                        {% if subcapitulo.estado_validacion == 'VALIDADO' %}
+                        <span class="badge badge-success">✓ VALIDADO</span>
+                        {% elif subcapitulo.estado_validacion == 'DISCREPANCIA' %}
+                        <span class="badge badge-warning">⚠️ DISCREPANCIA</span>
+                        {% elif subcapitulo.estado_validacion == 'REVISADO_IA' %}
+                        <span class="badge badge-purple">📋 REVISADO IA</span>
+                        {% elif subcapitulo.estado_validacion == 'ERROR' %}
+                        <span class="badge badge-danger">❌ ERROR</span>
+                        {% else %}
+                        <span class="badge" style="background: #6c757d; color: white;">PENDIENTE</span>
+                        {% endif %}
+
+                        {% if subcapitulo.origen %}
+                        <span class="badge badge-info" style="margin-left: 5px;">{{ subcapitulo.origen }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-size: 0.85em; color: #6c757d; margin-bottom: 5px;">
+                        IA: <strong style="color: #667eea;">{{ subcapitulo.total_ia|european if subcapitulo.total_ia else '0,00' }} €</strong>
+                        ({{ subcapitulo.num_partidas_ia if subcapitulo.num_partidas_ia is not none else '?' }} partidas)
+                        | Local: <strong style="color: #28a745;">{{ subcapitulo.total_local|european if subcapitulo.total_local else '0,00' }} €</strong>
+                        ({{ subcapitulo.num_partidas_local if subcapitulo.num_partidas_local is not none else '?' }} partidas)
+                    </div>
+                    <strong style="color: #764ba2; font-size: 1.1em;">
+                        Final: {{ subcapitulo.total_final|european if subcapitulo.total_final else '0,00' }} €
+                    </strong>
+                </div>
+            </div>
+
+            {# Contenido colapsable #}
+            <div id="{{ prefijo_id }}_{{ loop.index }}" style="display: none; margin-top: 10px; padding: 15px; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 5px;">
+                {# Información de validación #}
+                {% if subcapitulo.diferencia_euros is not none or subcapitulo.diferencia_porcentaje is not none %}
+                <div style="padding: 10px; background: {% if subcapitulo.estado_validacion == 'VALIDADO' %}#d4edda{% elif subcapitulo.estado_validacion == 'DISCREPANCIA' %}#fff3cd{% else %}#f8d7da{% endif %}; border-left: 3px solid {% if subcapitulo.estado_validacion == 'VALIDADO' %}#28a745{% elif subcapitulo.estado_validacion == 'DISCREPANCIA' %}#ffc107{% else %}#dc3545{% endif %}; margin-bottom: 15px; border-radius: 3px;">
+                    <strong>📊 Validación:</strong>
+                    <div style="margin-top: 5px; font-size: 0.9em;">
+                        <div>
+                            Número de partidas:
+                            <strong style="{% if subcapitulo.num_partidas_ia != subcapitulo.num_partidas_local %}color: #dc3545;{% endif %}">
+                                IA: {{ subcapitulo.num_partidas_ia if subcapitulo.num_partidas_ia is not none else '?' }}
+                                | Local: {{ subcapitulo.num_partidas_local if subcapitulo.num_partidas_local is not none else '?' }}
+                            </strong>
+                        </div>
+                        <div style="margin-top: 5px;">
+                            Diferencia en total: <strong>{{ subcapitulo.diferencia_euros|european if subcapitulo.diferencia_euros is not none else '0,00' }} €</strong>
+                            {% if subcapitulo.diferencia_porcentaje is not none %}
+                            (<strong>{{ subcapitulo.diferencia_porcentaje|round(2) }}%</strong>)
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+                {# PARTIDAS DEL SUBCAPÍTULO #}
+                {% if subcapitulo.partidas %}
+                <h6 style="margin: 0 0 10px 0; color: #495057;">Partidas:</h6>
+                <table style="width: 100%; font-size: 0.9em;">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Resumen</th>
+                            <th>Unidad</th>
+                            <th style="text-align: right;">Cantidad</th>
+                            <th style="text-align: right;">Precio</th>
+                            <th style="text-align: right;">Importe</th>
+                            <th style="text-align: center;">Origen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for partida in subcapitulo.partidas %}
+                        <tr>
+                            <td><code>{{ partida.codigo }}</code></td>
+                            <td>{{ partida.resumen[:50] }}{% if partida.resumen|length > 50 %}...{% endif %}</td>
+                            <td>{{ partida.unidad }}</td>
+                            <td style="text-align: right;">{{ partida.cantidad|european }}</td>
+                            <td style="text-align: right;">{{ partida.precio|european }} €</td>
+                            <td style="text-align: right;"><strong>{{ partida.importe|european }} €</strong></td>
+                            <td style="text-align: center;">
+                                {% if partida.origen == 'IA' %}
+                                <span class="badge badge-info">🤖 IA</span>
+                                {% elif partida.origen == 'Local' %}
+                                <span class="badge" style="background: #28a745; color: white;">⚙️ Local</span>
+                                {% else %}
+                                <span class="badge" style="background: #6c757d; color: white;">-</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% endif %}
+
+                {# APARTADOS DEL SUBCAPÍTULO #}
+                {% for apartado in subcapitulo.apartados %}
+                <div style="margin-top: 20px;">
+                    <h6 style="color: #6c757d; margin-bottom: 10px; font-weight: 600;">
+                        {{ apartado.codigo }} - {{ apartado.nombre }}
+                        {% if apartado.estado_validacion %}
+                        {% if apartado.estado_validacion == 'VALIDADO' %}
+                        <span class="badge badge-success">✓</span>
+                        {% elif apartado.estado_validacion == 'DISCREPANCIA' %}
+                        <span class="badge badge-warning">⚠️</span>
+                        {% endif %}
+                        {% endif %}
+                    </h6>
+
+                    {% if apartado.partidas %}
+                    <table style="width: 100%; font-size: 0.85em;">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Resumen</th>
+                                <th>Unidad</th>
+                                <th style="text-align: right;">Cantidad</th>
+                                <th style="text-align: right;">Precio</th>
+                                <th style="text-align: right;">Importe</th>
+                                <th style="text-align: center;">Origen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for partida in apartado.partidas %}
+                            <tr>
+                                <td><code>{{ partida.codigo }}</code></td>
+                                <td>{{ partida.resumen[:40] }}{% if partida.resumen|length > 40 %}...{% endif %}</td>
+                                <td>{{ partida.unidad }}</td>
+                                <td style="text-align: right;">{{ partida.cantidad|european }}</td>
+                                <td style="text-align: right;">{{ partida.precio|european }} €</td>
+                                <td style="text-align: right;"><strong>{{ partida.importe|european }} €</strong></td>
+                                <td style="text-align: center;">
+                                    {% if partida.origen == 'IA' %}
+                                    <span class="badge badge-info">🤖 IA</span>
+                                    {% elif partida.origen == 'Local' %}
+                                    <span class="badge" style="background: #28a745; color: white;">⚙️ Local</span>
+                                    {% else %}
+                                    <span class="badge" style="background: #6c757d; color: white;">-</span>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% endif %}
+                </div>
+                {% endfor %}
+
+                {# RECURSIÓN: Renderizar subcapítulos hijos #}
+                {% if subcapitulo.subcapitulos_hijos %}
+                <div style="margin-top: 20px; padding-top: 15px; border-top: 2px dashed #dee2e6;">
+                    <h6 style="color: #667eea; margin-bottom: 15px;">📂 Subcapítulos de nivel inferior:</h6>
+                    {{ renderizar_subcapitulos_hibridos(subcapitulo.subcapitulos_hijos, prefijo_id ~ '_' ~ loop.index, 0) }}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    {% endmacro %}
+
+    {% for capitulo in proyecto.capitulos %}
+    <div style="margin: 20px 0;">
+        {# Cabecera colapsable del CAPÍTULO #}
+        <div onclick="toggleSubcapitulo('cap_{{ loop.index }}')"
+             style="cursor: pointer; padding: 18px; background: {% if capitulo.estado_validacion == 'VALIDADO' %}#e8f5e9{% elif capitulo.estado_validacion == 'DISCREPANCIA' %}#fff9e6{% else %}#e3f2fd{% endif %}; border-radius: 8px; border-left: 5px solid {% if capitulo.estado_validacion == 'VALIDADO' %}#28a745{% elif capitulo.estado_validacion == 'DISCREPANCIA' %}#ffc107{% else %}#667eea{% endif %}; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+             onmouseover="this.style.opacity='0.95'; this.style.transform='translateX(5px)'"
+             onmouseout="this.style.opacity='1'; this.style.transform='translateX(0)'">
+            <div style="flex: 1;">
+                <strong style="color: #667eea; font-size: 1.15em;">📁 {{ capitulo.codigo }} - {{ capitulo.nombre }}</strong>
+                <div style="margin-top: 8px;">
+                    {% if capitulo.estado_validacion == 'VALIDADO' %}
+                    <span class="badge badge-success">✓ VALIDADO</span>
+                    {% elif capitulo.estado_validacion == 'DISCREPANCIA' %}
+                    <span class="badge badge-warning">⚠️ DISCREPANCIA</span>
+                    {% elif capitulo.estado_validacion == 'ERROR' %}
+                    <span class="badge badge-danger">❌ ERROR</span>
+                    {% else %}
+                    <span class="badge" style="background: #6c757d; color: white;">PENDIENTE</span>
+                    {% endif %}
+
+                    {# Indicador de subcapítulos y partidas #}
+                    {% if capitulo.subcapitulos and capitulo.subcapitulos|length > 0 %}
+                    <span class="badge" style="background: #667eea; color: white; margin-left: 5px;">
+                        {{ capitulo.subcapitulos|length }} subcap{% if capitulo.partidas %} | {{ capitulo.partidas|length }} partidas directas{% endif %}
+                    </span>
+                    {% elif capitulo.partidas and capitulo.partidas|length > 0 %}
+                    <span class="badge" style="background: #28a745; color: white; margin-left: 5px;">
+                        {{ capitulo.partidas|length }} partidas
+                    </span>
+                    {% else %}
+                    <span class="badge" style="background: #6c757d; color: white; margin-left: 5px;">
+                        0 subcap
+                    </span>
+                    {% endif %}
+                </div>
+            </div>
+            <div style="text-align: right;">
+                <div style="font-size: 0.9em; color: #6c757d; margin-bottom: 5px;">
+                    IA: <strong style="color: #667eea;">{{ capitulo.total_ia|european if capitulo.total_ia else '0,00' }} €</strong>
+                    ({{ capitulo.num_partidas_ia if capitulo.num_partidas_ia is not none else '?' }} partidas)
+                    | Local: <strong style="color: #28a745;">{{ capitulo.total_local|european if capitulo.total_local else '0,00' }} €</strong>
+                    ({{ capitulo.num_partidas_local if capitulo.num_partidas_local is not none else '?' }} partidas)
+                </div>
+                <strong style="color: #764ba2; font-size: 1.25em;">
+                    Final: {{ capitulo.total_final|european if capitulo.total_final else '0,00' }} €
+                </strong>
+            </div>
+        </div>
+
+        {# Contenido colapsable del CAPÍTULO #}
+        <div id="cap_{{ loop.index }}" style="display: none; margin-top: 15px; padding: 20px; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px;">
+
+            {# PARTIDAS DIRECTAS DEL CAPÍTULO (sin subcapítulo) #}
+            {% if capitulo.partidas %}
+            <div style="margin-bottom: 25px; padding: 15px; background: #f8f9fa; border-left: 3px solid #667eea; border-radius: 5px;">
+                <h6 style="margin: 0 0 15px 0; color: #667eea; font-weight: 600;">📋 Partidas Directas del Capítulo:</h6>
+                <table style="width: 100%; font-size: 0.9em;">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Resumen</th>
+                            <th>Unidad</th>
+                            <th style="text-align: right;">Cantidad</th>
+                            <th style="text-align: right;">Precio</th>
+                            <th style="text-align: right;">Importe</th>
+                            <th style="text-align: center;">Origen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for partida in capitulo.partidas %}
+                        <tr>
+                            <td><code>{{ partida.codigo }}</code></td>
+                            <td>{{ partida.resumen[:50] }}{% if partida.resumen|length > 50 %}...{% endif %}</td>
+                            <td>{{ partida.unidad }}</td>
+                            <td style="text-align: right;">{{ partida.cantidad|european }}</td>
+                            <td style="text-align: right;">{{ partida.precio|european }} €</td>
+                            <td style="text-align: right;"><strong>{{ partida.importe|european }} €</strong></td>
+                            <td style="text-align: center;">
+                                <span class="badge" style="background: #28a745; color: white;">⚙️ Local</span>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% endif %}
+
+            {# SUBCAPÍTULOS DEL CAPÍTULO #}
+            {% if capitulo.subcapitulos and capitulo.subcapitulos|length > 0 %}
+            <h6 style="color: #667eea; margin-bottom: 15px; font-weight: 600;">📂 Subcapítulos:</h6>
+            {# Renderizar todos los subcapítulos del capítulo (ya vienen correctamente estructurados) #}
+            {{ renderizar_subcapitulos_hibridos(capitulo.subcapitulos, 'sub_' ~ capitulo.codigo, 0) }}
+            {% endif %}
+
+            {# Total del capítulo #}
+            <div style="margin-top: 25px; padding: 15px; background: {% if capitulo.estado_validacion == 'VALIDADO' %}#f0fff4{% elif capitulo.estado_validacion == 'DISCREPANCIA' %}#fffbf0{% else %}#f0f1ff{% endif %}; border-radius: 5px; border: 2px solid {% if capitulo.estado_validacion == 'VALIDADO' %}#28a745{% elif capitulo.estado_validacion == 'DISCREPANCIA' %}#ffc107{% else %}#667eea{% endif %};">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <strong style="color: #667eea; font-size: 1.2em;">TOTAL {{ capitulo.codigo }}</strong>
+                    <div style="text-align: right;">
+                        <div style="font-size: 0.9em; color: #6c757d; margin-bottom: 5px;">
+                            IA: {{ capitulo.total_ia|european if capitulo.total_ia else '0,00' }} € |
+                            Local: {{ capitulo.total_local|european if capitulo.total_local else '0,00' }} €
+                        </div>
+                        <strong style="color: #764ba2; font-size: 1.3em;">
+                            {{ capitulo.total_final|european if capitulo.total_final else '0,00' }} €
+                        </strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<!-- EXPORTACIÓN -->
+<div class="card">
+    <h3>📥 Exportar Presupuesto</h3>
+    <p style="color: #6c757d; margin: 15px 0;">
+        Descarga el presupuesto híbrido validado en diferentes formatos:
+    </p>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <a href="http://localhost:3013/hybrid-exportar/{{ proyecto.id }}/csv"
+           class="btn"
+           download>
+            📄 Exportar CSV
+        </a>
+        <a href="http://localhost:3013/hybrid-exportar/{{ proyecto.id }}/excel"
+           class="btn"
+           download>
+            📊 Exportar Excel
+        </a>
+        <a href="http://localhost:3013/hybrid-exportar/{{ proyecto.id }}/xml"
+           class="btn"
+           download>
+            📋 Exportar XML
+        </a>
+        <a href="http://localhost:3013/hybrid-exportar/{{ proyecto.id }}/bc3"
+           class="btn"
+           download>
+            🏗️ Exportar BC3/FIEBDC-3
+        </a>
+    </div>
+</div>
+
+<!-- INFORMACIÓN DEL ARCHIVO -->
+<div class="card">
+    <h3>ℹ️ Información del Archivo</h3>
+    <table style="width: auto;">
+        <tr>
+            <td style="font-weight: 600; width: 200px;">Archivo origen:</td>
+            <td>{{ proyecto.archivo_origen }}</td>
+        </tr>
+        <tr>
+            <td style="font-weight: 600;">Sistema:</td>
+            <td><strong style="color: #667eea;">Híbrido (IA + Local + Validación)</strong></td>
+        </tr>
+        <tr>
+            <td style="font-weight: 600;">Fecha de procesamiento:</td>
+            <td>{{ proyecto.fecha_creacion[:19] if proyecto.fecha_creacion else '-' }}</td>
+        </tr>
+        <tr>
+            <td style="font-weight: 600;">Tiempo total:</td>
+            <td>{{ proyecto.tiempo_total|round(2) if proyecto.tiempo_total else '-' }} segundos</td>
+        </tr>
+        <tr>
+            <td style="font-weight: 600;">Fase actual:</td>
+            <td><strong>{{ proyecto.fase }}</strong></td>
+        </tr>
+        <tr>
+            <td style="font-weight: 600;">ID del proyecto:</td>
+            <td><span class="badge badge-info">#{{ proyecto.id }}</span></td>
+        </tr>
+    </table>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function toggleSubcapitulo(id) {
+    const element = document.getElementById(id);
+    const header = element.previousElementSibling;
+    const arrow = header.querySelector('strong');
+
+    if (element.style.display === 'none') {
+        element.style.display = 'block';
+        arrow.textContent = arrow.textContent.replace('▶', '▼');
+    } else {
+        element.style.display = 'none';
+        arrow.textContent = arrow.textContent.replace('▼', '▶');
+    }
+}
+
+// ============================================================================
+// FUNCIONES PARA EJECUTAR FASES INDEPENDIENTES
+// ============================================================================
+
+async function ejecutarFase1aa(proyectoId) {
+    const btn = document.getElementById('btn-fase1aa');
+    const loading = document.getElementById('loading-fase1aa');
+
+    // Confirmar si ya tiene estructura
+    const tieneEstructura = {{ 'true' if proyecto.capitulos else 'false' }};
+    if (tieneEstructura) {
+        if (!confirm('¿Re-extraer la estructura con PARSER LOCAL?\n\nEsto eliminará la estructura actual y volverá a procesarla con el parser determinista (sin IA).\n\n✓ Rápido (segundos)\n✓ Determinista\n✓ Sin costos de IA\n\n¿Continuar?')) {
+            return;
+        }
+    }
+
+    // Deshabilitar botón y mostrar loading
+    btn.disabled = true;
+    btn.style.opacity = '0.6';
+    loading.style.display = 'block';
+
+    try {
+        const response = await fetch(`http://localhost:3013/hybrid-fase1aa/${proyectoId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            alert('✓ Fase 1AA (LOCAL) completada!\n\n' +
+                  `Capítulos extraídos: ${data.capitulos_extraidos}\n` +
+                  `Subcapítulos extraídos: ${data.subcapitulos_extraidos}\n` +
+                  `Tiempo: ${data.tiempo.toFixed(2)}s\n` +
+                  `Método: ${data.metodo}\n\n` +
+                  'Ahora puedes ejecutar Fase 2 para extraer partidas.\n\n' +
+                  'Recargando página...');
+            location.reload();
+        } else {
+            throw new Error(data.error || 'Error desconocido');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('❌ Error en Fase 1AA:\n' + error.message);
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        loading.style.display = 'none';
+    }
+}
+
+async function ejecutarFase1a(proyectoId) {
+    const btn = document.getElementById('btn-fase1a');
+    const loading = document.getElementById('loading-fase1a');
+
+    // Confirmar si ya tiene estructura
+    const tieneEstructura = {{ 'true' if proyecto.capitulos else 'false' }};
+    if (tieneEstructura) {
+        if (!confirm('¿Re-extraer la estructura con IA?\n\nEsto eliminará la estructura actual y volverá a procesarla.\n\n¿Continuar?')) {
+            return;
+        }
+    }
+
+    // Deshabilitar botón y mostrar loading
+    btn.disabled = true;
+    btn.style.opacity = '0.6';
+    loading.style.display = 'block';
+
+    try {
+        const response = await fetch(`http://localhost:3013/hybrid-fase1a/${proyectoId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            alert('✓ Fase 1A completada!\n\n' +
+                  `Capítulos extraídos: ${data.capitulos_extraidos}\n` +
+                  `Tiempo: ${data.tiempo.toFixed(2)}s\n\n` +
+                  'Ahora puedes ejecutar Fase 1B para contar partidas.\n\n' +
+                  'Recargando página...');
+            location.reload();
+        } else {
+            throw new Error(data.error || 'Error desconocido');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('❌ Error en Fase 1A:\n' + error.message);
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        loading.style.display = 'none';
+    }
+}
+
+async function ejecutarFase1b(proyectoId) {
+    const btn = document.getElementById('btn-fase1b');
+    const loading = document.getElementById('loading-fase1b');
+
+    // Deshabilitar botón y mostrar loading
+    btn.disabled = true;
+    btn.style.opacity = '0.6';
+    loading.style.display = 'block';
+
+    try {
+        const response = await fetch(`http://localhost:3013/hybrid-fase1b/${proyectoId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            alert('✓ Fase 1B completada!\n\n' +
+                  `Partidas contadas: ${data.total_partidas_contadas}\n` +
+                  `Tiempo: ${data.tiempo.toFixed(2)}s\n\n` +
+                  'Recargando página...');
+            location.reload();
+        } else {
+            throw new Error(data.error || data.detail || 'Error desconocido');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('❌ Error en Fase 1B:\n' + error.message);
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        loading.style.display = 'none';
+    }
+}
+
+async function ejecutarFase2(proyectoId) {
+    const btn = document.getElementById('btn-fase2');
+    const loading = document.getElementById('loading-fase2');
+
+    // Confirmar si ya tiene partidas
+    const tienePartidas = {{ 'true' if proyecto.fase in ['FASE2_PARTIDAS', 'FASE3_VALIDACION', 'COMPLETADO'] else 'false' }};
+    if (tienePartidas) {
+        if (!confirm('¿Re-extraer las partidas con parser local?\n\nEsto eliminará las partidas actuales y volverá a procesarlas.\n\n¿Continuar?')) {
+            return;
+        }
+    }
+
+    // Deshabilitar botón y mostrar loading
+    btn.disabled = true;
+    btn.style.opacity = '0.6';
+    loading.style.display = 'block';
+
+    try {
+        const response = await fetch(`http://localhost:3013/hybrid-fase2/${proyectoId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            alert('✓ Fase 2 completada!\n\n' +
+                  `Partidas extraídas: ${data.partidas_extraidas}\n` +
+                  `Tiempo: ${data.tiempo.toFixed(2)}s\n\n` +
+                  'Recargando página...');
+            location.reload();
+        } else {
+            throw new Error(data.error || 'Error desconocido');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('❌ Error en Fase 2:\n' + error.message);
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        loading.style.display = 'none';
+    }
+}
+
+// Variable global para almacenar elementos a revisar
+let elementosARevisar = [];
+
+async function ejecutarFase3(proyectoId) {
+    const btn = document.getElementById('btn-fase3');
+    const loading = document.getElementById('loading-fase3');
+
+    // Deshabilitar botón y mostrar loading
+    btn.disabled = true;
+    btn.style.opacity = '0.6';
+    loading.style.display = 'block';
+
+    try {
+        const response = await fetch(`http://localhost:3013/hybrid-fase3/${proyectoId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            // Guardar elementos a revisar
+            elementosARevisar = data.elementos_a_revisar || [];
+
+            let mensaje = '✓ Fase 3 completada!\n\n' +
+                  `Validados: ${data.validados}\n` +
+                  `Discrepancias: ${data.discrepancias}\n` +
+                  `Errores: ${data.errores}\n` +
+                  `Coincidencia global: ${data.porcentaje_coincidencia.toFixed(1)}%\n` +
+                  `Tiempo: ${data.tiempo.toFixed(2)}s`;
+
+            if (elementosARevisar.length > 0) {
+                mensaje += `\n\n⚠️ ${elementosARevisar.length} elemento(s) necesitan revisión IA`;
+            }
+
+            mensaje += '\n\nRecargando página...';
+
+            alert(mensaje);
+            location.reload();
+        } else {
+            throw new Error(data.error || 'Error desconocido');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('❌ Error en Fase 3:\n' + error.message);
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        loading.style.display = 'none';
+    }
+}
+
+// Función para ejecutar Fase 4: Completar descripciones
+async function ejecutarFase4(proyectoId) {
+    const btn = document.getElementById('btn-fase4');
+    const loading = document.getElementById('loading-fase4');
+
+    // Deshabilitar botón y mostrar loading
+    btn.disabled = true;
+    btn.style.opacity = '0.6';
+    loading.style.display = 'block';
+
+    try {
+        const response = await fetch(`http://localhost:3013/hybrid-fase4/${proyectoId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            let mensaje = '✓ Fase 4 completada!\n\n' +
+                  `Partidas procesadas: ${data.partidas_procesadas}\n` +
+                  `Descripciones encontradas: ${data.descripciones_encontradas}\n` +
+                  `Sin descripción: ${data.sin_descripcion}\n` +
+                  `Porcentaje completado: ${data.porcentaje_completado.toFixed(1)}%\n` +
+                  `Tiempo: ${data.tiempo.toFixed(2)}s\n\n` +
+                  '💡 Coste: $0 (procesamiento local)';
+
+            mensaje += '\n\nRecargando página...';
+
+            alert(mensaje);
+            location.reload();
+        } else {
+            throw new Error(data.error || 'Error desconocido');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('❌ Error en Fase 4:\n' + error.message);
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        loading.style.display = 'none';
+    }
+}
+
+// Función para revisar un elemento específico con IA
+async function revisarElemento(proyectoId, tipo, elementoId, codigo, nombre) {
+    const btnId = `btn-revisar-${tipo}-${elementoId}`;
+    const btn = document.getElementById(btnId);
+    const statusId = `status-${tipo}-${elementoId}`;
+    const statusDiv = document.getElementById(statusId);
+
+    // Deshabilitar botón y mostrar loading
+    btn.disabled = true;
+    btn.textContent = '⏳ Revisando...';
+    statusDiv.textContent = '⏳ Enviando PDF a IA y extrayendo partidas...';
+    statusDiv.style.color = '#0c5460';
+
+    try {
+        const response = await fetch(`http://localhost:3013/hybrid-revisar-elemento/${proyectoId}?elemento_tipo=${tipo}&elemento_id=${elementoId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            statusDiv.innerHTML = `✓ Completado: ${data.actualizacion.actualizadas} actualizadas, ` +
+                                 `${data.actualizacion.agregadas} agregadas, ` +
+                                 `${data.actualizacion.eliminadas} eliminadas<br>` +
+                                 `Nuevo estado: <strong>${data.actualizacion.estado_validacion}</strong>`;
+            statusDiv.style.color = '#155724';
+            btn.textContent = '✓ Revisado';
+            btn.style.background = '#28a745';
+            btn.style.color = 'white';
+
+            // Esperar 2 segundos y recargar
+            setTimeout(() => {
+                location.reload();
+            }, 2000);
+        } else {
+            throw new Error(data.detail || data.error || 'Error desconocido');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        statusDiv.textContent = `❌ Error: ${error.message}`;
+        statusDiv.style.color = '#721c24';
+        btn.disabled = false;
+        btn.textContent = '🔄 Reintentar';
+    }
+}
+
+// Función para revisar todos los elementos con discrepancia (versión inteligente)
+async function revisarTodosElementos() {
+    const proyectoId = {{ proyecto.id }};
+
+    if (elementosARevisar.length === 0) {
+        alert('No hay elementos pendientes de revisión');
+        return;
+    }
+
+    if (!confirm(`¿Revisar TODOS los elementos con discrepancia?\n\n` +
+                 `El sistema procesará automáticamente:\n` +
+                 `• Solo subcapítulos sin hijos (hojas)\n` +
+                 `• Cada elemento se procesa una sola vez\n` +
+                 `• Recalculará después de cada uno\n` +
+                 `• Máximo 100 elementos\n\n` +
+                 `Esto puede tardar varios minutos.`)) {
+        return;
+    }
+
+    const btnTodos = document.getElementById('btn-revisar-todos');
+    const statusDiv = document.createElement('div');
+    statusDiv.id = 'status-revision-masiva';
+    statusDiv.style.cssText = 'margin-top: 15px; padding: 15px; background: #f0f8ff; border: 1px solid #667eea; border-radius: 5px; font-family: monospace; font-size: 0.85em;';
+    btnTodos.parentElement.appendChild(statusDiv);
+
+    btnTodos.disabled = true;
+    btnTodos.textContent = '⏳ Procesando...';
+    statusDiv.innerHTML = '🔄 Iniciando revisión masiva inteligente...';
+
+    try {
+        const response = await fetch(`http://localhost:3013/hybrid-revisar-todos/${proyectoId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            const mensaje = `✓ Revisión masiva completada\n\n` +
+                          `Iteraciones: ${data.iteraciones}\n` +
+                          `Elementos procesados: ${data.elementos_procesados}\n` +
+                          `Errores: ${data.errores}\n` +
+                          (data.limite_alcanzado ? `\n⚠️ Alcanzado límite de 50 iteraciones` : '') +
+                          `\n\nRecargando página...`;
+
+            statusDiv.innerHTML = mensaje.replace(/\n/g, '<br>');
+            statusDiv.style.background = '#d4edda';
+            statusDiv.style.borderColor = '#28a745';
+
+            setTimeout(() => {
+                location.reload();
+            }, 3000);
+        } else {
+            throw new Error(data.detail || data.error || 'Error desconocido');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        statusDiv.innerHTML = `❌ Error: ${error.message}`;
+        statusDiv.style.background = '#f8d7da';
+        statusDiv.style.borderColor = '#dc3545';
+        btnTodos.disabled = false;
+        btnTodos.textContent = '🔄 Reintentar Revisión Masiva';
+    }
+}
+
+// Al cargar la página, mostrar elementos a revisar si existen
+document.addEventListener('DOMContentLoaded', function() {
+    // Obtener elementos a revisar del proyecto (si la fase 3 ya se ejecutó)
+    const proyectoId = {{ proyecto.id }};
+
+    // Verificar si hay elementos con discrepancia en los capítulos
+    const capitulos = {{ proyecto.capitulos|tojson|safe if proyecto.capitulos else '[]' }};
+
+    elementosARevisar = [];
+
+    // Función recursiva para procesar subcapítulos anidados
+    function procesarSubcapitulosRecursivo(subcapitulos, capituloId) {
+        if (!subcapitulos) return;
+
+        subcapitulos.forEach(sub => {
+            // Agregar subcapítulo si tiene discrepancia
+            if (sub.estado_validacion && sub.estado_validacion.toLowerCase() === 'discrepancia' && sub.necesita_revision_ia) {
+                elementosARevisar.push({
+                    tipo: 'subcapitulo',
+                    subcapitulo_id: sub.id,
+                    capitulo_id: capituloId,
+                    codigo: sub.codigo,
+                    nombre: sub.nombre,
+                    total_ia: sub.total_ia,
+                    total_local: sub.total_local,
+                    diferencia_euros: sub.diferencia_euros,
+                    diferencia_porcentaje: sub.diferencia_porcentaje
+                });
+            }
+
+            // Procesar recursivamente subcapítulos hijos
+            if (sub.subcapitulos_hijos && sub.subcapitulos_hijos.length > 0) {
+                procesarSubcapitulosRecursivo(sub.subcapitulos_hijos, capituloId);
+            }
+        });
+    }
+
+    capitulos.forEach(cap => {
+        if (cap.estado_validacion && cap.estado_validacion.toLowerCase() === 'discrepancia' && cap.necesita_revision_ia) {
+            elementosARevisar.push({
+                tipo: 'capitulo',
+                capitulo_id: cap.id,
+                codigo: cap.codigo,
+                nombre: cap.nombre,
+                total_ia: cap.total_ia,
+                total_local: cap.total_local,
+                diferencia_euros: cap.diferencia_euros,
+                diferencia_porcentaje: cap.diferencia_porcentaje
+            });
+        }
+
+        // Procesar subcapítulos recursivamente
+        if (cap.subcapitulos) {
+            procesarSubcapitulosRecursivo(cap.subcapitulos, cap.id);
+        }
+    });
+
+    // Si hay elementos a revisar, mostrar la sección
+    if (elementosARevisar.length > 0) {
+        const container = document.getElementById('elementos-revisar-container');
+        const lista = document.getElementById('lista-elementos-revisar');
+
+        // Crear HTML para cada elemento
+        lista.innerHTML = elementosARevisar.map(elem => {
+            // Usar el ID correcto según el tipo de elemento
+            const elementoId = elem.tipo === 'capitulo' ? elem.capitulo_id : elem.subcapitulo_id;
+            const tipoLabel = elem.tipo === 'capitulo' ? 'CAPÍTULO' : 'SUBCAPÍTULO';
+
+            return `
+                <div style="padding: 15px; background: white; border: 1px solid #ffc107; border-radius: 5px;">
+                    <div style="display: flex; justify-content: space-between; align-items: start; gap: 15px;">
+                        <div style="flex: 1;">
+                            <div style="margin-bottom: 8px;">
+                                <span style="background: #ffc107; color: #000; padding: 2px 8px; border-radius: 3px; font-size: 0.8em; font-weight: bold;">${tipoLabel}</span>
+                                <strong style="margin-left: 8px;">${elem.codigo} - ${elem.nombre}</strong>
+                            </div>
+                            <div style="display: flex; gap: 20px; font-size: 0.9em; color: #6c757d;">
+                                <div>IA: <strong>${elem.total_ia?.toFixed(2) || 0} €</strong></div>
+                                <div>Local: <strong>${elem.total_local?.toFixed(2) || 0} €</strong></div>
+                                <div style="color: #dc3545;">Δ <strong>${elem.diferencia_porcentaje?.toFixed(1) || 0}%</strong> (${elem.diferencia_euros?.toFixed(2) || 0} €)</div>
+                            </div>
+                            <div id="status-${elem.tipo}-${elementoId}" style="margin-top: 8px; font-size: 0.85em; color: #6c757d;">
+                                Listo para revisar
+                            </div>
+                        </div>
+                        <button onclick="revisarElemento(${proyectoId}, '${elem.tipo}', ${elementoId}, '${elem.codigo}', '${elem.nombre}')"
+                                id="btn-revisar-${elem.tipo}-${elementoId}"
+                                class="btn"
+                                style="background: #667eea; color: white; padding: 8px 16px; font-size: 0.9em; white-space: nowrap;">
+                            🤖 Revisar con IA
+                        </button>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        container.style.display = 'block';
+    }
+});
+</script>
+{% endblock %}

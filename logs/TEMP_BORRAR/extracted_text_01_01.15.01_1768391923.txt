@@ -1,0 +1,10 @@
+=== TEXTO EXTRAÍDO ===
+Capítulo: 01
+Subcapítulos: ['01.15.01']
+Caracteres: 685
+Líneas: 11
+PDF: hybrid_20260114_002108_PRESUPUESTOS PARCIALES NAVAS DE TOLOSA.pdf
+
+================================================================================
+
+01 FASE 2 01.15.01 CONTENEDORES m23G02B070 mes ALQUILER SACO ESCOMBROS 1,5 m3 15,00 26,88 403,20 Coste del alquiler de sacos para RCD de 1,5 m3 de capacidad. m23G02B085 mes COSTE ALQUILER CONTENEDOR RCD 6 m3 25,00 83,68 2.092,00 Coste del alquiler de contenedor de 6 m3 de capacidad para RCD, sólo permitido éste tipo de residuo en el contenedor por el gestor de residuos no peligrosos (auto- rizado por la Consejería de Medio Ambiente). Según Real Decreto 105/2008, de 1 de febrero por el que se regula la producción y gestión de los residuos de construc- ción y demolición. TOTAL 01.15.01...................................................................................... 2.495,20

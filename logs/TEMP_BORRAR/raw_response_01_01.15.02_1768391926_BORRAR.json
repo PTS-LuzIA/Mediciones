@@ -1,0 +1,29 @@
+{
+  "capitulo_codigo": "01",
+  "partidas": [
+    {
+      "codigo": "m23G02T010",
+      "cantidad": 15.00,
+      "precio": 35.73,
+      "importe": 535.95
+    },
+    {
+      "codigo": "m23G02T080",
+      "cantidad": 174.36,
+      "precio": 12.49,
+      "importe": 2177.76
+    },
+    {
+      "codigo": "m23G02T030",
+      "cantidad": 201.00,
+      "precio": 95.96,
+      "importe": 19287.96
+    },
+    {
+      "codigo": "m23G02RH030",
+      "cantidad": 5.00,
+      "precio": 57.75,
+      "importe": 288.75
+    }
+  ]
+}

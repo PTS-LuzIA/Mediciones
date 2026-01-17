@@ -1,0 +1,47 @@
+{
+  "capitulo_codigo": "01",
+  "partidas": [
+    {
+      "codigo": "m23G03B010",
+      "cantidad": 1.00,
+      "precio": 91.72,
+      "importe": 91.72
+    },
+    {
+      "codigo": "m23G03B161",
+      "cantidad": 1.00,
+      "precio": 44.20,
+      "importe": 44.20
+    },
+    {
+      "codigo": "m23G03B240",
+      "cantidad": 1.00,
+      "precio": 81.51,
+      "importe": 81.51
+    },
+    {
+      "codigo": "m23G03B265",
+      "cantidad": 1.00,
+      "precio": 99.19,
+      "importe": 99.19
+    },
+    {
+      "codigo": "m23G03B320",
+      "cantidad": 1.00,
+      "precio": 98.87,
+      "importe": 98.87
+    },
+    {
+      "codigo": "m23G03B505",
+      "cantidad": 1.00,
+      "precio": 14.45,
+      "importe": 14.45
+    },
+    {
+      "codigo": "m23G02N050",
+      "cantidad": 300.67,
+      "precio": 15.15,
+      "importe": 4555.15
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "capitulo_codigo": "04",
+  "partidas": [
+    {
+      "codigo": "04.01.01",
+      "cantidad": 1,
+      "precio": 1500.00,
+      "importe": 1500.00
+    },
+    {
+      "codigo": "04.01.02",
+      "cantidad": 1,
+      "precio": 750.00,
+      "importe": 750.00
+    },
+    {
+      "codigo": "04.02.01",
+      "cantidad": 2,
+      "precio": 300.00,
+      "importe": 600.00
+    },
+    {
+      "codigo": "04.02.02",
+      "cantidad": 1,
+      "precio": 1200.00,
+      "importe": 1200.00
+    },
+    {
+      "codigo": "04.03.01",
+      "cantidad": 5,
+      "precio": 50.00,
+      "importe": 250.00
+    },
+    {
+      "codigo": "04.03.02",
+      "cantidad": 10,
+      "precio": 25.00,
+      "importe": 250.00
+    },
+    {
+      "codigo": "04.04.01",
+      "cantidad": 1,
+      "precio": 2000.00,
+      "importe": 2000.00
+    },
+    {
+      "codigo": "04.04.02",
+      "cantidad": 3,
+      "precio": 150.00,
+      "importe": 450.00
+    },
+    {
+      "codigo": "04.05.01",
+      "cantidad": 1,
+      "precio": 800.00,
+      "importe": 800.00
+    },
+    {
+      "codigo": "04.05.02",
+      "cantidad": 2,
+      "precio": 400.00,
+      "importe": 800.00
+    }
+  ]
+}

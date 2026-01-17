@@ -1,0 +1,68 @@
+Aquí tienes el JSON con las partidas del subcapítulo 01.01:
+
+```json
+{
+"capitulo_codigo": "01",
+"partidas": [
+    {
+        "codigo": "m23U01C190",
+        "titulo": "DESMONTAJE DE PAPELERA",
+        "descripcion": "Desmontaje de papelera existente de cualquier material, incluido transporte al lugar indicado por la Dirección facultativa, y si fuera necesario, demolición de cimentaciones, carga y transporte a vertedero autorizado.",
+        "subcapitulo_codigo": "01.01",
+        "unidad": "Ud",
+        "cantidad": 9.00,
+        "precio": 26.89,
+        "importe": 242.01
+    },
+    {
+        "codigo": "m23E01DKW010", 
+        "titulo": "LEVANTADO BARANDILLAS/VALLAS C/MEDIOS MANUALES",
+        "descripcion": "Levantado de barandillas o vallas de cualquier tipo, por medios manuales, incluso limpieza y retirada de escombros a pie de carga, sin transporte a vertedero y con p.p. de medios auxiliares, sin medidas de protección colectivas. Según RD105/2008. Medición de longitud realmente ejecutada.",
+        "subcapitulo_codigo": "01.01",
+        "unidad": "m",
+        "cantidad": 153.00,
+        "precio": 11.89,
+        "importe": 1819.17
+    },
+    {
+        "codigo": "APUDm23E01DKA020",
+        "titulo": "LEVANTADO CARPINTERÍA METÁLICA C/MEDIOS MANUALES", 
+        "descripcion": "Levantado de carpintería metálica, incluidos cercos, hojas y accesorios, por medios manuales, incluso limpieza, retirada de escombros a pie de carga, sin transporte a vertedero y con p.p. de medios auxiliares. Según RD 105/2008 y NTE-ADD. Medición de superficie realmente ejecutada.",
+        "subcapitulo_codigo": "01.01",
+        "unidad": "m2",
+        "cantidad": 327.00,
+        "precio": 12.74,
+        "importe": 4165.98
+    },
+    {
+        "codigo": "APUI_001",
+        "titulo": "DESMONTAJE DE FUENTE",
+        "descripcion": "Desmontaje de fuente y transporte a depósito municipal, incluso demolición de cimentación, carga y transporte de productos sobrantes a vertedero.",
+        "subcapitulo_codigo": "01.01", 
+        "unidad": "ud",
+        "cantidad": 1.00,
+        "precio": 66.52,
+        "importe": 66.52
+    },
+    {
+        "codigo": "m23U01C180",
+        "titulo": "DESMONTAJE DE BANCO",
+        "descripcion": "Desmontaje de banco existente de cualquier material, incluido transporte al lugar indicado por la Dirección facultativa, y si fuera necesario, demolición de cimentaciones, carga y transporte a vertedero autorizado.",
+        "subcapitulo_codigo": "01.01",
+        "unidad": "Ud", 
+        "cantidad": 4.00,
+        "precio": 46.15,
+        "importe": 184.60
+    },
+    {
+        "codigo": "m23M02PTD010",
+        "titulo": "Plataforma elevadora de tijera diesel hasta 10 m altura",
+        "descripcion": "Plataforma elevadora de tijera diesel hasta 10 m altura",
+        "subcapitulo_codigo": "01.01",
+        "unidad": "h",
+        "cantidad": 27.00,
+        "precio": 13.35,
+        "importe": 360.45
+    }
+]}
+```

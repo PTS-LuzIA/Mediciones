@@ -1,0 +1,281 @@
+{
+  "capitulo_codigo": "01",
+  "partidas": [
+    {
+      "codigo": "m23U14A075m",
+      "cantidad": 318.00,
+      "precio": 4.47,
+      "importe": 1421.46
+    },
+    {
+      "codigo": "m23E02ECA020",
+      "cantidad": 1.00,
+      "precio": 38.41,
+      "importe": 38.41
+    },
+    {
+      "codigo": "m23U02F030",
+      "cantidad": 127.20,
+      "precio": 3.37,
+      "importe": 428.66
+    },
+    {
+      "codigo": "m23U02F040",
+      "cantidad": 127.20,
+      "precio": 0.55,
+      "importe": 69.96
+    },
+    {
+      "codigo": "m23E02SZ080",
+      "cantidad": 1.00,
+      "precio": 19.49,
+      "importe": 19.49
+    },
+    {
+      "codigo": "m23U03H040",
+      "cantidad": 16.65,
+      "precio": 170.03,
+      "importe": 2831.00
+    },
+    {
+      "codigo": "m23U02EA010",
+      "cantidad": 50.88,
+      "precio": 5.19,
+      "importe": 264.07
+    },
+    {
+      "codigo": "m23U02ER010",
+      "cantidad": 38.16,
+      "precio": 5.64,
+      "importe": 215.22
+    },
+    {
+      "codigo": "m23U18DV010",
+      "cantidad": 318.00,
+      "precio": 1.08,
+      "importe": 343.44
+    },
+    {
+      "codigo": "m23U13BH010",
+      "cantidad": 318.00,
+      "precio": 4.66,
+      "importe": 1481.00
+    },
+    {
+      "codigo": "m23U10APA300",
+      "cantidad": 709.50,
+      "precio": 2.95,
+      "importe": 2093.00
+    },
+    {
+      "codigo": "m23U10APA310",
+      "cantidad": 360.00,
+      "precio": 5.23,
+      "importe": 1882.00
+    },
+    {
+      "codigo": "m23U10APA320",
+      "cantidad": 1.00,
+      "precio": 8.43,
+      "importe": 8.00
+    },
+    {
+      "codigo": "m23U10APA390",
+      "cantidad": 25.00,
+      "precio": 20.38,
+      "importe": 509.00
+    },
+    {
+      "codigo": "m23U10DF155",
+      "cantidad": 1935.00,
+      "precio": 2.78,
+      "importe": 5379.00
+    },
+    {
+      "codigo": "m23U10DF175",
+      "cantidad": 75.00,
+      "precio": 2.45,
+      "importe": 183.00
+    },
+    {
+      "codigo": "m23U10DF310",
+      "cantidad": 42.00,
+      "precio": 9.18,
+      "importe": 385.00
+    },
+    {
+      "codigo": "m23U10DV020",
+      "cantidad": 2.00,
+      "precio": 18.38,
+      "importe": 36.00
+    },
+    {
+      "codigo": "m23E20VCL020",
+      "cantidad": 1.00,
+      "precio": 15.07,
+      "importe": 15.00
+    },
+    {
+      "codigo": "m23U10DV030",
+      "cantidad": 1.00,
+      "precio": 23.73,
+      "importe": 23.73
+    },
+    {
+      "codigo": "m23E20VCL030",
+      "cantidad": 1.00,
+      "precio": 24.81,
+      "importe": 24.81
+    },
+    {
+      "codigo": "m23U10DF005",
+      "cantidad": 2.00,
+      "precio": 106.37,
+      "importe": 212.74
+    },
+    {
+      "codigo": "m23U10DF010",
+      "cantidad": 1.00,
+      "precio": 136.94,
+      "importe": 136.94
+    },
+    {
+      "codigo": "m23U10DV260",
+      "cantidad": 2.00,
+      "precio": 17.44,
+      "importe": 34.88
+    },
+    {
+      "codigo": "m23E20VFL030",
+      "cantidad": 1.00,
+      "precio": 36.59,
+      "importe": 36.59
+    },
+    {
+      "codigo": "m23U10DV270",
+      "cantidad": 1.00,
+      "precio": 23.85,
+      "importe": 23.85
+    },
+    {
+      "codigo": "m23E20VFL040",
+      "cantidad": 1.00,
+      "precio": 36.42,
+      "importe": 36.42
+    },
+    {
+      "codigo": "U12VR130",
+      "cantidad": 2.00,
+      "precio": 154.91,
+      "importe": 309.82
+    },
+    {
+      "codigo": "U12VR131",
+      "cantidad": 1.00,
+      "precio": 198.45,
+      "importe": 198.45
+    },
+    {
+      "codigo": "U12SV020",
+      "cantidad": 2.00,
+      "precio": 56.82,
+      "importe": 113.64
+    },
+    {
+      "codigo": "U12SV120",
+      "cantidad": 1.00,
+      "precio": 39.34,
+      "importe": 39.00
+    },
+    {
+      "codigo": "m23U10DV490",
+      "cantidad": 2.00,
+      "precio": 157.43,
+      "importe": 314.00
+    },
+    {
+      "codigo": "m23U10DV500",
+      "cantidad": 1.00,
+      "precio": 289.09,
+      "importe": 289.00
+    },
+    {
+      "codigo": "m23U10DV450",
+      "cantidad": 2.00,
+      "precio": 137.33,
+      "importe": 274.00
+    },
+    {
+      "codigo": "m23U10DF230",
+      "cantidad": 42.00,
+      "precio": 3.59,
+      "importe": 150.00
+    },
+    {
+      "codigo": "m23U10DF232",
+      "cantidad": 54.00,
+      "precio": 1.43,
+      "importe": 77.00
+    },
+    {
+      "codigo": "m23U10DF233",
+      "cantidad": 12.00,
+      "precio": 1.57,
+      "importe": 18.00
+    },
+    {
+      "codigo": "m23U10DF234",
+      "cantidad": 1.00,
+      "precio": 1.82,
+      "importe": 1.00
+    },
+    {
+      "codigo": "m23U10DP110",
+      "cantidad": 1.00,
+      "precio": 343.75,
+      "importe": 343.00
+    },
+    {
+      "codigo": "m23U10DP120",
+      "cantidad": 2.00,
+      "precio": 501.60,
+      "importe": 1003.00
+    },
+    {
+      "codigo": "m23U10C160",
+      "cantidad": 4.00,
+      "precio": 96.48,
+      "importe": 385.00
+    },
+    {
+      "codigo": "m23U10C190",
+      "cantidad": 1.00,
+      "precio": 142.31,
+      "importe": 142.00
+    },
+    {
+      "codigo": "m23U10C230",
+      "cantidad": 2.00,
+      "precio": 37.00,
+      "importe": 74.00
+    },
+    {
+      "codigo": "m23U10AF550",
+      "cantidad": 2.00,
+      "precio": 136.17,
+      "importe": 272.34
+    },
+    {
+      "codigo": "m23U10AF570",
+      "cantidad": 2.00,
+      "precio": 95.35,
+      "importe": 190.70
+    },
+    {
+      "codigo": "APUDm23U10AF02u0d",
+      "cantidad": 1.00,
+      "precio": 1466.30,
+      "importe": 1466.30
+    }
+  ]
+}

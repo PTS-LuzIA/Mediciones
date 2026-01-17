@@ -1,0 +1,29 @@
+{
+  "capitulo_codigo": "02",
+  "partidas": [
+    {
+      "codigo": "U04VBM020",
+      "cantidad": 53.20,
+      "precio": 179.36,
+      "importe": 9541.95
+    },
+    {
+      "codigo": "3E11D030",
+      "cantidad": 1.00,
+      "precio": 11.13,
+      "importe": 11.13
+    },
+    {
+      "codigo": "3E04SM020",
+      "cantidad": 1.00,
+      "precio": 15.08,
+      "importe": 15.08
+    },
+    {
+      "codigo": "3E02SZ070",
+      "cantidad": 1.00,
+      "precio": 31.40,
+      "importe": 31.40
+    }
+  ]
+}

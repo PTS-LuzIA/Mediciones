@@ -1,0 +1,2857 @@
+{
+  "capitulo_codigo": "01",
+  "partidas": [
+    {
+      "codigo": "m23U01C190",
+      "titulo": "DESMONTAJE DE PAPELERA",
+      "descripcion": "Desmontaje de papelera existente de cualquier material, incluido transporte al lu- gar indicado por la Dirección facultativa, y si fuera necesario, demolición de cimen- taciones, carga y transporte a vertedero autorizado.",
+      "subcapitulo_codigo": "01.01",
+      "unidad": "Ud",
+      "cantidad": 4.0,
+      "precio": 26.89,
+      "importe": 107.56
+    },
+    {
+      "codigo": "m23E01DKW010",
+      "titulo": "LEVANTADO BARANDILLAS/VALLAS C/MEDIOS MANUALES",
+      "descripcion": "Levantado de barandillas o vallas de cualquier tipo, por medios manuales, incluso limpieza y retirada de escombros a pie de carga, sin transporte a vertedero y con p.p. de medios auxiliares, sin medidas de protección colectivas. Según RD 105/2008. Medición de longitud realmente ejecutada.",
+      "subcapitulo_codigo": "01.01",
+      "unidad": "m",
+      "cantidad": 202.50,
+      "precio": 11.89,
+      "importe": 2407.73
+    },
+    {
+      "codigo": "APUDm23E01DKA-020",
+      "titulo": "LEVANTADO CARPINTERÍA METÁLICA C/MEDIOS MANUALES",
+      "descripcion": "Levantado de carpintería metálica, incluidos cercos, hojas y accesorios, por me- dios manuales, incluso limpieza, retirada de escombros a pie de carga, sin trans- porte a vertedero y con p.p. de medios auxiliares. Según RD 105/2008 y NTE-ADD. Medición de superficie realmente ejecutada.",
+      "subcapitulo_codigo": "01.01",
+      "unidad": "m2",
+      "cantidad": 107.50,
+      "precio": 12.74,
+      "importe": 1369.55
+    },
+    {
+      "codigo": "m23U01C180",
+      "titulo": "DESMONTAJE DE BANCO",
+      "descripcion": "Desmontaje de banco existente de cualquier material, incluido transporte al lugar indicado por la Dirección facultativa, y si fuera necesario, demolición de cimenta- ciones, carga y transporte a vertedero autorizado.",
+      "subcapitulo_codigo": "01.01",
+      "unidad": "Ud",
+      "cantidad": 5.00,
+      "precio": 46.15,
+      "importe": 230.75
+    },
+    {
+      "codigo": "m23M02PTD010",
+      "titulo": "Plataforma elevadora de tijera diesel hasta 10 m altura",
+      "descripcion": "Plataforma elevadora de tijera diesel hasta 10 m altura",
+      "subcapitulo_codigo": "01.01",
+      "unidad": "h",
+      "cantidad": 27.00,
+      "precio": 13.35,
+      "importe": 360.45
+    },
+    {
+      "codigo": "m23U01A010",
+      "titulo": "LEVANTADO DE BORDILLO",
+      "descripcion": "Levantado de bordillo, con recuperación del mismo incluso retirada y carga, o aco- pio en obra, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 3.99,
+      "importe": 3.99
+    },
+    {
+      "codigo": "APUDm23U01A01001",
+      "titulo": "LEVANTADO DE BORDILLO DE GRANITO CON RECUPERACIÓN",
+      "descripcion": "Levantado de bordillo, con recuperación del mismo incluso retirada y carga, o aco- pio en obra, incluido transporte a dependencias municipales. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 9.17,
+      "importe": 9.17
+    },
+    {
+      "codigo": "APUDm23U01A0102",
+      "titulo": "LEVANTADO DE BORDILLO SIN RECUPERACIÓN",
+      "descripcion": "Levantado de bordillo, sin recuperación del mismo incluso retirada y carga, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m",
+      "cantidad": 275.50,
+      "precio": 3.99,
+      "importe": 1099.25
+    },
+    {
+      "codigo": "m23U02H010",
+      "titulo": "TRANSPORTE BORDILLO RECUPERADO",
+      "descripcion": "Limpieza de bordillo recuperado, paletizado en palé de madera y transporte de bor- dillo recuperado a casilla u otra obra municipal, incluso descarga.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 9.97,
+      "importe": 9.97
+    },
+    {
+      "codigo": "m23U01BP010",
+      "titulo": "DEMOLICIÓN MEDIOS MECÁNICOS PAVIMENTO ASFÁLTICO E<12 cm",
+      "descripcion": "Levantado por medios mecánicos (retroexcavadora con martillo hidráulico o simi- lar) de pavimento de aglomerado asfáltico en capas de rodadura e intermedia de espesor menor o igual a doce centímetros, incluso retirada y carga de productos, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m2",
+      "cantidad": 316.80,
+      "precio": 2.34,
+      "importe": 741.31
+    },
+    {
+      "codigo": "m23U01BP020",
+      "titulo": "DEMOLICIÓN COMPRESOR PAVIMENTO ASFÁLTICO E<12cm",
+      "descripcion": "Levantado con compresor de pavimento de aglomerado asfáltico en capas de ro- dadura e intermedia de espesor menor o igual a doce centímetros, incluso retirada y carga de productos, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m2",
+      "cantidad": 79.20,
+      "precio": 4.60,
+      "importe": 364.32
+    },
+    {
+      "codigo": "m23E01DPP120",
+      "titulo": "DEMOLICIÓN PAVIMENTO FLEXIBLE",
+      "descripcion": "Demolición de pavimento flexible de moqueta, linóleo, caucho-goma, PVC, corcho, etc. incluso limpieza de adhesivo, retirada, carga y sin transporte a vertedero. Se- gún RD 105/2008 y NTE-ADD. Medición de superficie realmente ejecutada.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m2",
+      "cantidad": 292.00,
+      "precio": 3.74,
+      "importe": 1092.08
+    },
+    {
+      "codigo": "m23U01BP030",
+      "titulo": "DEMOLICIÓN COMPRESOR SOLADO ACERA",
+      "descripcion": "Levantado con compresor de solado de aceras de cemento continuo, loseta hi- dráulica o terrazo y p.p. de material de agarre, incluso retirada y carga de produc- tos, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m2",
+      "cantidad": 626.50,
+      "precio": 3.21,
+      "importe": 2011.07
+    },
+    {
+      "codigo": "m23U01BF030",
+      "titulo": "DEMOLICIÓN MEDIOS MECÁNICOS FIRME BASE HORMIGÓN",
+      "descripcion": "Levantado por medios mecánicos (retroexcavadora con martillo hidráulico o simi- lar) de firme con base de hormigón hidráulico, incluso retirada y carga de produc- tos, medido sobre perfil, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m3",
+      "cantidad": 239.30,
+      "precio": 26.57,
+      "importe": 6358.20
+    },
+    {
+      "codigo": "m23U01BF040",
+      "titulo": "DEMOLICIÓN COMPRESOR FIRME BASE HORMIGÓN",
+      "descripcion": "Levantado con compresor de firme con base de hormigón hidráulico, incluso retira- da y carga de productos, medido sobre perfil, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m3",
+      "cantidad": 59.83,
+      "precio": 65.43,
+      "importe": 3914.68
+    },
+    {
+      "codigo": "m23U01BB020",
+      "titulo": "DEMOLICIÓN COMPRESOR HORMIGÓN EN MASA",
+      "descripcion": "Demolición con compresor, de fábrica de hormigón en masa de cualquier tipo, in-cluso retirada y carga de productos, medido sobre fábrica, sin transporte. Confor- me a ORDEN FOM/1382/2002-PG3-Art.301, RD 105/2008 y NTE-ADD-13.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m3",
+      "cantidad": 6.90,
+      "precio": 82.11,
+      "importe": 566.56
+    },
+    {
+      "codigo": "m23U01BB030",
+      "titulo": "DEMOLICIÓN MEDIOS MECÁNICOS HORMIGÓN ARMADO",
+      "descripcion": "Demolición por medios mecánicos, (retroexcavadora con martillo hidráulico o simi- lar), de fábrica de hormigón armado, de cualquier tipo, incluso retirada y carga de productos, medido sobre fábrica, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301, RD 105/2008 y NTE-ADD-13.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m3",
+      "cantidad": 34.04,
+      "precio": 47.29,
+      "importe": 1609.75
+    },
+    {
+      "codigo": "m23U01BB040",
+      "titulo": "DEMOLICIÓN COMPRESOR HORMIGÓN ARMADO",
+      "descripcion": "Demolición con compresor, de fábrica de hormigón armado de cualquier tipo, inclu- so retirada y carga de productos, medido sobre fábrica, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301, RD 105/2008 y NTE-ADD-13.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m3",
+      "cantidad": 1.80,
+      "precio": 90.43,
+      "importe": 162.77
+    },
+    {
+      "codigo": "m23E01DM040",
+      "titulo": "DEMOLICIÓN CIMENTACIÓN HORMIGÓN ARMADO C/MAQUINARIA",
+      "descripcion": "Demolición de cimentaciones o elementos aislados de hormigón armado (encepa- dos) etc., con retro-pala con martillo rompedor, incluso limpieza y retirada de es- combros a pie de carga, sin transporte al vertedero y con parte proporcional de medios auxiliares, sin medidas de protección colectivas. Según RD 105/2008 y NTE-ADD. Medición de volumen realmente ejecutado.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m3",
+      "cantidad": 3.06,
+      "precio": 141.92,
+      "importe": 434.28
+    },
+    {
+      "codigo": "m23E01DFL030",
+      "titulo": "DEMOLICIÓN FÁBRICA LADRILLO MACIZO 1 PIE C/MARTILLO ELÉCTRICO",
+      "descripcion": "Demolición de muros de fábrica de ladrillo macizo de un pie de espesor, con marti- llo eléctrico, incluso limpieza y retirada de escombros a pie de carga, sin transpor- te al vertedero y con p.p. de medios auxiliares, sin medidas de protección colecti- vas. Según RD 105/2008 y NTE-ADD. Medición de superficie realmente ejecutada.",
+      "subcapitulo_codigo": "01.02",
+      "unidad": "m2",
+      "cantidad": 3.00,
+      "precio": 37.81,
+      "importe": 113.43
+    },
+    {
+      "codigo": "m23U01BP030",
+      "titulo": "DEMOLICIÓN COMPRESOR SOLADO ACERA",
+      "descripcion": "Levantado con compresor de solado de aceras de cemento continuo, loseta hi- dráulica o terrazo y p.p. de material de agarre, incluso retirada y carga de produc- tos, sin transporte. Conforme a ORDEN FOM/1382/2002-PG3-Art.301 y RD 105/2008.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 3.21,
+      "importe": 3.21
+    },
+    {
+      "codigo": "m23E02AM010",
+      "titulo": "DESBROCE Y LIMPIEZA DEL TERRENO C/MEDIOS MECÁNICOS",
+      "descripcion": "Desbroce y limpieza superficial del terreno por medios mecánicos, sin carga ni transporte al vertedero y con p.p. de medios auxiliares. Según NTE-ADE.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1168.00,
+      "precio": 1.03,
+      "importe": 1203.04
+    },
+    {
+      "codigo": "m23E02AM020",
+      "titulo": "RETIRADA CAPA TIERRA VEGETAL C/MEDIOS MECÁNICOS",
+      "descripcion": "Retirada y apilado de capa de tierra vegetal superficial, por medios mecánicos, sin carga ni transporte al vertedero y con p.p. de medios auxiliares. Según NTE-ADE.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 230.00,
+      "precio": 1.55,
+      "importe": 356.50
+    },
+    {
+      "codigo": "m23E02CM020",
+      "titulo": "EXCAVACIÓN VACIADOS TERRENOS FLOJOS C/MEDIOS MECÁNICOS",
+      "descripcion": "Excavación a cielo abierto, en terrenos flojos, por medios mecánicos, con extrac- ción de tierras fuera de la excavación, en vaciados, sin carga ni transporte al verte- dero y con p.p. de medios auxiliares. Según CTE DB-SE-C y NTE-ADV.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 891.10,
+      "precio": 4.55,
+      "importe": 4054.51
+    },
+    {
+      "codigo": "m23E02CM030",
+      "titulo": "EXCAVACIÓN VACIADOS TERRENOS COMPACTOS C/MEDIOS MECÁNICOS",
+      "descripcion": "Excavación a cielo abierto, en terrenos compactos, por medios mecánicos, con ex- tracción de tierras fuera de la excavación, en vaciados, sin carga ni transporte al verte- dero y con p.p. de medios auxiliares. Según CTE DB-SE-C y NTE-ADV.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 50.00,
+      "precio": 5.25,
+      "importe": 262.50
+    },
+    {
+      "codigo": "APUDm23U02H050m3",
+      "titulo": "TRANSPORTE INTERIOR DE OBRA",
+      "descripcion": "Transporte interior de obra de los productos resultantes de excavación, incluso descarga y extendido mecánico en su caso, medido sobre perfil.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 891.10,
+      "precio": 2.66,
+      "importe": 2370.33
+    },
+    {
+      "codigo": "m23E02RP010",
+      "titulo": "REFINADO ZANJA/POZO TERRENOS FLOJOS C/MEDIOS MANUALES",
+      "descripcion": "Refinado de paredes y fondos de vaciados, en terrenos de consistencia floja, por medios manuales, en excavaciones realizadas por máquinas, con extracción y ex- tendido de las tierras en los bordes, y con p.p. de medios auxiliares. Según CTE DB SE-C y NTE-ADZ.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 31.40,
+      "importe": 31.40
+    },
+    {
+      "codigo": "m23U02F040",
+      "titulo": "COMPACTACIÓN FONDO ZANJA",
+      "descripcion": "Compactación por medios mecánicos, del terreno natural del fondo de zanjas o ci- mientos. Conforme a ORDEN FOM/1382/2002-PG3-Art.302.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 6.23,
+      "importe": 6.23
+    },
+    {
+      "codigo": "m23E02SA070",
+      "titulo": "COMPACTACIÓN TERRENO A CIELO ABIERTO C/MEDIOS MECÁNICOS S/APORTE",
+      "descripcion": "Compactación de terrenos a cielo abierto, por medios mecánicos, sin aporte de tie- rras, incluso regado de los mismos, sin definir grado de compactación mínimo, y con p.p. de medios auxiliares. Según CTE DB-SE-C.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 1.61,
+      "importe": 1.61
+    },
+    {
+      "codigo": "m23U02ER010",
+      "titulo": "RELLENO ZANJAS SUELO TOLERABLES",
+      "descripcion": "Relleno y compactación de zanjas, por medios mecánicos, con suelos tolerables o adecuados de la propia excavación, hasta una densidad según Pliego de Condicio- nes, medido sobre perfil. Conforme a ORDEN FOM/1382/2002-PG3-Art.332.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 3.43,
+      "precio": 5.64,
+      "importe": 19.40
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 12.60,
+      "precio": 36.46,
+      "importe": 458.32
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG3-Art. 610. Componentes de hormigón con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.35,
+      "importe": 155.35
+    },
+    {
+      "codigo": "m23U04DM015",
+      "titulo": "HORMIGÓN PARA ARMAR HM-25/B/40/XC2 ο XC3, MUROS",
+      "descripcion": "Suministro y puesta en obra de hormigón para armar HM-25/B/40/XC2 ο XC3, ce- mento CEM-II/A-P 32,5 R, perforado a rotación en seco, con diámetro 1000 mm ,incluso p.p. de transporte de equipo mecánico, retirada de sobrantes, descabeza- do, limpieza y doblado de armaduras. Conforme a ORDEN FOM/1382/2002-PG3-Art.600/630. Según Código Estructural y CTE DB-SE. Com- ponentes del hormigón con marcado CE y DdP (Declaración de prestaciones) se- gún Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 163.79,
+      "importe": 163.79
+    },
+    {
+      "codigo": "m23U04DJ020",
+      "titulo": "ACERO BARRAS CORRUGADAS B 500 S",
+      "descripcion": "Suministro y colocación de acero para armaduras en barras corrugadas B 500 S, incluso cortado, doblado y recortes, según peso teórico. Conforme a ORDEN FOM/1382/2002-PG3-Art. 240. Conforme a Código Estructural y CTE DB-SE-A. Barras de acero con marcado CE y DdP (Declaración de prestaciones) según Re- glamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "kg",
+      "cantidad": 237.44,
+      "precio": 2.40,
+      "importe": 569.86
+    },
+    {
+      "codigo": "m23U08AH010",
+      "titulo": "LADRILLO HUECO DOBLE EN MUROS",
+      "descripcion": "Fábrica de ladrillo cerámico hueco doble (H.D.) de 8,9 o 10 cm en muros, tomado con mortero de 5 N/mm2 de cemento (CEM-II/B-P 32,5) y arena de río 1:6. Según UNE-EN 998-2:2018, RC-16 y CTE DB-SE-F. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 155.50,
+      "importe": 155.50
+    },
+    {
+      "codigo": "m23E10IBW020",
+      "titulo": "IMPERMEABILIZACIÓN MUROS LÁMINA ASFÁLTICA+LÁMINA DRENANTE",
+      "descripcion": "Impermeabilización de muros de cimentación por su cara externa, constituida por imprimación asfáltica, lámina asfáltica de betún elastómero LBM-30 FP, con arma- dura de fieltro de poliéster, totalmente adherida al muro con soplete, lámina dre- nante fijada mecánicamente al soporte y geotextil para drenaje. Lista para verter las tierras. Según UNE-EN 13707:2014, UNE-EN 13252:2017 y CTE DB-HS. Ma- teriales con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 181.00,
+      "precio": 24.77,
+      "importe": 4483.37
+    },
+    {
+      "codigo": "m23U05B130",
+      "titulo": "TUBERÍA PVC DRENAJE D=160 mm",
+      "descripcion": "Suministro y colocación de tubo dren-colector de PVC, flexible y corrugado, de 160 mm de diámetro, en zanja drenante. Conforme a UNE 53994:2020 y ORDEN FOM/1382/2002-PG3-Art.420. Tubo con marcado CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m",
+      "cantidad": 1.00,
+      "precio": 1.03,
+      "importe": 1.03
+    },
+    {
+      "codigo": "m23U05A040",
+      "titulo": "MATERIAL FILTRO ZANJAS DRENAJE",
+      "descripcion": "Suministro, extensión y compactación de material filtro seleccionado, colocado en zanjas para drenaje, en capas de 10 cm, medido sobre perfil. Material con marca- do CE y DdP (Declaración de prestaciones) según Reglamento (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m3",
+      "cantidad": 1.00,
+      "precio": 36.46,
+      "importe": 36.46
+    },
+    {
+      "codigo": "m23U04CA030",
+      "titulo": "ENCOFRADO METÁLICO CIMENTACIÓN",
+      "descripcion": "Encofrado metálico en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural. Materiales con marcado CE y DdP (Declaración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 18.90,
+      "importe": 18.90
+    },
+    {
+      "codigo": "m23U04CA010",
+      "titulo": "ENCOFRADO MADERA CIMENTACIÓN",
+      "descripcion": "Encofrado de madera en cimentaciones (zapatas, recalces, vigas, riostras, encepa- dos, losas, etc.) colocado a cualquier profundidad incluso desencofrado y limpieza. Según Código Estructural y NTE-EME. Materiales con marcado CE y DdP (Decla- ración de prestaciones) según Reglamento Europeo (UE) 305/2011.",
+      "subcapitulo_codigo": "01.03",
+      "unidad": "m2",
+      "cantidad": 1.00,
+      "precio": 17.10,
+      "importe": 17.10
+    },
+    {
+      "codigo": "m23U03L030",
+      "titulo": "HORMIGÓN DE LIMPIEZA HM-20/B/20/XC2 ο XC3 CEM II",
+      "descripcion": "Suministro y puesta en obra de hormigón de limpieza en masa tipo HM-20 fabrica- do in situ o elaborado en central con cemento CEM-II, con árido procedente de cantera de tamaño máximo 20 mm y consistencia blanda, colocado en fondos de excavación, a cualquier profundidad, para capa de limpieza y/o rellenos. Conforme ORDEN FOM/1382/2002-PG
