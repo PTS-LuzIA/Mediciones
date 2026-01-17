@@ -92,6 +92,14 @@ class LocalDescriptionExtractor:
         encontrado_header = False
         dentro_subcapitulo = subcapitulo_codigo is None  # Si no hay filtro, buscar en todo el PDF
 
+        # Debug: contar tipos para diagnóstico
+        tipos_encontrados = {}
+        for item in self.clasificaciones:
+            t = item['tipo'].value if hasattr(item['tipo'], 'value') else item['tipo']
+            tipos_encontrados[t] = tipos_encontrados.get(t, 0) + 1
+
+        logger.debug(f"Tipos en clasificaciones: {tipos_encontrados}")
+
         for i, item in enumerate(self.clasificaciones):
             tipo = item['tipo'].value if hasattr(item['tipo'], 'value') else item['tipo']
             datos = item.get('datos', {}) or {}  # Asegurar que datos nunca sea None
@@ -120,7 +128,11 @@ class LocalDescriptionExtractor:
                     logger.debug(f"✓ Encontrado header de partida {codigo_partida}")
                     continue
                 elif encontrado_header:
-                    # Encontramos otro header, terminar búsqueda
+                    # Ignorar headers de solapamiento (duplicados visuales del PDF)
+                    if datos.get('solapamiento_detectado'):
+                        logger.debug(f"  ~ Ignorando header de solapamiento: {codigo_header}")
+                        continue
+                    # Encontramos otro header real, terminar búsqueda
                     logger.debug(f"Fin de descripción: encontrado nuevo header {codigo_header}")
                     break
 
