@@ -1,0 +1,78 @@
+╔══════════════════════════════════════════════════════════╗
+║         SISTEMA MEDICIONES V2 - INICIO RÁPIDO           ║
+╚══════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────────────────────────────────┐
+│  1. INICIAR EL SISTEMA                                   │
+└──────────────────────────────────────────────────────────┘
+
+    ./start_v2.sh
+
+    Esto inicia automáticamente:
+    ✓ Backend API (puerto 8000)
+    ✓ Frontend (puerto 3015)
+    ✓ Verifica PostgreSQL
+    ✓ Crea BD si no existe
+
+┌──────────────────────────────────────────────────────────┐
+│  2. ACCEDER AL SISTEMA                                   │
+└──────────────────────────────────────────────────────────┘
+
+    Abre en tu navegador:
+    → http://localhost:3015
+
+    Credenciales:
+    Usuario:    admin
+    Contraseña: admin123
+
+┌──────────────────────────────────────────────────────────┐
+│  3. URLS IMPORTANTES                                     │
+└──────────────────────────────────────────────────────────┘
+
+    Frontend:  http://localhost:3015
+    API:       http://localhost:8000
+    Docs:      http://localhost:8000/docs
+
+┌──────────────────────────────────────────────────────────┐
+│  4. GESTIÓN DEL SISTEMA                                  │
+└──────────────────────────────────────────────────────────┘
+
+    Ver estado:    ./status_v2.sh
+    Detener:       ./stop_v2.sh
+    Ver logs:      tail -f logs/backend_v2.log logs/frontend_v2.log
+
+┌──────────────────────────────────────────────────────────┐
+│  5. FLUJO DE USO                                         │
+└──────────────────────────────────────────────────────────┘
+
+    1. Login con admin/admin123
+    2. Click "Nuevo Proyecto" o "Subir PDF"
+    3. Drag & Drop tu PDF de presupuesto
+    4. Espera 10-30 segundos (procesamiento)
+    5. Automáticamente te redirige al detalle
+    6. Explora la jerarquía expandible
+    7. Si tiene mediciones → Click "Validar Mediciones"
+
+┌──────────────────────────────────────────────────────────┐
+│  CARACTERÍSTICAS                                         │
+└──────────────────────────────────────────────────────────┘
+
+    ✓ Detección automática de 4 formatos PDF
+      • 1 columna sin mediciones
+      • 2 columnas sin mediciones
+      • 1 columna con mediciones
+      • 2 columnas con mediciones
+
+    ✓ Almacenamiento completo de mediciones auxiliares
+    ✓ Validación automática de cantidades
+    ✓ Gráficos de distribución presupuestaria
+    ✓ API REST con JWT authentication
+    ✓ Frontend moderno React + Next.js
+
+╔══════════════════════════════════════════════════════════╗
+║  SISTEMA V1 NO SE MODIFICA - V2 ES INDEPENDIENTE         ║
+╚══════════════════════════════════════════════════════════╝
+
+Para más información:
+→ README_V2.md (inicio rápido)
+→ SISTEMA_V2_COMPLETADO.md (documentación completa)

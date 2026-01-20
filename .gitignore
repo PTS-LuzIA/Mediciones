@@ -39,3 +39,27 @@ Thumbs.db
 *.bak
 *.cache
 .env
+
+# ============================================
+# Sistema V2 - Archivos a ignorar
+# ============================================
+
+# PIDs de procesos V2
+.backend_v2.pid
+.frontend_v2.pid
+
+# Logs V2
+logs/backend_v2.log
+logs/frontend_v2.log
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env.local
+frontend/.vercel
+
+# Base de datos local
+*.db-journal
+mediciones_hybrid.db
+
