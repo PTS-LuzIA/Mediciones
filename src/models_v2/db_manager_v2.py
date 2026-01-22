@@ -459,87 +459,92 @@ class DatabaseManagerV2:
     def _calcular_total_capitulo_recursivo(self, capitulo, discrepancias: list, discrepancias_ids: set) -> Decimal:
         """
         Calcula el total de un capítulo sumando recursivamente:
+        - SOLO subcapítulos de NIVEL 1 (los hijos se calculan recursivamente)
         - Partidas directas de subcapítulos hoja
-        - Totales calculados de subcapítulos con hijos
         """
         total = Decimal('0')
 
+        # IMPORTANTE: Sumar SOLO subcapítulos de nivel 1
+        # Los niveles 2, 3, 4 ya están incluidos recursivamente en sus padres
         for subcapitulo in capitulo.subcapitulos:
-            total_sub = self._calcular_total_subcapitulo_recursivo(subcapitulo, discrepancias, discrepancias_ids)
-            subcapitulo.total_calculado = total_sub
-            total += total_sub
+            if subcapitulo.nivel == 1:  # SOLO nivel 1
+                total_sub = self._calcular_total_subcapitulo_recursivo(subcapitulo, discrepancias, discrepancias_ids)
+                subcapitulo.total_calculado = total_sub
+                total += total_sub
 
-            # Detectar discrepancia en subcapítulo (evitando duplicados)
-            clave = f"subcapitulo_{subcapitulo.id}"
-            if (clave not in discrepancias_ids and
-                subcapitulo.total and
-                abs(float(subcapitulo.total) - float(total_sub)) > 0.01):
-                discrepancias.append({
-                    'tipo': 'subcapitulo',
-                    'id': subcapitulo.id,
-                    'codigo': subcapitulo.codigo,
-                    'nombre': subcapitulo.nombre,
-                    'total_original': float(subcapitulo.total),
-                    'total_calculado': float(total_sub),
-                    'diferencia': float(subcapitulo.total) - float(total_sub)
-                })
-                discrepancias_ids.add(clave)
+                # Detectar discrepancia en subcapítulo (evitando duplicados)
+                clave = f"subcapitulo_{subcapitulo.id}"
+                if (clave not in discrepancias_ids and
+                    subcapitulo.total and
+                    abs(float(subcapitulo.total) - float(total_sub)) > 0.01):
+                    discrepancias.append({
+                        'tipo': 'subcapitulo',
+                        'id': subcapitulo.id,
+                        'codigo': subcapitulo.codigo,
+                        'nombre': subcapitulo.nombre,
+                        'total_original': float(subcapitulo.total),
+                        'total_calculado': float(total_sub),
+                        'diferencia': float(subcapitulo.total) - float(total_sub)
+                    })
+                    discrepancias_ids.add(clave)
 
         return total
 
     def _calcular_total_subcapitulo_recursivo(self, subcapitulo, discrepancias: list, discrepancias_ids: set) -> Decimal:
         """
         Calcula el total de un subcapítulo:
-        - Si tiene partidas: suma de importes de partidas
-        - Si tiene hijos: suma recursiva de hijos
-        - Si tiene ambos: suma de ambos
+        - Suma partidas directas del subcapítulo
+        - Suma recursivamente SOLO hijos directos (nivel N+1)
         """
         total = Decimal('0')
 
-        # Sumar partidas directas
+        # 1. Sumar partidas directas (si las tiene)
         for partida in subcapitulo.partidas:
             total += partida.importe or Decimal('0')
 
-        # Si no hay partidas pero hay subcapítulos (estructura jerárquica en V2 plana)
-        # buscar subcapítulos hijos por código
-        if not subcapitulo.partidas:
-            # En V2 los subcapítulos están planos, buscar hijos por patrón de código
-            codigo_base = subcapitulo.codigo
-            subcapitulos_hijos = self.session.query(Subcapitulo).filter(
-                Subcapitulo.capitulo_id == subcapitulo.capitulo_id,
-                Subcapitulo.codigo.like(f"{codigo_base}.%"),
-                Subcapitulo.codigo != codigo_base
-            ).all()
+        # 2. Buscar y sumar subcapítulos hijos directos (nivel inmediatamente inferior)
+        # En V2 los subcapítulos están planos, buscar hijos por patrón de código
+        codigo_base = subcapitulo.codigo
+        nivel_base = subcapitulo.nivel
 
-            # Filtrar solo hijos directos (no nietos)
-            hijos_directos = []
-            for hijo in subcapitulos_hijos:
-                partes_base = codigo_base.split('.')
-                partes_hijo = hijo.codigo.split('.')
-                # Es hijo directo si tiene exactamente un nivel más
-                if len(partes_hijo) == len(partes_base) + 1:
-                    hijos_directos.append(hijo)
+        # Buscar hijos directos: nivel = nivel_base + 1 Y código empieza con codigo_base
+        subcapitulos_hijos = self.session.query(Subcapitulo).filter(
+            Subcapitulo.capitulo_id == subcapitulo.capitulo_id,
+            Subcapitulo.nivel == nivel_base + 1,  # SOLO nivel inmediatamente inferior
+            Subcapitulo.codigo.like(f"{codigo_base}.%"),
+            Subcapitulo.codigo != codigo_base
+        ).all()
 
-            for hijo in hijos_directos:
-                total_hijo = self._calcular_total_subcapitulo_recursivo(hijo, discrepancias, discrepancias_ids)
-                hijo.total_calculado = total_hijo
-                total += total_hijo
+        # Filtrar solo hijos directos por código (verificación adicional)
+        hijos_directos = []
+        for hijo in subcapitulos_hijos:
+            partes_base = codigo_base.split('.')
+            partes_hijo = hijo.codigo.split('.')
+            # Es hijo directo si tiene exactamente un nivel más Y el prefijo coincide
+            if len(partes_hijo) == len(partes_base) + 1 and hijo.codigo.startswith(codigo_base + '.'):
+                hijos_directos.append(hijo)
 
-                # Detectar discrepancia en hijo (evitando duplicados)
-                clave = f"subcapitulo_{hijo.id}"
-                if (clave not in discrepancias_ids and
-                    hijo.total and
-                    abs(float(hijo.total) - float(total_hijo)) > 0.01):
-                    discrepancias.append({
-                        'tipo': 'subcapitulo',
-                        'id': hijo.id,
-                        'codigo': hijo.codigo,
-                        'nombre': hijo.nombre,
-                        'total_original': float(hijo.total),
-                        'total_calculado': float(total_hijo),
-                        'diferencia': float(hijo.total) - float(total_hijo)
-                    })
-                    discrepancias_ids.add(clave)
+        # Sumar recursivamente cada hijo directo
+        for hijo in hijos_directos:
+            total_hijo = self._calcular_total_subcapitulo_recursivo(hijo, discrepancias, discrepancias_ids)
+            hijo.total_calculado = total_hijo
+            total += total_hijo
+
+            # Detectar discrepancia en hijo (evitando duplicados)
+            clave = f"subcapitulo_{hijo.id}"
+            if (clave not in discrepancias_ids and
+                hijo.total and
+                abs(float(hijo.total) - float(total_hijo)) > 0.01):
+                discrepancias.append({
+                    'tipo': 'subcapitulo',
+                    'id': hijo.id,
+                    'codigo': hijo.codigo,
+                    'nombre': hijo.nombre,
+                    'total_original': float(hijo.total),
+                    'total_calculado': float(total_hijo),
+                    'diferencia': float(hijo.total) - float(total_hijo)
+                })
+                discrepancias_ids.add(clave)
 
         return total
 
@@ -611,6 +616,24 @@ class DatabaseManagerV2:
 
             # Agregar partidas nuevas a la BD
             partidas_nuevas = resultado_llm['partidas_nuevas']
+
+            # ⚠️ VALIDACIÓN DE SEGURIDAD 1: Si IA no extrajo NINGUNA partida y hay partidas locales,
+            # probablemente es un ERROR de extracción (sección vacía, clasificación fallida, etc.)
+            # NO actualizar en este caso para prevenir pérdida de datos
+            if len(partidas_nuevas) == 0 and len(partidas_existentes) > 0:
+                logger.error(f"❌ ERROR: IA extrajo 0 partidas pero hay {len(partidas_existentes)} partidas locales")
+                logger.error(f"   Esto indica un fallo en la extracción (sección vacía, texto incompleto, etc.)")
+                logger.error(f"   ABORTANDO actualización para prevenir pérdida de datos")
+                return {
+                    'success': False,
+                    'error': f"IA no extrajo partidas del {tipo} {elemento_dict['codigo']}. "
+                            f"Esto indica un error en la extracción de texto del PDF. "
+                            f"Revisa que el texto extraído contenga las partidas completas.",
+                    'partidas_agregadas': 0,
+                    'partidas_actualizadas': 0,
+                    'total_agregado': 0
+                }
+
             partidas_actualizadas = 0
             partidas_nuevas_insertadas = 0
 
@@ -635,6 +658,9 @@ class DatabaseManagerV2:
             else:
                 subcap_destino = elemento
 
+            # Crear mapa de partidas existentes para búsqueda rápida
+            partidas_locales_map = {p['codigo']: p for p in partidas_existentes}
+
             # Insertar o actualizar partidas
             for partida_data in partidas_nuevas:
                 # Verificar si la partida ya existe (por código y subcapítulo)
@@ -652,19 +678,44 @@ class DatabaseManagerV2:
                     partidas_actualizadas += 1
                     logger.info(f"  ↻ Actualizada: {partida_data['codigo']}")
                 else:
-                    # Crear nueva partida (sin resumen ni descripcion)
-                    partida = Partida(
-                        subcapitulo_id=subcap_destino.id,
-                        codigo=partida_data['codigo'],
-                        unidad=partida_data.get('unidad', 'ud'),
-                        cantidad_total=Decimal(str(partida_data.get('cantidad', 0))),
-                        precio=Decimal(str(partida_data.get('precio', 0))),
-                        importe=Decimal(str(partida_data['importe'])),
-                        orden=999 + partidas_nuevas_insertadas
-                    )
-                    self.session.add(partida)
-                    partidas_nuevas_insertadas += 1
-                    logger.info(f"  + Nueva: {partida_data['codigo']}")
+                    # ⚠️ VALIDACIÓN DE SEGURIDAD 2: Verificar si esta "nueva" partida es en realidad
+                    # un duplicado con código erróneo (el LLM puede devolver códigos incorrectos)
+                    # Comparamos cantidad, precio e importe con todas las partidas locales existentes
+                    cantidad_ia = partida_data.get('cantidad', 0.0)
+                    precio_ia = partida_data.get('precio', 0.0)
+                    importe_ia = partida_data.get('importe', 0.0)
+
+                    es_duplicado = False
+                    codigo_duplicado = None
+
+                    for codigo_local, partida_local in partidas_locales_map.items():
+                        # Comparar con tolerancia mínima para valores flotantes (0.01 euros/unidades)
+                        if (abs(partida_local['importe'] - importe_ia) < 0.01 and
+                            abs(partida_local.get('cantidad', 0) - cantidad_ia) < 0.01 and
+                            abs(partida_local.get('precio', 0) - precio_ia) < 0.01):
+                            es_duplicado = True
+                            codigo_duplicado = codigo_local
+                            break
+
+                    if es_duplicado:
+                        # Es un duplicado: el LLM devolvió un código erróneo pero los valores coinciden
+                        logger.warning(f"  ⚠️  Duplicado detectado: {partida_data['codigo']} tiene los mismos valores que {codigo_duplicado}")
+                        logger.warning(f"      Cantidad={cantidad_ia}, Precio={precio_ia}, Importe={importe_ia}")
+                        logger.warning(f"      Se omite la creación de la partida duplicada")
+                    else:
+                        # Crear nueva partida (realmente nueva)
+                        partida = Partida(
+                            subcapitulo_id=subcap_destino.id,
+                            codigo=partida_data['codigo'],
+                            unidad=partida_data.get('unidad', 'ud'),
+                            cantidad_total=Decimal(str(cantidad_ia)),
+                            precio=Decimal(str(precio_ia)),
+                            importe=Decimal(str(importe_ia)),
+                            orden=999 + partidas_nuevas_insertadas
+                        )
+                        self.session.add(partida)
+                        partidas_nuevas_insertadas += 1
+                        logger.info(f"  + Nueva: {partida_data['codigo']}")
 
             self.session.commit()
 

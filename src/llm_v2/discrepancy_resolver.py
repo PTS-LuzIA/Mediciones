@@ -159,13 +159,33 @@ class DiscrepancyResolver:
                             logger.debug(f"Fin de sección {codigo} detectado por TOTAL")
                             break
 
-                    # Detectar fin por otro subcapítulo del mismo nivel o superior
-                    if re.match(r'^\d{2}\.\d{2}', linea_limpia):
-                        # Es otro subcapítulo
-                        codigo_detectado = re.match(r'^(\d{2}\.\d{2})', linea_limpia).group(1)
+                    # Detectar fin por otro subcapítulo (MEJORADO: distinguir hermanos vs hijos)
+                    # Ejemplo: Si buscamos 02.08.02:
+                    # - 02.08.02.01 es HIJO (continuar capturando)
+                    # - 02.08.03 es HERMANO (detener)
+                    # - 02.09 es TÍO/SUPERIOR (detener)
+                    match_codigo = re.match(r'^(\d{2}(?:\.\d{2})+)', linea_limpia)
+                    if match_codigo:
+                        codigo_detectado = match_codigo.group(1)
+
                         if codigo_detectado != codigo:
-                            logger.debug(f"Fin de sección {codigo} detectado por nuevo subcapítulo {codigo_detectado}")
-                            break
+                            # Determinar nivel del código buscado y del detectado
+                            partes_buscado = codigo.split('.')
+                            partes_detectado = codigo_detectado.split('.')
+                            nivel_buscado = len(partes_buscado)
+                            nivel_detectado = len(partes_detectado)
+
+                            # Verificar si es hijo directo (un nivel más profundo Y comienza con mismo prefijo)
+                            es_hijo = (nivel_detectado == nivel_buscado + 1 and
+                                      codigo_detectado.startswith(codigo + '.'))
+
+                            if es_hijo:
+                                # Es un hijo (sub-subcapítulo), CONTINUAR capturando
+                                logger.debug(f"Código detectado {codigo_detectado} es hijo de {codigo}, continuando...")
+                            else:
+                                # Es hermano o superior, DETENER
+                                logger.debug(f"Fin de sección {codigo} detectado por código hermano/superior {codigo_detectado}")
+                                break
 
             if not lineas_seccion:
                 logger.warning(f"No se encontró el código {codigo} en el PDF")
@@ -244,6 +264,9 @@ class DiscrepancyResolver:
 
         try:
             # Llamar al LLM solo con texto
+            temperature = 0.0
+            logger.info(f"🤖 Llamando a LLM con temperatura={temperature} (determinismo máximo)")
+
             async with httpx.AsyncClient(timeout=300.0) as client:
                 response = await client.post(
                     f"{self.base_url}/chat/completions",
@@ -259,7 +282,7 @@ class DiscrepancyResolver:
                                 "content": prompt
                             }
                         ],
-                        "temperature": 0.1,
+                        "temperature": temperature,  # Máxima determinismo - mismo prompt = misma respuesta
                         "response_format": {"type": "json_object"}
                     }
                 )

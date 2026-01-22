@@ -24,7 +24,7 @@ class Settings(BaseSettings):
     # Seguridad
     SECRET_KEY: str = os.getenv("SECRET_KEY", "CHANGE_THIS_IN_PRODUCTION_USE_STRONG_SECRET")
     ALGORITHM: str = "HS256"
-    ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = 480  # 8 horas para desarrollo
 
     # CORS - Dominios permitidos
     @property

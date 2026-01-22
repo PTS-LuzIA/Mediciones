@@ -517,8 +517,62 @@ class PartidaParserV2_4Fases:
                     partida_actual = None
 
             elif tipo == TipoLinea.TOTAL:
-                # Los totales ya fueron procesados en Fase 1
-                pass
+                # CERRAR PARTIDA ACTUAL antes de procesar TOTAL
+                if partida_actual:
+                    # Finalizar partida anterior si existe
+                    if partida_actual['descripcion_lineas']:
+                        partida_actual['descripcion'] = ' '.join(partida_actual['descripcion_lineas'])
+
+                    # Solo agregar si tiene importe > 0
+                    if partida_actual['importe'] > 0:
+                        if subcapitulo_actual:
+                            subcapitulo_actual['partidas'].append(partida_actual)
+                        elif capitulo_actual:
+                            capitulo_actual['partidas'].append(partida_actual)
+                        logger.debug(f"Partida completada al encontrar TOTAL: {partida_actual['codigo']} = {partida_actual['importe']}")
+                    else:
+                        logger.debug(f"Partida rechazada al encontrar TOTAL (importe 0): {partida_actual['codigo']}")
+
+                    partida_actual = None
+
+                # IMPORTANTE: Cerrar también el subcapítulo/apartado actual
+                # El TOTAL marca el fin de una sección jerárquica
+                codigo_total = datos.get('codigo', '')
+
+                # Si el TOTAL tiene código, verificar qué nivel cerrar
+                if codigo_total and subcapitulo_actual:
+                    # Si el TOTAL corresponde al subcapítulo actual, cerrarlo
+                    if subcapitulo_actual.get('codigo') == codigo_total:
+                        logger.debug(f"TOTAL cierra subcapítulo {codigo_total}")
+
+                        # Si el subcapítulo tiene padre (nivel 3+), volver al padre
+                        partes_codigo = codigo_total.split('.')
+                        if len(partes_codigo) > 2:  # Nivel 3+ (ej: 01.04.01)
+                            codigo_padre = '.'.join(partes_codigo[:-1])
+                            if codigo_padre in subcapitulos_map:
+                                subcapitulo_actual = subcapitulos_map[codigo_padre]
+                                logger.debug(f"  └─ Volviendo al padre {codigo_padre}")
+                            else:
+                                subcapitulo_actual = None
+                        else:
+                            # Nivel 2 (ej: 01.04), cerrar completamente
+                            subcapitulo_actual = None
+                else:
+                    # TOTAL sin código: cerrar cualquier sección abierta
+                    if subcapitulo_actual:
+                        logger.debug(f"TOTAL sin código cierra subcapítulo actual {subcapitulo_actual.get('codigo', '')}")
+                        # Intentar volver al padre si existe
+                        codigo_actual = subcapitulo_actual.get('codigo', '')
+                        partes_codigo = codigo_actual.split('.')
+                        if len(partes_codigo) > 2:
+                            codigo_padre = '.'.join(partes_codigo[:-1])
+                            if codigo_padre in subcapitulos_map:
+                                subcapitulo_actual = subcapitulos_map[codigo_padre]
+                                logger.debug(f"  └─ Volviendo al padre {codigo_padre}")
+                            else:
+                                subcapitulo_actual = None
+                        else:
+                            subcapitulo_actual = None
 
         return estructura
 
