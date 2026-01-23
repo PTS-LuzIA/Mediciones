@@ -46,6 +46,7 @@ export interface Partida {
   id: number
   codigo: string
   unidad?: string
+  resumen?: string
   descripcion?: string
   cantidad_total: number
   precio: number

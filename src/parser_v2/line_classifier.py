@@ -59,18 +59,28 @@ class LineClassifier:
     # Ejemplos: "01.01", "DEM06", "U11SAM020", "PY10AA012a", "RETIRADA001", "E08PEA090"
     # NO matchea: "rlores a 2" (empieza con minúscula)
     # Unidades: con \b para evitar matches parciales (ej: "pa" no debe matchear "para")
-    # Incluye: m, m2, m3, m², m³, ml, ud, u, uf, pa, kg, h, l, t, ud/d, mes, día, año, sem
+    # Incluye: m, m2, m3, m², m³, ml, ud, u, uf, pa, kg, h, l, t, ud/d, mes, día, año, sem, sm, d
     # Soporta tanto "m2" como "m²" (superíndice Unicode)
     # Soporta unidades compuestas con barra: ud/d, m/d, etc.
     # Patrón simplificado: CÓDIGO (sin espacios) + UNIDAD + DESCRIPCIÓN
     # Usa \S+ para el código (cualquier secuencia sin espacios)
-    PATRON_PARTIDA = re.compile(r'^(\S+)\s+(m[2-3²³]?(?:/[a-z]+)?|M[2-3²³]?|Ml|ml|M\.?|m\.|[Uu][Dd]?(?:/[a-z]+)?|[Uu][Ff]|PA|Pa|pa|[Pp][\.:][Aa][\.::]?|kg|Kg|KG|[HhLlTt]|mes|MES|Mes|día|dia|Día|Dia|año|Año|sem|Sem)\s+(.+)', re.IGNORECASE)
+    PATRON_PARTIDA = re.compile(r'^(\S+)\s+(m[2-3²³]?(?:/[a-z]+)?|M[2-3²³]?|Ml|ml|M\.?|m\.|[Uu][Dd]?(?:/[a-z]+)?|[Uu][Ff]|PA|Pa|pa|[Pp][\.:][Aa][\.::]?|kg|Kg|KG|[HhLlTt]|d|D|sm|SM|Sm|mes|MES|Mes|día|dia|Día|Dia|año|Año|sem|Sem)\s+(.+)', re.IGNORECASE)
     # Patrón para partida completa con números al final: CÓDIGO UNIDAD DESCRIPCIÓN CANTIDAD PRECIO IMPORTE
     # Este patrón debe evaluarse ANTES que PATRON_PARTIDA para capturar líneas completas
     # Usa \S+ para código (cualquier secuencia sin espacios) para flexibilidad máxima
     # Patrón de números simplificado: acepta dígitos con comas y puntos (9,00 o 1.234,56)
     PATRON_PARTIDA_COMPLETA = re.compile(
-        r'^([A-Z0-9]\S*)\s+(m[2-3²³]?(?:/[a-z]+)?|M[2-3²³]?|Ml|ml|M\.?|m\.|[Uu][Dd]?(?:/[a-z]+)?|[Uu][Ff]|PA|Pa|pa|[Pp][\.:][Aa][\.::]?|kg|Kg|KG|[HhLlTt]|mes|MES|Mes|día|dia|Día|Dia|año|Año|sem|Sem)\s+(.+?)\s+([\d.,]+)\s+([\d.,]+)\s+([\d.,]+)\s*$'
+        r'^([A-Z0-9]\S*)\s+(m[2-3²³]?(?:/[a-z]+)?|M[2-3²³]?|Ml|ml|M\.?|m\.|[Uu][Dd]?(?:/[a-z]+)?|[Uu][Ff]|PA|Pa|pa|[Pp][\.:][Aa][\.::]?|kg|Kg|KG|[HhLlTt]|d|D|sm|SM|Sm|mes|MES|Mes|día|dia|Día|Dia|año|Año|sem|Sem)\s+(.+?)\s+([\d.,]+)\s+([\d.,]+)\s+([\d.,]+)\s*$'
+    )
+    # Patrón para partida SIN unidad explícita: CÓDIGO DESCRIPCIÓN CANTIDAD PRECIO IMPORTE
+    # Para partidas donde la unidad está implícita en el código o simplemente no aparece
+    # Ejemplo: "APUDm23E27HE01m02.1 ESMALTE-LACA SATINADO S/METAL 808,50 13,17 10.647,95"
+    # Ejemplo: "APUDm23E05AP02u0dA PLACA ANCLAJE S275 40x25x2cm SIN GARROTAS 95,00 51,55 4.897,25"
+    # Se asignará unidad "X" por defecto
+    # IMPORTANTE: La descripción debe empezar con letra mayúscula (permite números después)
+    # Usa .+? (lazy) para capturar todo hasta encontrar los 3 números finales
+    PATRON_PARTIDA_SIN_UNIDAD = re.compile(
+        r'^([A-Z0-9]\S*)\s+([A-ZÁÉÍÓÚÑ].+?)\s+([\d.,]+)\s+([\d.,]+)\s+([\d.,]+)\s*$'
     )
     # Patrón para TOTAL con código explícito: "TOTAL SUBCAPÍTULO 01.04.01  12.345,67"
     PATRON_TOTAL = re.compile(r'^TOTAL\s+(SUBCAPÍTULO|CAPÍTULO|APARTADO)\s+([\d\.]+)', re.IGNORECASE)
@@ -226,9 +236,40 @@ class LineClassifier:
                     }
                 }
             # Si tiene números pero no matchea con PATRON_PARTIDA (no hay unidad detectada)
-            # podría ser una partida con unidad solapada/faltante
+            # probar primero con el patrón de partida sin unidad explícita
             else:
-                # Intentar extraer CODIGO + TITULO (sin unidad en el medio)
+                # PRIMERO: Probar patrón de partida sin unidad (SOLUCIÓN 2 - Opción A)
+                # Ejemplo: "APUDm23E27HE01m02.1 ESMALTE-LACA SATINADO S/METAL 808,50 13,17 10.647,95"
+                partida_sin_unidad_match = cls.PATRON_PARTIDA_SIN_UNIDAD.match(linea)
+                if partida_sin_unidad_match:
+                    codigo = partida_sin_unidad_match.group(1).strip()
+                    resumen = partida_sin_unidad_match.group(2).strip()
+                    cantidad = partida_sin_unidad_match.group(3).strip()
+                    precio = partida_sin_unidad_match.group(4).strip()
+                    importe = partida_sin_unidad_match.group(5).strip()
+
+                    # VALIDACIÓN: Rechazar si el código es un número con formato de importe
+                    # Ejemplo: "29.672,05" NO es un código válido, es un TOTAL
+                    patron_importe = re.compile(r'^\d+(?:\.\d{3})*,\d{2}$')
+                    if patron_importe.match(codigo):
+                        logger.debug(f"Código rechazado (formato de importe): '{codigo}'")
+                        # No es una partida, continuar con otras clasificaciones
+                    else:
+                        logger.info(f"🔍 Partida sin unidad detectada: '{codigo}' - '{resumen[:40]}...' → Unidad='X'")
+
+                        return {
+                            'tipo': TipoLinea.PARTIDA_HEADER,
+                            'datos': {
+                                'codigo': codigo,
+                                'unidad': 'X',  # Unidad por defecto
+                                'resumen': resumen,
+                                'cantidad_str': cantidad,
+                                'precio_str': precio,
+                                'importe_str': importe
+                            }
+                        }
+
+                # Si no matchea con PATRON_PARTIDA_SIN_UNIDAD, intentar extraer CODIGO + TITULO (sin unidad en el medio)
                 # Formato: "APUDes23UA014e LEVANTADO DE BORDILLO... 95,00 9,17 869,32"
                 # Formato PEGADO: "APUI_V_mU16NROU822SUMINISTRO E INSTALACIÓN... 5,00 603,54 3.017,70"
                 # IMPORTANTE: Ser MUY estricto para evitar falsos positivos
@@ -320,16 +361,21 @@ class LineClassifier:
                     # Validaciones adicionales MUY estrictas
                     unidades_comunes = re.compile(r'^(m[2-3²³]?|M[2-3²³]?|Ml|ml|M\.?|m\.|[Uu][Dd]?|[Uu][Ff]|PA|Pa|pa|[Pp][\.:][Aa][\.::]?|kg|Kg|KG|[HhLlTt])$', re.IGNORECASE)
 
+                    # Patrón para detectar números con formato de importe español (ej: 29.672,05)
+                    patron_importe = re.compile(r'^\d+(?:\.\d{3})*,\d{2}$')
+
                     # NO procesar si:
                     # - El código termina en punto (105/2008.)
                     # - El código tiene guion seguido de mayúscula (NTE-ADD)
                     # - El código es demasiado corto (< 5 chars)
                     # - El código es una unidad
+                    # - El código es un número con formato de importe (ej: 29.672,05)
                     # - El título no tiene al menos 2 palabras
                     if (len(codigo_detectado) >= 5 and
                         not codigo_detectado.endswith('.') and
                         '-' not in codigo_detectado[-4:] and
                         not unidades_comunes.match(codigo_detectado) and
+                        not patron_importe.match(codigo_detectado) and
                         len(titulo_detectado.split()) >= 2):
 
                         # Parece una partida válida con unidad solapada/faltante
@@ -389,16 +435,21 @@ class LineClassifier:
             # Validaciones adicionales MUY estrictas
             unidades_comunes = re.compile(r'^(m[2-3²³]?|M[2-3²³]?|Ml|ml|M\.?|m\.|[Uu][Dd]?|[Uu][Ff]|PA|Pa|pa|[Pp][\.:][Aa][\.::]?|kg|Kg|KG|[HhLlTt])$', re.IGNORECASE)
 
+            # Patrón para detectar números con formato de importe español (ej: 29.672,05)
+            patron_importe = re.compile(r'^\d+(?:\.\d{3})*,\d{2}$')
+
             # NO procesar si:
             # - El código es demasiado corto (< 5 chars)
             # - El código termina en punto (105/2008.)
             # - El código tiene guion seguido de mayúscula (NTE-ADD)
             # - El código es una unidad
+            # - El código es un número con formato de importe (ej: 29.672,05)
             # - El título no tiene al menos 2 palabras
             if (len(codigo_detectado) >= 5 and
                 not codigo_detectado.endswith('.') and
                 '-' not in codigo_detectado[-4:] and
                 not unidades_comunes.match(codigo_detectado) and
+                not patron_importe.match(codigo_detectado) and
                 len(titulo_detectado.split()) >= 2):
 
                 logger.warning(f"⚠️  Partida sin unidad (sin números): código='{codigo_detectado}', título='{titulo_detectado[:30]}...'")
@@ -441,10 +492,15 @@ class LineClassifier:
         """
         Detecta y une líneas de descripción que continúan en la siguiente línea.
 
-        Estrategia:
-        1. Detecta PARTIDA_HEADER con descripción en mayúsculas (títulos)
-        2. Si la siguiente línea clasificada como IGNORAR también está en mayúsculas
-           y NO tiene código de partida, es continuación de la descripción
+        Estrategia MEJORADA para códigos largos:
+        1. Detecta PARTIDA_HEADER (independientemente del formato del resumen)
+        2. Si la siguiente línea:
+           - Está clasificada como IGNORAR o PARTIDA_DESCRIPCION
+           - NO tiene código de partida al inicio
+           - NO tiene números al final (cantidad/precio/importe)
+           - Tiene texto descriptivo con ALGUNA mayúscula
+           - NO es un header de tabla
+           → Es continuación del resumen
         3. Une ambas líneas en la partida original
 
         Args:
@@ -455,12 +511,11 @@ class LineClassifier:
         """
         import re
 
-        # Patrón para detectar líneas que son continuación de descripción:
-        # - Mayúsculas al inicio
-        # - No tiene código de partida (no empieza con patrón de código)
-        # - No es un header de tabla
-        # - Longitud corta/media (típicamente < 100 caracteres)
+        # Patrón para detectar código de partida al inicio
         patron_codigo_partida = re.compile(r'^[A-Z0-9]\S{4,}\s+')
+
+        # Patrón para detectar números al final (cantidad/precio/importe)
+        patron_numeros_final = re.compile(r'(\d+(?:\.\d{3})*(?:,\d{1,4})?)\s+(\d+(?:\.\d{3})*(?:,\d{1,4})?)\s+(\d+(?:\.\d{3})*(?:,\d{1,4})?)\s*$')
 
         resultados = []
         i = 0
@@ -470,54 +525,55 @@ class LineClassifier:
             item_actual = clasificaciones[i]
             tipo_actual = item_actual['tipo']
 
-            # Buscar PARTIDA_HEADER con resumen en mayúsculas
+            # Buscar PARTIDA_HEADER (cualquier formato de resumen)
             if tipo_actual == TipoLinea.PARTIDA_HEADER:
                 datos_partida = item_actual['datos']
                 resumen_actual = datos_partida.get('resumen', '')
 
-                # Verificar si el resumen está mayormente en mayúsculas (título)
-                if resumen_actual and resumen_actual.upper() == resumen_actual:
-                    # Buscar siguiente línea
-                    if i + 1 < len(clasificaciones):
-                        item_siguiente = clasificaciones[i + 1]
-                        tipo_siguiente = item_siguiente['tipo']
-                        linea_siguiente = item_siguiente['linea'].strip()
+                # Buscar siguiente línea (potencial continuación)
+                if i + 1 < len(clasificaciones):
+                    item_siguiente = clasificaciones[i + 1]
+                    tipo_siguiente = item_siguiente['tipo']
+                    linea_siguiente = item_siguiente['linea'].strip()
 
-                        # Verificar si es continuación:
-                        # 1. Línea clasificada como IGNORAR o PARTIDA_DESCRIPCION
-                        # 2. En mayúsculas o mayormente mayúsculas
-                        # 3. NO tiene código de partida al inicio
-                        # 4. NO es header de tabla
-                        # 5. Longitud razonable (no demasiado larga)
-                        if (tipo_siguiente in [TipoLinea.IGNORAR, TipoLinea.PARTIDA_DESCRIPCION] and
-                            linea_siguiente and
-                            len(linea_siguiente) < 100 and
-                            not patron_codigo_partida.match(linea_siguiente) and
-                            not cls._es_header_tabla(linea_siguiente)):
+                    # Verificar si es continuación del resumen:
+                    # 1. Línea clasificada como IGNORAR o PARTIDA_DESCRIPCION
+                    # 2. NO tiene código de partida al inicio
+                    # 3. NO tiene números al final (cantidad/precio/importe)
+                    # 4. Tiene texto descriptivo (letras)
+                    # 5. Tiene ALGUNA letra en MAYÚSCULAS (no todo minúsculas)
+                    # 6. NO es header de tabla
+                    # 7. Longitud razonable (no demasiado larga)
+                    if (tipo_siguiente in [TipoLinea.IGNORAR, TipoLinea.PARTIDA_DESCRIPCION] and
+                        linea_siguiente and
+                        len(linea_siguiente) < 150 and
+                        not patron_codigo_partida.match(linea_siguiente) and
+                        not patron_numeros_final.search(linea_siguiente) and
+                        not cls._es_header_tabla(linea_siguiente)):
 
-                            # Calcular porcentaje de mayúsculas
-                            letras = [c for c in linea_siguiente if c.isalpha()]
-                            if letras:
-                                mayusculas = sum(1 for c in letras if c.isupper())
-                                porcentaje_mayus = mayusculas / len(letras)
+                        # Verificar que tiene letras y TODAS están en mayúsculas
+                        letras = [c for c in linea_siguiente if c.isalpha()]
+                        if letras:
+                            mayusculas = sum(1 for c in letras if c.isupper())
 
-                                # Si > 70% mayúsculas, es probablemente continuación
-                                if porcentaje_mayus > 0.7:
-                                    # UNIR las líneas
-                                    resumen_unido = resumen_actual + ' ' + linea_siguiente
-                                    datos_partida['resumen'] = resumen_unido
+                            # Si TODAS las letras están en mayúsculas (100%)
+                            # esto indica que es continuación del resumen
+                            if mayusculas == len(letras):
+                                # UNIR las líneas
+                                resumen_unido = resumen_actual + ' ' + linea_siguiente
+                                datos_partida['resumen'] = resumen_unido
 
-                                    # Actualizar también la línea completa del item
-                                    linea_original = item_actual['linea']
-                                    item_actual['linea'] = linea_original + ' ' + linea_siguiente
+                                # Actualizar también la línea completa del item
+                                linea_original = item_actual['linea']
+                                item_actual['linea'] = linea_original + ' ' + linea_siguiente
 
-                                    lineas_unidas += 1
-                                    logger.info(f"✓ Descripción continuada unida: '{resumen_actual[:40]}...' + '{linea_siguiente[:30]}...'")
+                                lineas_unidas += 1
+                                logger.info(f"✓ Descripción continuada unida: '{resumen_actual[:40]}...' + '{linea_siguiente[:30]}...'")
 
-                                    # Saltar la siguiente línea (ya fue procesada)
-                                    resultados.append(item_actual)
-                                    i += 2
-                                    continue
+                                # Saltar la siguiente línea (ya fue procesada)
+                                resultados.append(item_actual)
+                                i += 2
+                                continue
 
             # Si no se unió, agregar normalmente
             resultados.append(item_actual)

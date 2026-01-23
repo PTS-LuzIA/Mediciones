@@ -772,11 +772,17 @@ async def resolver_discrepancias_bulk(
             if not resultado['success']:
                 raise HTTPException(500, resultado.get('error', 'Error al resolver discrepancias'))
 
+            # Construir mensaje informativo
+            mensaje = f"✓ {resultado['resueltas_exitosas']} discrepancias resueltas ({resultado['total_partidas_agregadas']} partidas agregadas)"
+            if resultado.get('omitidas_sin_partidas', 0) > 0:
+                mensaje += f", {resultado['omitidas_sin_partidas']} omitidas (sin partidas directas)"
+
             return {
                 "success": True,
-                "mensaje": f"✓ {resultado['resueltas_exitosas']} discrepancias resueltas ({resultado['total_partidas_agregadas']} partidas agregadas)",
+                "mensaje": mensaje,
                 "resueltas_exitosas": resultado['resueltas_exitosas'],
                 "resueltas_fallidas": resultado['resueltas_fallidas'],
+                "omitidas_sin_partidas": resultado.get('omitidas_sin_partidas', 0),
                 "total_partidas_agregadas": resultado['total_partidas_agregadas'],
                 "errores": resultado['errores']
             }

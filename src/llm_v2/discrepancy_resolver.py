@@ -65,6 +65,36 @@ class DiscrepancyResolver:
             logger.error(f"Error codificando página {page_num}: {e}")
             raise
 
+    def _detectar_codigos_hijos_en_texto(self, texto: str, codigo: str) -> bool:
+        """
+        Detecta si el texto contiene códigos hijos del código especificado.
+
+        Ejemplo: Si codigo = "03", busca patrones como "03.01", "03.02", etc.
+                 Si codigo = "02.12", busca patrones como "02.12.01", "02.12.02", etc.
+
+        Args:
+            texto: Texto extraído del PDF
+            codigo: Código del capítulo/subcapítulo
+
+        Returns:
+            True si encuentra códigos hijos, False si no
+        """
+        import re
+
+        # Construir patrón para detectar hijos directos
+        # Ejemplo: "03" -> buscar "03.XX"
+        #          "02.12" -> buscar "02.12.XX"
+        patron_hijo = rf'^{re.escape(codigo)}\.\d{{1,2}}\s+[A-ZÁÉÍÓÚÑ]'
+
+        # Buscar en cada línea del texto
+        for linea in texto.split('\n'):
+            linea_limpia = linea.strip()
+            if re.match(patron_hijo, linea_limpia):
+                logger.debug(f"✓ Código hijo detectado en texto: '{linea_limpia[:60]}...'")
+                return True
+
+        return False
+
     def _extract_text_from_pdf(self, pdf_path: str, codigo: str, proyecto_id: int = None) -> str:
         """
         Extrae SOLO el texto del subcapítulo específico del PDF.
@@ -130,7 +160,7 @@ class DiscrepancyResolver:
             lineas_seccion = []
 
             codigo_pattern = re.escape(codigo)  # Escapar puntos en el código
-            logger.debug(f"Buscando código: '{codigo}' con pattern: '^{codigo_pattern}\\s+[A-Z]'")
+            logger.debug(f"Buscando código: '{codigo}' con pattern: '^{codigo_pattern}\\s*[A-Z]'")
 
             for idx, linea in enumerate(all_lines):
                 linea_limpia = linea.strip()
@@ -139,11 +169,11 @@ class DiscrepancyResolver:
                 if codigo in linea_limpia:
                     logger.debug(f"Línea {idx} contiene código '{codigo}': '{linea_limpia}'")
                     logger.debug(f"  Repr: {repr(linea_limpia)}")
-                    pattern_test = rf'^{codigo_pattern}\s+[A-Z]'
+                    pattern_test = rf'^{codigo_pattern}\s*[A-Z]'
                     logger.debug(f"  Match result: {re.match(pattern_test, linea_limpia)}")
 
-                # Detectar inicio del subcapítulo
-                if re.match(rf'^{codigo_pattern}\s+[A-Z]', linea_limpia):
+                # Detectar inicio del subcapítulo (con o sin espacio después del código)
+                if re.match(rf'^{codigo_pattern}\s*[A-ZÁÉÍÓÚÑ]', linea_limpia):
                     dentro_seccion = True
                     lineas_seccion.append(linea_limpia)
                     logger.info(f"✓ Inicio de sección {codigo} encontrado en línea {idx}")
@@ -164,7 +194,8 @@ class DiscrepancyResolver:
                     # - 02.08.02.01 es HIJO (continuar capturando)
                     # - 02.08.03 es HERMANO (detener)
                     # - 02.09 es TÍO/SUPERIOR (detener)
-                    match_codigo = re.match(r'^(\d{2}(?:\.\d{2})+)', linea_limpia)
+                    # IMPORTANTE: Debe seguir el patrón código + espacio + mayúscula (no números + coma = importe)
+                    match_codigo = re.match(r'^(\d{2}(?:\.\d{2})+)\s+[A-ZÁÉÍÓÚÑ]', linea_limpia)
                     if match_codigo:
                         codigo_detectado = match_codigo.group(1)
 
@@ -194,10 +225,30 @@ class DiscrepancyResolver:
             # Unir líneas
             full_text = '\n'.join(lineas_seccion)
 
-            # Limitar tamaño
-            if len(full_text) > 20000:  # ~5k tokens - suficiente para un subcapítulo
-                full_text = full_text[:20000]
-                logger.warning(f"Texto truncado a 20k caracteres")
+            # TRUNCADO INTELIGENTE: Si el texto es muy largo, buscar el TOTAL para cortar
+            MAX_CHARS = 100000  # Límite máximo de seguridad (Gemini soporta mucho más)
+
+            if len(full_text) > MAX_CHARS:
+                logger.warning(f"⚠️ Texto muy largo ({len(full_text)} caracteres), buscando punto de corte inteligente...")
+
+                # Buscar la última línea con "TOTAL" antes del límite
+                lineas_hasta_limite = full_text[:MAX_CHARS].split('\n')
+
+                # Buscar la última aparición de TOTAL
+                ultima_linea_total = -1
+                for i, linea in enumerate(lineas_hasta_limite):
+                    if linea.strip().startswith('TOTAL') or linea.strip().startswith('Total'):
+                        ultima_linea_total = i
+
+                if ultima_linea_total > 0:
+                    # Cortar en el TOTAL encontrado
+                    full_text = '\n'.join(lineas_hasta_limite[:ultima_linea_total + 1])
+                    logger.info(f"✓ Texto truncado inteligentemente en línea TOTAL {ultima_linea_total}")
+                    logger.info(f"  Texto final: {len(full_text)} caracteres")
+                else:
+                    # No se encontró TOTAL, cortar por límite de caracteres
+                    full_text = full_text[:MAX_CHARS]
+                    logger.warning(f"⚠️ No se encontró TOTAL, truncado a {MAX_CHARS} caracteres")
 
             logger.info(f"  Texto extraído: {len(lineas_seccion)} líneas, {len(full_text)} caracteres")
             return full_text
@@ -295,10 +346,19 @@ class DiscrepancyResolver:
                 result = response.json()
                 content = result['choices'][0]['message']['content']
 
+                # Guardar respuesta RAW del LLM ANTES de parsear para debugging
+                raw_response_file = f"{logs_dir}/raw_response_{tipo}_{elemento['codigo'].replace('.', '_')}_{timestamp}.txt"
+                try:
+                    with open(raw_response_file, 'w', encoding='utf-8') as f:
+                        f.write(content)
+                    logger.info(f"💾 Respuesta RAW LLM guardada: {raw_response_file}")
+                except Exception as e:
+                    logger.warning(f"No se pudo guardar respuesta RAW: {e}")
+
                 # Parsear respuesta JSON
                 partidas_llm = json.loads(content)
 
-                # Guardar respuesta del LLM para debugging
+                # Guardar respuesta parseada del LLM para debugging
                 response_file = f"{logs_dir}/response_{tipo}_{elemento['codigo'].replace('.', '_')}_{timestamp}.json"
                 try:
                     with open(response_file, 'w', encoding='utf-8') as f:
@@ -389,6 +449,11 @@ IMPORTANTE:
 - Los códigos de partidas pueden ser de cualquier formato (ej: "01.02.03", "m23U01A010", etc.)
 - Extrae: código, unidad, cantidad, precio, importe
 - El importe debe ser: cantidad × precio
+- UNIDAD: Extrae SOLO el código de unidad (máximo 10 caracteres):
+  * Ejemplos válidos: "ud", "m2", "m3", "kg", "m", "h", "t", "l", "pa"
+  * NO extraigas descripciones largas
+  * Si la unidad aparece en el texto como "m3 EXCAVACIÓN...", extrae solo "m3"
+  * Si no encuentras una unidad válida, usa "ud" por defecto
 - Si no encuentras partidas faltantes, devuelve un array vacío
 
 Responde SOLO en JSON válido:
@@ -406,6 +471,41 @@ Responde SOLO en JSON válido:
 """
         return prompt
 
+    def _normalizar_unidad(self, unidad: str) -> str:
+        """
+        Normaliza la unidad para asegurar que sea válida y no exceda 20 caracteres.
+
+        Args:
+            unidad: Unidad raw del LLM
+
+        Returns:
+            Unidad normalizada (máximo 20 caracteres)
+        """
+        if not unidad or not isinstance(unidad, str):
+            return "X"
+
+        # Limpiar espacios
+        unidad = unidad.strip()
+
+        # Si es demasiado larga (probablemente una descripción), intentar extraer la unidad
+        if len(unidad) > 20:
+            # Intentar extraer unidades comunes al inicio
+            unidades_comunes = ['m3', 'm2', 'ml', 'ud', 'kg', 'pa', 'h', 'm', 't', 'l', 'uR', 'u20R']
+            for u in unidades_comunes:
+                if unidad.lower().startswith(u.lower()):
+                    logger.warning(f"Unidad truncada: '{unidad}' -> '{u}'")
+                    return u
+
+            # Si no encontramos una unidad común, usar "X"
+            logger.warning(f"Unidad inválida (demasiado larga): '{unidad}' -> 'X'")
+            return "X"
+
+        # Si está vacía
+        if not unidad:
+            return "X"
+
+        return unidad
+
     def _procesar_partidas_llm(self, respuesta_llm: Dict, elemento: Dict) -> List[Dict]:
         """Procesa y valida las partidas devueltas por el LLM"""
         partidas_nuevas = []
@@ -421,10 +521,14 @@ Responde SOLO en JSON válido:
             # que no siguen la jerarquía numérica. Confiamos en que el LLM
             # identifica correctamente las partidas del capítulo/subcapítulo solicitado.
 
+            # Normalizar unidad
+            unidad_raw = partida.get('unidad', 'ud')
+            unidad = self._normalizar_unidad(unidad_raw)
+
             # Normalizar partida
             partida_normalizada = {
                 'codigo': partida['codigo'],
-                'unidad': partida.get('unidad', 'ud'),
+                'unidad': unidad,
                 'cantidad': float(partida.get('cantidad', 0)),
                 'precio': float(partida.get('precio', 0)),
                 'importe': float(partida['importe'])

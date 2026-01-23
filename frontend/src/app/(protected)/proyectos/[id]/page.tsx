@@ -439,9 +439,14 @@ export default function ProyectoDetallePage({ params }: { params: { id: string }
                                   {subcap.partidas.map((partida) => (
                                     <tr key={partida.id} className="border-b border-gray-100 hover:bg-gray-50">
                                       <td className="py-2 px-4 pl-16 font-mono text-xs">{partida.codigo}</td>
-                                      <td className="py-2 px-4 text-gray-900">
-                                        {partida.descripcion?.substring(0, 100)}
-                                        {partida.descripcion && partida.descripcion.length > 100 ? '...' : ''}
+                                      <td className="py-2 px-4">
+                                        <div className="font-semibold text-gray-900">{partida.resumen}</div>
+                                        {partida.descripcion && (
+                                          <div className="text-xs text-gray-500 mt-1">
+                                            {partida.descripcion.substring(0, 100)}
+                                            {partida.descripcion.length > 100 ? '...' : ''}
+                                          </div>
+                                        )}
                                       </td>
                                       <td className="py-2 px-4 text-center text-gray-600">{partida.unidad}</td>
                                       <td className="py-2 px-4 text-right">{formatNumber(Number(partida.cantidad_total))}</td>

@@ -350,6 +350,7 @@ class DatabaseManagerV2:
                         subcapitulo_id=target_id,
                         codigo=part_data.get('codigo', ''),
                         unidad=part_data.get('unidad', ''),
+                        resumen=part_data.get('resumen', ''),
                         descripcion=part_data.get('descripcion', ''),
                         cantidad_total=Decimal(str(part_data.get('cantidad', 0))),
                         precio=Decimal(str(part_data.get('precio', 0))),
@@ -360,7 +361,7 @@ class DatabaseManagerV2:
                         orden=orden
                     )
                     self.session.add(partida)
-                    logger.debug(f"Partida agregada: {partida.codigo} a {'capítulo' if es_capitulo else 'subcapítulo'} {codigo_elemento}")
+                    logger.debug(f"Partida agregada: {partida.codigo} (resumen: {part_data.get('resumen', '')[:50]}) a {'capítulo' if es_capitulo else 'subcapítulo'} {codigo_elemento}")
 
         # Recursivo para subcapítulos
         for sub_data in elemento.get('subcapitulos', []):
@@ -747,6 +748,11 @@ class DatabaseManagerV2:
         Itera sobre todas las discrepancias y llama al LLM para encontrar
         partidas faltantes en cada una.
 
+        IMPORTANTE: Solo resuelve discrepancias en capítulos/subcapítulos que tienen
+        partidas directas. Si un elemento solo tiene subcapítulos hijos pero no partidas
+        propias, se omite para evitar que el LLM extraiga partidas de los hijos y las
+        duplique en el padre.
+
         Args:
             proyecto_id: ID del proyecto
             pdf_path: Ruta al PDF original
@@ -762,14 +768,40 @@ class DatabaseManagerV2:
             resueltas_exitosas = 0
             resueltas_fallidas = 0
             total_partidas_agregadas = 0
+            omitidas_sin_partidas = 0
             errores = []
 
             logger.info(f"🤖 Resolviendo TODAS las discrepancias del proyecto {proyecto_id} con IA...")
+
+            # Importar resolver una sola vez
+            from src.llm_v2.discrepancy_resolver import DiscrepancyResolver
+            resolver = DiscrepancyResolver()
 
             # Resolver discrepancias en capítulos
             for capitulo in proyecto.capitulos:
                 if (capitulo.total and capitulo.total_calculado and
                     abs(float(capitulo.total) - float(capitulo.total_calculado)) > 0.01):
+
+                    # VALIDACIÓN: Solo resolver si el capítulo tiene partidas directas
+                    # (no solo subcapítulos hijos)
+                    num_partidas_directas = self.session.query(Partida).join(Subcapitulo).filter(
+                        Subcapitulo.capitulo_id == capitulo.id
+                    ).count()
+
+                    if num_partidas_directas == 0:
+                        logger.info(f"  ⏭️  Omitiendo capítulo {capitulo.codigo} (sin partidas directas)")
+                        omitidas_sin_partidas += 1
+                        continue
+
+                    # VALIDACIÓN ADICIONAL: Verificar en el texto PDF si hay códigos hijos
+                    # Esto previene duplicaciones cuando el capítulo tiene subcapítulos en el PDF
+                    # pero no están registrados en la BD
+                    texto_pdf = resolver._extract_text_from_pdf(pdf_path, capitulo.codigo, proyecto_id)
+
+                    if texto_pdf and resolver._detectar_codigos_hijos_en_texto(texto_pdf, capitulo.codigo):
+                        logger.info(f"  ⏭️  Omitiendo capítulo {capitulo.codigo} (tiene subcapítulos hijos en el PDF)")
+                        omitidas_sin_partidas += 1
+                        continue
 
                     logger.info(f"  Resolviendo capítulo {capitulo.codigo}...")
                     resultado = await self.resolver_discrepancia_con_ia(
@@ -783,10 +815,30 @@ class DatabaseManagerV2:
                         resueltas_fallidas += 1
                         errores.append(f"Capítulo {capitulo.codigo}: {resultado.get('error', 'Error desconocido')}")
 
-                # Resolver discrepancias en subcapítulos
+            # Resolver discrepancias en subcapítulos (LOOP SEPARADO)
+            for capitulo in proyecto.capitulos:
                 for subcapitulo in capitulo.subcapitulos:
                     if (subcapitulo.total and subcapitulo.total_calculado and
                         abs(float(subcapitulo.total) - float(subcapitulo.total_calculado)) > 0.01):
+
+                        # VALIDACIÓN: Solo resolver si el subcapítulo tiene partidas directas
+                        # (no solo subcapítulos hijos)
+                        num_partidas_directas = len(subcapitulo.partidas)
+
+                        if num_partidas_directas == 0:
+                            logger.info(f"  ⏭️  Omitiendo subcapítulo {subcapitulo.codigo} (sin partidas directas)")
+                            omitidas_sin_partidas += 1
+                            continue
+
+                        # VALIDACIÓN ADICIONAL: Verificar en el texto PDF si hay códigos hijos
+                        # Esto previene duplicaciones cuando el subcapítulo tiene hijos en el PDF
+                        # pero no están registrados en la BD
+                        texto_pdf = resolver._extract_text_from_pdf(pdf_path, subcapitulo.codigo, proyecto_id)
+
+                        if texto_pdf and resolver._detectar_codigos_hijos_en_texto(texto_pdf, subcapitulo.codigo):
+                            logger.info(f"  ⏭️  Omitiendo subcapítulo {subcapitulo.codigo} (tiene subcapítulos hijos en el PDF)")
+                            omitidas_sin_partidas += 1
+                            continue
 
                         logger.info(f"  Resolviendo subcapítulo {subcapitulo.codigo}...")
                         resultado = await self.resolver_discrepancia_con_ia(
@@ -803,12 +855,14 @@ class DatabaseManagerV2:
             logger.info(f"✓ Resolución bulk completada:")
             logger.info(f"  Exitosas: {resueltas_exitosas}")
             logger.info(f"  Fallidas: {resueltas_fallidas}")
+            logger.info(f"  Omitidas (sin partidas directas): {omitidas_sin_partidas}")
             logger.info(f"  Total partidas agregadas: {total_partidas_agregadas}")
 
             return {
                 'success': True,
                 'resueltas_exitosas': resueltas_exitosas,
                 'resueltas_fallidas': resueltas_fallidas,
+                'omitidas_sin_partidas': omitidas_sin_partidas,
                 'total_partidas_agregadas': total_partidas_agregadas,
                 'errores': errores
             }
@@ -821,7 +875,9 @@ class DatabaseManagerV2:
                 'error': str(e),
                 'resueltas_exitosas': 0,
                 'resueltas_fallidas': 0,
-                'total_partidas_agregadas': 0
+                'omitidas_sin_partidas': 0,
+                'total_partidas_agregadas': 0,
+                'errores': []
             }
 
     def _guardar_capitulo(self, proyecto_id: int, cap_data: Dict, orden: int) -> Capitulo:
@@ -1022,10 +1078,13 @@ class DatabaseManagerV2:
             .first()
         )
 
-        # Ordenar subcapítulos por nivel y orden para mantener jerarquía visual
+        # Ordenar capítulos y subcapítulos por nivel y orden para mantener jerarquía visual
         if proyecto:
+            # Ordenar capítulos por código numérico (01, 02, 03, etc.)
+            proyecto.capitulos.sort(key=lambda c: c.orden or 0)
+
             for capitulo in proyecto.capitulos:
-                # Ordenar por orden para mantener la secuencia correcta
+                # Ordenar subcapítulos por orden para mantener la secuencia correcta
                 capitulo.subcapitulos.sort(key=lambda s: s.orden or 0)
 
         return proyecto

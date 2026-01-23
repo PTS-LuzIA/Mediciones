@@ -210,8 +210,14 @@ class PartidaParserV2_4Fases:
 
         inicio = datetime.now()
 
-        # Paso 2.1: Obtener líneas del PDF (ya las tenemos de Fase 1)
+        # Paso 2.1: Obtener líneas del PDF
         logger.info("  📋 Paso 2.1: Obteniendo líneas del PDF...")
+
+        # Si no se ejecutó Fase 1 antes, inicializar pdf_extractor
+        if self.pdf_extractor is None:
+            logger.info("    ⚠️ PDF extractor no inicializado, inicializando ahora...")
+            self.pdf_extractor = PDFExtractor(str(self.pdf_path))
+
         datos_pdf = self.pdf_extractor.extraer_todo()
         lineas = datos_pdf['all_lines']
         logger.info(f"    ✓ {len(lineas)} líneas a clasificar")
@@ -405,23 +411,9 @@ class PartidaParserV2_4Fases:
                     subcapitulo_actual = nuevo_subcapitulo
 
             elif tipo == TipoLinea.PARTIDA_HEADER:
-                # CERRAR PARTIDA ANTERIOR
-                if partida_actual:
-                    # Finalizar partida anterior si existe
-                    if partida_actual['descripcion_lineas']:
-                        partida_actual['descripcion'] = ' '.join(partida_actual['descripcion_lineas'])
-
-                    # Solo agregar si tiene importe > 0
-                    if partida_actual['importe'] > 0:
-                        if subcapitulo_actual:
-                            subcapitulo_actual['partidas'].append(partida_actual)
-                        elif capitulo_actual:
-                            capitulo_actual['partidas'].append(partida_actual)
-                        logger.debug(f"Partida completada: {partida_actual['codigo']} = {partida_actual['importe']}")
-                    else:
-                        logger.debug(f"Partida rechazada (importe 0): {partida_actual['codigo']}")
-
-                    partida_actual = None
+                # CERRAR PARTIDA ANTERIOR usando helper
+                self._cerrar_partida(partida_actual, subcapitulo_actual, capitulo_actual)
+                partida_actual = None  # Importante: limpiar referencia
 
                 # VALIDAR CÓDIGO ANTES DE CREAR PARTIDA
                 codigo = datos.get('codigo', '')
@@ -462,28 +454,16 @@ class PartidaParserV2_4Fases:
                 # CREAR NUEVA PARTIDA
                 partida_actual = {
                     'codigo': codigo,
-                    'unidad': datos.get('unidad', ''),
+                    'unidad': self._normalizar_unidad(datos.get('unidad', '')),
                     'resumen': datos.get('resumen', ''),
                     'descripcion': '',
                     'descripcion_lineas': [],
                     'cantidad': cantidad,
                     'precio': precio,
-                    'importe': importe
+                    'importe': importe,
+                    'orden': 0
                 }
-                logger.debug(f"Partida iniciada: {partida_actual['codigo']}")
-
-                # Si el header ya tiene datos numéricos completos, finalizar inmediatamente
-                if importe > 0 and cantidad > 0 and precio > 0:
-                    partida_actual['descripcion'] = partida_actual['resumen']
-
-                    # Agregar partida al contexto actual
-                    if subcapitulo_actual:
-                        subcapitulo_actual['partidas'].append(partida_actual)
-                    elif capitulo_actual:
-                        capitulo_actual['partidas'].append(partida_actual)
-
-                    logger.debug(f"Partida completada (inline): {partida_actual['codigo']} = {partida_actual['importe']}")
-                    partida_actual = None
+                logger.debug(f"Partida iniciada: {partida_actual['codigo']} (importe inicial: {importe})")
 
             elif tipo == TipoLinea.PARTIDA_DESCRIPCION:
                 # Agregar línea de descripción
@@ -492,48 +472,38 @@ class PartidaParserV2_4Fases:
                     partida_actual['descripcion_lineas'].append(desc_texto)
 
             elif tipo == TipoLinea.PARTIDA_DATOS:
-                # Finalizar partida con datos numéricos
+                # SOLO ACTUALIZAR valores numéricos (NO cerrar partida)
+                # La partida se cerrará con el siguiente PARTIDA_HEADER, TOTAL o fin del loop
                 if partida_actual:
-                    # Extraer números
-                    partida_actual['cantidad'] = self._limpiar_numero(datos.get('cantidad_str', '0'))
-                    partida_actual['precio'] = self._limpiar_numero(datos.get('precio_str', '0'))
-                    partida_actual['importe'] = self._limpiar_numero(datos.get('importe_str', '0'))
+                    # Extraer números de la línea
+                    cantidad = self._limpiar_numero(datos.get('cantidad_str', '0'))
+                    precio = self._limpiar_numero(datos.get('precio_str', '0'))
+                    importe = self._limpiar_numero(datos.get('importe_str', '0'))
 
-                    # Construir descripción completa
-                    if partida_actual['descripcion_lineas']:
-                        partida_actual['descripcion'] = ' '.join(partida_actual['descripcion_lineas'])
-
-                    # Solo agregar si importe > 0
-                    if partida_actual['importe'] > 0:
-                        # Determinar dónde agregar la partida (al último subcapítulo o capítulo)
-                        if subcapitulo_actual:
-                            subcapitulo_actual['partidas'].append(partida_actual)
-                        elif capitulo_actual:
-                            capitulo_actual['partidas'].append(partida_actual)
-                        logger.debug(f"Partida completada: {partida_actual['codigo']} = {partida_actual['importe']}")
+                    # SOLUCIÓN 3: Solo actualizar si la partida actual NO tiene valores válidos
+                    # Esto previene sobrescribir valores correctos con datos de otra partida
+                    # que no fue detectada como PARTIDA_HEADER (ej: partidas sin unidad antes de Solución 2)
+                    if partida_actual['importe'] == 0 or partida_actual['importe'] is None:
+                        # Partida sin valores: actualizar normalmente
+                        partida_actual['cantidad'] = cantidad if cantidad else 0.0
+                        partida_actual['precio'] = precio if precio else 0.0
+                        partida_actual['importe'] = importe if importe else 0.0
+                        logger.debug(f"Partida actualizada con datos: {partida_actual['codigo']} = {importe}")
                     else:
-                        logger.debug(f"Partida rechazada (importe 0): {partida_actual['codigo']}")
-
-                    partida_actual = None
+                        # Partida YA tiene valores: probablemente sea una partida nueva sin unidad
+                        # que no fue detectada como PARTIDA_HEADER
+                        logger.warning(
+                            f"⚠️ PARTIDA_DATOS ignorada: partida actual '{partida_actual['codigo']}' "
+                            f"ya tiene importe={partida_actual['importe']}. "
+                            f"Los datos (cantidad={cantidad}, precio={precio}, importe={importe}) "
+                            f"probablemente pertenecen a una partida sin unidad no detectada."
+                        )
+                    # ❌ NO cerrar partida aquí - puede haber más líneas de descripción después
 
             elif tipo == TipoLinea.TOTAL:
-                # CERRAR PARTIDA ACTUAL antes de procesar TOTAL
-                if partida_actual:
-                    # Finalizar partida anterior si existe
-                    if partida_actual['descripcion_lineas']:
-                        partida_actual['descripcion'] = ' '.join(partida_actual['descripcion_lineas'])
-
-                    # Solo agregar si tiene importe > 0
-                    if partida_actual['importe'] > 0:
-                        if subcapitulo_actual:
-                            subcapitulo_actual['partidas'].append(partida_actual)
-                        elif capitulo_actual:
-                            capitulo_actual['partidas'].append(partida_actual)
-                        logger.debug(f"Partida completada al encontrar TOTAL: {partida_actual['codigo']} = {partida_actual['importe']}")
-                    else:
-                        logger.debug(f"Partida rechazada al encontrar TOTAL (importe 0): {partida_actual['codigo']}")
-
-                    partida_actual = None
+                # CERRAR PARTIDA ACTUAL antes de procesar TOTAL usando helper
+                self._cerrar_partida(partida_actual, subcapitulo_actual, capitulo_actual)
+                partida_actual = None
 
                 # IMPORTANTE: Cerrar también el subcapítulo/apartado actual
                 # El TOTAL marca el fin de una sección jerárquica
@@ -574,7 +544,48 @@ class PartidaParserV2_4Fases:
                         else:
                             subcapitulo_actual = None
 
+        # Cerrar última partida si existe (al final del loop)
+        self._cerrar_partida(partida_actual, subcapitulo_actual, capitulo_actual)
+
         return estructura
+
+    def _cerrar_partida(self, partida_actual: Dict, subcapitulo_actual: Dict, capitulo_actual: Dict):
+        """
+        Helper: cierra y guarda una partida en la estructura correcta
+        Realiza validaciones finales antes de añadir la partida
+        """
+        if not partida_actual:
+            return
+
+        # VALIDACIÓN FINAL: Rechazar partidas con importe 0
+        if partida_actual.get('importe', 0) == 0:
+            logger.debug(f"⚠️ Partida descartada (importe 0): {partida_actual.get('codigo', 'SIN_CODIGO')}")
+            return
+
+        # VALIDACIÓN FINAL: Rechazar partidas con código inválido
+        codigo = partida_actual.get('codigo', '')
+        if not codigo or len(codigo) <= 2 or not any(c.isdigit() for c in codigo):
+            logger.debug(f"⚠️ Partida descartada (código inválido): {codigo}")
+            return
+
+        # Crear copia para no modificar el original (por si se vuelve a usar)
+        partida_final = dict(partida_actual)
+
+        # Reconstruir descripción
+        if partida_final.get('descripcion_lineas'):
+            partida_final['descripcion'] = ' '.join(partida_final['descripcion_lineas'])
+
+        # Eliminar campo temporal descripcion_lineas
+        if 'descripcion_lineas' in partida_final:
+            del partida_final['descripcion_lineas']
+
+        # Añadir a la estructura correcta
+        if subcapitulo_actual:
+            subcapitulo_actual['partidas'].append(partida_final)
+            logger.debug(f"✓ Partida guardada en subcapítulo {subcapitulo_actual['codigo']}: {codigo} = {partida_final['importe']}")
+        elif capitulo_actual:
+            capitulo_actual['partidas'].append(partida_final)
+            logger.debug(f"✓ Partida guardada en capítulo {capitulo_actual['codigo']}: {codigo} = {partida_final['importe']}")
 
     def _contar_partidas_recursivo(self, estructura: Dict) -> int:
         """Cuenta partidas recursivamente"""
@@ -591,6 +602,41 @@ class PartidaParserV2_4Fases:
             total += len(sub.get('partidas', []))
             total += self._contar_partidas_en_elemento(sub)
         return total
+
+    def _normalizar_unidad(self, unidad: str) -> str:
+        """
+        Normaliza la unidad para asegurar que sea válida y no exceda 20 caracteres.
+
+        Args:
+            unidad: Unidad raw del parser
+
+        Returns:
+            Unidad normalizada (máximo 20 caracteres)
+        """
+        if not unidad or not isinstance(unidad, str):
+            return "X"
+
+        # Limpiar espacios
+        unidad = unidad.strip()
+
+        # Si es demasiado larga (probablemente una descripción), intentar extraer la unidad
+        if len(unidad) > 20:
+            # Intentar extraer unidades comunes al inicio
+            unidades_comunes = ['m3', 'm2', 'ml', 'ud', 'kg', 'pa', 'h', 'm', 't', 'l', 'uR', 'u20R']
+            for u in unidades_comunes:
+                if unidad.lower().startswith(u.lower()):
+                    logger.warning(f"Unidad truncada: '{unidad}' -> '{u}'")
+                    return u
+
+            # Si no encontramos una unidad común, usar "X"
+            logger.warning(f"Unidad inválida (demasiado larga): '{unidad}' -> 'X'")
+            return "X"
+
+        # Si está vacía
+        if not unidad:
+            return "X"
+
+        return unidad
 
     def _limpiar_numero(self, texto: str) -> float:
         """

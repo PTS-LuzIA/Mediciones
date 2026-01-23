@@ -67,6 +67,7 @@ class PartidaResponse(BaseModel):
     id: int
     codigo: str
     unidad: Optional[str]
+    resumen: Optional[str]
     descripcion: Optional[str]
     cantidad_total: Decimal
     precio: Decimal
