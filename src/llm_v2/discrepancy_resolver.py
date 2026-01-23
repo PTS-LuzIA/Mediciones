@@ -447,13 +447,19 @@ INSTRUCCIONES:
 IMPORTANTE:
 - NO incluyas partidas que YA están extraídas (códigos: {', '.join(codigos_existentes[:10])})
 - Los códigos de partidas pueden ser de cualquier formato (ej: "01.02.03", "m23U01A010", etc.)
-- Extrae: código, unidad, cantidad, precio, importe
+- Extrae: código, unidad, resumen, descripción, cantidad, precio, importe
 - El importe debe ser: cantidad × precio
 - UNIDAD: Extrae SOLO el código de unidad (máximo 10 caracteres):
   * Ejemplos válidos: "ud", "m2", "m3", "kg", "m", "h", "t", "l", "pa"
   * NO extraigas descripciones largas
   * Si la unidad aparece en el texto como "m3 EXCAVACIÓN...", extrae solo "m3"
   * Si no encuentras una unidad válida, usa "ud" por defecto
+- RESUMEN: Título corto de la partida (máximo 80 caracteres, en mayúsculas)
+  * Ejemplo: "EXCAVACIÓN EN ZANJA TERRENOS COMPACTOS"
+- DESCRIPCIÓN: Texto técnico completo de la partida (puede tener varias líneas)
+  * Ejemplo: "Excavación en zanjas, en terrenos compactos, por medios mecánicos..."
+  * Une todas las líneas de descripción en un solo texto
+  * Limpia guiones de separación de palabras (ej: "me- dios" → "medios")
 - Si no encuentras partidas faltantes, devuelve un array vacío
 
 Responde SOLO en JSON válido:
@@ -462,6 +468,8 @@ Responde SOLO en JSON válido:
     {{
       "codigo": "01.02.03",
       "unidad": "m2",
+      "resumen": "EXCAVACIÓN EN ZANJA TERRENOS COMPACTOS",
+      "descripcion": "Excavación en zanjas, en terrenos compactos, por medios mecánicos, incluso perfilado de fondos y laterales, extracción de tierras fuera de la excavación, y carga sobre camión o contenedor.",
       "cantidad": 150.5,
       "precio": 12.50,
       "importe": 1881.25
@@ -525,10 +533,16 @@ Responde SOLO en JSON válido:
             unidad_raw = partida.get('unidad', 'ud')
             unidad = self._normalizar_unidad(unidad_raw)
 
+            # NUEVO: Extraer resumen y descripción (SOLUCIÓN 5)
+            resumen = partida.get('resumen', '').strip()
+            descripcion = partida.get('descripcion', '').strip()
+
             # Normalizar partida
             partida_normalizada = {
                 'codigo': partida['codigo'],
                 'unidad': unidad,
+                'resumen': resumen,  # NUEVO
+                'descripcion': descripcion,  # NUEVO
                 'cantidad': float(partida.get('cantidad', 0)),
                 'precio': float(partida.get('precio', 0)),
                 'importe': float(partida['importe'])

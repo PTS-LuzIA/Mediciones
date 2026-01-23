@@ -331,6 +331,27 @@ class LineClassifier:
                     codigo_detectado = linea_candidata[:mejor_corte]
                     titulo_detectado = linea_candidata[mejor_corte:]
 
+                    # SOLUCIÓN 1: Validar que el código NO termine con palabra completa larga
+                    # Si el código termina con patrón "...123PALABRA", probablemente "PALABRA" es parte del resumen
+                    # Ejemplo: "APUDm23E01AAMuVd010TUERCA" → "010TUERCA" indica que TUERCA es parte del resumen
+                    patron_palabra_pegada = re.compile(r'[0-9_][A-Z]{5,}$')
+                    if patron_palabra_pegada.search(codigo_detectado):
+                        logger.debug(f"Código candidato tiene palabra pegada al final: '{codigo_detectado}'")
+                        # Buscar la transición anterior (número → letra mayúscula)
+                        for j in range(len(codigo_detectado) - 2, max(0, len(codigo_detectado) - 15), -1):
+                            if codigo_detectado[j].isdigit() and codigo_detectado[j+1].isupper():
+                                # Ajustar el corte: código hasta el número, resto es resumen
+                                codigo_ajustado = codigo_detectado[:j+1]
+                                palabra_pegada = codigo_detectado[j+1:]
+                                titulo_ajustado = palabra_pegada + ' ' + titulo_detectado
+
+                                logger.info(f"🔧 Código corregido: '{codigo_detectado}' → '{codigo_ajustado}'")
+                                logger.info(f"   Resumen reconstruido: '{titulo_ajustado[:50]}...'")
+
+                                codigo_detectado = codigo_ajustado
+                                titulo_detectado = titulo_ajustado
+                                break
+
                     # Validar que el código sea razonable (8-25 caracteres)
                     logger.debug(f"Código candidato detectado: '{codigo_detectado}' (longitud={len(codigo_detectado)})")
                     if 8 <= len(codigo_detectado) <= 25:
@@ -422,10 +443,43 @@ class LineClassifier:
                 }
             }
 
-        # 6b. Verificar si es partida SIN UNIDAD (solapamiento) y sin números
+        # 6b. PRIORIDAD: Si hay partida activa, verificar si es descripción ANTES de detectar nueva partida
+        # SOLUCIÓN 2: Evita que líneas de descripción se clasifiquen erróneamente como partidas
+        if contexto and contexto.get('partida_activa'):
+            # Verificar si la línea tiene indicadores FUERTES de ser una partida nueva
+            # (no solo una descripción que empieza con mayúscula)
+            primera_palabra = linea.split()[0] if linea.split() else ''
+
+            # Lista de palabras comunes en descripciones (NO son códigos de partida)
+            palabras_descripcion = {
+                'Placa', 'Sistema', 'Hormigón', 'Mortero', 'Pintura', 'Tubería', 'Cable',
+                'Demolición', 'Excavación', 'Relleno', 'Pavimento', 'Revestimiento',
+                'Instalación', 'Suministro', 'Transporte', 'Carga', 'Descarga',
+                'Fábrica', 'Tabique', 'Solera', 'Cimentación', 'Estructura',
+                'Carpintería', 'Cerrajería', 'Fontanería', 'Electricidad',
+                'Albañilería', 'Acabados', 'Impermeabilización', 'Aislamiento'
+            }
+
+            # Indicadores de que NO es una partida nueva (es descripción):
+            # 1. Primera palabra es común en descripciones
+            # 2. Primera palabra es corta (< 8 caracteres)
+            # 3. No tiene números al final (cantidad/precio/importe)
+            tiene_numeros_al_final = bool(cls.PATRON_NUMEROS_FINAL.search(linea))
+            es_palabra_descriptiva = primera_palabra in palabras_descripcion
+            codigo_corto = len(primera_palabra) < 8
+
+            # Si no tiene números al final Y (palabra descriptiva O código corto)
+            # entonces es descripción, no partida nueva
+            if not tiene_numeros_al_final and (es_palabra_descriptiva or codigo_corto):
+                return {
+                    'tipo': TipoLinea.PARTIDA_DESCRIPCION,
+                    'datos': {'texto': linea}
+                }
+
+        # 6c. Verificar si es partida SIN UNIDAD (solapamiento) y sin números
         # Formato: "APUDes23UA014e LEVANTADO DE BORDILLO" (sin números al final)
-        # FLEXIBILIZADO: Acepta cualquier contenido después del código
-        patron_sin_unidad = re.compile(r'^([A-Z][A-Za-z0-9_]{4,})\s+(.+)$')
+        # SOLUCIÓN 3: Validaciones MÁS ESTRICTAS para evitar falsos positivos
+        patron_sin_unidad = re.compile(r'^([A-Z][A-Za-z0-9_]{7,})\s+(.+)$')  # Mínimo 8 caracteres (era 5)
         match_sin_unidad = patron_sin_unidad.match(linea)
 
         if match_sin_unidad:
@@ -438,14 +492,28 @@ class LineClassifier:
             # Patrón para detectar números con formato de importe español (ej: 29.672,05)
             patron_importe = re.compile(r'^\d+(?:\.\d{3})*,\d{2}$')
 
+            # SOLUCIÓN 3: Verificar que el código tenga números intercalados (no solo letras)
+            tiene_numeros = any(c.isdigit() for c in codigo_detectado)
+
+            # Lista de palabras que NO son códigos de partida
+            palabras_comunes = {
+                'Placa', 'Sistema', 'Hormigón', 'Mortero', 'Pintura', 'Tubería', 'Cable',
+                'Demolición', 'Excavación', 'Relleno', 'Pavimento', 'Revestimiento',
+                'Instalación', 'Suministro', 'Transporte', 'Carga', 'Descarga'
+            }
+
             # NO procesar si:
-            # - El código es demasiado corto (< 5 chars)
+            # - El código es demasiado corto (< 8 chars) [MEJORADO: era 5]
+            # - El código NO tiene números intercalados [NUEVO]
+            # - El código es una palabra común [NUEVO]
             # - El código termina en punto (105/2008.)
             # - El código tiene guion seguido de mayúscula (NTE-ADD)
             # - El código es una unidad
             # - El código es un número con formato de importe (ej: 29.672,05)
             # - El título no tiene al menos 2 palabras
-            if (len(codigo_detectado) >= 5 and
+            if (len(codigo_detectado) >= 8 and
+                tiene_numeros and
+                codigo_detectado not in palabras_comunes and
                 not codigo_detectado.endswith('.') and
                 '-' not in codigo_detectado[-4:] and
                 not unidades_comunes.match(codigo_detectado) and
@@ -469,7 +537,7 @@ class LineClassifier:
         if cls._es_header_tabla(linea):
             return {'tipo': TipoLinea.HEADER_TABLA, 'datos': None}
 
-        # 8. Si tiene contexto de partida activa, es DESCRIPCIÓN
+        # 8. Si tiene contexto de partida activa, es DESCRIPCIÓN (fallback)
         if contexto and contexto.get('partida_activa'):
             return {
                 'tipo': TipoLinea.PARTIDA_DESCRIPCION,

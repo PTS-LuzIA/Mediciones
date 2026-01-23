@@ -825,26 +825,25 @@ class PartidaParserV2_4Fases:
 
     def ejecutar_fase4(self):
         """
-        FASE 4: Completar descripciones faltantes (opcional)
+        FASE 4: Completar descripciones faltantes
 
-        En V2 las descripciones ya se extraen en Fase 2,
-        así que esta fase es principalmente para estadísticas
+        MEJORADO: Ahora extrae descripciones del texto original para partidas sin descripción
         """
         logger.info("")
         logger.info("🔧 " + "=" * 70)
-        logger.info("🔧 [FASE 4/4] Completando Descripciones (Opcional)")
+        logger.info("🔧 [FASE 4/4] Completando Descripciones desde Texto Extraído")
         logger.info("🔧 " + "=" * 70)
 
         inicio = datetime.now()
 
-        if not self.fase2_resultado:
-            logger.warning("  ⚠️  Fase 2 no completada, saltando Fase 4")
+        if not self.fase2_resultado or not self.fase1_resultado:
+            logger.warning("  ⚠️  Fase 1 o 2 no completadas, saltando Fase 4")
             self.fase4_resultado = {'saltada': True}
             return
 
         estructura = self.fase2_resultado['estructura_completa']
 
-        logger.info("  📝 Verificando descripciones de partidas...")
+        logger.info("  📝 Paso 4.1: Verificando descripciones de partidas...")
 
         total_partidas = 0
         con_descripcion = 0
@@ -856,19 +855,60 @@ class PartidaParserV2_4Fases:
             con_descripcion += stats['con_desc']
             sin_descripcion += stats['sin_desc']
 
-        porcentaje = (con_descripcion / total_partidas * 100) if total_partidas > 0 else 0
+        porcentaje_inicial = (con_descripcion / total_partidas * 100) if total_partidas > 0 else 0
 
         logger.info(f"    • Total partidas: {total_partidas}")
-        logger.info(f"    • Con descripción: {con_descripcion} ({porcentaje:.1f}%)")
+        logger.info(f"    • Con descripción: {con_descripcion} ({porcentaje_inicial:.1f}%)")
         logger.info(f"    • Sin descripción: {sin_descripcion}")
+
+        # NUEVO: Recuperar descripciones del texto extraído
+        descripciones_recuperadas = 0
+        con_descripcion_final = con_descripcion
+        sin_descripcion_final = sin_descripcion
+        porcentaje_final = porcentaje_inicial
+
+        if sin_descripcion > 0:
+            logger.info("")
+            logger.info(f"  🔍 Paso 4.2: Recuperando {sin_descripcion} descripciones del texto extraído...")
+
+            # Cargar texto extraído
+            texto_file = self.fase1_resultado.get('archivo_texto')
+            if not texto_file or not Path(texto_file).exists():
+                logger.warning("    ⚠️  Archivo de texto extraído no encontrado")
+            else:
+                with open(texto_file, 'r', encoding='utf-8') as f:
+                    lineas_texto = f.readlines()
+
+                descripciones_recuperadas = self._recuperar_descripciones_desde_texto(
+                    estructura,
+                    lineas_texto
+                )
+
+                logger.info(f"    ✓ Descripciones recuperadas: {descripciones_recuperadas}")
+
+                # Recontar después de recuperación
+                con_descripcion_final = 0
+                sin_descripcion_final = 0
+                for cap in estructura.get('capitulos', []):
+                    stats = self._contar_descripciones_recursivo(cap)
+                    con_descripcion_final += stats['con_desc']
+                    sin_descripcion_final += stats['sin_desc']
+
+                porcentaje_final = (con_descripcion_final / total_partidas * 100) if total_partidas > 0 else 0
+
+                logger.info(f"    • Con descripción (después): {con_descripcion_final} ({porcentaje_final:.1f}%)")
+                logger.info(f"    • Sin descripción (después): {sin_descripcion_final}")
 
         duracion = (datetime.now() - inicio).total_seconds()
 
         self.fase4_resultado = {
             'total_partidas': total_partidas,
-            'con_descripcion': con_descripcion,
-            'sin_descripcion': sin_descripcion,
-            'porcentaje_completado': porcentaje,
+            'con_descripcion_inicial': con_descripcion,
+            'sin_descripcion_inicial': sin_descripcion,
+            'con_descripcion_final': con_descripcion_final,
+            'sin_descripcion_final': sin_descripcion_final,
+            'descripciones_recuperadas': descripciones_recuperadas,
+            'porcentaje_completado': porcentaje_final,
             'duracion_segundos': duracion
         }
 
@@ -895,6 +935,165 @@ class PartidaParserV2_4Fases:
             sin_desc += stats['sin_desc']
 
         return {'total': total, 'con_desc': con_desc, 'sin_desc': sin_desc}
+
+    def _recuperar_descripciones_desde_texto(self, estructura: Dict, lineas_texto: List[str]) -> int:
+        """
+        Recupera descripciones faltantes del texto extraído
+
+        Estrategia:
+        1. Para cada partida sin descripción
+        2. Buscar su código en el texto extraído
+        3. Capturar las líneas siguientes hasta encontrar otra partida o un TOTAL
+        4. Limpiar y unir las líneas
+        5. Actualizar la descripción en la estructura
+
+        Args:
+            estructura: Estructura de capítulos/subcapítulos/partidas
+            lineas_texto: Líneas del archivo de texto extraído
+
+        Returns:
+            Número de descripciones recuperadas
+        """
+        import re
+
+        recuperadas = 0
+
+        # Crear mapa de líneas por número para búsqueda rápida
+        lineas_map = {}
+        for linea in lineas_texto:
+            # Formato: "  123: contenido de la línea"
+            match = re.match(r'\s*(\d+):\s*(.*)$', linea)
+            if match:
+                num_linea = int(match.group(1))
+                contenido = match.group(2)
+                lineas_map[num_linea] = contenido
+
+        # Patrones para detectar fin de descripción
+        patron_partida = re.compile(r'^[A-Z0-9][A-Za-z0-9_]{3,}\s+')
+        patron_total = re.compile(r'^TOTAL\s+', re.IGNORECASE)
+        patron_capitulo = re.compile(r'^(CAPÍTULO|SUBCAPÍTULO|APARTADO|\d{1,2}(?:\.\d{1,2})*)\s+', re.IGNORECASE)
+
+        # Iterar sobre todas las partidas recursivamente
+        for cap in estructura.get('capitulos', []):
+            recuperadas += self._recuperar_descripciones_en_elemento(
+                cap, lineas_map, patron_partida, patron_total, patron_capitulo
+            )
+
+        return recuperadas
+
+    def _recuperar_descripciones_en_elemento(
+        self,
+        elemento: Dict,
+        lineas_map: Dict[int, str],
+        patron_partida,
+        patron_total,
+        patron_capitulo
+    ) -> int:
+        """Recupera descripciones recursivamente en un elemento"""
+        recuperadas = 0
+
+        # Procesar partidas del elemento
+        for partida in elemento.get('partidas', []):
+            # Solo procesar si NO tiene descripción
+            if not partida.get('descripcion', '').strip():
+                codigo = partida.get('codigo', '')
+                if not codigo:
+                    continue
+
+                # Buscar código en el texto
+                descripcion_extraida = self._extraer_descripcion_para_codigo(
+                    codigo,
+                    lineas_map,
+                    patron_partida,
+                    patron_total,
+                    patron_capitulo
+                )
+
+                if descripcion_extraida:
+                    partida['descripcion'] = descripcion_extraida
+                    recuperadas += 1
+                    logger.debug(f"  ✓ Descripción recuperada para {codigo}: {descripcion_extraida[:50]}...")
+
+        # Recursivo en subcapítulos
+        for sub in elemento.get('subcapitulos', []):
+            recuperadas += self._recuperar_descripciones_en_elemento(
+                sub, lineas_map, patron_partida, patron_total, patron_capitulo
+            )
+
+        return recuperadas
+
+    def _extraer_descripcion_para_codigo(
+        self,
+        codigo: str,
+        lineas_map: Dict[int, str],
+        patron_partida,
+        patron_total,
+        patron_capitulo
+    ) -> str:
+        """
+        Extrae la descripción de una partida específica del texto
+
+        Args:
+            codigo: Código de la partida
+            lineas_map: Mapa de número de línea → contenido
+            patron_partida, patron_total, patron_capitulo: Patrones regex para detectar fin
+
+        Returns:
+            Descripción extraída o string vacío
+        """
+        import re
+
+        # Buscar línea que contiene el código de la partida
+        linea_partida = None
+        for num_linea, contenido in lineas_map.items():
+            if codigo in contenido:
+                # Verificar que es realmente el inicio de la partida (no parte de descripción)
+                if contenido.strip().startswith(codigo):
+                    linea_partida = num_linea
+                    break
+
+        if not linea_partida:
+            return ''
+
+        # Capturar las líneas siguientes (hasta 10 líneas o hasta encontrar fin)
+        lineas_descripcion = []
+        max_lineas = 10
+
+        for offset in range(1, max_lineas + 1):
+            num_siguiente = linea_partida + offset
+            if num_siguiente not in lineas_map:
+                break
+
+            linea = lineas_map[num_siguiente].strip()
+
+            # Detectar fin de descripción
+            if not linea:
+                # Línea vacía: continuar (puede haber saltos)
+                continue
+
+            if patron_partida.match(linea):
+                # Nueva partida: terminar
+                break
+
+            if patron_total.match(linea):
+                # Total: terminar
+                break
+
+            if patron_capitulo.match(linea):
+                # Nuevo capítulo/subcapítulo: terminar
+                break
+
+            # Agregar línea a la descripción
+            lineas_descripcion.append(linea)
+
+        # Unir y limpiar
+        if lineas_descripcion:
+            descripcion = ' '.join(lineas_descripcion)
+            # Limpiar guiones de separación de palabras
+            descripcion = descripcion.replace('- ', '')
+            return descripcion.strip()
+
+        return ''
 
     # ================================================================
     # COMPILAR RESULTADO FINAL

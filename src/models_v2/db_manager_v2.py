@@ -671,11 +671,22 @@ class DatabaseManagerV2:
                 ).first()
 
                 if partida_existente:
-                    # Actualizar partida existente (sin resumen ni descripcion)
+                    # Actualizar partida existente
+                    # SOLUCIÓN 5: Actualizar también resumen y descripción si vienen del LLM
                     partida_existente.unidad = partida_data.get('unidad', 'ud')
                     partida_existente.cantidad_total = Decimal(str(partida_data.get('cantidad', 0)))
                     partida_existente.precio = Decimal(str(partida_data.get('precio', 0)))
                     partida_existente.importe = Decimal(str(partida_data['importe']))
+
+                    # Si el LLM proporcionó resumen/descripción Y la partida NO los tiene, actualizarlos
+                    if partida_data.get('resumen') and not partida_existente.resumen:
+                        partida_existente.resumen = partida_data['resumen']
+                        logger.info(f"    ✓ Resumen agregado: {partida_data['resumen'][:40]}...")
+
+                    if partida_data.get('descripcion') and not partida_existente.descripcion:
+                        partida_existente.descripcion = partida_data['descripcion']
+                        logger.info(f"    ✓ Descripción agregada: {partida_data['descripcion'][:40]}...")
+
                     partidas_actualizadas += 1
                     logger.info(f"  ↻ Actualizada: {partida_data['codigo']}")
                 else:
@@ -705,10 +716,13 @@ class DatabaseManagerV2:
                         logger.warning(f"      Se omite la creación de la partida duplicada")
                     else:
                         # Crear nueva partida (realmente nueva)
+                        # SOLUCIÓN 5: Incluir resumen y descripción del LLM
                         partida = Partida(
                             subcapitulo_id=subcap_destino.id,
                             codigo=partida_data['codigo'],
                             unidad=partida_data.get('unidad', 'ud'),
+                            resumen=partida_data.get('resumen', ''),  # NUEVO
+                            descripcion=partida_data.get('descripcion', ''),  # NUEVO
                             cantidad_total=Decimal(str(cantidad_ia)),
                             precio=Decimal(str(precio_ia)),
                             importe=Decimal(str(importe_ia)),
