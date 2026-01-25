@@ -478,7 +478,7 @@ async def ejecutar_fase1(
                 raise HTTPException(400, "PDF no encontrado")
 
             # Ejecutar SOLO Fase 1
-            parser = PartidaParserV2_4Fases(pdf_path, current_user['id'], proyecto_id)
+            parser = PartidaParserV2_4Fases(pdf_path, current_user['user_id'], proyecto_id)
             parser.ejecutar_fase1()
 
             # GUARDAR EN BD - Fase 1
@@ -536,7 +536,7 @@ async def ejecutar_fase2(
                 raise HTTPException(400, "PDF no encontrado")
 
             # Ejecutar Fase 1 + 2
-            parser = PartidaParserV2_4Fases(pdf_path, current_user['id'], proyecto_id)
+            parser = PartidaParserV2_4Fases(pdf_path, current_user['user_id'], proyecto_id)
             parser.ejecutar_fase1()
             parser.ejecutar_fase2()
 
@@ -586,7 +586,7 @@ async def ejecutar_fase3(
                 raise HTTPException(400, "PDF no encontrado")
 
             # Ejecutar Fase 1 + 2 + 3
-            parser = PartidaParserV2_4Fases(pdf_path, current_user['id'], proyecto_id)
+            parser = PartidaParserV2_4Fases(pdf_path, current_user['user_id'], proyecto_id)
             parser.ejecutar_fase1()
             parser.ejecutar_fase2()
             parser.ejecutar_fase3()
@@ -646,7 +646,7 @@ async def ejecutar_fase4(
                 raise HTTPException(400, "PDF no encontrado")
 
             # Ejecutar TODAS las fases
-            parser = PartidaParserV2_4Fases(pdf_path, current_user['id'], proyecto_id)
+            parser = PartidaParserV2_4Fases(pdf_path, current_user['user_id'], proyecto_id)
             resultado = parser.parsear()  # Ejecuta las 4 fases
 
             # Fase 4: Completar descripciones si es necesario
