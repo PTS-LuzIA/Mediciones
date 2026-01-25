@@ -596,6 +596,8 @@ class DatabaseManagerV2:
                 {
                     'codigo': p.codigo,
                     'resumen': p.resumen,
+                    'cantidad': float(p.cantidad_total) if p.cantidad_total else 0,
+                    'precio': float(p.precio) if p.precio else 0,
                     'importe': float(p.importe) if p.importe else 0
                 }
                 for p in partidas
@@ -893,6 +895,26 @@ class DatabaseManagerV2:
                                 if intento == max_intentos:  # Solo contar como fallo en último intento
                                     resueltas_fallidas += 1
                                     errores.append(f"Subcapítulo {subcapitulo.codigo}: {resultado.get('error', 'Error desconocido')}")
+
+                # CRÍTICO: Recalcular totales después de agregar partidas
+                # Sin esto, el segundo intento verá las mismas discrepancias porque total_calculado no se actualiza
+                if intento < max_intentos and discrepancias_procesadas_en_intento > 0:
+                    logger.info(f"\n{'='*60}")
+                    logger.info(f"🔄 Recalculando totales después del intento {intento}...")
+                    logger.info(f"{'='*60}\n")
+
+                    resultado_fase3 = self.actualizar_fase3(proyecto_id, {})
+                    num_discrepancias_restantes = len(resultado_fase3['discrepancias'])
+
+                    logger.info(f"✓ Recálculo completado:")
+                    logger.info(f"  Discrepancias restantes: {num_discrepancias_restantes}")
+                    logger.info(f"  Total original: {resultado_fase3['total_original']:,.2f} €")
+                    logger.info(f"  Total calculado: {resultado_fase3['total_calculado']:,.2f} €\n")
+
+                    # Si no quedan discrepancias, salir del loop
+                    if num_discrepancias_restantes == 0:
+                        logger.info(f"✓ Todas las discrepancias resueltas después del intento {intento}")
+                        break
 
                 # Si no se procesó ninguna discrepancia en este intento, salir del loop
                 if discrepancias_procesadas_en_intento == 0:

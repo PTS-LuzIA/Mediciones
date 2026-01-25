@@ -415,6 +415,10 @@ IMPORTANTE:
 - Los códigos de partidas pueden ser de cualquier formato (ej: "01.02.03", "m23U01A010", etc.)
 - Extrae: código, unidad, resumen, descripción, cantidad, precio, importe
 - El importe debe ser: cantidad × precio
+
+IMPORTANTE - SOBRE DUPLICADOS:
+- Si encuentras partidas con el mismo importe/cantidad/precio pero códigos diferentes, probablemente son duplicados
+- NO agregues partidas que tengan valores idénticos a las ya extraídas, aunque el código sea ligeramente diferente
 - UNIDAD: Extrae SOLO el código de unidad (máximo 10 caracteres):
   * Ejemplos válidos: "ud", "m2", "m3", "kg", "m", "h", "t", "l", "pa"
   * NO extraigas descripciones largas
