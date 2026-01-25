@@ -603,11 +603,21 @@ class DatabaseManagerV2:
                 for p in partidas
             ]
 
-            # Extraer user_id del nombre del PDF (formato: {user_id}_{nombre}.pdf)
+            # Extraer user_id del nombre del PDF
+            # Formatos soportados:
+            # - Nuevo: u{user_id}_p{proyecto_id}_{nombre}.pdf → extraer de "u{user_id}"
+            # - Antiguo: {user_id}_{nombre}.pdf → extraer primer número
             import os
+            import re
             pdf_filename = os.path.basename(pdf_path)
             try:
-                user_id = int(pdf_filename.split('_')[0])
+                # Intentar formato nuevo: u{user_id}_p{proyecto_id}_
+                match = re.match(r'u(\d+)_p(\d+)_', pdf_filename)
+                if match:
+                    user_id = int(match.group(1))
+                else:
+                    # Fallback a formato antiguo: {user_id}_{nombre}
+                    user_id = int(pdf_filename.split('_')[0])
             except (ValueError, IndexError):
                 user_id = 1  # Default si no se puede extraer
 
@@ -792,11 +802,21 @@ class DatabaseManagerV2:
             if not proyecto:
                 raise ValueError(f"Proyecto {proyecto_id} no encontrado")
 
-            # Extraer user_id del nombre del PDF (formato: {user_id}_{nombre}.pdf)
+            # Extraer user_id del nombre del PDF
+            # Formatos soportados:
+            # - Nuevo: u{user_id}_p{proyecto_id}_{nombre}.pdf → extraer de "u{user_id}"
+            # - Antiguo: {user_id}_{nombre}.pdf → extraer primer número
             import os
+            import re
             pdf_filename = os.path.basename(pdf_path)
             try:
-                user_id = int(pdf_filename.split('_')[0])
+                # Intentar formato nuevo: u{user_id}_p{proyecto_id}_
+                match = re.match(r'u(\d+)_p(\d+)_', pdf_filename)
+                if match:
+                    user_id = int(match.group(1))
+                else:
+                    # Fallback a formato antiguo: {user_id}_{nombre}
+                    user_id = int(pdf_filename.split('_')[0])
             except (ValueError, IndexError):
                 user_id = 1  # Default si no se puede extraer
 
