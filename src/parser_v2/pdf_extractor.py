@@ -26,10 +26,13 @@ logger = logging.getLogger(__name__)
 class PDFExtractor:
     """Extrae texto estructurado desde PDFs de mediciones"""
 
-    def __init__(self, pdf_path: str, detect_columns: bool = True, remove_repeated_headers: bool = True):
+    def __init__(self, pdf_path: str, user_id: int, proyecto_id: int,
+                 detect_columns: bool = True, remove_repeated_headers: bool = True):
         """
         Args:
             pdf_path: Ruta al archivo PDF
+            user_id: ID del usuario (REQUERIDO, se incluye en nombres de archivos de log)
+            proyecto_id: ID del proyecto (REQUERIDO, se incluye en nombres de archivos de log)
             detect_columns: Si True, detecta automáticamente layouts de múltiples columnas
                            y extrae cada columna por separado usando bounding boxes
             remove_repeated_headers: Si True, elimina cabeceras repetidas después de la primera aparición
@@ -44,6 +47,8 @@ class PDFExtractor:
         self.remove_repeated_headers = remove_repeated_headers
         self.column_detector = ColumnDetector() if detect_columns else None
         self.layout_info = []  # Información de layout por página
+        self.user_id = user_id
+        self.proyecto_id = proyecto_id
 
         # Patrones comunes de cabeceras que se repiten en cada página
         # Se usan patrones genéricos que aplican a la mayoría de presupuestos
@@ -71,7 +76,20 @@ class PDFExtractor:
         # CACHÉ: Verificar si ya existe el texto extraído del PDF
         nombre_pdf = self.pdf_path.stem
         cache_dir = Path('logs/extracted_pdfs')
-        cache_file = cache_dir / f"{nombre_pdf}_extracted.txt"
+
+        # Limpiar nombre del PDF: si empieza con "user_id_", quitarlo para evitar duplicados
+        # Ejemplo: "1_PROYECTO..." -> "PROYECTO..."
+        nombre_limpio = nombre_pdf
+        if '_' in nombre_pdf:
+            first_part = nombre_pdf.split('_')[0]
+            if first_part.isdigit() and int(first_part) == self.user_id:
+                # Quitar el prefijo "user_id_"
+                nombre_limpio = '_'.join(nombre_pdf.split('_')[1:])
+
+        # Construir nombre de archivo de caché SIEMPRE incluyendo user_id y proyecto_id
+        # Formato: u{user_id}_p{proyecto_id}_{nombre_limpio}_extracted.txt
+        cache_filename = f"u{self.user_id}_p{self.proyecto_id}_{nombre_limpio}_extracted.txt"
+        cache_file = cache_dir / cache_filename
 
         if cache_file.exists():
             logger.info(f"✓ Usando texto cacheado: {cache_file}")
