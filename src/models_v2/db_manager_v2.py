@@ -774,6 +774,8 @@ class DatabaseManagerV2:
         Returns:
             Dict con estadísticas de resolución
         """
+        import time
+
         try:
             proyecto = self.session.query(Proyecto).filter_by(id=proyecto_id).first()
             if not proyecto:
@@ -791,86 +793,119 @@ class DatabaseManagerV2:
             from src.llm_v2.discrepancy_resolver import DiscrepancyResolver
             resolver = DiscrepancyResolver()
 
-            # Resolver discrepancias en capítulos
-            for capitulo in proyecto.capitulos:
-                if (capitulo.total and capitulo.total_calculado and
-                    abs(float(capitulo.total) - float(capitulo.total_calculado)) > 0.01):
+            # Sistema de reintentos: máximo 2 intentos
+            max_intentos = 2
 
-                    # VALIDACIÓN: Solo resolver si el capítulo tiene partidas directas
-                    # (no solo subcapítulos hijos)
-                    num_partidas_directas = self.session.query(Partida).join(Subcapitulo).filter(
-                        Subcapitulo.capitulo_id == capitulo.id
-                    ).count()
+            for intento in range(1, max_intentos + 1):
+                if intento > 1:
+                    # Recargar proyecto para obtener estado actualizado
+                    self.session.expire_all()
+                    proyecto = self.session.query(Proyecto).filter_by(id=proyecto_id).first()
 
-                    if num_partidas_directas == 0:
-                        logger.info(f"  ⏭️  Omitiendo capítulo {capitulo.codigo} (sin partidas directas)")
-                        omitidas_sin_partidas += 1
-                        continue
+                    logger.info(f"\n{'='*60}")
+                    logger.info(f"🔄 REINTENTO {intento}/{max_intentos}: Verificando discrepancias restantes...")
+                    logger.info(f"{'='*60}\n")
+                    time.sleep(2)  # Delay entre reintentos
 
-                    # VALIDACIÓN ADICIONAL: Verificar en el texto PDF si hay códigos hijos
-                    # Esto previene duplicaciones cuando el capítulo tiene subcapítulos en el PDF
-                    # pero no están registrados en la BD
-                    texto_pdf = resolver._extract_text_from_pdf(pdf_path, capitulo.codigo, proyecto_id)
+                discrepancias_procesadas_en_intento = 0
 
-                    if texto_pdf and resolver._detectar_codigos_hijos_en_texto(texto_pdf, capitulo.codigo):
-                        logger.info(f"  ⏭️  Omitiendo capítulo {capitulo.codigo} (tiene subcapítulos hijos en el PDF)")
-                        omitidas_sin_partidas += 1
-                        continue
+                # Resolver discrepancias en capítulos
+                for capitulo in proyecto.capitulos:
+                    if (capitulo.total and capitulo.total_calculado and
+                        abs(float(capitulo.total) - float(capitulo.total_calculado)) > 0.01):
 
-                    logger.info(f"  Resolviendo capítulo {capitulo.codigo}...")
-                    resultado = await self.resolver_discrepancia_con_ia(
-                        proyecto_id, "capitulo", capitulo.id, pdf_path
-                    )
-
-                    if resultado['success']:
-                        resueltas_exitosas += 1
-                        total_partidas_agregadas += resultado['partidas_agregadas']
-                    else:
-                        resueltas_fallidas += 1
-                        errores.append(f"Capítulo {capitulo.codigo}: {resultado.get('error', 'Error desconocido')}")
-
-            # Resolver discrepancias en subcapítulos (LOOP SEPARADO)
-            for capitulo in proyecto.capitulos:
-                for subcapitulo in capitulo.subcapitulos:
-                    if (subcapitulo.total and subcapitulo.total_calculado and
-                        abs(float(subcapitulo.total) - float(subcapitulo.total_calculado)) > 0.01):
-
-                        # VALIDACIÓN: Solo resolver si el subcapítulo tiene partidas directas
+                        # VALIDACIÓN: Solo resolver si el capítulo tiene partidas directas
                         # (no solo subcapítulos hijos)
-                        num_partidas_directas = len(subcapitulo.partidas)
+                        num_partidas_directas = self.session.query(Partida).join(Subcapitulo).filter(
+                            Subcapitulo.capitulo_id == capitulo.id
+                        ).count()
 
                         if num_partidas_directas == 0:
-                            logger.info(f"  ⏭️  Omitiendo subcapítulo {subcapitulo.codigo} (sin partidas directas)")
-                            omitidas_sin_partidas += 1
+                            if intento == 1:  # Solo contar omisiones en primer intento
+                                logger.info(f"  ⏭️  Omitiendo capítulo {capitulo.codigo} (sin partidas directas)")
+                                omitidas_sin_partidas += 1
                             continue
 
                         # VALIDACIÓN ADICIONAL: Verificar en el texto PDF si hay códigos hijos
-                        # Esto previene duplicaciones cuando el subcapítulo tiene hijos en el PDF
+                        # Esto previene duplicaciones cuando el capítulo tiene subcapítulos en el PDF
                         # pero no están registrados en la BD
-                        texto_pdf = resolver._extract_text_from_pdf(pdf_path, subcapitulo.codigo, proyecto_id)
+                        texto_pdf = resolver._extract_text_from_pdf(pdf_path, capitulo.codigo, proyecto_id)
 
-                        if texto_pdf and resolver._detectar_codigos_hijos_en_texto(texto_pdf, subcapitulo.codigo):
-                            logger.info(f"  ⏭️  Omitiendo subcapítulo {subcapitulo.codigo} (tiene subcapítulos hijos en el PDF)")
-                            omitidas_sin_partidas += 1
+                        if texto_pdf and resolver._detectar_codigos_hijos_en_texto(texto_pdf, capitulo.codigo):
+                            if intento == 1:  # Solo contar omisiones en primer intento
+                                logger.info(f"  ⏭️  Omitiendo capítulo {capitulo.codigo} (tiene subcapítulos hijos en el PDF)")
+                                omitidas_sin_partidas += 1
                             continue
 
-                        logger.info(f"  Resolviendo subcapítulo {subcapitulo.codigo}...")
+                        logger.info(f"  [Intento {intento}/{max_intentos}] Resolviendo capítulo {capitulo.codigo}...")
+                        discrepancias_procesadas_en_intento += 1
+
                         resultado = await self.resolver_discrepancia_con_ia(
-                            proyecto_id, "subcapitulo", subcapitulo.id, pdf_path
+                            proyecto_id, "capitulo", capitulo.id, pdf_path
                         )
 
                         if resultado['success']:
                             resueltas_exitosas += 1
                             total_partidas_agregadas += resultado['partidas_agregadas']
                         else:
-                            resueltas_fallidas += 1
-                            errores.append(f"Subcapítulo {subcapitulo.codigo}: {resultado.get('error', 'Error desconocido')}")
+                            if intento == max_intentos:  # Solo contar como fallo en último intento
+                                resueltas_fallidas += 1
+                                errores.append(f"Capítulo {capitulo.codigo}: {resultado.get('error', 'Error desconocido')}")
 
+                # Resolver discrepancias en subcapítulos (LOOP SEPARADO)
+                for capitulo in proyecto.capitulos:
+                    for subcapitulo in capitulo.subcapitulos:
+                        if (subcapitulo.total and subcapitulo.total_calculado and
+                            abs(float(subcapitulo.total) - float(subcapitulo.total_calculado)) > 0.01):
+
+                            # VALIDACIÓN: Solo resolver si el subcapítulo tiene partidas directas
+                            # (no solo subcapítulos hijos)
+                            num_partidas_directas = len(subcapitulo.partidas)
+
+                            if num_partidas_directas == 0:
+                                if intento == 1:  # Solo contar omisiones en primer intento
+                                    logger.info(f"  ⏭️  Omitiendo subcapítulo {subcapitulo.codigo} (sin partidas directas)")
+                                    omitidas_sin_partidas += 1
+                                continue
+
+                            # VALIDACIÓN ADICIONAL: Verificar en el texto PDF si hay códigos hijos
+                            # Esto previene duplicaciones cuando el subcapítulo tiene hijos en el PDF
+                            # pero no están registrados en la BD
+                            texto_pdf = resolver._extract_text_from_pdf(pdf_path, subcapitulo.codigo, proyecto_id)
+
+                            if texto_pdf and resolver._detectar_codigos_hijos_en_texto(texto_pdf, subcapitulo.codigo):
+                                if intento == 1:  # Solo contar omisiones en primer intento
+                                    logger.info(f"  ⏭️  Omitiendo subcapítulo {subcapitulo.codigo} (tiene subcapítulos hijos en el PDF)")
+                                    omitidas_sin_partidas += 1
+                                continue
+
+                            logger.info(f"  [Intento {intento}/{max_intentos}] Resolviendo subcapítulo {subcapitulo.codigo}...")
+                            discrepancias_procesadas_en_intento += 1
+
+                            resultado = await self.resolver_discrepancia_con_ia(
+                                proyecto_id, "subcapitulo", subcapitulo.id, pdf_path
+                            )
+
+                            if resultado['success']:
+                                resueltas_exitosas += 1
+                                total_partidas_agregadas += resultado['partidas_agregadas']
+                            else:
+                                if intento == max_intentos:  # Solo contar como fallo en último intento
+                                    resueltas_fallidas += 1
+                                    errores.append(f"Subcapítulo {subcapitulo.codigo}: {resultado.get('error', 'Error desconocido')}")
+
+                # Si no se procesó ninguna discrepancia en este intento, salir del loop
+                if discrepancias_procesadas_en_intento == 0:
+                    logger.info(f"✓ Todas las discrepancias resueltas en intento {intento}")
+                    break
+
+            logger.info(f"\n{'='*60}")
             logger.info(f"✓ Resolución bulk completada:")
             logger.info(f"  Exitosas: {resueltas_exitosas}")
             logger.info(f"  Fallidas: {resueltas_fallidas}")
             logger.info(f"  Omitidas (sin partidas directas): {omitidas_sin_partidas}")
             logger.info(f"  Total partidas agregadas: {total_partidas_agregadas}")
+            logger.info(f"{'='*60}\n")
 
             return {
                 'success': True,

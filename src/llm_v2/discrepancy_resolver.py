@@ -100,60 +100,26 @@ class DiscrepancyResolver:
         Extrae SOLO el texto del subcapítulo específico del PDF.
         Busca desde el código del subcapítulo hasta su línea TOTAL.
 
-        IMPORTANTE: Reutiliza el texto extraído en Fase 2 (logs/extracted_full_text_*.txt)
-        en lugar de volver a procesar el PDF.
+        IMPORTANTE: NO usa cache. Siempre extrae de nuevo con el extractor actual
+        para garantizar que usa las últimas mejoras (column fix, etc.)
         """
         import re
-        import glob
 
         try:
-            # PRIORIDAD 1: Buscar texto extraído en Fase 2
-            nombre_pdf_completo = os.path.basename(pdf_path).replace('.pdf', '')
+            # Extraer TODO el texto del PDF con el extractor actual (sin cache)
+            logger.info(f"🔄 Extrayendo texto de '{os.path.basename(pdf_path)}' sin cache (garantiza últimas mejoras)")
 
-            # IMPORTANTE: El PDF guardado tiene formato "{user_id}_{nombre_original}.pdf"
-            # pero el archivo de texto no tiene ese prefijo. Necesitamos quitarlo.
-            # Ejemplo: "7_PRESUPUESTOS.pdf" -> nombre_pdf = "PRESUPUESTOS"
-            if '_' in nombre_pdf_completo:
-                # Quitar el prefijo "{user_id}_" si existe
-                partes = nombre_pdf_completo.split('_', 1)
-                if partes[0].isdigit():  # Verificar que sea un ID numérico
-                    nombre_pdf = partes[1]
-                else:
-                    nombre_pdf = nombre_pdf_completo
-            else:
-                nombre_pdf = nombre_pdf_completo
+            from src.parser_v2.pdf_extractor import PDFExtractor
 
-            # Buscar patrón: logs/extracted_full_text_{proyecto_id}_{nombre_pdf}.txt
-            if proyecto_id:
-                texto_fase2 = f"logs/extracted_full_text_{proyecto_id}_{nombre_pdf}.txt"
-                if os.path.exists(texto_fase2):
-                    logger.info(f"✓ Reutilizando texto de Fase 2: {texto_fase2}")
-                    with open(texto_fase2, 'r', encoding='utf-8') as f:
-                        all_lines = [line.rstrip('\n') for line in f.readlines()]
-                else:
-                    # Buscar sin proyecto_id
-                    patron = f"logs/extracted_full_text_*_{nombre_pdf}.txt"
-                    archivos = glob.glob(patron)
-                    if archivos:
-                        texto_fase2 = archivos[0]
-                        logger.info(f"✓ Reutilizando texto de Fase 2: {texto_fase2}")
-                        with open(texto_fase2, 'r', encoding='utf-8') as f:
-                            all_lines = [line.rstrip('\n') for line in f.readlines()]
-                    else:
-                        logger.warning(f"⚠️ No se encontró texto de Fase 2. Esto no debería pasar.")
-                        return ""
-            else:
-                # Sin proyecto_id, buscar cualquier archivo
-                patron = f"logs/extracted_full_text_*_{nombre_pdf}.txt"
-                archivos = glob.glob(patron)
-                if archivos:
-                    texto_fase2 = archivos[0]
-                    logger.info(f"✓ Reutilizando texto de Fase 2: {texto_fase2}")
-                    with open(texto_fase2, 'r', encoding='utf-8') as f:
-                        all_lines = [line.rstrip('\n') for line in f.readlines()]
-                else:
-                    logger.warning(f"⚠️ No se encontró texto de Fase 2. Esto no debería pasar.")
-                    return ""
+            extractor = PDFExtractor(pdf_path)
+            datos = extractor.extraer_todo()
+            all_lines = datos.get('all_lines', [])
+
+            if not all_lines:
+                logger.error(f"❌ No se pudo extraer texto del PDF: {pdf_path}")
+                return ""
+
+            logger.info(f"✓ Extraídas {len(all_lines)} líneas del PDF (extractor v2 actualizado)")
 
             # Buscar inicio del subcapítulo (código + nombre en la misma línea)
             dentro_seccion = False

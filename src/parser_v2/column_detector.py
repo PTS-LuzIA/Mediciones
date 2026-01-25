@@ -73,19 +73,26 @@ class ColumnDetector:
         column_ranges = []
         prev_x = x_min
 
+        # SOLUCIÓN 1: Margen de seguridad para incluir dígitos en el borde de columna
+        # Problema: En PDFs de 2 columnas, los últimos dígitos decimales (ej: el "5" en "29.672,05")
+        # pueden quedar justo en el borde y ser excluidos por el gap detector.
+        # Solución: Agregar 10 puntos de margen al límite derecho de cada columna.
+        margen_derecho = 10  # puntos de tolerancia
+
         for gap_x in gaps:
             # Verificar que la columna tenga ancho mínimo
             if gap_x - prev_x >= self.min_column_width:
-                column_ranges.append((prev_x, gap_x))
+                # Agregar margen al límite derecho para incluir dígitos en el borde
+                column_ranges.append((prev_x, gap_x + margen_derecho))
                 prev_x = gap_x
 
-        # Última columna
+        # Última columna (también con margen)
         if x_max - prev_x >= self.min_column_width:
-            column_ranges.append((prev_x, x_max))
+            column_ranges.append((prev_x, x_max + margen_derecho))
 
         num_columnas = len(column_ranges)
 
-        logger.info(f"Detectadas {num_columnas} columna(s): {column_ranges}")
+        logger.info(f"Detectadas {num_columnas} columna(s) con margen: {column_ranges}")
 
         return num_columnas, column_ranges
 
