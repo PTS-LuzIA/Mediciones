@@ -348,16 +348,36 @@ async def upload_pdf(
             detail=f"Archivo demasiado grande. Máximo: {settings.MAX_UPLOAD_SIZE / 1024 / 1024:.0f}MB"
         )
 
-    # Guardar archivo
-    upload_path = Path(settings.UPLOAD_DIR) / f"{current_user['user_id']}_{file.filename}"
-
     try:
+        # PASO 1: Crear proyecto vacío primero para obtener proyecto_id
+        nombre_temporal = file.filename.replace('.pdf', '')
+
+        with DatabaseManagerV2() as db:
+            proyecto = db.crear_proyecto_vacio(
+                nombre=nombre_temporal,
+                pdf_path="",  # Se actualizará después
+                filename=file.filename
+            )
+
+        proyecto_id = proyecto.id
+        user_id = current_user['user_id']
+
+        # PASO 2: Guardar archivo con formato: u{user_id}_p{proyecto_id}_{nombre_original}.pdf
+        # Limpiar nombre de archivo original
+        nombre_limpio = file.filename
+        if nombre_limpio.startswith(f"{user_id}_"):
+            # Si ya tiene prefijo user_id, quitarlo
+            nombre_limpio = '_'.join(nombre_limpio.split('_')[1:])
+
+        upload_filename = f"u{user_id}_p{proyecto_id}_{nombre_limpio}"
+        upload_path = Path(settings.UPLOAD_DIR) / upload_filename
+
         with open(upload_path, "wb") as f:
             f.write(contents)
 
-        # Extraer SOLO el nombre del proyecto del PDF (primera línea o título)
+        # PASO 3: Extraer nombre del proyecto del PDF
         try:
-            pdf_extractor = PDFExtractor(str(upload_path))
+            pdf_extractor = PDFExtractor(str(upload_path), user_id, proyecto_id)
             datos_pdf = pdf_extractor.extraer_todo()
             lineas = datos_pdf['all_lines']
 
@@ -372,13 +392,15 @@ async def upload_pdf(
         except:
             nombre_proyecto = file.filename.replace('.pdf', '')
 
-        # Crear proyecto en BD (sin estructura, solo metadata)
+        # PASO 4: Actualizar proyecto con la ruta correcta y nombre extraído
+        from models_v2.db_models_v2 import Proyecto
         with DatabaseManagerV2() as db:
-            proyecto = db.crear_proyecto_vacio(
-                nombre=nombre_proyecto,
-                pdf_path=str(upload_path),
-                filename=file.filename
-            )
+            proyecto_obj = db.session.query(Proyecto).filter_by(id=proyecto_id).first()
+            if proyecto_obj:
+                proyecto_obj.pdf_path = str(upload_path)
+                proyecto_obj.nombre = nombre_proyecto
+                db.session.commit()
+                proyecto = proyecto_obj
 
         logger.info(f"PDF guardado. Proyecto ID: {proyecto.id} - Listo para procesar por fases")
 
