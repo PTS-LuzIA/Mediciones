@@ -603,9 +603,13 @@ class DatabaseManagerV2:
                 for p in partidas
             ]
 
-            # Obtener user_id del proyecto
-            proyecto = self.session.query(Proyecto).filter_by(id=proyecto_id).first()
-            user_id = proyecto.user_id if proyecto else 1
+            # Extraer user_id del nombre del PDF (formato: {user_id}_{nombre}.pdf)
+            import os
+            pdf_filename = os.path.basename(pdf_path)
+            try:
+                user_id = int(pdf_filename.split('_')[0])
+            except (ValueError, IndexError):
+                user_id = 1  # Default si no se puede extraer
 
             # Llamar al LLM
             logger.info(f"🤖 Resolviendo discrepancia en {tipo} {elemento.codigo} con IA...")
@@ -788,7 +792,13 @@ class DatabaseManagerV2:
             if not proyecto:
                 raise ValueError(f"Proyecto {proyecto_id} no encontrado")
 
-            user_id = proyecto.user_id if proyecto else 1
+            # Extraer user_id del nombre del PDF (formato: {user_id}_{nombre}.pdf)
+            import os
+            pdf_filename = os.path.basename(pdf_path)
+            try:
+                user_id = int(pdf_filename.split('_')[0])
+            except (ValueError, IndexError):
+                user_id = 1  # Default si no se puede extraer
 
             resueltas_exitosas = 0
             resueltas_fallidas = 0
