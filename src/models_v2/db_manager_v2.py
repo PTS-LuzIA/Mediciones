@@ -603,6 +603,10 @@ class DatabaseManagerV2:
                 for p in partidas
             ]
 
+            # Obtener user_id del proyecto
+            proyecto = self.session.query(Proyecto).filter_by(id=proyecto_id).first()
+            user_id = proyecto.user_id if proyecto else 1
+
             # Llamar al LLM
             logger.info(f"🤖 Resolviendo discrepancia en {tipo} {elemento.codigo} con IA...")
             resolver = DiscrepancyResolver()
@@ -611,7 +615,8 @@ class DatabaseManagerV2:
                 elemento=elemento_dict,
                 tipo=tipo,
                 partidas_existentes=partidas_existentes,
-                proyecto_id=proyecto_id  # Pasar proyecto_id para reutilizar texto de Fase 2
+                proyecto_id=proyecto_id,  # Pasar proyecto_id para reutilizar texto de Fase 2
+                user_id=user_id  # Pasar user_id para PDFExtractor
             )
 
             if not resultado_llm['success']:

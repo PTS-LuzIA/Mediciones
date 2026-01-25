@@ -111,7 +111,7 @@ class DiscrepancyResolver:
 
             from src.parser_v2.pdf_extractor import PDFExtractor
 
-            extractor = PDFExtractor(pdf_path)
+            extractor = PDFExtractor(pdf_path, user_id, proyecto_id)
             datos = extractor.extraer_todo()
             all_lines = datos.get('all_lines', [])
 
@@ -229,7 +229,8 @@ class DiscrepancyResolver:
         elemento: Dict,
         tipo: str,
         partidas_existentes: List[Dict],
-        proyecto_id: int = None
+        proyecto_id: int = None,
+        user_id: int = 1
     ) -> Dict:
         """
         Resuelve una discrepancia enviando texto del PDF al LLM para encontrar partidas faltantes
@@ -240,6 +241,7 @@ class DiscrepancyResolver:
             tipo: "capitulo" o "subcapitulo"
             partidas_existentes: Lista de partidas ya extraídas
             proyecto_id: ID del proyecto (para reutilizar texto de Fase 2)
+            user_id: ID del usuario (para PDFExtractor)
 
         Returns:
             Dict con partidas encontradas y metadatos
