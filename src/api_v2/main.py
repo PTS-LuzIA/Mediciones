@@ -400,14 +400,13 @@ async def upload_pdf(
                 proyecto_obj.pdf_path = str(upload_path)
                 proyecto_obj.nombre = nombre_proyecto
                 db.session.commit()
-                proyecto = proyecto_obj
 
-        logger.info(f"PDF guardado. Proyecto ID: {proyecto.id} - Listo para procesar por fases")
+        logger.info(f"PDF guardado. Proyecto ID: {proyecto_id} - Listo para procesar por fases")
 
         return UploadResponse(
             success=True,
             message="PDF guardado correctamente. Procesa por fases en la página de edición.",
-            proyecto_id=proyecto.id,
+            proyecto_id=proyecto_id,
             filename=file.filename,
             size_bytes=file_size,
             procesamiento={
