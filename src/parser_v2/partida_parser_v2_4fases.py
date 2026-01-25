@@ -35,9 +35,11 @@ class PartidaParserV2_4Fases:
     Parser con 4 fases idéntico al V1 para debugging paso a paso
     """
 
-    def __init__(self, pdf_path: str):
+    def __init__(self, pdf_path: str, user_id: int = 1, proyecto_id: int = 1):
         self.pdf_path = Path(pdf_path)
         self.pdf_name = self.pdf_path.stem
+        self.user_id = user_id
+        self.proyecto_id = proyecto_id
 
         # Directorio para resultados intermedios
         self.output_dir = Path("logs/parser_v2_fases")
@@ -110,7 +112,7 @@ class PartidaParserV2_4Fases:
 
         # Paso 1.1: Extraer texto del PDF
         logger.info("  📄 Paso 1.1: Extrayendo texto del PDF con pdfplumber...")
-        self.pdf_extractor = PDFExtractor(str(self.pdf_path))
+        self.pdf_extractor = PDFExtractor(str(self.pdf_path), self.user_id, self.proyecto_id)
         datos_pdf = self.pdf_extractor.extraer_todo()
 
         lineas = datos_pdf['all_lines']
