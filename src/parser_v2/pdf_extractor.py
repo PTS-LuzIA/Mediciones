@@ -77,14 +77,23 @@ class PDFExtractor:
         nombre_pdf = self.pdf_path.stem
         cache_dir = Path('logs/extracted_pdfs')
 
-        # Limpiar nombre del PDF: si empieza con "user_id_", quitarlo para evitar duplicados
-        # Ejemplo: "1_PROYECTO..." -> "PROYECTO..."
+        # Limpiar nombre del PDF: quitar prefijos user_id/proyecto_id si existen
+        # Formatos a limpiar:
+        # - Nuevo: u{user_id}_p{proyecto_id}_{nombre} → {nombre}
+        # - Antiguo: {user_id}_{nombre} → {nombre}
+        import re
         nombre_limpio = nombre_pdf
-        if '_' in nombre_pdf:
-            first_part = nombre_pdf.split('_')[0]
-            if first_part.isdigit() and int(first_part) == self.user_id:
-                # Quitar el prefijo "user_id_"
-                nombre_limpio = '_'.join(nombre_pdf.split('_')[1:])
+
+        # Intentar quitar formato nuevo: u{user_id}_p{proyecto_id}_
+        match = re.match(r'u\d+_p\d+_(.+)', nombre_pdf)
+        if match:
+            nombre_limpio = match.group(1)
+        else:
+            # Intentar quitar formato antiguo: {user_id}_
+            if '_' in nombre_pdf:
+                first_part = nombre_pdf.split('_')[0]
+                if first_part.isdigit() and int(first_part) == self.user_id:
+                    nombre_limpio = '_'.join(nombre_pdf.split('_')[1:])
 
         # Construir nombre de archivo de caché SIEMPRE incluyendo user_id y proyecto_id
         # Formato: u{user_id}_p{proyecto_id}_{nombre_limpio}_extracted.txt
