@@ -788,6 +788,8 @@ class DatabaseManagerV2:
             if not proyecto:
                 raise ValueError(f"Proyecto {proyecto_id} no encontrado")
 
+            user_id = proyecto.user_id if proyecto else 1
+
             resueltas_exitosas = 0
             resueltas_fallidas = 0
             total_partidas_agregadas = 0
@@ -836,7 +838,7 @@ class DatabaseManagerV2:
                         # VALIDACIÓN ADICIONAL: Verificar en el texto PDF si hay códigos hijos
                         # Esto previene duplicaciones cuando el capítulo tiene subcapítulos en el PDF
                         # pero no están registrados en la BD
-                        texto_pdf = resolver._extract_text_from_pdf(pdf_path, capitulo.codigo, proyecto_id)
+                        texto_pdf = resolver._extract_text_from_pdf(pdf_path, capitulo.codigo, proyecto_id, user_id)
 
                         if texto_pdf and resolver._detectar_codigos_hijos_en_texto(texto_pdf, capitulo.codigo):
                             if intento == 1:  # Solo contar omisiones en primer intento
@@ -878,7 +880,7 @@ class DatabaseManagerV2:
                             # VALIDACIÓN ADICIONAL: Verificar en el texto PDF si hay códigos hijos
                             # Esto previene duplicaciones cuando el subcapítulo tiene hijos en el PDF
                             # pero no están registrados en la BD
-                            texto_pdf = resolver._extract_text_from_pdf(pdf_path, subcapitulo.codigo, proyecto_id)
+                            texto_pdf = resolver._extract_text_from_pdf(pdf_path, subcapitulo.codigo, proyecto_id, user_id)
 
                             if texto_pdf and resolver._detectar_codigos_hijos_en_texto(texto_pdf, subcapitulo.codigo):
                                 if intento == 1:  # Solo contar omisiones en primer intento

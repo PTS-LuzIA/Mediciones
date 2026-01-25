@@ -95,7 +95,7 @@ class DiscrepancyResolver:
 
         return False
 
-    def _extract_text_from_pdf(self, pdf_path: str, codigo: str, proyecto_id: int = None) -> str:
+    def _extract_text_from_pdf(self, pdf_path: str, codigo: str, proyecto_id: int = None, user_id: int = 1) -> str:
         """
         Extrae SOLO el texto del subcapítulo específico del PDF.
         Busca desde el código del subcapítulo hasta su línea TOTAL.
@@ -253,7 +253,7 @@ class DiscrepancyResolver:
         logger.info(f"   Partidas existentes: {len(partidas_existentes)}")
 
         # Extraer texto relevante del PDF (reutilizando texto de Fase 2)
-        pdf_text = self._extract_text_from_pdf(pdf_path, elemento['codigo'], proyecto_id)
+        pdf_text = self._extract_text_from_pdf(pdf_path, elemento['codigo'], proyecto_id, user_id)
 
         if not pdf_text:
             return {
