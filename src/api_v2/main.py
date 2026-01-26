@@ -375,22 +375,21 @@ async def upload_pdf(
         with open(upload_path, "wb") as f:
             f.write(contents)
 
-        # PASO 3: Extraer nombre del proyecto del PDF
+        # PASO 3: Extraer título del proyecto del PDF usando PDFExtractor
+        nombre_proyecto = file.filename.replace('.pdf', '')  # Fallback por defecto
         try:
             pdf_extractor = PDFExtractor(str(upload_path), user_id, proyecto_id)
             datos_pdf = pdf_extractor.extraer_todo()
-            lineas = datos_pdf['all_lines']
 
-            # Buscar nombre en primeras 10 líneas
-            nombre_proyecto = file.filename.replace('.pdf', '')
-            for linea in lineas[:10]:
-                linea_limpia = linea.strip()
-                # Si es una línea larga con palabras (no solo números/códigos)
-                if len(linea_limpia) > 20 and not linea_limpia.startswith('CAPÍTULO'):
-                    nombre_proyecto = linea_limpia[:100]  # Máximo 100 caracteres
-                    break
-        except:
-            nombre_proyecto = file.filename.replace('.pdf', '')
+            # Usar el título detectado automáticamente por PDFExtractor
+            titulo_detectado = datos_pdf.get('titulo_proyecto')
+            if titulo_detectado:
+                nombre_proyecto = titulo_detectado
+                logger.info(f"📋 Título detectado del PDF: '{titulo_detectado}'")
+            else:
+                logger.warning(f"⚠️ No se pudo detectar título, usando nombre del archivo")
+        except Exception as e:
+            logger.warning(f"⚠️ Error extrayendo título del PDF: {e}")
 
         # PASO 4: Actualizar proyecto con la ruta correcta y nombre extraído
         from models_v2.db_models_v2 import Proyecto
@@ -504,9 +503,11 @@ async def ejecutar_fase1(
 
             # GUARDAR EN BD - Fase 1
             estructura = parser.fase1_resultado.get('estructura', {})
+            titulo_proyecto = parser.fase1_resultado.get('titulo_proyecto')
             metadata = {
                 'layout_detectado': parser.fase1_resultado.get('layout_info', {}).get('total_columnas', 1),
-                'pdf_nombre': Path(pdf_path).name
+                'pdf_nombre': Path(pdf_path).name,
+                'titulo_proyecto': titulo_proyecto  # Pasar el título detectado
             }
 
             # Formatear layout_detectado como string descriptivo

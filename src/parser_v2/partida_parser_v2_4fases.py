@@ -25,7 +25,8 @@ from datetime import datetime
 from .pdf_extractor import PDFExtractor
 from .column_detector import ColumnDetector
 from .line_classifier import LineClassifier, TipoLinea
-from .structure_parser import StructureParser
+from .structure_parser import StructureParser  # Legacy parser (fallback)
+from .orchestrators import Fase1Orchestrator  # Nuevo orquestador modular
 
 logger = logging.getLogger(__name__)
 
@@ -117,9 +118,12 @@ class PartidaParserV2_4Fases:
 
         lineas = datos_pdf['all_lines']
         layout_info = datos_pdf.get('layout_summary', {})
+        titulo_proyecto = datos_pdf.get('titulo_proyecto', None)
 
         logger.info(f"    ✓ Extraídas {len(lineas)} líneas")
         logger.info(f"    ✓ Layout detectado: {layout_info}")
+        if titulo_proyecto:
+            logger.info(f"    📋 Título del proyecto: {titulo_proyecto}")
 
         # Guardar texto extraído para debugging
         texto_file = self.output_dir / f"fase1_texto_extraido_{self.timestamp}.txt"
@@ -132,10 +136,16 @@ class PartidaParserV2_4Fases:
                 f.write(f"{i:5d}: {linea}\n")
         logger.info(f"    💾 Texto guardado: {texto_file}")
 
-        # Paso 1.2: Parsear estructura jerárquica
-        logger.info("  🏗️  Paso 1.2: Parseando estructura jerárquica...")
-        self.structure_parser = StructureParser()
-        estructura = self.structure_parser.parsear(lineas)
+        # Paso 1.2: Parsear estructura jerárquica con orquestador modular
+        logger.info("  🏗️  Paso 1.2: Parseando estructura jerárquica con orquestador...")
+        estructura = Fase1Orchestrator.parsear(lineas)
+
+        # Extraer metadata del formato detectado
+        formato_detectado = estructura.get('metadata', {}).get('formato', 'UNKNOWN')
+        parser_usado = estructura.get('metadata', {}).get('parser_usado', 'UNKNOWN')
+
+        logger.info(f"    📋 Formato detectado: {formato_detectado}")
+        logger.info(f"    🔧 Parser usado: {parser_usado}")
 
         num_caps = len(estructura.get('capitulos', []))
         num_subs = self._contar_subcapitulos_recursivo(estructura)
@@ -160,6 +170,9 @@ class PartidaParserV2_4Fases:
             'estructura': estructura,
             'num_capitulos': num_caps,
             'num_subcapitulos': num_subs,
+            'formato_detectado': formato_detectado,
+            'parser_usado': parser_usado,
+            'titulo_proyecto': titulo_proyecto,
             'layout_info': layout_info,
             'num_lineas': len(lineas),
             'duracion_segundos': duracion,
@@ -284,11 +297,18 @@ class PartidaParserV2_4Fases:
         Construye estructura jerárquica completa con partidas
         (igual que en partida_parser_v2_unified.py)
         """
+        # Preservar metadata de Fase 1 si existe
+        metadata_fase1 = {}
+        if self.fase1_resultado:
+            estructura_fase1 = self.fase1_resultado.get('estructura', {})
+            metadata_fase1 = estructura_fase1.get('metadata', {})
+
         estructura = {
             'capitulos': [],
             'metadata': {
                 'pdf_nombre': self.pdf_path.name,
-                'total_lineas': len(clasificaciones)
+                'total_lineas': len(clasificaciones),
+                **metadata_fase1  # Preservar formato y parser_usado de Fase 1
             }
         }
 
@@ -299,6 +319,13 @@ class PartidaParserV2_4Fases:
 
         # Mapa para niveles multinivel
         subcapitulos_map = {}
+
+        # Obtener lista de subcapítulos válidos de la FASE 1 (si existe)
+        subcapitulos_validos_fase1 = set()
+        if self.fase1_resultado:
+            estructura_fase1 = self.fase1_resultado.get('estructura', {})
+            subcapitulos_validos_fase1 = self._extraer_codigos_subcapitulos_fase1(estructura_fase1)
+            logger.debug(f"Subcapítulos válidos de FASE 1: {sorted(subcapitulos_validos_fase1)}")
 
         for idx, item in enumerate(clasificaciones):
             tipo = item['tipo']
@@ -322,6 +349,30 @@ class PartidaParserV2_4Fases:
             elif tipo == TipoLinea.SUBCAPITULO:
                 codigo = datos.get('codigo', '')
                 nombre = datos.get('nombre', '')
+
+                # VALIDACIÓN: Si tenemos estructura de FASE 1, verificar que el subcapítulo sea válido
+                # O que al menos su padre exista (para permitir códigos de 3+ niveles que son partidas)
+                if subcapitulos_validos_fase1:
+                    # Extraer código padre
+                    partes = codigo.split('.')
+                    if len(partes) >= 2:
+                        codigo_padre = '.'.join(partes[:-1])
+                    else:
+                        codigo_padre = None
+
+                    # Rechazar si:
+                    # 1. No está en la lista de válidos
+                    # 2. Y tampoco su padre está en la lista (si tiene padre)
+                    # Esto permite que códigos de 3+ niveles pasen si su padre es un subcapítulo válido
+                    if codigo not in subcapitulos_validos_fase1:
+                        if len(partes) == 2:
+                            # Nivel 2 (XX.YY): debe estar en la lista
+                            logger.debug(f"Subcapítulo rechazado (no está en FASE 1): {codigo} - {nombre}")
+                            continue
+                        elif codigo_padre and codigo_padre not in subcapitulos_validos_fase1:
+                            # Nivel 3+ (XX.YY.ZZ): su padre debe estar en la lista
+                            logger.debug(f"Subcapítulo rechazado (padre {codigo_padre} no está en FASE 1): {codigo} - {nombre}")
+                            continue
 
                 # Determinar nivel del subcapítulo
                 nivel = codigo.count('.')
@@ -588,6 +639,24 @@ class PartidaParserV2_4Fases:
         elif capitulo_actual:
             capitulo_actual['partidas'].append(partida_final)
             logger.debug(f"✓ Partida guardada en capítulo {capitulo_actual['codigo']}: {codigo} = {partida_final['importe']}")
+
+    def _extraer_codigos_subcapitulos_fase1(self, estructura: Dict) -> set:
+        """
+        Extrae todos los códigos de subcapítulos de la estructura de FASE 1.
+        Esto permite validar que los subcapítulos detectados en FASE 2 son válidos.
+        """
+        codigos = set()
+        for cap in estructura.get('capitulos', []):
+            codigos.update(self._extraer_codigos_de_elemento(cap))
+        return codigos
+
+    def _extraer_codigos_de_elemento(self, elemento: Dict) -> set:
+        """Extrae códigos recursivamente de un elemento"""
+        codigos = set()
+        for sub in elemento.get('subcapitulos', []):
+            codigos.add(sub['codigo'])
+            codigos.update(self._extraer_codigos_de_elemento(sub))
+        return codigos
 
     def _contar_partidas_recursivo(self, estructura: Dict) -> int:
         """Cuenta partidas recursivamente"""
@@ -1128,6 +1197,7 @@ class PartidaParserV2_4Fases:
         metadata = {
             'pdf_nombre': self.pdf_path.name,
             'pdf_path': str(self.pdf_path),
+            'titulo_proyecto': self.fase1_resultado.get('titulo_proyecto') if self.fase1_resultado else None,
             'num_columnas': self.fase1_resultado.get('layout_info', {}).get('total_columnas', 1) if self.fase1_resultado else 1,
             'layout_info': self.fase1_resultado.get('layout_info', {}) if self.fase1_resultado else {},
             'tiempos_fases': tiempos,

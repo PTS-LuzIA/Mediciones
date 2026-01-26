@@ -106,13 +106,31 @@ class PDFExtractor:
                 with open(cache_file, 'r', encoding='utf-8') as f:
                     lineas = [linea.rstrip('\n') for linea in f.readlines()]
 
-                return {
+                # Detectar título del proyecto desde caché
+                titulo_proyecto = None
+                for linea in lineas[:10]:
+                    linea_limpia = linea.strip()
+                    # Buscar línea larga que parezca título (no es cabecera estándar ni código)
+                    if (len(linea_limpia) > 30 and
+                        not linea_limpia.startswith(('CÓDIGO', 'PRESUPUESTO', 'CÓDIGO RESUMEN', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15')) and
+                        linea_limpia not in self.header_patterns):
+                        titulo_proyecto = linea_limpia
+                        logger.info(f"📋 Título del proyecto detectado desde caché: '{titulo_proyecto}'")
+                        break
+
+                resultado = {
                     'metadata': {'archivo': self.pdf_path.name, 'from_cache': True},
                     'pages': [],
                     'all_text': '\n'.join(lineas),
                     'all_lines': lineas,
                     'layout_summary': {'total_columnas': 0, 'paginas_multicolumna': 0}
                 }
+
+                # Añadir título si se detectó
+                if titulo_proyecto:
+                    resultado['titulo_proyecto'] = titulo_proyecto
+
+                return resultado
             except Exception as e:
                 logger.warning(f"⚠️ Error leyendo caché, extrayendo de nuevo: {e}")
 
@@ -154,7 +172,10 @@ class PDFExtractor:
                 # Filtrar cabeceras repetidas si está habilitado
                 if self.remove_repeated_headers:
                     lineas_originales = len(resultado['all_lines'])
-                    resultado['all_lines'] = self._filtrar_cabeceras_repetidas(resultado['all_lines'])
+                    resultado['all_lines'], titulo_proyecto = self._filtrar_cabeceras_repetidas(resultado['all_lines'])
+                    # Guardar el título del proyecto en metadata
+                    if titulo_proyecto:
+                        resultado['titulo_proyecto'] = titulo_proyecto
                     lineas_filtradas = len(resultado['all_lines'])
                     if lineas_filtradas < lineas_originales:
                         logger.info(f"🧹 Cabeceras repetidas eliminadas: {lineas_originales} → {lineas_filtradas} líneas ({lineas_originales - lineas_filtradas} eliminadas)")
@@ -193,7 +214,7 @@ class PDFExtractor:
 
         return resultado
 
-    def _filtrar_cabeceras_repetidas(self, lineas: List[str]) -> List[str]:
+    def _filtrar_cabeceras_repetidas(self, lineas: List[str]):
         """
         Filtra líneas de cabecera que se repiten en múltiples páginas.
         Mantiene solo la primera aparición de cada patrón de cabecera.
@@ -202,11 +223,12 @@ class PDFExtractor:
             lineas: Lista de líneas de texto extraídas
 
         Returns:
-            Lista de líneas filtradas sin cabeceras repetidas
+            Tupla (lista de líneas filtradas, título del proyecto o None)
         """
         # Detectar dinámicamente el nombre del proyecto en las primeras 10 líneas
         # Típicamente aparece después de "PRESUPUESTO" y antes de "CÓDIGO RESUMEN..."
         patrones_dinamicos = list(self.header_patterns)
+        titulo_proyecto = None  # Variable para guardar el título
 
         for i, linea in enumerate(lineas[:10]):
             linea_limpia = linea.strip()
@@ -215,6 +237,9 @@ class PDFExtractor:
                 # Verificar que no sea ya una cabecera conocida
                 if linea_limpia not in patrones_dinamicos:
                     # Es probable que sea el nombre del proyecto
+                    if titulo_proyecto is None:  # Capturar solo el primer título detectado
+                        titulo_proyecto = linea_limpia
+                        logger.info(f"📋 Título del proyecto detectado: '{titulo_proyecto}'")
                     patrones_dinamicos.append(linea_limpia)
                     logger.debug(f"Detectado nombre de proyecto como cabecera: '{linea_limpia[:60]}...'")
 
@@ -223,6 +248,11 @@ class PDFExtractor:
 
         for linea in lineas:
             linea_limpia = linea.strip()
+
+            # IMPORTANTE: NUNCA filtrar líneas que contengan TOTAL (son datos importantes)
+            if linea_limpia.upper().startswith('TOTAL'):
+                lineas_filtradas.append(linea)
+                continue
 
             # Verificar si es una cabecera conocida
             es_cabecera = False
@@ -242,7 +272,7 @@ class PDFExtractor:
             if not es_cabecera:
                 lineas_filtradas.append(linea)
 
-        return lineas_filtradas
+        return lineas_filtradas, titulo_proyecto
 
     def _filtrar_pies_pagina(self, lineas: List[str]) -> List[str]:
         """

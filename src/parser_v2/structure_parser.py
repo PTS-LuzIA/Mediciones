@@ -25,29 +25,39 @@ class StructureParser:
     """
 
     # Patrones para identificar capítulos/subcapítulos
-    # Formato: "01 NOMBRE" o "CAPÍTULO 01 NOMBRE"
+    # Formato: "01 NOMBRE" o "CAPÍTULO 01 NOMBRE" o "CAPÍTULO C01 NOMBRE"
     # Acepta con o sin espacio: "01 NOMBRE" o "01NOMBRE"
-    PATRON_CAPITULO = re.compile(r'^(?:CAPÍTULO\s+)?(\d{1,2})\s*([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑa-záéíóúñ0-9\s\-/\.,:;()]+)$')
+    # MODIFICADO: Ahora acepta códigos alfanuméricos (C01, C10, etc.) además de numéricos
+    PATRON_CAPITULO = re.compile(r'^(?:CAPÍTULO\s+)?([A-Z]?\d{1,2})\s*([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑa-záéíóúñ0-9\s\-/\.,:;()]+)$')
 
-    # Formato: "01.04 NOMBRE" o "SUBCAPÍTULO 01.04 NOMBRE"
-    # Acepta cualquier número de niveles: 01.04, 01.04.01, 01.04.01.01, etc.
-    # Acepta con o sin espacio: "01.04 NOMBRE" o "01.04NOMBRE"
-    PATRON_SUBCAPITULO = re.compile(r'^(?:SUBCAPÍTULO\s+|APARTADO\s+)?(\d{1,2}(?:\.\d{1,2})+)\s*([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑa-záéíóúñ0-9\s\-/\.,:;()]+)$')
+    # Formato: "01.04 NOMBRE" o "SUBCAPÍTULO 01.04 NOMBRE" o "APARTADO 01.04 NOMBRE"
+    # También: "C08.01 NOMBRE" (alfanumérico)
+    # Acepta cualquier número de niveles: 01.04, 01.04.01, 01.04.01.01, C08.01, etc.
+    # IMPORTANTE: Para evitar confundir con partidas, la palabra SUBCAPÍTULO/APARTADO es opcional
+    # pero se debe validar que NO sea una línea de partida (que tiene unidad después del código)
+    # Validación adicional: verificar que no contenga unidades típicas después del código
+    # MODIFICADO: Ahora acepta códigos alfanuméricos (C08.01, C10.02, etc.) además de numéricos
+    PATRON_SUBCAPITULO = re.compile(r'^(?:SUBCAPÍTULO\s+|APARTADO\s+)?([A-Z]?\d{1,2}(?:\.\d{1,2})+)\s+([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑa-záéíóúñ0-9\s\-/\.,:;()]+)$')
 
     # Patrón para líneas TOTAL con código explícito (formato estándar)
     # Ejemplos: "TOTAL SUBCAPÍTULO 01.04.01  12.345,67", "TOTAL CAPÍTULO 01  98.765,43"
+    #           "TOTAL SUBCAPÍTULO C08.01 CALLE TENERIFE... 110.289,85"
+    # También captura el tipo (SUBCAPÍTULO/CAPÍTULO) para poder crear nodos si no existen
+    # MODIFICADO: Ahora acepta códigos alfanuméricos (C08.01, etc.)
     PATRON_TOTAL_CON_CODIGO = re.compile(
-        r'^TOTAL\s+(SUBCAPÍTULO|CAPÍTULO|APARTADO)\s+([\d\.]+)\s+([\d.,]+)\s*$',
+        r'^TOTAL\s+(SUBCAPÍTULO|CAPÍTULO|APARTADO)\s+([A-Z]?[\d\.]+)\s+.*?([\d.,]+)\s*$',
         re.IGNORECASE
     )
 
     # Patrón para líneas TOTAL con código y puntos suspensivos (formato común en PDFs)
     # Ejemplos: "TOTAL 01.04.01....... 49.578,18", "TOTAL 03.06.02.02.01... 8.058,17"
     #           "TOTAL 01............ 123.456,78" (capítulo sin punto)
-    # El código puede ser con o sin puntos: "01" o "01.04.01"
+    #           "TOTAL C08.01........ 110.289,85" (alfanumérico)
+    # El código puede ser con o sin puntos: "01" o "01.04.01" o "C01" o "C08.01"
     # Luego vienen puntos/espacios de relleno, luego el importe
+    # MODIFICADO: Ahora acepta códigos alfanuméricos
     PATRON_TOTAL_CON_PUNTOS = re.compile(
-        r'^TOTAL\s+(\d{1,2}(?:\.\d{1,2})*)[\s\.]+(\d{1,3}(?:\.\d{3})*,\d{2})\s*$',
+        r'^TOTAL\s+([A-Z]?\d{1,2}(?:\.\d{1,2})*)[\s\.]+(\d{1,3}(?:\.\d{3})*,\d{2})\s*$',
         re.IGNORECASE
     )
 
@@ -63,6 +73,7 @@ class StructureParser:
         self.capitulo_actual = None
         self.ultimo_codigo = None  # Para tracking de TOTALes
         self.mapa_nodos = {}  # Mapa código -> nodo para acceso rápido
+        self.formato_explicito = None  # None = auto-detectar, True = usa "CAPÍTULO/SUBCAPÍTULO", False = sin palabras
 
     def parsear(self, lineas: List[str]) -> Dict:
         """
@@ -81,6 +92,10 @@ class StructureParser:
         self.ultimo_codigo = None
         self.mapa_nodos = {}
 
+        # PASO 1: Auto-detectar formato del presupuesto
+        self._detectar_formato(lineas)
+        logger.info(f"  📋 Formato detectado: {'EXPLÍCITO (con CAPÍTULO/SUBCAPÍTULO)' if self.formato_explicito else 'IMPLÍCITO (sin palabras clave)'}")
+
         for i, linea in enumerate(lineas):
             linea = linea.strip()
             if not linea:
@@ -89,22 +104,83 @@ class StructureParser:
             # Intentar detectar capítulo
             match_cap = self.PATRON_CAPITULO.match(linea)
             if match_cap:
-                self._procesar_capitulo(match_cap.group(1), match_cap.group(2).strip())
+                codigo = match_cap.group(1)
+                nombre = match_cap.group(2).strip()
+
+                # Validar que el código sea válido (no "0" o "00")
+                if codigo == '0' or codigo == '00':
+                    logger.debug(f"  ⚠️  Capítulo rechazado (código inválido): {codigo} {nombre}")
+                    continue
+
+                # Validar que el nombre no sea solo un número de página
+                if 'página' in nombre.lower() or 'pagina' in nombre.lower():
+                    logger.debug(f"  ⚠️  Capítulo rechazado (parece número de página): {codigo} {nombre}")
+                    continue
+
+                # NUEVA VALIDACIÓN: Rechazar códigos muy largos (>4 caracteres) o con números después de letra
+                # Ej: "U01AB100" (8 chars), "DEM06" (5 chars) → son códigos de partida, NO capítulos
+                # Los capítulos válidos son: "01", "1", "C01", "C10" (máx 3 chars)
+                if len(codigo) > 3:
+                    logger.debug(f"  ⚠️  Capítulo rechazado (código muy largo, parece partida): {codigo} {nombre}")
+                    continue
+
+                # NUEVA VALIDACIÓN: Si tiene formato CAPÍTULO/SUBCAPÍTULO explícito, debe tener esa palabra
+                # Si NO tiene la palabra y el código es alfanumérico, verificar que no sea una partida
+                if self.formato_explicito and 'CAPÍTULO' not in linea.upper():
+                    logger.debug(f"  ⚠️  Capítulo rechazado (formato explícito sin palabra clave): {codigo} {nombre}")
+                    continue
+
+                self._procesar_capitulo(codigo, nombre)
                 continue
 
             # Intentar detectar subcapítulo
             match_sub = self.PATRON_SUBCAPITULO.match(linea)
             if match_sub:
-                self._procesar_subcapitulo(match_sub.group(1), match_sub.group(2).strip())
+                codigo = match_sub.group(1)
+                nombre = match_sub.group(2).strip()
+
+                # FORMATO EXPLÍCITO: Solo aceptar si la línea contiene "SUBCAPÍTULO" o "APARTADO"
+                if self.formato_explicito:
+                    linea_upper = linea.upper()
+                    if 'SUBCAPÍTULO' not in linea_upper and 'APARTADO' not in linea_upper:
+                        # No tiene la palabra clave → es una partida o línea irrelevante
+                        logger.debug(f"  ⚠️  Línea rechazada como subcapítulo (formato explícito sin palabra clave): {codigo} {nombre}")
+                        continue
+
+                # FORMATO IMPLÍCITO: Validar que no sea una partida
+                else:
+                    # Las partidas tienen formato: "01.04 UD DESCRIPCION" o "01.04 m2 DESCRIPCION"
+                    # donde después del código viene una unidad corta (1-5 caracteres en mayúsculas o minúsculas)
+                    # seguida de un espacio y una descripción más larga
+                    palabras = nombre.split()
+                    es_partida = False
+
+                    if palabras:
+                        primera_palabra = palabras[0].upper()
+                        # Unidades comunes: M, M2, M3, UD, KG, T, PA, H, L, U, ML, etc.
+                        unidades_comunes = ['M', 'M2', 'M3', 'ML', 'UD', 'U', 'KG', 'T', 'TM', 'PA', 'H', 'L',
+                                           'DM2', 'DM3', 'CM2', 'CM3', 'HA', 'KM', 'DM', 'CM', 'MM',
+                                           'KW', 'KWH', 'MWH', 'UR', 'U20R', 'P:A']
+
+                        # Si la primera palabra es una unidad común Y hay más texto después, es probablemente una partida
+                        if primera_palabra in unidades_comunes and len(palabras) > 1:
+                            es_partida = True
+                            logger.debug(f"  ⚠️  Línea rechazada como subcapítulo (parece partida): {codigo} {nombre}")
+
+                    if es_partida:
+                        continue
+
+                # Si pasó todas las validaciones, procesar como subcapítulo
+                self._procesar_subcapitulo(codigo, nombre)
                 continue
 
             # Intentar detectar TOTAL con código explícito (formato estándar)
             match_total_con_codigo = self.PATRON_TOTAL_CON_CODIGO.match(linea)
             if match_total_con_codigo:
-                tipo = match_total_con_codigo.group(1)
+                tipo = match_total_con_codigo.group(1).upper()  # SUBCAPÍTULO, CAPÍTULO o APARTADO
                 codigo = match_total_con_codigo.group(2)
                 total_str = match_total_con_codigo.group(3)
-                self._procesar_total(total_str, codigo_explicito=codigo)
+                self._procesar_total(total_str, codigo_explicito=codigo, tipo=tipo)
                 continue
 
             # Intentar detectar TOTAL con puntos suspensivos (formato común)
@@ -128,6 +204,33 @@ class StructureParser:
         logger.info(f"✓ Parsing completado: {len(self.estructura['capitulos'])} capítulos")
         return self.estructura
 
+    def _detectar_formato(self, lineas: List[str]):
+        """
+        Detecta si el presupuesto usa formato explícito o implícito.
+
+        Formato EXPLÍCITO: usa "CAPÍTULO XX" y "SUBCAPÍTULO XX.YY" (ej: proyecto 16)
+        Formato IMPLÍCITO: no usa esas palabras, solo códigos (ej: proyecto 15)
+
+        Estrategia:
+        - Buscar en las primeras 100 líneas si aparece "CAPÍTULO" o "SUBCAPÍTULO"
+        - Si aparece al menos 2 veces, es formato explícito
+        - Si no, es formato implícito
+        """
+        contador_palabras = 0
+
+        for linea in lineas[:100]:  # Revisar solo primeras 100 líneas
+            linea_upper = linea.upper()
+            if 'CAPÍTULO' in linea_upper or 'SUBCAPÍTULO' in linea_upper or 'APARTADO' in linea_upper:
+                contador_palabras += 1
+
+            # Si encontramos al menos 2 ocurrencias, es formato explícito
+            if contador_palabras >= 2:
+                self.formato_explicito = True
+                return
+
+        # Si no encontramos suficientes ocurrencias, es formato implícito
+        self.formato_explicito = False
+
     def _procesar_capitulo(self, codigo: str, nombre: str):
         """Procesa un capítulo principal"""
         logger.debug(f"  📁 Capítulo detectado: {codigo} - {nombre}")
@@ -149,12 +252,30 @@ class StructureParser:
         """
         Procesa un subcapítulo de cualquier nivel.
         Crea automáticamente niveles intermedios si faltan.
+
+        NUEVA FUNCIONALIDAD: Maneja códigos inconsistentes (ej: CAPÍTULO C01 → SUBCAPÍTULO C08.01)
+        mediante detección contextual - si el prefijo no coincide con el capítulo actual,
+        lo asigna al último capítulo detectado (adopción forzada).
         """
         if not self.capitulo_actual:
             logger.warning(f"⚠️  Subcapítulo {codigo} sin capítulo padre - ignorado")
             return
 
         logger.debug(f"  📂 Subcapítulo detectado: {codigo} - {nombre}")
+
+        # NUEVA VALIDACIÓN: Verificar si el código del subcapítulo es coherente con el capítulo actual
+        # Extraer el prefijo del código del subcapítulo (parte antes del primer punto)
+        partes = codigo.split('.')
+        prefijo_subcap = partes[0] if len(partes) > 1 else None
+        codigo_capitulo = self.capitulo_actual['codigo']
+
+        adopted = False  # Flag para marcar si fue adoptado forzadamente
+
+        if prefijo_subcap and prefijo_subcap != codigo_capitulo:
+            # El prefijo NO coincide con el capítulo actual (ej: C08 vs C01)
+            logger.warning(f"⚠️  Código inconsistente detectado: Subcapítulo {codigo} bajo Capítulo {codigo_capitulo}")
+            logger.warning(f"   → Asignación forzada por contexto (el subcapítulo sigue al capítulo en el documento)")
+            adopted = True
 
         # Asegurar que todos los niveles padres existen
         self._asegurar_niveles_intermedios(codigo)
@@ -168,9 +289,12 @@ class StructureParser:
             'orden': 0  # Se ajustará al agregarlo
         }
 
-        # Determinar dónde agregarlo según el nivel
-        partes = codigo.split('.')
+        # Marcar si fue adoptado forzadamente (para debugging)
+        if adopted:
+            nuevo_sub['_adopted'] = True
+            nuevo_sub['_codigo_capitulo_padre'] = codigo_capitulo
 
+        # Determinar dónde agregarlo según el nivel
         if len(partes) == 2:
             # Nivel 1: agregar directamente al capítulo
             nuevo_sub['orden'] = len(self.capitulo_actual['subcapitulos'])
@@ -236,13 +360,15 @@ class StructureParser:
                 # Registrar en el mapa
                 self.mapa_nodos[codigo_intermedio] = nuevo_nivel
 
-    def _procesar_total(self, total_str: str, codigo_explicito: Optional[str] = None):
+    def _procesar_total(self, total_str: str, codigo_explicito: Optional[str] = None, tipo: Optional[str] = None):
         """
         Procesa una línea TOTAL y la asigna al código correspondiente.
+        Si el nodo no existe y es un SUBCAPÍTULO, lo crea automáticamente.
 
         Args:
             total_str: String con el importe (formato español: 1.234,56)
             codigo_explicito: Si se proporciona, usa este código; si no, usa ultimo_codigo
+            tipo: Tipo de elemento (SUBCAPÍTULO, CAPÍTULO, APARTADO) - usado para crear nodo si no existe
         """
         # Determinar a qué código asignar
         codigo_target = codigo_explicito if codigo_explicito else self.ultimo_codigo
@@ -259,13 +385,21 @@ class StructureParser:
             logger.warning(f"⚠️  No se pudo convertir total: {total_str}")
             return
 
+        # Si el nodo no existe y es un SUBCAPÍTULO, crearlo automáticamente
+        if codigo_target not in self.mapa_nodos:
+            if tipo and tipo in ['SUBCAPÍTULO', 'APARTADO'] and '.' in codigo_target:
+                logger.info(f"  🔧 Creando subcapítulo desde TOTAL: {codigo_target}")
+                # Extraer nombre genérico desde el código
+                nombre_generico = f"{tipo} {codigo_target}"
+                self._procesar_subcapitulo(codigo_target, nombre_generico)
+
         # Asignar al nodo correcto
         if codigo_target in self.mapa_nodos:
             nodo = self.mapa_nodos[codigo_target]
             nodo['total'] = total
             logger.debug(f"  💰 Total asignado a {codigo_target}: {total:.2f} €")
         else:
-            logger.warning(f"⚠️  No se encontró nodo para código {codigo_target}")
+            logger.warning(f"⚠️  No se encontró nodo para código {codigo_target} (tipo: {tipo})")
 
     def _calcular_totales_faltantes(self):
         """

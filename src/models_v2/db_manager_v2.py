@@ -158,6 +158,12 @@ class DatabaseManagerV2:
         # Actualizar metadata
         proyecto.layout_detectado = metadata.get('layout_detectado', 'pendiente')
 
+        # Actualizar título del proyecto si fue detectado
+        titulo_proyecto = metadata.get('titulo_proyecto')
+        if titulo_proyecto:
+            proyecto.nombre = titulo_proyecto
+            logger.info(f"📋 Título del proyecto actualizado: '{titulo_proyecto}'")
+
         # Limpiar datos existentes si los hay (en orden correcto por foreign keys)
         logger.info("🧹 Limpiando datos existentes antes de reprocesar Fase 1...")
 
@@ -1164,12 +1170,13 @@ class DatabaseManagerV2:
     def obtener_proyecto(self, proyecto_id: int) -> Optional[Proyecto]:
         """
         Obtiene un proyecto por ID con eager loading de todas las relaciones
+        y reconstruye la jerarquía anidada desde la estructura plana de BD.
 
         Args:
             proyecto_id: ID del proyecto
 
         Returns:
-            Objeto Proyecto o None
+            Objeto Proyecto con jerarquía reconstruida o None
         """
         from sqlalchemy.orm import joinedload
 
@@ -1186,16 +1193,130 @@ class DatabaseManagerV2:
             .first()
         )
 
-        # Ordenar capítulos y subcapítulos por nivel y orden para mantener jerarquía visual
+        # Ordenar capítulos y reconstruir jerarquía de subcapítulos
         if proyecto:
             # Ordenar capítulos por código numérico (01, 02, 03, etc.)
             proyecto.capitulos.sort(key=lambda c: c.orden or 0)
 
             for capitulo in proyecto.capitulos:
-                # Ordenar subcapítulos por orden para mantener la secuencia correcta
-                capitulo.subcapitulos.sort(key=lambda s: s.orden or 0)
+                # NUEVO: Reconstruir jerarquía anidada desde estructura plana
+                capitulo.subcapitulos = self._reconstruir_jerarquia_subcapitulos(
+                    capitulo.subcapitulos
+                )
 
         return proyecto
+
+    def _reconstruir_jerarquia_subcapitulos(self, subcapitulos_planos: List) -> List:
+        """
+        Reconstruye la jerarquía anidada de subcapítulos desde la estructura plana de BD.
+
+        En BD, todos los subcapítulos están al mismo nivel (mismo capitulo_id) y se
+        distinguen por 'nivel' y 'codigo'. Este método los reorganiza en estructura
+        anidada para la API.
+
+        Ejemplo:
+            BD (plano):
+                - C08.01 (nivel 1)
+                - C08.02 (nivel 1)
+                - C08.08 (nivel 1)
+                - C08.08.01 (nivel 2)  ← hijo de C08.08
+                - C08.08.02 (nivel 2)  ← hijo de C08.08
+
+            Resultado (anidado):
+                - C08.01
+                - C08.02
+                - C08.08
+                  └─ subcapitulos: [C08.08.01, C08.08.02]
+
+        Args:
+            subcapitulos_planos: Lista plana de subcapítulos de la BD
+
+        Returns:
+            Lista con subcapítulos organizados jerárquicamente
+        """
+        if not subcapitulos_planos:
+            return []
+
+        # Ordenar por orden para mantener secuencia correcta
+        subcapitulos_planos.sort(key=lambda s: s.orden or 0)
+
+        # Crear mapa de subcapítulos por código para búsqueda rápida
+        mapa_subs = {sub.codigo: sub for sub in subcapitulos_planos}
+
+        # Encontrar subcapítulos de nivel 1 (raíces)
+        raices = []
+        procesados = set()
+
+        for sub in subcapitulos_planos:
+            # Si ya fue procesado como hijo, saltar
+            if sub.codigo in procesados:
+                continue
+
+            # Determinar si es raíz (nivel 1) o hijo
+            partes = sub.codigo.split('.')
+
+            if len(partes) == 2:
+                # Nivel 1 (ej: C08.01, 01.04) - es raíz
+                # Inicializar lista de subcapítulos hijos (atributo dinámico para la API)
+                if not hasattr(sub, 'subcapitulos') or sub.subcapitulos is None:
+                    sub.subcapitulos = []
+
+                # Buscar y agregar hijos recursivamente
+                self._agregar_hijos_recursivo(sub, mapa_subs, procesados)
+                raices.append(sub)
+                procesados.add(sub.codigo)
+            elif len(partes) > 2:
+                # Nivel 2+ (ej: C08.08.01) - verificar si su padre existe
+                codigo_padre = '.'.join(partes[:-1])
+
+                if codigo_padre not in mapa_subs:
+                    # El padre no existe en BD - tratar como raíz (fallback)
+                    logger.warning(f"Subcapítulo {sub.codigo} sin padre {codigo_padre} - tratando como raíz")
+                    if not hasattr(sub, 'subcapitulos'):
+                        sub.subcapitulos = []
+                    raices.append(sub)
+                    procesados.add(sub.codigo)
+
+        return raices
+
+    def _agregar_hijos_recursivo(self, padre, mapa_subs: Dict, procesados: set):
+        """
+        Agrega recursivamente los hijos de un subcapítulo.
+
+        Args:
+            padre: Subcapítulo padre
+            mapa_subs: Mapa de código → subcapítulo
+            procesados: Set de códigos ya procesados
+        """
+        codigo_padre = padre.codigo
+        nivel_padre = codigo_padre.count('.')
+
+        # Buscar hijos directos (nivel inmediatamente inferior)
+        for codigo_hijo, hijo in mapa_subs.items():
+            # Saltar si ya fue procesado
+            if codigo_hijo in procesados:
+                continue
+
+            # Verificar si es hijo directo
+            partes_hijo = codigo_hijo.split('.')
+            nivel_hijo = len(partes_hijo) - 1
+
+            # Condiciones para ser hijo directo:
+            # 1. Nivel = nivel_padre + 1
+            # 2. Código empieza con codigo_padre + '.'
+            if (nivel_hijo == nivel_padre + 1 and
+                codigo_hijo.startswith(codigo_padre + '.')):
+
+                # Es hijo directo - agregar
+                if not hasattr(hijo, 'subcapitulos'):
+                    hijo.subcapitulos = []
+
+                # Agregar hijos del hijo recursivamente
+                self._agregar_hijos_recursivo(hijo, mapa_subs, procesados)
+
+                # Agregar al padre
+                padre.subcapitulos.append(hijo)
+                procesados.add(codigo_hijo)
 
     def validar_mediciones_proyecto(self, proyecto_id: int) -> Dict:
         """
