@@ -345,7 +345,7 @@ export default function EditarProyectoPage({ params }: { params: { id: string } 
 
   const renderSubcapitulos = (subs: any[], nivel: number) => {
     return subs.map((sub: any, i: number) => (
-      <div key={i} className={`ml-${nivel * 4}`}>
+      <div key={i} style={{ marginLeft: `${nivel * 16}px` }}>
         <div className="text-xs text-gray-800">
           {'  '.repeat(nivel)}└─ SUB {sub.codigo}: {sub.nombre} - {sub.total?.toFixed(2) || '0.00'} €
         </div>
@@ -356,7 +356,7 @@ export default function EditarProyectoPage({ params }: { params: { id: string } 
 
   const renderSubcapitulosConPartidas = (subs: any[], nivel: number) => {
     return subs.map((sub: any, i: number) => (
-      <div key={i} className={`ml-${nivel * 4}`}>
+      <div key={i} style={{ marginLeft: `${nivel * 16}px` }}>
         <div className="text-xs text-gray-800">
           {'  '.repeat(nivel)}└─ SUB {sub.codigo}: {sub.nombre} ({sub.partidas?.length || 0} partidas)
         </div>

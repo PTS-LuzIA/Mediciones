@@ -68,45 +68,8 @@ export default function ProyectoDetallePage({ params }: { params: { id: string }
     setExpandedSubcapitulos(newSet)
   }
 
-  // Reconstruir jerarquía de subcapítulos desde lista plana
-  const buildSubcapituloTree = (subcapitulos: any[]) => {
-    if (!subcapitulos || subcapitulos.length === 0) return []
-
-    // Crear mapa por código
-    const map: { [key: string]: any } = {}
-    const roots: any[] = []
-
-    // Primero, crear una copia de cada subcapítulo con array de hijos
-    subcapitulos.forEach(sub => {
-      map[sub.codigo] = { ...sub, children: [] }
-    })
-
-    // Construir árbol
-    subcapitulos.forEach(sub => {
-      const node = map[sub.codigo]
-
-      // Determinar si es raíz o tiene padre
-      const parts = sub.codigo.split('.')
-
-      if (parts.length === 2) {
-        // Nivel 1: es raíz (ej: 01.01)
-        roots.push(node)
-      } else {
-        // Nivel 2+: buscar padre (ej: 01.01.01 -> padre: 01.01)
-        const parentCode = parts.slice(0, -1).join('.')
-        const parent = map[parentCode]
-
-        if (parent) {
-          parent.children.push(node)
-        } else {
-          // Si no encuentra padre, agregar como raíz (fallback)
-          roots.push(node)
-        }
-      }
-    })
-
-    return roots
-  }
+  // NOTA: Ya no necesitamos reconstruir la jerarquía porque la API v2
+  // devuelve los subcapítulos con jerarquía anidada en el campo 'subcapitulos'
 
   if (isLoading) {
     return (
@@ -355,7 +318,7 @@ export default function ProyectoDetallePage({ params }: { params: { id: string }
                 {/* Subcapítulos */}
                 {expandedCapitulos.has(capitulo.id) && (
                   <div className="border-t border-gray-200 bg-gray-50">
-                    {buildSubcapituloTree(capitulo.subcapitulos).map((subcap) =>
+                    {capitulo.subcapitulos.map((subcap) =>
                       renderSubcapituloNode(subcap, 1)
                     )}
                   </div>
@@ -371,7 +334,7 @@ export default function ProyectoDetallePage({ params }: { params: { id: string }
   // Función recursiva para renderizar nodos de subcapítulos
   function renderSubcapituloNode(subcap: any, nivel: number): JSX.Element {
     const paddingLeft = 12 + ((nivel - 1) * 24)
-    const hasChildren = subcap.children && subcap.children.length > 0
+    const hasChildren = subcap.subcapitulos && subcap.subcapitulos.length > 0
     const hasPartidas = subcap.partidas && subcap.partidas.length > 0
 
     return (
@@ -416,7 +379,7 @@ export default function ProyectoDetallePage({ params }: { params: { id: string }
         {/* Hijos (subcapítulos anidados) */}
         {expandedSubcapitulos.has(subcap.id) && hasChildren && (
           <div>
-            {subcap.children.map((child: any) => renderSubcapituloNode(child, nivel + 1))}
+            {subcap.subcapitulos.map((child: any) => renderSubcapituloNode(child, nivel + 1))}
           </div>
         )}
 
